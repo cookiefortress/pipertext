@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    --backgroundColor: #EEEBDD;
+    --accentOne: #810000;
+    --accentTwo: #630000;
+    --dark: #1B1717;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    font-family: 'Space Mono';
+    background-image: url("space2.gif");
+}
+.container {
+    flex: 0 1 62.5rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.containerTwo {
+    flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    margin-left: 1.2rem;
+}
+
+/* space-mono font */
+@font-face {
+    font-family: 'Space Mono';
+    src: url('fonts/SpaceMono-BoldItalic.woff2') format('woff2'),
+        url('fonts/SpaceMono-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Space Mono';
+    src: url('fonts/SpaceMono-Italic.woff2') format('woff2'),
+        url('fonts/SpaceMono-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Space Mono';
+    src: url('fonts/SpaceMono-Bold.woff2') format('woff2'),
+        url('fonts/SpaceMono-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Space Mono';
+    src: url('fonts/SpaceMono-Regular.woff2') format('woff2'),
+        url('fonts/SpaceMono-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+/* sidebar */
+aside {
+    flex: 1 1 14rem;
+    max-width: 14rem;
+    min-width: 10rem;
+    background-image: linear-gradient(to bottom left, var(--accentOne), rgb(224, 0, 0));
+    border: 3px ridge var(--dark);
+}
+
+/* header */
+header {
+    max-height: 6rem;
+    flex: 1 1 62.5rem;
+    background-color: var(--backgroundColor);
+    border-radius: 0 5px 0 0;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    border: 3px ridge var(--dark);
+}
+header h1 {
+    padding-left: 1rem;
+}
+
+/* navbar */
+nav {
+    background-color: var(--accentOne);
+    background-image: linear-gradient(to bottom right, var(--accentOne), rgb(224, 0, 0));
+    display: flex;
+    justify-content: flex-start;
+    gap: .6rem;
+    padding: .6rem 0;
+    padding-left: 1rem;
+}
+nav a {
+    width: 6rem;
+    height: 3rem;
+    padding: 1rem;
+    background-color: var(--backgroundColor);
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--dark);
+    border: 3px ridge var(--dark);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* main content */
+main {
+    margin-top: 1.4rem;
+    background-image: linear-gradient(to bottom right, var(--accentOne), rgb(224, 0, 0));
+    padding: 2rem;
+    border: 3px ridge var(--dark);
+}
+main h2 {
+    border-bottom: 2px dashed var(--dark);
+    padding: .4rem;
+    font-size: 1.6rem;
+}
+main p {
+    text-indent: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+}
