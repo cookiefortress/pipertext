@@ -44,6 +44,7 @@ header div {
 header h1 {
     padding-left: 2rem;
     margin: 1rem 0;
+    text-shadow: 2px 2px 0px var(--accentTwo);
 }
 
 nav {
@@ -116,6 +117,12 @@ div.recentArticle h4 a {
 div.recentArticle h4 a:hover {
     color: var(--accentOne);
 }
+aside marquee {
+    background-color: var(--accentOne);
+    border: 2px ridge var(--accentTwo);
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+}
 
 
 main {
@@ -132,6 +139,7 @@ main p {
     margin: .5rem 0 1.3rem 0;
     padding-left: .8rem;
     border-left: 2px solid var(--accentOne);
+    font-size: .85rem;
 }
 figure.card {
     display: flex;
@@ -145,18 +153,22 @@ figure.card:hover {
     transform: scale(1.5);
 }
 figure.card img {
-    width: 20rem;
+    width: 15rem;
     border: 4px outset var(--accentOne);
 }
 figure.card figcaption {
+    width: 13rem;
     text-align: center;
-    background-color: #818181;
+    background-color: #c6c6c6;
     color: black;
     padding: .5rem;
     border-color: var(--accentOne);
     border-width: 0 4px 4px 4px;
     border-style: outset;
-    box-shadow: 5px 5px #818181;
+    box-shadow: 5px 5px #c6c6c6;
+}
+figure.card figcaption a {
+    text-decoration: none;
 }
 
 footer {
@@ -177,8 +189,6 @@ footer {
     75% { color: orangered; }
     100% { color: red; }
   }
-  
   .flame-text {
-    
     animation: colorCycle .9s infinite linear;
   }
