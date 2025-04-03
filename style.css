@@ -96,6 +96,7 @@ aside {
     flex-flow: column nowrap;
     align-items: center;
     padding: .5rem;
+    padding-top: 1rem;
 }
 aside div.recentArticle {
     font-size: .6rem;
@@ -120,6 +121,7 @@ div.recentArticle h4 a:hover {
 main {
     grid-area: 3 / 2 / 4 / 3;
     padding: 2rem;
+    padding-top: 1rem;
     border-top: 2px solid var(--light);
 }
 main h2 {
@@ -127,7 +129,7 @@ main h2 {
 }
 main p {
     text-indent: 1rem;
-    margin: .5rem 0 1rem 0;
+    margin: .5rem 0 1.3rem 0;
     padding-left: .8rem;
     border-left: 2px solid var(--accentOne);
 }
@@ -148,13 +150,13 @@ figure.card img {
 }
 figure.card figcaption {
     text-align: center;
-    background-color: var(--light);
+    background-color: #818181;
     color: black;
     padding: .5rem;
     border-color: var(--accentOne);
     border-width: 0 4px 4px 4px;
     border-style: outset;
-    box-shadow: 5px 5px var(--light);
+    box-shadow: 5px 5px #818181;
 }
 
 footer {
