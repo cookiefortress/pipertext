@@ -120,8 +120,8 @@ div.recentArticle h4 a:hover {
 aside marquee {
     background-color: var(--accentOne);
     border: 2px ridge var(--accentTwo);
-    padding: 1rem 0;
-    margin-bottom: 1rem;
+    padding: .5rem 0 0 0;
+    margin-bottom: .5rem;
 }
 
 
