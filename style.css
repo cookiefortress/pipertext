@@ -19,7 +19,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: .8fr 3fr;
-    grid-template-rows: 1.2fr 1fr 5fr 1fr;
+    grid-template-rows: auto auto 5fr auto;
 
     margin: auto;
     width: 100%;
@@ -43,6 +43,7 @@ header div {
 }
 header h1 {
     padding-left: 2rem;
+    margin: 1rem 0;
 }
 
 nav {
@@ -130,8 +131,52 @@ main p {
     padding-left: .8rem;
     border-left: 2px solid var(--accentOne);
 }
+figure.card {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    float: right;
+    margin-left: .5rem;
+    margin-bottom: 1rem;
+}
+figure.card:hover {
+    transform: scale(1.5);
+}
+figure.card img {
+    width: 20rem;
+    border: 4px outset var(--accentOne);
+}
+figure.card figcaption {
+    text-align: center;
+    background-color: var(--light);
+    color: black;
+    padding: .5rem;
+    border-color: var(--accentOne);
+    border-width: 0 4px 4px 4px;
+    border-style: outset;
+    box-shadow: 5px 5px var(--light);
+}
 
 footer {
     grid-area: 4 / 1 / 5 / 3;
-    background-color: black;
+    background-color: var(--dark);
+    border-top: 2px solid var(--light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    gap: .25rem;
+    padding: 2rem;
 }
+@keyframes colorCycle {
+    0% { color: red; }
+    25% { color: orange; }
+    50% { color: rgb(26, 3, 3); }
+    75% { color: orangered; }
+    100% { color: red; }
+  }
+  
+  .flame-text {
+    
+    animation: colorCycle .9s infinite linear;
+  }
