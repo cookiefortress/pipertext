@@ -33,4 +33,3 @@ async function typewriter(str) {
 }
 
 typewriter(pipertext);
-header.classList.remove("flame-text");

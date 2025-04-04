@@ -49,7 +49,7 @@ header div.logo select {
 	border-radius: 0;
 	padding: .1rem .3rem;
 	align-self: start;
-	margin-top: .5rem;
+	
 	margin-right: 3rem;
 }
 header div.logo select {
@@ -299,4 +299,23 @@ main div.template address a {
 	padding: .3rem;
 	background-color: var(--light);
 	border: 4px ridge #c6c6c6;
+}
+
+/* about page */
+#ricostay {
+	float: left;
+	width: 22rem;
+}
+#ricostayImg {
+	width: 20rem;
+	margin-bottom: -4px;
+}
+#ricostayCard {
+	width: 80%;
+}
+#runningMan {
+	width: 130px;
+}
+#runningManCard {
+	width: 60%;
 }
