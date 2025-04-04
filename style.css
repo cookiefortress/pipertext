@@ -106,6 +106,9 @@ aside {
 	padding: 0.5rem;
 	padding-top: 1rem;
 }
+aside h3 {
+	border-bottom: 2px solid var(--accentTwo);
+}
 aside div.recentArticle {
 	font-size: 0.6rem;
 	padding: 0.5rem;
@@ -113,7 +116,8 @@ aside div.recentArticle {
 aside div.recentArticle p {
 	text-indent: 1rem;
 }
-div.recentArticle h4 {
+aside div.recentArticle h4 a {
+	font-size: .7rem;
 	margin-bottom: 0.3rem;
 }
 div.recentArticle h4 a {
