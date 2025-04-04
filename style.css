@@ -19,7 +19,7 @@ body {
 /* main container */
 .container {
 	display: grid;
-	grid-template-columns: 0.8fr 3fr;
+	grid-template-columns: .8fr 1fr 3fr;
 	grid-template-rows: auto auto 5fr auto;
 	margin: auto;
 	width: 100%;
@@ -30,13 +30,17 @@ body {
 }
 
 header {
-	grid-area: 1 / 1 / 2 / 3;
+	grid-area: 1 / 1 / 2 / 4;
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: row nowrap;
 	justify-content: space-between;
 	align-items: center;
 	font-size: 1.4rem;
 	padding: 0 2rem;
+	width: 100%;
+}
+header div.logo {
+	
 }
 header div.logo img {
     width: 6rem;
@@ -45,22 +49,17 @@ header div.logo img {
 header div {
 	display: flex;
 	align-items: center;
+	justify-content: center;
 }
 header h1 {
-	padding-left: 2rem;
-	margin: 1rem 0;
+	padding-left: 0rem;
+	margin: 1rem 0 0 0;
 	text-shadow: 2px 2px 0px var(--accentTwo);
-}
-/* this is hacky but it works */
-header h1::before {
-    content: "​"; /* contains a zero-width whitespace character. prevents the page from loading without the pipertext h1 and then filling in via the script and moving the grid around */
-}
-header h1::after {
-    content: none;
+	width: 280px;
 }
 
 nav {
-	grid-area: 2 / 1 / 3 / 3;
+	grid-area: 2 / 1 / 3 / 4;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -136,7 +135,7 @@ aside marquee {
 }
 
 main {
-	grid-area: 3 / 2 / 4 / 3;
+	grid-area: 3 / 2 / 4 / 4;
 	padding: 2rem;
 	padding-top: 1rem;
 	padding-left: 1.5rem;
@@ -195,7 +194,7 @@ figure.card figcaption a {
 }
 
 footer {
-	grid-area: 4 / 1 / 5 / 3;
+	grid-area: 4 / 1 / 5 / 4;
 	background-color: var(--dark);
 	border-top: 2px solid var(--light);
 	display: flex;
