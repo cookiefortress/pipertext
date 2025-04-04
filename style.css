@@ -39,9 +39,6 @@ header {
 	padding: 0 2rem;
 	width: 100%;
 }
-header div.logo {
-	
-}
 header div.logo img {
     width: 6rem;
     filter: invert() drop-shadow(10px 10px 4px #7c7c88);
