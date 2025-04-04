@@ -38,6 +38,8 @@ header {
 	font-size: 1.4rem;
 	padding: 0 2rem;
 	width: 100%;
+	min-height: 6rem;
+	max-height: 6rem;
 }
 header div.logo img {
     width: 6rem;
@@ -117,6 +119,7 @@ aside {
 	align-items: center;
 	padding: 0.5rem;
 	padding-top: 1rem;
+	min-height: 24.375rem;
 }
 aside h3 {
 	border-bottom: 2px solid var(--accentTwo);
