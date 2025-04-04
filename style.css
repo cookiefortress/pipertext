@@ -221,3 +221,25 @@ footer {
 .flame-text {
 	animation: colorCycle 0.9s infinite linear;
 }
+
+/* contact page */
+main div.template div {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+}
+main div.template address {
+	display: flex;
+	gap: 3rem;
+	flex-wrap: wrap;
+}
+main div.template address a {
+	margin: auto;
+	text-decoration: none;
+	color: var(--accentOne);
+	padding: .3rem;
+	background-color: var(--light);
+	border: 4px ridge #c6c6c6;
+}
