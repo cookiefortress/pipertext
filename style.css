@@ -16,14 +16,14 @@ body {
     background: url(img/space.gif);
 }
 
+/* main container */
 .container {
     display: grid;
     grid-template-columns: .8fr 3fr;
     grid-template-rows: auto auto 5fr auto;
-
     margin: auto;
     width: 100%;
-    max-width: 60rem; /* 960px */
+    max-width: 60rem;
     background-color: var(--dark);
     box-shadow: 0 10px 16px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.2);
 }
@@ -81,7 +81,6 @@ nav ul li a {
     text-decoration: none;
     background-color: var(--accentTwo);
     color: var(--light);
-    
 }
 nav ul li a:hover {
     background-color: var(--accentOne);
@@ -129,6 +128,7 @@ main {
     grid-area: 3 / 2 / 4 / 3;
     padding: 2rem;
     padding-top: 1rem;
+    padding-left: 1.5rem;
     border-top: 2px solid var(--light);
 }
 main h2 {
@@ -141,6 +141,14 @@ main p {
     border-left: 2px solid var(--accentOne);
     font-size: .85rem;
 }
+main p a {
+    text-decoration: none;
+}
+main p a:hover {
+    color: var(--accentOne);
+    font-weight: bolder;
+    text-shadow: 2px 2px 0 black;
+}
 figure.card {
     display: flex;
     flex-flow: column nowrap;
@@ -151,6 +159,9 @@ figure.card {
 }
 figure.card:hover {
     transform: scale(1.5);
+}
+figure.card:hover figcaption {
+    box-shadow: none;
 }
 figure.card img {
     width: 15rem;
