@@ -5,11 +5,11 @@ function appendMain() {
 }
 
 function appendTemplate() {
-	document.querySelector(".template").style.visibility = "visible";
+	document.querySelector(".template").style.display = "block";
 }
 
 function includeHTML() {
-	document.querySelector(".template").style.visibility = "hidden";
+	// document.querySelector(".template").style.visibility = "hidden";
 	var z, i, elmnt, file, xhttp;
 	/* Loop through a collection of all HTML elements: */
 	z = document.getElementsByTagName("*");
