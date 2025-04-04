@@ -43,6 +43,18 @@ header div.logo img {
     width: 6rem;
     filter: invert() drop-shadow(10px 10px 4px #7c7c88);
 }
+header div.logo select {
+	border-radius: 0;
+	padding: .1rem .3rem;
+	align-self: start;
+	margin-top: .5rem;
+	margin-right: 3rem;
+}
+header div.logo select {
+	color: var(--dark);
+	background-color: #c6c6c6;
+	cursor: pointer;
+}
 header div {
 	display: flex;
 	align-items: center;
