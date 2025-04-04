@@ -4,7 +4,12 @@ function appendMain() {
 	main.appendChild(templateMain);
 }
 
+function appendTemplate() {
+	document.querySelector(".template").style.visibility = "visible";
+}
+
 function includeHTML() {
+	document.querySelector(".template").style.visibility = "hidden";
 	var z, i, elmnt, file, xhttp;
 	/* Loop through a collection of all HTML elements: */
 	z = document.getElementsByTagName("*");
@@ -35,6 +40,7 @@ function includeHTML() {
 		}
 	}
 	appendMain();
+	appendTemplate();
 }
 
 includeHTML();
