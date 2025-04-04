@@ -1,205 +1,226 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 html {
-    --light: #EEEBDD;
-    --accentOne: #810000;
-    --accentTwo: #630000;
-    --dark: #1B1717;
-    --grey: grey;
-    font-family: Consolas, monospace, 'Courier New', Courier;
-    color: var(--light);
+	--light: #eeebdd;
+	--accentOne: #810000;
+	--accentTwo: #630000;
+	--dark: #1b1717;
+	--grey: grey;
+	font-family: Consolas, monospace, "Courier New", Courier;
+	color: var(--light);
 }
 body {
-    background: url(img/space.gif);
+	background: url(img/space.gif);
 }
 
 /* main container */
 .container {
-    display: grid;
-    grid-template-columns: .8fr 3fr;
-    grid-template-rows: auto auto 5fr auto;
-    margin: auto;
-    width: 100%;
-    max-width: 60rem;
-    background-color: var(--dark);
-    box-shadow: 0 10px 16px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.2);
+	display: grid;
+	grid-template-columns: 0.8fr 3fr;
+	grid-template-rows: auto auto 5fr auto;
+	margin: auto;
+	width: 100%;
+	max-width: 60rem;
+	background-color: var(--dark);
+	box-shadow: 0 10px 16px 0 rgba(255, 255, 255, 0.2),
+		0 6px 20px 0 rgba(255, 255, 255, 0.2);
 }
 
 header {
-    grid-area: 1 / 1 / 2 / 3;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.4rem;
-    padding: 0 2rem;
+	grid-area: 1 / 1 / 2 / 3;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 1.4rem;
+	padding: 0 2rem;
+}
+header div.logo img {
+    width: 6rem;
+    filter: invert() drop-shadow(10px 10px 4px #7c7c88);
 }
 header div {
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
 }
 header h1 {
-    padding-left: 2rem;
-    margin: 1rem 0;
-    text-shadow: 2px 2px 0px var(--accentTwo);
+	padding-left: 2rem;
+	margin: 1rem 0;
+	text-shadow: 2px 2px 0px var(--accentTwo);
+}
+/* this is hacky but it works */
+header h1::before {
+    content: "​"; /* contains a zero-width whitespace character. prevents the page from loading without the pipertext h1 and then filling in via the script and moving the grid around */
+}
+header h1::after {
+    content: none;
 }
 
 nav {
-    grid-area: 2 / 1 / 3 / 3;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
+	grid-area: 2 / 1 / 3 / 3;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
 }
 nav ul {
-    display: flex;
-    flex-flow: row nowrap;
-    width: 100%;
-    height: 100%;
-    list-style-type: none;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	flex-flow: row nowrap;
+	width: 100%;
+	height: 100%;
+	list-style-type: none;
+	align-items: center;
+	justify-content: center;
 }
 nav ul li {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    min-height: 100%;
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	text-decoration: none;
+	min-height: 100%;
 }
 nav ul li a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60%;
-    border: 4px outset var(--accentOne);
-    padding: .75rem 0;
-    text-decoration: none;
-    background-color: var(--accentTwo);
-    color: var(--light);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 60%;
+	border: 4px outset var(--accentOne);
+	padding: 0.75rem 0;
+	text-decoration: none;
+	background-color: var(--accentTwo);
+	color: var(--light);
 }
 nav ul li a:hover {
-    background-color: var(--accentOne);
-    border: 4px outset var(--accentTwo);
+	background-color: var(--accentOne);
+	border: 4px outset var(--accentTwo);
 }
 
 aside {
-    grid-area: 3 / 1 / 4 / 2;
-    background-color: var(--dark);
-    border-right: 2px solid var(--light);
-    border-top: 2px solid var(--light);
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    padding: .5rem;
-    padding-top: 1rem;
+	grid-area: 3 / 1 / 4 / 2;
+	background-color: var(--dark);
+	border-right: 2px solid var(--light);
+	border-top: 2px solid var(--light);
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	padding: 0.5rem;
+	padding-top: 1rem;
 }
 aside div.recentArticle {
-    font-size: .6rem;
-    padding: .5rem;
+	font-size: 0.6rem;
+	padding: 0.5rem;
 }
 aside div.recentArticle p {
-    text-indent: 1rem;
+	text-indent: 1rem;
 }
 div.recentArticle h4 {
-    margin-bottom: .3rem;
+	margin-bottom: 0.3rem;
 }
 div.recentArticle h4 a {
-    font-size: .8rem;
-    text-decoration: none;
-    color: whitesmoke;
+	font-size: 0.8rem;
+	text-decoration: none;
+	color: whitesmoke;
 }
 div.recentArticle h4 a:hover {
-    color: var(--accentOne);
+	color: var(--accentOne);
 }
 aside marquee {
-    background-color: var(--accentOne);
-    border: 2px ridge var(--accentTwo);
-    padding: .5rem 0 0 0;
-    margin-bottom: .5rem;
+	background-color: var(--accentOne);
+	border: 2px ridge var(--accentTwo);
+	padding: 0.5rem 0 0 0;
+	margin-bottom: 0.5rem;
 }
-
 
 main {
-    grid-area: 3 / 2 / 4 / 3;
-    padding: 2rem;
-    padding-top: 1rem;
-    padding-left: 1.5rem;
-    border-top: 2px solid var(--light);
+	grid-area: 3 / 2 / 4 / 3;
+	padding: 2rem;
+	padding-top: 1rem;
+	padding-left: 1.5rem;
+	border-top: 2px solid var(--light);
 }
 main h2 {
-    margin-bottom: 2px;
+	margin-bottom: 2px;
 }
 main p {
-    text-indent: 1rem;
-    margin: .5rem 0 1.3rem 0;
-    padding-left: .8rem;
-    border-left: 2px solid var(--accentOne);
-    font-size: .85rem;
+	text-indent: 1rem;
+	margin: 0.5rem 0 1.3rem 0;
+	padding-left: 0.8rem;
+	border-left: 2px solid var(--accentOne);
+	font-size: 0.85rem;
 }
 main p a {
-    text-decoration: none;
+	text-decoration: none;
 }
 main p a:hover {
-    color: var(--accentOne);
-    font-weight: bolder;
-    text-shadow: 2px 2px 0 black;
+	color: var(--accentOne);
+	font-weight: bolder;
+	text-shadow: 2px 2px 0 black;
 }
 figure.card {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    float: right;
-    margin-left: .5rem;
-    margin-bottom: 1rem;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	float: right;
+	margin-left: 0.5rem;
+	margin-bottom: 1rem;
 }
 figure.card:hover {
-    transform: scale(1.5);
+	transform: scale(1.5);
 }
 figure.card:hover figcaption {
-    box-shadow: none;
+	box-shadow: none;
 }
 figure.card img {
-    width: 15rem;
-    border: 4px outset var(--accentOne);
+	width: 15rem;
+	border: 4px outset var(--accentOne);
 }
 figure.card figcaption {
-    width: 13rem;
-    text-align: center;
-    background-color: #c6c6c6;
-    color: black;
-    padding: .5rem;
-    border-color: var(--accentOne);
-    border-width: 0 4px 4px 4px;
-    border-style: outset;
-    box-shadow: 5px 5px #c6c6c6;
+	width: 13rem;
+	text-align: center;
+	background-color: #c6c6c6;
+	color: black;
+	padding: 0.5rem;
+	border-color: var(--accentOne);
+	border-width: 0 4px 4px 4px;
+	border-style: outset;
+	box-shadow: 5px 5px #c6c6c6;
 }
 figure.card figcaption a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 footer {
-    grid-area: 4 / 1 / 5 / 3;
-    background-color: var(--dark);
-    border-top: 2px solid var(--light);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column nowrap;
-    gap: .25rem;
-    padding: 2rem;
+	grid-area: 4 / 1 / 5 / 3;
+	background-color: var(--dark);
+	border-top: 2px solid var(--light);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column nowrap;
+	gap: 0.25rem;
+	padding: 2rem;
 }
 @keyframes colorCycle {
-    0% { color: red; }
-    25% { color: orange; }
-    50% { color: rgb(26, 3, 3); }
-    75% { color: orangered; }
-    100% { color: red; }
-  }
-  .flame-text {
-    animation: colorCycle .9s infinite linear;
-  }
+	0% {
+		color: red;
+	}
+	25% {
+		color: orange;
+	}
+	50% {
+		color: rgb(26, 3, 3);
+	}
+	75% {
+		color: orangered;
+	}
+	100% {
+		color: red;
+	}
+}
+.flame-text {
+	animation: colorCycle 0.9s infinite linear;
+}
