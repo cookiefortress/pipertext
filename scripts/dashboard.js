@@ -19,8 +19,8 @@ function getUTC() {
 
 let dashboard = document.createElement("div");
 dashboard.style.color = "var(--light)";
-dashboard.style.backgroundColor = "var(--accentOne)";
-dashboard.style.border = "2px ridge var(--accentTwo)";
+dashboard.style.backgroundColor = "black";
+dashboard.style.border = "2px ridge var(--accentOne)";
 dashboard.style.width = "8.875rem";
 dashboard.style.height = "10rem";
 dashboard.style.padding = ".2rem";
@@ -30,6 +30,7 @@ dashboard.style.flexFlow = "column nowrap";
 dashboard.style.justifyContent = "center";
 dashboard.style.alignItems = "center";
 dashboard.style.gap = ".5rem"
+dashboard.classList.add(".dashboard");
 
 const sidebar = document.querySelector("aside");
 sidebar.appendChild(dashboard);
