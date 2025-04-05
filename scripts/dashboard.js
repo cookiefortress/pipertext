@@ -1,7 +1,7 @@
 function writeUTC() {
 	UTC = getUTC();
 
-	dashboard.innerHTML = "UTC - " + UTC + pipertextIcon;
+	dashboard.innerHTML = "UTC: " + UTC + pipertextIcon;
 	setTimeout(writeUTC, 1000);
 }
 
@@ -20,6 +20,7 @@ function getUTC() {
 let dashboard = document.createElement("div");
 dashboard.style.color = "var(--light)";
 dashboard.style.backgroundColor = "black";
+dashboard.style.background = `linear-gradient(rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.34)), url(../img/spacex.gif)`;
 dashboard.style.border = "2px ridge var(--accentOne)";
 dashboard.style.width = "8.875rem";
 dashboard.style.height = "10rem";

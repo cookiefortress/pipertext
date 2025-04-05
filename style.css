@@ -9,7 +9,7 @@ html {
 	--accentTwo: #630000;
 	--dark: #1b1717;
 	--grey: grey;
-	font-family: Consolas, monospace, "Courier New", Courier;
+	font-family: Consolas, monospace, "Times New Roman", Courier;
 	color: var(--light);
 }
 body {
@@ -161,6 +161,9 @@ main h2 {
 	margin-bottom: 2px;
 	text-align: center;
 }
+h2:nth-child(n+2) {
+	margin-top: .8rem;
+}
 main p {
 	text-indent: 1rem;
 	margin: 0.5rem 0 1.3rem 0;
@@ -175,6 +178,12 @@ main p a:hover {
 	color: var(--accentOne);
 	font-weight: bolder;
 	text-shadow: 2px 2px 0 black;
+}
+main p code {
+	text-shadow: 1px 1px 1px rgb(0, 0, 0);
+	letter-spacing: 1px;
+	font-size: .8rem;
+	color: rgb(0, 218, 0);
 }
 figure.card {
 	display: flex;
@@ -197,13 +206,13 @@ figure.card img {
 figure.card figcaption {
 	width: 13rem;
 	text-align: center;
-	background-color: #c6c6c6;
+	background-color: var(--light);
 	color: black;
 	padding: 0.5rem;
 	border-color: var(--accentOne);
 	border-width: 0 4px 4px 4px;
 	border-style: outset;
-	box-shadow: 5px 5px #c6c6c6;
+	box-shadow: 5px 5px var(--light);
 }
 figure.card figcaption a {
 	text-decoration: none;
