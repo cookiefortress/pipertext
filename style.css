@@ -50,7 +50,7 @@ header div.logo select {
 	padding: .1rem .3rem;
 	align-self: start;
 	
-	margin-right: 3rem;
+	margin-right: 1rem;
 }
 header div.logo select {
 	color: var(--dark);
