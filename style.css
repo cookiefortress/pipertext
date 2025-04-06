@@ -8,6 +8,7 @@ html {
 	--secondary: #eeebdd;
 	--accentOne: #810000;
 	--accentTwo: #630000;
+	--gradientTopLeft: black;
 
 	--winGrey: #6c6c6c;
 	--winGreen: #208c71;
@@ -28,7 +29,7 @@ body {
 	width: 100%;
 	max-width: 60rem;
 	background-color: var(--primary); /* fallback */
-	background-image: linear-gradient(to bottom right, black, var(--primary));
+	background-image: linear-gradient(to bottom right, var(--gradientTopLeft), var(--primary));
 	box-shadow: 0 10px 16px 0 rgba(255, 255, 255, 0.2),
 	0 6px 20px 0 rgba(255, 255, 255, 0.2);
 }
