@@ -4,9 +4,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>pipertext</title>
-	<link rel="icon" type="image/x-icon" href="../img/pipe.png">
-	<link rel="icon" type="image/png" href="../img/pipe.png">
-	<link rel="stylesheet" href="../style.css">
+	<link rel="icon" type="image/x-icon" href="/img/pipe.png">
+	<link rel="icon" type="image/png" href="/img/pipe.png">
+	<link rel="stylesheet" href="/style.css">
 	<script src="/scripts/dashboard.js" defer></script>
 	<script src="/scripts/themes.js" defer></script>
 </head>
@@ -37,27 +37,27 @@
 						<option value="cat">soon</option>
 						<option value="hamster">!!!</option>
 					</select>
-					<img src="../img/pipe.png" alt="Pipertext logo">
+					<img src="/img/pipe.png" alt="Pipertext logo">
 				</div>
 			</header>
 	
 			<nav>
 				<ul>
-					<li><a href="../index.html">home</a></li>
+					<li><a href="/index.html">home</a></li>
 					<li><a href="">resource</a></li>
-					<li><a href="articles.html">articles</a></li>
-					<li><a href="quotes.html">quotes</a></li>
-					<li><a href="about.html">about</a></li>
-					<li><a href="contact.html">contact</a></li>
+					<li><a href="/html/articles.html">articles</a></li>
+					<li><a href="/html/quotes.html">quotes</a></li>
+					<li><a href="/html/about.html">about</a></li>
+					<li><a href="/html/contact.html">contact</a></li>
 				</ul>
 			</nav>
 	
 			<aside>
 				<marquee>
-					<img src="../gif/bestvw.gif" alt="Best viewed with a computer and a monitor!">
-					<img src="../gif/fftake.gif" alt="Firefox - take back the web!">
-					<img src="../gif/css2.gif" alt="Made with CSS!">
-					<img src="../gif/gothtml.gif" alt="Got HTML?">
+					<img src="/gif/bestvw.gif" alt="Best viewed with a computer and a monitor!">
+					<img src="/gif/fftake.gif" alt="Firefox - take back the web!">
+					<img src="/gif/css2.gif" alt="Made with CSS!">
+					<img src="/gif/gothtml.gif" alt="Got HTML?">
 				</marquee>
 				<h3>Recent posts</h3>
 				<div class="recentArticle">
@@ -84,23 +84,26 @@
 				</div>
 			</aside>
 	
-			<main id="articles">
-				<h2>Articles</h2>
-				<p>The following list sorts all articles from newest to oldest. Article topics are broad, and some contain cute little programs!</p>
-				<ul>
-					<a href="articles/microsoft50.html">
-						<li>
-							<span>50 years of Microsoft</span>
-							<time>2025/04/06</time>
-						</li>
-					</a>
-					<a href="articles/touchPipertext.html">
-						<li>
-							<span>touch pipertext.ptml</span>
-							<time>2025/04/06</time>
-						</li>
-					</a>					
-				</ul>
+			<main class="article">
+				<img src="articleImg/ms50themes.png" alt="An image of the Microsoft 50th birthday page.">
+				<article>
+					<h2 class="articleHeader">50 years of Microsoft</h2>
+					<time>UTC 2025-04-06 - April 6<sup>th</sup>, 2025</time>
+					<hr>
+					<p>
+						For <a href="https://en.wikipedia.org/wiki/Microsoft" target="_blank" rel="noopener noreferrer">Microsoft</a>'s 50<sup>th</sup> anniversary a couple days ago, they put out <a href="https://www.microsoft.com/en-us/edge/microsoft-50th-anniversary?form=MT00YS&channel=stable&version=135.0.3179.54&cs=1836788259" target="_blank" rel="noopener noreferrer">a cool little graphic</a> going over a few of the major points throughout the company's history. Regardless of your opinion on them, I thought it was kind of cute!
+					</p>
+					<p>
+						Also, at the end of the page, you can download a Windows-esque nostalgia theme and another theme based around the page itself, Microsoft's 50<sup>th</sup> birthday, for Edge. I don't use Edge for anything other than testing, but I still got the nostalgia theme.
+					</p>
+					<p>
+						I've added the Word logo from 1983 and Internet Explorer logo as displayed in the Microsoft post below. They're pretty cute!
+					</p>
+						<div class="imgRow">
+							<img src="articleImg/ms50ie.webp" alt="Internet Explorer logo from the Microsoft 50th birthday page.">
+							<img src="articleImg/ms50word1983.webp" alt="1983 Microsoft Word logo from the Microsoft 50th birthday page.">
+						</div>
+				</article>
 			</main>
 	
 			<footer>

@@ -401,7 +401,29 @@ main.article article p {
 	margin-top: 1rem;
 	font-size: 1rem;
 }
-main.article img {
+main.article img:first-of-type {
+	mask-image: linear-gradient(to right, rgba(0, 0, 0, 1.0) -20%, transparent 100%);
+	opacity: 50%;
+	width: 100%;
+}
+main.article img:nth-child(n+2) {
+	mask-image: none;
+}
+main.article div.imgRow {
 	display: flex;
-	mask-image: linear-gradient(to right, rgba(0, 0, 0, 1.0) -200%, transparent 100%);
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 10%;
+}
+main.article div.imgRow img {
+	mask-image: none;
+	width: 25%;
+	margin-top: 1rem;
+	border: 4px ridge var(--accentOne);
+	background-color: var(--primary);
+	padding: 1rem;
+	opacity: 100%;
+}
+main.article div.imgRow img:hover {
+	background-color: var(--accentTwo);
 }
