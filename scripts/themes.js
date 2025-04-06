@@ -17,7 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // function for changing the color scheme
 function changeTheme() {
-	if (themeSelector.value == "cherry") {
+	if (themeSelector.value == "cherry" || themeSelector.value == "themes") {
 		console.log("Standard (cherry) theme selected!!");
 		document.documentElement.style.cssText = `
 			--primary: #1b1717;
