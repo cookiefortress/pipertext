@@ -121,25 +121,26 @@ aside {
 }
 aside h3 {
 	border-bottom: 2px solid var(--accentTwo);
+	text-align: center;
+	margin: 0 1rem;
+	margin-top: .5rem;
 }
 aside div.recentArticle {
 	font-size: 0.6rem;
 	padding: 0.5rem;
+	width: 90%;
+}
+aside div.recentArticle a {
+	font-size: .9rem;
+	text-decoration: none;
+	color: var(--secondary);
+	font-style: italic;
+}
+div.recentArticle a:hover {
+	color: var(--accentOne);
 }
 aside div.recentArticle p {
-	text-indent: 1rem;
-}
-aside div.recentArticle h4 a {
-	font-size: .7rem;
-	margin-bottom: 0.3rem;
-}
-div.recentArticle h4 a {
-	font-size: 0.8rem;
-	text-decoration: none;
-	color: whitesmoke;
-}
-div.recentArticle h4 a:hover {
-	color: var(--accentOne);
+	margin-bottom: 1rem;
 }
 aside marquee {
 	background-color: var(--accentOne);
@@ -385,6 +386,7 @@ main#articles ul li {
 }
 main#articles ul li:hover {
 	color: var(--primary);
+	background-color: var(--secondary);
 }
 main#articles ul li span {
 	flex: 1;
