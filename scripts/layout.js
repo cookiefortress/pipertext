@@ -33,7 +33,7 @@ function createDashboard() {
 	dashboard.style.justifyContent = "center";
 	dashboard.style.alignItems = "center";
 	dashboard.style.gap = ".5rem";
-	dashboard.classList.add(".dashboard");
+	dashboard.classList.add("dashboard");
 }
 
 function createSidebar() {

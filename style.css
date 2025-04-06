@@ -118,7 +118,7 @@ aside {
 	padding: 0.5rem;
 	padding-top: 1rem;
 	min-height: 24.375rem;
-	min-width: 100%;
+	min-width: 10rem;
 }
 aside h3 {
 	border-bottom: 2px solid var(--accentTwo);
@@ -292,6 +292,20 @@ footer {
 	nav {
 		padding: .2rem;
 		margin-bottom: 2rem;
+	}
+	aside .dashboard {
+		max-width: 90%;
+	}
+	figure.card {
+		max-width: 40%;
+		margin-left: 25%;
+		float: none;
+	}
+	figure img {
+		max-width: 200%;
+	}
+	figure figcaption {
+		max-width: 150%;
 	}
 }
 
