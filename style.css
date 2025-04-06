@@ -371,7 +371,7 @@ main#articles ul a {
 	text-decoration: none;
 }
 main#articles ul a:visited {
-	color: var(--secondary);
+	color: var(--winGrey);
 }
 main#articles ul li {
 	border: 2px solid var(--secondary);
@@ -380,10 +380,11 @@ main#articles ul li {
 	justify-content: space-between;
 	width: 100%;
 	height: 100%;
-	color: var(--winGrey);
+	color: var(--secondary);
+	background-color: var(--accentOne);
 }
 main#articles ul li:hover {
-	color: var(--accentOne);
+	color: var(--primary);
 }
 main#articles ul li span {
 	flex: 1;
@@ -403,7 +404,6 @@ main.article article p {
 }
 main.article img:first-of-type {
 	mask-image: linear-gradient(to right, rgba(0, 0, 0, 1.0) -20%, transparent 100%);
-	opacity: 50%;
 	width: 100%;
 }
 main.article img:nth-child(n+2) {
@@ -422,7 +422,6 @@ main.article div.imgRow img {
 	border: 4px ridge var(--accentOne);
 	background-color: var(--primary);
 	padding: 1rem;
-	opacity: 100%;
 }
 main.article div.imgRow img:hover {
 	background-color: var(--accentTwo);
