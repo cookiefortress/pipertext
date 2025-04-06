@@ -1,7 +1,7 @@
 function writeUTC() {
 	UTC = getUTC();
 
-	dashboard.innerHTML = "UTC: " + UTC + pipertextIcon;
+	dashboard.innerHTML = "UTC " + UTC + pipertextIcon;
 	setTimeout(writeUTC, 1000);
 }
 
@@ -13,7 +13,7 @@ function getUTC() {
 	const hours = now.getUTCHours();
 	const minutes = now.getUTCMinutes();
 	const seconds = now.getUTCSeconds();
-	let UTC = (`${year}-${month + 1}-${date} ${hours}:${minutes}:${seconds}`);
+	let UTC = (`${hours}:${minutes}:${seconds} ${year}-${month + 1}-${date}`);
 	return UTC;
 }
 
