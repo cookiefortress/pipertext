@@ -140,6 +140,12 @@ aside div.recentArticle a {
 	color: var(--secondary);
 	font-style: italic;
 }
+aside button:hover {
+	cursor: pointer;
+}
+aside button:active {
+	filter: brightness(200%)
+}
 div.recentArticle a:hover {
 	color: var(--accentOne);
 }

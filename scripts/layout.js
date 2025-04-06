@@ -67,6 +67,11 @@ function createSidebar() {
 			"touch pipertext.ptml",
 			"2025/04/06"
 		)
+		createRecentPost(
+			"/html/articles/microsoft50.html",
+			"50 years of Microsoft",
+			"2025/04/06"
+		)
 	}
 
 	let mainMarquee = document.createElement("marquee");
@@ -82,10 +87,37 @@ function createSidebar() {
 	recentPosts.appendChild(recentPostsHeader);
 	createRecentPosts();
 
+	// let pushCounter = document.createElement("div");
+	// pushCounter.style.display = "flex";
+	// pushCounter.style.flexDirection = "column";
+	// pushCounter.style.alignItems = "center";
+	// let pushCounterBtn = document.createElement("button");
+	// pushCounterBtn.style.width = "100px";
+	// pushCounterBtn.style.height = "30px";
+	// pushCounterBtn.style.marginTop = ".3rem";
+	// pushCounterBtn.style.borderRadius = "0";
+	// pushCounterBtn.style.backgroundColor = "var(--accentOne)";
+	// pushCounterBtn.style.color = "var(--secondary)";
+	// pushCounterBtn.style.borderColor = "var(--primary)";
+	// pushCounterBtn.textContent = "+1";
+	// let counter = document.createElement("p");
+	// counter.style.width = "150px";
+	// counter.style.height = "auto";
+	// counter.style.border = "3px ridge var(--accentOne)"
+	// counter.style.padding = ".4rem";
+	// counter.style.backgroundColor = "var(--secondary)";
+	// counter.style.color = "var(--primary)";
+	// counter.style.textAlign = "center";
+	// counter.style.marginTop = ".5rem";
+	// counter.textContent = "x";
+	// pushCounter.appendChild(counter);
+	// pushCounter.appendChild(pushCounterBtn);
+
 	// append the marquee, dashboard, and recentPosts to the sidebar
 	sidebar.appendChild(mainMarquee);
 	sidebar.appendChild(dashboard);
 	sidebar.appendChild(recentPosts);
+	// sidebar.appendChild(pushCounter);
 }
 
 function createFooter() {
