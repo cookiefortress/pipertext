@@ -1,4 +1,13 @@
 let themeSelector = document.querySelector("#themes");
+let initialVal = themeSelector.value;
+if (initialVal == "themes") {
+	document.documentElement.style.cssText = `
+			--primary: #1b1717;
+			--secondary: #eeebdd;
+			--accentOne: #810000;
+			--accentTwo: #630000;
+			--gradientTopLeft: black;`;
+}
 
 // save selection on change
 themeSelector.addEventListener('change', (e) => {
@@ -17,14 +26,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // function for changing the color scheme
 function changeTheme() {
-	if (themeSelector.value == "cherry" || themeSelector.value == "themes") {
+	if (themeSelector.value == "cherry") {
 		console.log("Standard (cherry) theme selected!!");
 		document.documentElement.style.cssText = `
 			--primary: #1b1717;
 			--secondary: #eeebdd;
 			--accentOne: #810000;
 			--accentTwo: #630000;
-			--gradientTopLeft: black`;
+			--gradientTopLeft: black;`;
 	}
 	else if (themeSelector.value == "tobacco") {
 		console.log("Tobacco theme selected!");
