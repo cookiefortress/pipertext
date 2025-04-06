@@ -86,7 +86,7 @@ function changeTheme() {
 			--primary: white;
 			--secondary: black;
 			--accentOne: grey;
-			--accentTwo: background-color: rgba(0, 0, 0, 1);
+			--accentTwo: transparent;
 			--gradientTopLeft: whitesmoke;`
 	}
 	else if (themeSelector.value == "cmd") {
@@ -95,7 +95,7 @@ function changeTheme() {
 			--primary: black;
 			--secondary: white;
 			--accentOne: grey;
-			--accentTwo: background-color: rgba(0, 0, 0, 1);
+			--accentTwo: transparent;
 			--gradientTopLeft: #1b1717;`
 	}
 }
