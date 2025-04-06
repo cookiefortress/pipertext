@@ -158,6 +158,10 @@ aside marquee {
 	padding: 0.5rem 0 0 0;
 	margin-bottom: 0.5rem;
 }
+/* easter egg.. marnie! */
+aside .marnie:hover {
+	transform:scale(2.5);
+}
 
 main {
 	grid-area: 3 / 2 / 4 / 4;
@@ -451,4 +455,51 @@ main.article div.imgRow img {
 }
 main.article div.imgRow img:hover {
 	background-color: var(--accentTwo);
+}
+
+/* resource page(s) */
+#resourceContainer {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+	grid-auto-rows: max-content;
+	gap: 1.2rem;
+	margin-top: 1rem;
+	text-decoration: none;
+}
+#resourceContainer div {
+	color: var(--secondary);
+	background: linear-gradient(to bottom right, var(--accentOne), var(--primary));
+	border: 3px ridge var(--accentTwo);
+}
+#resourceContainer a {
+	text-decoration: none;
+}
+#resourceContainer a:hover div {
+	background: linear-gradient(to bottom right, var(--primary), var(--accentOne));
+}
+#resourceContainer a div p {
+	border: none;
+	padding: 0;
+	margin: 0;
+	text-indent: 0;
+	text-align: center;
+	margin-bottom: .5rem;
+}
+main.resourcePage h2 {
+	margin-bottom: 1rem;
+}
+.resGrid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+	grid-auto-rows: max-content;
+	gap: 1.2rem;
+}
+.resGrid div {
+	background-color: var(--primary);
+	color: var(--secondary);
+	padding: 1rem;
+}
+.resGrid div p img {
+	margin-right: .5rem;
+	margin-bottom: .5rem;
 }

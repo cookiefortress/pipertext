@@ -27,7 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
 // function for changing the color scheme
 function changeTheme() {
 	if (themeSelector.value == "cherry") {
-		console.log("Standard (cherry) theme selected!!");
+		console.log("Standard (cherry) theme selected!");
 		document.documentElement.style.cssText = `
 			--primary: #1b1717;
 			--secondary: #eeebdd;
@@ -107,5 +107,24 @@ function changeTheme() {
 			--accentOne: grey;
 			--accentTwo: transparent;
 			--gradientTopLeft: #1b1717;`
+	}
+	else if (themeSelector.value == "marnie") {
+		console.log("Marnie's theme selected!");
+		document.documentElement.style.cssText = `
+			--primary: #FFF5E4;
+			--secondary: #443627;
+			--accentOne: #99BC85;
+			--accentTwo: #FFA725;
+			--gradientTopLeft: #FFF5E4;`
+		let marnie = document.createElement("img");
+		marnie.src = "/img/marnie.jpg";
+		marnie.style.width = "90%"
+		marnie.style.border = "3px ridge var(--secondary)";
+		marnie.style.marginTop = ".8rem";
+		marnie.classList.add("marnie");
+		let marnieExists = document.querySelector(".marnie");
+		if(!(marnieExists)) {
+			document.querySelector("aside").appendChild(marnie);
+		}
 	}
 }

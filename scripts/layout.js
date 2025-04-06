@@ -152,6 +152,7 @@ function createHeader() {
                 <option value="pride">pride</option>
                 <option value="psycho">psycho</option>
                 <option value="cmd">cmd</option>
+				<option value="marnie">marnie</option>
             </select>
             <select name="friends" id="friends">
                 <option value="">partners</option>
@@ -167,7 +168,7 @@ function createNav() {
 	nav.innerHTML = `
 		<ul>
         	<li><a href="/index.html">home</a></li>
-            <li><a href="">resource</a></li>
+            <li><a href="/resource/resource.html">resource</a></li>
             <li><a href="/html/articles.html">articles</a></li>
             <li><a href="/html/quotes.html">quotes</a></li>
             <li><a href="/html/about.html">about</a></li>
