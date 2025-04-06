@@ -118,6 +118,7 @@ aside {
 	padding: 0.5rem;
 	padding-top: 1rem;
 	min-height: 24.375rem;
+	min-width: 100%;
 }
 aside h3 {
 	border-bottom: 2px solid var(--accentTwo);
@@ -127,11 +128,14 @@ aside h3 {
 }
 aside div.recentArticle {
 	font-size: 0.6rem;
-	padding: 0.5rem;
+	padding: 0 0 0 1rem;
+	margin-top: .4rem;
+	
 	width: 90%;
+	height: max-content;
 }
 aside div.recentArticle a {
-	font-size: .9rem;
+	font-size: .8rem;
 	text-decoration: none;
 	color: var(--secondary);
 	font-style: italic;
@@ -140,7 +144,7 @@ div.recentArticle a:hover {
 	color: var(--accentOne);
 }
 aside div.recentArticle p {
-	margin-bottom: 1rem;
+	margin-bottom: .2rem;
 }
 aside marquee {
 	background-color: var(--accentOne);
