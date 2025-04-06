@@ -20,7 +20,7 @@ function getUTC() {
 let dashboard = document.createElement("div");
 dashboard.style.color = "var(--light)";
 dashboard.style.backgroundColor = "black";
-dashboard.style.background = `linear-gradient(rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.34)), url(../img/spacex.gif)`;
+dashboard.style.background = `linear-gradient(rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.34)), url(/img/spacex.gif)`;
 dashboard.style.border = "2px ridge var(--accentOne)";
 dashboard.style.width = "8.875rem";
 dashboard.style.height = "10rem";
@@ -36,6 +36,6 @@ dashboard.classList.add(".dashboard");
 const sidebar = document.querySelector("aside");
 sidebar.appendChild(dashboard);
 
-let pipertextIcon = "<img src='../img/pipertext.png' alt='Pipertext 88x31 icon' width='88px'>";
+let pipertextIcon = "<img src='/img/pipertext.png' alt='Pipertext 88x31 icon' width='88px'>";
 
 writeUTC();

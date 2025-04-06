@@ -43,6 +43,7 @@ function changeTheme() {
 			--accentOne: #00FF66;
 			--accentTwo: rgb(17, 97, 17);
 			--gradientTopLeft: #1b1717;`
+		// document.querySelector(".container").style.boxShadow = "0 10px 16px rgba(51, 255, 51, 0.4),0 6px 20px rgba(51, 255, 51, 0.4)";
 	}
 	else if (themeSelector.value == "cypher") {
 		console.log("Cypher theme selected!");
