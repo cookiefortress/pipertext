@@ -67,11 +67,6 @@ function createSidebar() {
 			"touch pipertext.ptml",
 			"2025/04/06"
 		)
-		createRecentPost(
-			"/html/articles/microsoft50.html",
-			"50 years of Microsoft",
-			"2025/04/06"
-		)
 	}
 
 	let mainMarquee = document.createElement("marquee");
