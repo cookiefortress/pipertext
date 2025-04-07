@@ -500,6 +500,5 @@ main.resourcePage h2 {
 	padding: 1rem;
 }
 .resGrid div p img {
-	margin-right: .5rem;
-	margin-bottom: .5rem;
+	margin: .5rem;
 }
