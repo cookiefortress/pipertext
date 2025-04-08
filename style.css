@@ -159,7 +159,7 @@ aside marquee {
 	margin-bottom: 0.5rem;
 }
 /* easter egg.. marnie! */
-aside .marnie:hover {
+aside .marnie:active {
 	transform:scale(2.5);
 }
 
@@ -198,7 +198,9 @@ main p code {
 	font-size: .8rem;
 	color: rgb(0, 218, 0);
 }
-figure.card {
+
+/* figure component */
+figure {
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: center;
@@ -206,25 +208,27 @@ figure.card {
 	margin-left: 0.5rem;
 	margin-bottom: 1rem;
 }
-figure.card:hover {
+figure:active {
 	transform: scale(1.5);
 }
-figure.card:hover figcaption {
+figure:hover figcaption {
 	box-shadow: none;
 }
 figure.card img {
-	width: 15rem;
+	width: 13rem;
 	border: 4px outset var(--accentOne);
+	background-color: var(--primary);
 }
 figure.card figcaption {
-	width: 13rem;
+	width: 12rem;
 	text-align: center;
-	background-color: var(--secondary);
-	color: var(--accentOne);
+	background-color: var(--primary);
+	color: var(--secondary);
 	padding: 0.5rem;
 	border-color: var(--accentOne);
 	border-width: 0 4px 4px 4px;
 	border-style: outset;
+	font-size: .8rem;
 }
 figure.card figcaption a {
 	text-decoration: none;
@@ -342,7 +346,6 @@ main div.template address a {
 }
 #ricostayImg {
 	width: 20rem;
-	margin-bottom: -4px;
 }
 #ricostayCard {
 	width: 80%;
