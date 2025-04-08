@@ -124,7 +124,11 @@ function changeTheme() {
 		marnie.classList.add("marnie");
 		let marnieExists = document.querySelector(".marnie");
 		if(!(marnieExists)) {
-			document.querySelector("aside").appendChild(marnie);
+			sidebar.appendChild(marnie);
+			let hello = document.createElement("p");
+			hello.textContent = "Your overlord says hi!";
+			hello.style = "text-align: center;"
+			sidebar.appendChild(hello);
 		}
 	}
 }
