@@ -419,6 +419,8 @@ main#articlesMain ul li span {
 /* individual articles */
 main.article {
 	padding: 0;
+	display: flex;
+	flex-flow: column nowrap;
 }
 main.article article {
 	padding: 2rem;
@@ -430,7 +432,10 @@ main.article article p {
 }
 main.article img:first-of-type {
 	mask-image: linear-gradient(to right, rgba(0, 0, 0, 1.0) -20%, transparent 100%);
-	width: 100%;
+	width: 98%;
+	align-self: flex-end;
+	margin-top: 1rem;
+	border: 2px solid var(--secondary);
 }
 main.article img:nth-child(n+2) {
 	mask-image: none;
@@ -451,6 +456,16 @@ main.article div.imgRow img {
 }
 main.article div.imgRow img:hover {
 	background-color: var(--accentTwo);
+}
+main.article span.bigText {
+	font-size: 8rem;
+	align-self: center;
+	color: var(--accentOne);
+	cursor: default;
+	margin-top: 1rem;
+}
+main.article h3 {
+	text-align: center;
 }
 
 /* quotes page */
