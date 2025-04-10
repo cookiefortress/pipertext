@@ -9,6 +9,13 @@ function Book(title, author, pages, hasRead) {
 		return `${title} by ${author}, ${pages} pages, ${hasRead ? "has been read" : "not read yet"}`;
 	}
 }
+Book.prototype.changeReadStatus = function(hasRead) {
+	if(this.hasRead === true) this.hasRead = false;
+	else if (this.hasRead === false) this.hasRead = true;
+	else console.log("wtf");
+	document.querySelector("table").remove();
+	createTable(libraryArr);
+}
 function addBook(title, author, pages, hasRead) {
 	let book = new Book(title, author, pages, hasRead);
 	libraryArr.push(book);
@@ -21,6 +28,7 @@ function createTable(arr) {
 
 	for(let book of arr) {
 		let tableRow = document.createElement("tr");
+		tableRow.setAttribute("id", book.bookID);
 		for(let prop in book) {
 			if(typeof book[prop] == "function" || prop == "bookID") break;
 			let tableData = document.createElement("td");
@@ -34,6 +42,34 @@ function createTable(arr) {
 			tableData.style.width = "25%";
 			tableRow.appendChild(tableData);
 		}
+
+		let deleteButton = document.createElement("button");
+		deleteButton.textContent = "x"
+		deleteButton.style.backgroundColor = "red";
+		deleteButton.style.margin = ".4rem 0 0 .3rem"
+		deleteButton.style.width = "1rem"
+		deleteButton.style.borderColor = "red";
+		deleteButton.style.textAlign = "center";
+		deleteButton.addEventListener("click", () => {
+			document.getElementById(book.bookID).remove();
+			let targetID = book.bookID;
+			let newArray = libraryArr.filter(book => book.bookID !== targetID);
+			libraryArr = newArray;
+		});
+
+		changeReadStatusButton = document.createElement("button");
+		changeReadStatusButton.textContent = "✓";
+		changeReadStatusButton.style.backgroundColor = "blue";
+		changeReadStatusButton.style.margin = ".4rem 0 0 .3rem"
+		changeReadStatusButton.style.borderColor = "blue";
+		changeReadStatusButton.style.width = "1rem";
+		changeReadStatusButton.addEventListener("click", () => {
+			book.changeReadStatus();
+
+		});
+
+		tableRow.appendChild(changeReadStatusButton);
+		tableRow.appendChild(deleteButton);
 		table.appendChild(tableRow);
 	}
 	document.querySelector("div#library").appendChild(table);
@@ -88,7 +124,6 @@ function createForm() {
 	submitButton.style.margin = "0 auto";
 	submitButton.addEventListener("click", (event) => {
 		event.preventDefault();
-
 		let title = form.title.value;
 		let author = form.author.value;
 		let pages = parseInt(form.pages.value);
@@ -97,7 +132,6 @@ function createForm() {
 		form.remove();
 		document.querySelector("table").remove();
 		createTable(libraryArr);
-
 	})
 	form.appendChild(submitButton);
 	document.querySelector("article").appendChild(form);
@@ -105,6 +139,7 @@ function createForm() {
 
 addBook("The Hobbit", "J.R.R. Tolkien", 300, true);
 addBook("Yada yada", "Mr Yoda", 120, false);
+addBook("Le monster of snowballs", "The snowball man", 150, false);
 createTable(libraryArr);
 
 let newBookButton = document.querySelector("#newBookButton");
