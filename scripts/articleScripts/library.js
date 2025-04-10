@@ -138,8 +138,6 @@ function createForm() {
 }
 
 addBook("The Hobbit", "J.R.R. Tolkien", 300, true);
-addBook("Yada yada", "Mr Yoda", 120, false);
-addBook("Le monster of snowballs", "The snowball man", 150, false);
 createTable(libraryArr);
 
 let newBookButton = document.querySelector("#newBookButton");

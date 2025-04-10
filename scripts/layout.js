@@ -58,6 +58,11 @@ function createSidebar() {
 		recentPosts.appendChild(recentPostsHeader);
 		
 		createRecentPost(
+			"/html/articles/library.html",
+			"Project - Library",
+			"2025/04/10"
+		)
+		createRecentPost(
 			"/html/articles/semanticHTML.html",
 			"The beauty of semantic HTML",
 			"2025/04/08"
@@ -65,11 +70,6 @@ function createSidebar() {
 		createRecentPost(
 			"/html/articles/microsoft50.html",
 			"50 years of Microsoft",
-			"2025/04/06"
-		)
-		createRecentPost(
-			"/html/articles/touchPipertext.html",
-			"touch pipertext.ptml",
 			"2025/04/06"
 		)
 	}
