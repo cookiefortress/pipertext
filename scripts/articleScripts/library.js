@@ -125,8 +125,11 @@ function createForm() {
 	submitButton.addEventListener("click", (event) => {
 		event.preventDefault();
 		let title = form.title.value;
+		if(title === "") return Error("Empty title");
 		let author = form.author.value;
+		if(author === "") return Error("Empty author");
 		let pages = parseInt(form.pages.value);
+		if(isNaN(pages)) return Error("Number of pages is not a number");
 		let hasRead = form.hasRead.value;
 		addBook(title, author, pages, hasRead);
 		form.remove();
