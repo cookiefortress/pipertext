@@ -130,7 +130,7 @@ function createForm() {
 		if(author === "") return Error("Empty author");
 		let pages = parseInt(form.pages.value);
 		if(isNaN(pages)) return Error("Number of pages is not a number");
-		let hasRead = form.hasRead.value;
+		let hasRead = form.hasRead.checked;
 		addBook(title, author, pages, hasRead);
 		form.remove();
 		document.querySelector("table").remove();
