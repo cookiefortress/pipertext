@@ -6,7 +6,6 @@ const Player = function(name) {
 	else if (name == "Player 2") {
 		marker = "O";
 	}
-	let score = 0;
 
 	return { name, marker };
 };
@@ -66,6 +65,7 @@ const Gameboard = (function() {
 			}
 		}
 		if(markerCount === 9) {
+			Gameboard.clearBoard();
 			return true;
 		}
 		else return false;
@@ -115,8 +115,9 @@ const Game = (function() {
 				p1score++;
 				return result;
 			}
-			Gameboard.checkDraw();
-			return;
+			let draw = Gameboard.checkDraw();
+			if(draw === true)
+			return true;
 		}
 		else if(turn % 2 !== 0) {
 			let validMove = Gameboard.checkValidMove(x, y);
@@ -306,6 +307,16 @@ const drawBoard = (function() {
 	for(let i = 0; i < 3; i++) {
 		document.getElementById(`button${i}`).addEventListener("click", () => {
 			let checkForRefresh = Game.playRound(0, i);
+			if(checkForRefresh === true) {
+				for(let button of buttons) {
+					button.textContent = "";
+				}
+				let scores = Game.getPlayerScores();
+				scoreOne.textContent = scores.p1;
+				scoreTwo.textContent = scores.p2;
+				status.textContent = "Draw!";
+				return;
+			}
 			if(checkForRefresh === "Invalid move") {
 				return;
 			}
@@ -315,7 +326,7 @@ const drawBoard = (function() {
 				console.log(`turn ${turn}`);
 			}
 			else {
-				document.getElementById(`button${i}`).textContent = "Y";
+				document.getElementById(`button${i}`).textContent = "O";
 				console.log(`turn ${turn}`);
 			}
 			if(checkForRefresh === "Player 1 victory" || checkForRefresh === "Player 2 victory") {
@@ -333,6 +344,16 @@ const drawBoard = (function() {
 	for(let i = 3; i < 6; i++) {
 		document.getElementById(`button${i}`).addEventListener("click", () => {
 			let checkForRefresh = Game.playRound(1, i-3);
+			if(checkForRefresh === true) {
+				for(let button of buttons) {
+					button.textContent = "";
+				}
+				let scores = Game.getPlayerScores();
+				scoreOne.textContent = scores.p1;
+				scoreTwo.textContent = scores.p2;
+				status.textContent = "Draw!";
+				return;
+			}
 			if(checkForRefresh === "Invalid move") {
 				return;
 			}
@@ -342,7 +363,7 @@ const drawBoard = (function() {
 				console.log(`turn ${turn}`);
 			}
 			else {
-				document.getElementById(`button${i}`).textContent = "Y";
+				document.getElementById(`button${i}`).textContent = "O";
 				console.log(`turn ${turn}`);
 			}
 			if(checkForRefresh === "Player 1 victory" || checkForRefresh === "Player 2 victory") {
@@ -360,6 +381,16 @@ const drawBoard = (function() {
 	for(let i = 6; i < 9; i++) {
 		document.getElementById(`button${i}`).addEventListener("click", () => {
 			let checkForRefresh = Game.playRound(2, i-6);
+			if(checkForRefresh === true) {
+				for(let button of buttons) {
+					button.textContent = "";
+				}
+				let scores = Game.getPlayerScores();
+				scoreOne.textContent = scores.p1;
+				scoreTwo.textContent = scores.p2;
+				status.textContent = "Draw!";
+				return;
+			}
 			if(checkForRefresh === "Invalid move") {
 				return;
 			}
@@ -369,7 +400,7 @@ const drawBoard = (function() {
 				console.log(`turn ${turn}`);
 			}
 			else if(turn % 2 === 0) {
-				document.getElementById(`button${i}`).textContent = "Y";
+				document.getElementById(`button${i}`).textContent = "O";
 				console.log(`turn ${turn}`);
 			}
 			if(checkForRefresh === "Player 1 victory" || checkForRefresh === "Player 2 victory") {
