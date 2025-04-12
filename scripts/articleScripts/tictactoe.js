@@ -6,6 +6,7 @@ const Player = function(name) {
 	else if (name == "Player 2") {
 		marker = "O";
 	}
+	let score = 0;
 
 	return { name, marker };
 };
@@ -24,9 +25,11 @@ const Gameboard = (function() {
 			if(board[i][0] === board[i][1] && board[i][1] === board[i][2]) {
 				if(board[i][0] === "X") {
 					console.log("Player 1 wins!");
+					return "Player 1 victory";
 				}
 				else if(board[i][0] === "O") {
 					console.log("Player 2 wins!");
+					return "Player 2 victory";
 				}
 			}
 		}
@@ -35,9 +38,11 @@ const Gameboard = (function() {
 			if(board[0][i] === board[1][i] && board[1][i] === board[2][i]) {
 				if(board[0][i] === "X") {
 					console.log("Player 1 wins!");
+					return "Player 1 victory";
 				}
 				else if(board[0][i] === "O") {
 					console.log("Player 2 wins!");
+					return "Player 2 victory";
 				}
 			}
 		}
@@ -45,9 +50,11 @@ const Gameboard = (function() {
 		if(board[0][0] === board[1][1] && board[1][1] === board[2][2] || board[0][2] === board[1][1] && board[1][1] === board[2][0]) {
 			if(board[1][1] === "X") {
 				console.log("Player 1 wins!");
+				return "Player 1 victory";
 			}
 			else if(board[1][1] === "O") {
 				console.log("Player 2 wins!");
+				return "Player 2 victory";
 			}
 		}
 	}
@@ -72,13 +79,23 @@ const Gameboard = (function() {
 	const placeMarker = function(x, y, player) {
 		board[y][x] = `${player.marker}`;
 	}
+	const clearBoard = function() {
+		for(let i = 0; i < 3; i++) {
+			for(let j = 0; j < 3; j++) {
+				board[i][j] = "";
+			}
+		}
+	}
 
-	return { getBoard, checkWin, checkDraw, checkValidMove, placeMarker };
+
+	return { getBoard, checkWin, checkDraw, checkValidMove, placeMarker, clearBoard };
 })();
 
 const Game = (function() {
 	let playerOne = Player("Player 1");
+	let p1score = 0;
 	let playerTwo = Player("Player 2");
+	let p2score = 0;
 	const currentBoard = Gameboard.getBoard();
 	let turn = 0;
 	const playRound = (x, y) => {
@@ -86,11 +103,18 @@ const Game = (function() {
 			let validMove = Gameboard.checkValidMove(x, y);
 			if(validMove === false) {
 				console.log("Invalid move!");
-				return;
+				return "Invalid move";
 			}
 			turn++;
 			Gameboard.placeMarker(x, y, playerOne);
-			Gameboard.checkWin();
+			let result = Gameboard.checkWin();
+			if(result === "Player 1 victory") {
+				console.log("Congratulations player 1!")
+				Gameboard.clearBoard();
+				turn = 0;
+				p1score++;
+				return result;
+			}
 			Gameboard.checkDraw();
 			return;
 		}
@@ -98,11 +122,18 @@ const Game = (function() {
 			let validMove = Gameboard.checkValidMove(x, y);
 			if(validMove === false) {
 				console.log("Invalid move!");
-				return;
+				return "Invalid move";
 			}
 			turn++;
 			Gameboard.placeMarker(x, y, playerTwo);
-			Gameboard.checkWin();
+			let result = Gameboard.checkWin();
+			if(result === "Player 2 victory") {
+				console.log("Congratulations player 2!")
+				Gameboard.clearBoard();
+				turn = 0;
+				p2score++;
+				return result;
+			}
 			Gameboard.checkDraw();
 			return;
 		}
@@ -110,8 +141,14 @@ const Game = (function() {
 	const getTurn = () => {
 		return turn;
 	}
+	const getPlayerScores = () => {
+		return {
+			p1: p1score,
+			p2: p2score
+		}
+	}
 
-	return { currentBoard, playRound, getTurn }
+	return { currentBoard, playRound, getTurn, getPlayerScores }
 })();
 
 const drawBoard = (function() {
@@ -129,11 +166,23 @@ const drawBoard = (function() {
 	scoreOne.style.width = "20%";
 	scoreOne.style.height = "80%";
 	scoreOne.style.border = "3px solid var(--accentTwo)"
+	scoreOne.style.display = "flex";
+	scoreOne.style.justifyContent = "center";
+	scoreOne.style.alignItems = "center";
+	scoreOne.style.fontSize = "2rem";
 
 	let scoreTwo = document.createElement("div");
 	scoreTwo.style.width = "20%";
 	scoreTwo.style.height = "80%";
 	scoreTwo.style.border = "3px solid var(--accentTwo)"
+	scoreTwo.style.display = "flex";
+	scoreTwo.style.justifyContent = "center";
+	scoreTwo.style.alignItems = "center";
+	scoreTwo.style.fontSize = "2rem";
+
+	let scores = Game.getPlayerScores();
+	scoreOne.textContent = scores.p1;
+	scoreTwo.textContent = scores.p2;
 
 	scoreboard.appendChild(scoreOne);
 	scoreboard.appendChild(scoreTwo);
@@ -186,35 +235,60 @@ const drawBoard = (function() {
 	}
 	for(let i = 0; i < 3; i++) {
 		document.getElementById(`button${i}`).addEventListener("click", () => {
-			Game.playRound(0, i);
+			let checkForRefresh = Game.playRound(0, i);
+			if(checkForRefresh === "Invalid move") {
+				return;
+			}
 			turn = Game.getTurn();
 			if(turn % 2 !== 0) {
 				document.getElementById(`button${i}`).textContent = "X";
 				console.log(`turn ${turn}`);
 			}
-			else if(turn % 2 === 0) {
+			else {
 				document.getElementById(`button${i}`).textContent = "Y";
 				console.log(`turn ${turn}`);
+			}
+			if(checkForRefresh === "Player 1 victory" || checkForRefresh === "Player 2 victory") {
+				for(let button of buttons) {
+					button.textContent = "";
+				}
+				let scores = Game.getPlayerScores();
+				scoreOne.textContent = scores.p1;
+				scoreTwo.textContent = scores.p2;
 			}
 		});
 	}
 	for(let i = 3; i < 6; i++) {
 		document.getElementById(`button${i}`).addEventListener("click", () => {
-			Game.playRound(1, i-3);
+			let checkForRefresh = Game.playRound(1, i-3);
+			if(checkForRefresh === "Invalid move") {
+				return;
+			}
 			turn = Game.getTurn();
 			if(turn % 2 !== 0) {
 				document.getElementById(`button${i}`).textContent = "X";
 				console.log(`turn ${turn}`);
 			}
-			else if(turn % 2 === 0) {
+			else {
 				document.getElementById(`button${i}`).textContent = "Y";
 				console.log(`turn ${turn}`);
+			}
+			if(checkForRefresh === "Player 1 victory" || checkForRefresh === "Player 2 victory") {
+				for(let button of buttons) {
+					button.textContent = "";
+				}
+				let scores = Game.getPlayerScores();
+				scoreOne.textContent = scores.p1;
+				scoreTwo.textContent = scores.p2;
 			}
 		});
 	}
 	for(let i = 6; i < 9; i++) {
 		document.getElementById(`button${i}`).addEventListener("click", () => {
-			Game.playRound(2, i-6);
+			let checkForRefresh = Game.playRound(2, i-6);
+			if(checkForRefresh === "Invalid move") {
+				return;
+			}
 			turn = Game.getTurn();
 			if(turn % 2 !== 0) {
 				document.getElementById(`button${i}`).textContent = "X";
@@ -224,7 +298,17 @@ const drawBoard = (function() {
 				document.getElementById(`button${i}`).textContent = "Y";
 				console.log(`turn ${turn}`);
 			}
+			if(checkForRefresh === "Player 1 victory" || checkForRefresh === "Player 2 victory") {
+				for(let button of buttons) {
+					button.textContent = "";
+				}
+				let scores = Game.getPlayerScores();
+				scoreOne.textContent = scores.p1;
+				scoreTwo.textContent = scores.p2;
+			}
 		});
 	}
+
+	
 	
 })();
