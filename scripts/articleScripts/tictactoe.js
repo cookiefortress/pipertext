@@ -152,6 +152,75 @@ const Game = (function() {
 })();
 
 const drawBoard = (function() {
+	let changeNameDiv = document.querySelector("#changeName");
+	changeNameDiv.style.display = "flex";
+	changeNameDiv.style.justifyContent = "space-between";
+
+	let nameInput = document.createElement("input");
+	nameInput.type = "text";
+	nameInput.style.width = "8rem";
+	nameInput.maxLength = "15"
+
+	let changeNameButton = document.createElement("button");
+	changeNameButton.textContent = "player 1 - change name";
+	changeNameButton.style.backgroundColor = "var(--secondary)";
+	changeNameButton.style.color = "var(--primary)";
+	changeNameButton.style.width = "10rem";
+
+	let divOne = document.querySelector("#one");
+	divOne.style.display = "flex";
+	divOne.style.flexDirection = "column";
+	divOne.style.alignItems = "center";
+	divOne.style.gap = ".5rem";
+	divOne.appendChild(nameInput);
+	divOne.appendChild(changeNameButton);
+	let p1;
+	let displayP1name = document.createElement("div");
+	changeNameButton.addEventListener("click", () => {
+		p1name = nameInput.value;
+		p1 = p1name;
+		displayP1name.textContent = p1name;
+		divOne.appendChild(displayP1name);
+	});
+
+	let status = document.createElement("div");
+	status.textContent = "Start playing!";
+	three.appendChild(status);
+
+	let nameInputTwo = document.createElement("input");
+	nameInputTwo.type = "text";
+	nameInputTwo.style.width = "8rem";
+	nameInputTwo.maxLength = "15"
+
+	let changeNameButtonTwo = document.createElement("button");
+	changeNameButtonTwo.textContent = "player 2 - change name";
+	changeNameButtonTwo.style.backgroundColor = "var(--secondary)";
+	changeNameButtonTwo.style.color = "var(--primary)";
+	changeNameButtonTwo.style.width = "10rem";
+
+	let divTwo = document.querySelector("#two");
+	divTwo.style.display = "flex";
+	divTwo.style.flexDirection = "column";
+	divTwo.style.gap = ".5rem";
+	divTwo.style.alignItems = "center";
+	divTwo.appendChild(nameInputTwo);
+	divTwo.appendChild(changeNameButtonTwo);
+	let p2;
+	let displayP2name = document.createElement("div");
+	changeNameButtonTwo.addEventListener("click", () => {
+		p2name = nameInputTwo.value;
+		p2 = p2name;
+		displayP2name.textContent = p2name;
+		divTwo.appendChild(displayP2name);
+	});
+
+	if(p1 === undefined) {
+		p1 = "Player 1"
+	}
+	if(p2 === undefined) {
+		p2 = "Player 2"
+	}
+
 	let scoreboard = document.querySelector("#scoreboard");
 	scoreboard.style.height = "5rem";
 	scoreboard.style.width = "50%";
@@ -220,7 +289,8 @@ const drawBoard = (function() {
 			button.style.borderRight = "4px solid var(--accentOne)"
 		}
 	}
-	let buttons = document.querySelectorAll("button");
+	const tictactoe = document.querySelector("#tictactoe");
+	let buttons = tictactoe.querySelectorAll("button");
 	for(let i = 0; i < buttons.length; i++) {
 		buttons[i].style.backgroundColor = "var(--primary)"
 		buttons[i].addEventListener("mouseenter", () => {
@@ -252,6 +322,8 @@ const drawBoard = (function() {
 				for(let button of buttons) {
 					button.textContent = "";
 				}
+				if(checkForRefresh === "Player 1 victory") status.textContent = `${p1} wins!`;
+				else if (checkForRefresh === "Player 2 victory") status.textContent = `${p2} wins!`;
 				let scores = Game.getPlayerScores();
 				scoreOne.textContent = scores.p1;
 				scoreTwo.textContent = scores.p2;
@@ -277,6 +349,8 @@ const drawBoard = (function() {
 				for(let button of buttons) {
 					button.textContent = "";
 				}
+				if(checkForRefresh === "Player 1 victory") status.textContent = `${p1} wins!`;
+				else if (checkForRefresh === "Player 2 victory") status.textContent = `${p2} wins!`;
 				let scores = Game.getPlayerScores();
 				scoreOne.textContent = scores.p1;
 				scoreTwo.textContent = scores.p2;
@@ -302,6 +376,8 @@ const drawBoard = (function() {
 				for(let button of buttons) {
 					button.textContent = "";
 				}
+				if(checkForRefresh === "Player 1 victory") status.textContent = `${p1} wins!`;
+				else if (checkForRefresh === "Player 2 victory") status.textContent = `${p2} wins!`;
 				let scores = Game.getPlayerScores();
 				scoreOne.textContent = scores.p1;
 				scoreTwo.textContent = scores.p2;
