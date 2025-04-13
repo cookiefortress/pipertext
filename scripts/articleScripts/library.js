@@ -12,7 +12,7 @@ function Book(title, author, pages, hasRead) {
 Book.prototype.changeReadStatus = function(hasRead) {
 	if(this.hasRead === true) this.hasRead = false;
 	else if (this.hasRead === false) this.hasRead = true;
-	else console.log("wtf");
+	else console.log("how");
 	document.querySelector("table").remove();
 	createTable(libraryArr);
 }
