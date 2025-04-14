@@ -1,14 +1,27 @@
 let libraryArr = [];
-function Book(title, author, pages, hasRead) {
-	this.title = title;
-	this.author = author;
-	this.pages = pages;
-	this.hasRead = hasRead;
-	this.bookID = crypto.randomUUID();
-	this.getInfo = function() {
-		return `${title} by ${author}, ${pages} pages, ${hasRead ? "has been read" : "not read yet"}`;
+// function Book(title, author, pages, hasRead) {
+// 	this.title = title;
+// 	this.author = author;
+// 	this.pages = pages;
+// 	this.hasRead = hasRead;
+// 	this.bookID = crypto.randomUUID();
+// 	this.getInfo = function() {
+// 		return `${title} by ${author}, ${pages} pages, ${hasRead ? "has been read" : "not read yet"}`;
+// 	}
+// }
+class Book {
+	constructor(title, author, pages, hasRead) {
+		this.title = title;
+		this.author = author;
+		this.pages = pages;
+		this.hasRead = hasRead;
+		this.bookID = crypto.randomUUID();
+	}
+	getInfo() {
+		return `${this.title} by ${this.author}. ${this.pages} pages long. ${this.hasRead ? "has been read" : 'not read yet'}`;
 	}
 }
+
 Book.prototype.changeReadStatus = function(hasRead) {
 	if(this.hasRead === true) this.hasRead = false;
 	else if (this.hasRead === false) this.hasRead = true;
