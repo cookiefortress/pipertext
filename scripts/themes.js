@@ -68,7 +68,7 @@ function changeTheme() {
 		document.documentElement.style.cssText = `
 			--primary: #4c5844;
 			--secondary: #968732;
-			--accentOne: #4c5844;
+			--accentOne:rgb(103, 117, 94);
 			--accentTwo: #4c5844;
 			--gradientTopLeft: #4c5844;`
 	}
