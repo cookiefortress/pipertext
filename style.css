@@ -327,7 +327,6 @@ a:visited {
 a:hover {
 	color: var(--accentOne);
 	font-weight: bolder;
-	text-shadow: 1px 1px 0px var(--primary);
 }
 
 /* homepage */

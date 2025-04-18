@@ -153,6 +153,7 @@ function createHeader() {
                 <option value="psycho">psycho</option>
                 <option value="cmd">cmd</option>
 				<option value="marnie">marnie</option>
+				<option value="freeDOS">freeDOS</option>
             </select>
             <select name="friends" id="friends">
                 <option value="">partners</option>

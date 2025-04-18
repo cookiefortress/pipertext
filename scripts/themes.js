@@ -131,4 +131,13 @@ function changeTheme() {
 			sidebar.appendChild(hello);
 		}
 	}
+	else if (themeSelector.value == "freeDOS") {
+		console.log("freeDOS theme selected!");
+		document.documentElement.style.cssText = `
+			--primary: #acaaac;
+			--secondary: #000000;
+			--accentOne: #0000ac;
+			--accentTwo: #00aaac;
+			--gradientTopLeft: #acaaac;`
+	}
 }
