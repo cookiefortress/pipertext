@@ -185,6 +185,22 @@ footer {
 	gap: 0.25rem;
 	padding: 2rem;
 }
+.dashboard {
+	color: var(--light);
+	background-color: black;
+	background: linear-gradient(rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.34)), url(/img/spacex.gif);
+	border: 2px ridge var(--accentOne);
+	width: 8.875rem;
+	height: 10rem;
+	padding: 0.2rem;
+	text-align: center;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+  }
+  
 
 /* main content, all pages */
 main {
@@ -559,3 +575,4 @@ main div#contactMain address a {
 	background-color: var(--secondary);
 	border: 4px outset var(--winGrey);
 }
+

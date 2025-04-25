@@ -1,42 +1,38 @@
-let pipertextIcon = "<img src='/img/pipertext.png' alt='Pipertext 88x31 icon' width='88px'>";
-function writeUTC() {
-	UTC = getUTC();
-	dashboard.innerHTML = "UTC " + UTC + pipertextIcon;
-	setTimeout(writeUTC, 1000);
-}
-
-function getUTC() {
-	const now = new Date();
-	const year = now.getUTCFullYear();
-	const month = now.getUTCMonth();
-	const date = now.getUTCDate();
-	const hours = now.getUTCHours();
-	const minutes = now.getUTCMinutes();
-	const seconds = now.getUTCSeconds();
-	let UTC = (`${hours}:${minutes}:${seconds} ${year}-${month + 1}-${date}`);
-	return UTC;
-}
-
-let dashboard = document.createElement("div");
-// create the dashboard with the time in UTC
-function createDashboard() {
-	dashboard.style.color = "var(--light)";
-	dashboard.style.backgroundColor = "black";
-	dashboard.style.background = `linear-gradient(rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.34)), url(/img/spacex.gif)`;
-	dashboard.style.border = "2px ridge var(--accentOne)";
-	dashboard.style.width = "8.875rem";
-	dashboard.style.height = "10rem";
-	dashboard.style.padding = ".2rem";
-	dashboard.style.textAlign = "center";
-	dashboard.style.display = "flex";
-	dashboard.style.flexFlow = "column nowrap";
-	dashboard.style.justifyContent = "center";
-	dashboard.style.alignItems = "center";
-	dashboard.style.gap = ".5rem";
-	dashboard.classList.add("dashboard");
-}
-
 function createSidebar() {
+	const mainMarquee = document.createElement("marquee");
+	mainMarquee.innerHTML = `
+	<img src="/gif/bestvw.gif" alt="Best viewed with a computer and a monitor!">
+    <img src="/gif/fftake.gif" alt="Firefox - take back the web!">
+    <img src="/gif/css2.gif" alt="Made with CSS!">
+    <img src="/gif/gothtml.gif" alt="Got HTML?">`
+
+	function createDashboard() {
+		let dashboard = document.createElement("div");
+		dashboard.classList.add("dashboard");
+		
+		function writeUTC() {
+			let pipertextIcon = "<img src='/img/pipertext.png' alt='Pipertext 88x31 icon' width='88px'>";
+			UTC = getUTC();
+			dashboard.innerHTML = "UTC " + UTC + pipertextIcon;
+			setTimeout(writeUTC, 1000);
+		}
+		
+		function getUTC() {
+			const now = new Date();
+			const year = now.getUTCFullYear();
+			const month = now.getUTCMonth();
+			const date = now.getUTCDate();
+			const hours = now.getUTCHours();
+			const minutes = now.getUTCMinutes();
+			const seconds = now.getUTCSeconds();
+			let UTC = (`${hours}:${minutes}:${seconds} ${year}-${month + 1}-${date}`);
+			return UTC;
+		}
+	
+		writeUTC();
+		return dashboard;
+	}
+
 	function createRecentPost(href, title, date) {
 		let recentPost = document.createElement("div");
 		recentPost.classList.add("recentArticle");
@@ -51,6 +47,7 @@ function createSidebar() {
 		recentPost.appendChild(postDate);
 		recentPosts.appendChild(recentPost);
 	}
+
 	function createRecentPosts() {
 		let recentPosts = document.createElement("div");
 		let recentPostsHeader = document.createElement("h3");
@@ -74,50 +71,16 @@ function createSidebar() {
 		)
 	}
 
-	let mainMarquee = document.createElement("marquee");
-	mainMarquee.innerHTML = `
-	<img src="/gif/bestvw.gif" alt="Best viewed with a computer and a monitor!">
-    <img src="/gif/fftake.gif" alt="Firefox - take back the web!">
-    <img src="/gif/css2.gif" alt="Made with CSS!">
-    <img src="/gif/gothtml.gif" alt="Got HTML?">`
-
 	let recentPosts = document.createElement("div");
 	let recentPostsHeader = document.createElement("h3");
 	recentPostsHeader.textContent = "Recent posts";
 	recentPosts.appendChild(recentPostsHeader);
 	createRecentPosts();
 
-	// let pushCounter = document.createElement("div");
-	// pushCounter.style.display = "flex";
-	// pushCounter.style.flexDirection = "column";
-	// pushCounter.style.alignItems = "center";
-	// let pushCounterBtn = document.createElement("button");
-	// pushCounterBtn.style.width = "100px";
-	// pushCounterBtn.style.height = "30px";
-	// pushCounterBtn.style.marginTop = ".3rem";
-	// pushCounterBtn.style.borderRadius = "0";
-	// pushCounterBtn.style.backgroundColor = "var(--accentOne)";
-	// pushCounterBtn.style.color = "var(--secondary)";
-	// pushCounterBtn.style.borderColor = "var(--primary)";
-	// pushCounterBtn.textContent = "+1";
-	// let counter = document.createElement("p");
-	// counter.style.width = "150px";
-	// counter.style.height = "auto";
-	// counter.style.border = "3px ridge var(--accentOne)"
-	// counter.style.padding = ".4rem";
-	// counter.style.backgroundColor = "var(--secondary)";
-	// counter.style.color = "var(--primary)";
-	// counter.style.textAlign = "center";
-	// counter.style.marginTop = ".5rem";
-	// counter.textContent = "x";
-	// pushCounter.appendChild(counter);
-	// pushCounter.appendChild(pushCounterBtn);
-
 	// append the marquee, dashboard, and recentPosts to the sidebar
 	sidebar.appendChild(mainMarquee);
-	sidebar.appendChild(dashboard);
+	sidebar.appendChild(createDashboard());
 	sidebar.appendChild(recentPosts);
-	// sidebar.appendChild(pushCounter);
 }
 
 function createFooter() {
@@ -133,6 +96,7 @@ function createFooter() {
             </a>
         </p>`
 }
+
 function createHeader() {
 	let header = document.querySelector("header");
 	header.innerHTML = `
@@ -164,6 +128,7 @@ function createHeader() {
             <img src="/img/pipe.png" alt="Pipertext logo">
         </div>`
 }
+
 function createNav() {
 	let nav = document.querySelector("nav");
 	nav.innerHTML = `
@@ -179,9 +144,7 @@ function createNav() {
 
 // select the sidebar
 const sidebar = document.querySelector("aside");
-createDashboard();
 createHeader();
 createSidebar();
 createNav();
 createFooter();
-writeUTC();
