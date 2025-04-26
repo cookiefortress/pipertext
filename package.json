@@ -1,0 +1,26 @@
+{
+  "name": "pipertext",
+  "version": "1.0.0",
+  "description": "Pipertext - Keeping the web's ember burning",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cookiefortress/pipertext.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cookiefortress/pipertext/issues"
+  },
+  "homepage": "https://github.com/cookiefortress/pipertext#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.25.1",
+    "eslint": "^9.25.1",
+    "globals": "^16.0.0",
+    "prettier": "3.5.3"
+  }
+}

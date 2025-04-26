@@ -1,61 +1,134 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>pipertext</title>
-    <link rel="icon" type="image/x-icon" href="/img/pipe.png">
-    <link rel="icon" type="image/png" href="/img/pipe.png">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/x-icon" href="/img/pipe.png" />
+    <link rel="icon" type="image/png" href="/img/pipe.png" />
+    <link rel="stylesheet" href="/style.css" />
     <script src="/scripts/layout.js" defer></script>
     <script src="/scripts/themes.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <header></header>
-        <nav></nav>
-        <aside></aside>
-	
-			<main class="article">
-				<span class="bigText">&lt;article&gt;</span>
-				<article>
-					<h2 class="articleHeader">The beauty of semantic HTML</h2>
-					<time>UTC 2025-04-08 - April 8<sup>th</sup>, 2025</time>
-					<hr>
-					<p>
-						Yea yea, the <em>semantic web</em> is a modern idea! What's old-school about that?
-					</p>
-					<p>
-						Well, I should first admit that I am a beginner at web development. I can make an okay static page... and that's about where my expertise ends. I want to get better of course, but I find myself really wanting to get the fundamentals down before I delve into anything beyond my feeble brain's capabilties.
-					</p>
-					<p>
-						And fortunately for me, I find <a href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener noreferrer">HTML</a> and <a href="https://en.wikipedia.org/wiki/CSS" target="_blank" rel="noopener noreferrer">CSS</a> alone to be a lot of fun, and really interesting. I suppose it's the opposite for most, but I like "handmade" stuff, especially really good "handmade" stuff. I have yet to really delve into frameworks and the like, but it seems to me it might take my enjoyment out of things a bit. Again, just a me thing. The creation of a webpage using only essential tooling is oddly satisfying to me. Plus... it's old-school. :-&rpar;
-					</p>
-					<p>
-						Maybe that explains why I find HTML interesting. So many tags, yet we choose to just <code>&lt;div&gt;</code> things up and call it a day. As of writing this post, there are <a href="https://www.w3schools.com/tags/" target="_blank" rel="noreferrer noopener">123~ tags</a> standardized in <a href="https://en.wikipedia.org/wiki/HTML5" target="_blank" rel="noopener noreferrer">HTML5</a>. This doesn't even include tags such as <code>&lt;marquee&gt;</code> (which Pipertext uses, if you haven't noticed) which are considered deprecated, albeit still often functional on most of the major browsers.
-					</p>
-					<h3>Why they're useful</h3>
-					<p>
-						First of all, inspect this page, open the <code>&lt;div&gt;</code> with a class of "container" and look at the stunning, beautiful, expertly-crafted layout. Hear that clapping coming from the other room? They just saw my layout too.
-					</p>
-					<p>
-						But seriously, it's just so clean, so easy to navigate. Sure, that's largely chalked up to my use of <a href="https://en.wikipedia.org/wiki/CSS_grid_layout" target="_blank" rel="noopener noreferrer">CSS grid</a>, but it's still just so much prettier to my eye than a bunch of <code>&lt;div&gt;</code>s with class names designated differently among developers. See, there's my footer, it's in the <code>&lt;footer&gt;</code> tag. Woah dude, where's your sidebar?! Well, it's in the <code>&lt;aside&gt;</code> tag, of course!
-					</p>
-					<p>
-						Your CSS will be cleaner as a result as well. Just type <code>main &lcub;&rcub;</code> and you're good to go. I suppose it doesn't really matter if it's a codebase only <em>you</em> will be maintaining, but if everyone always wrote their HTML like this, maintaining other's work would probably become a million times easier.
-					</p>
-					<p>
-						Some of them are admittedly goofy and seem unnecessary. Take for instance the <code>&lt;dfn&gt;</code> tag, which is short for "definition element". It's supposed to represent a word that is to be defined within the context of some part of a page. I mean, cool... but is anyone actually going to remember to do that? Probably not. I would imagine tags like this <em>do</em> see their use in pages where accessibility is critical, however.
-					</p>
-					<p>
-						In conclusion, semantic HTML is simply <code>&lt;div&gt;</code>ine!
-					</p>
-				</article>
-				<hr width="700px" style="align-self: center; margin-top: 0;margin-bottom: 1rem;">
-				<span class="bigText" style="margin: 0; margin-bottom: 1.5rem;">&lt;/article&gt;</span>
-			</main>
-	
-		<footer></footer>
-	</div>
-</body>
+      <header></header>
+      <nav></nav>
+      <aside></aside>
+
+      <main class="article">
+        <span class="bigText">&lt;article&gt;</span>
+        <article>
+          <h2 class="articleHeader">The beauty of semantic HTML</h2>
+          <time>UTC 2025-04-08 - April 8<sup>th</sup>, 2025</time>
+          <hr />
+          <p>
+            Yea yea, the <em>semantic web</em> is a modern idea! What's
+            old-school about that?
+          </p>
+          <p>
+            Well, I should first admit that I am a beginner at web development.
+            I can make an okay static page... and that's about where my
+            expertise ends. I want to get better of course, but I find myself
+            really wanting to get the fundamentals down before I delve into
+            anything beyond my feeble brain's capabilties.
+          </p>
+          <p>
+            And fortunately for me, I find
+            <a
+              href="https://en.wikipedia.org/wiki/HTML"
+              target="_blank"
+              rel="noopener noreferrer"
+              >HTML</a
+            >
+            and
+            <a
+              href="https://en.wikipedia.org/wiki/CSS"
+              target="_blank"
+              rel="noopener noreferrer"
+              >CSS</a
+            >
+            alone to be a lot of fun, and really interesting. I suppose it's the
+            opposite for most, but I like "handmade" stuff, especially really
+            good "handmade" stuff. I have yet to really delve into frameworks
+            and the like, but it seems to me it might take my enjoyment out of
+            things a bit. Again, just a me thing. The creation of a webpage
+            using only essential tooling is oddly satisfying to me. Plus... it's
+            old-school. :-&rpar;
+          </p>
+          <p>
+            Maybe that explains why I find HTML interesting. So many tags, yet
+            we choose to just <code>&lt;div&gt;</code> things up and call it a
+            day. As of writing this post, there are
+            <a
+              href="https://www.w3schools.com/tags/"
+              target="_blank"
+              rel="noreferrer noopener"
+              >123~ tags</a
+            >
+            standardized in
+            <a
+              href="https://en.wikipedia.org/wiki/HTML5"
+              target="_blank"
+              rel="noopener noreferrer"
+              >HTML5</a
+            >. This doesn't even include tags such as
+            <code>&lt;marquee&gt;</code> (which Pipertext uses, if you haven't
+            noticed) which are considered deprecated, albeit still often
+            functional on most of the major browsers.
+          </p>
+          <h3>Why they're useful</h3>
+          <p>
+            First of all, inspect this page, open the
+            <code>&lt;div&gt;</code> with a class of "container" and look at the
+            stunning, beautiful, expertly-crafted layout. Hear that clapping
+            coming from the other room? They just saw my layout too.
+          </p>
+          <p>
+            But seriously, it's just so clean, so easy to navigate. Sure, that's
+            largely chalked up to my use of
+            <a
+              href="https://en.wikipedia.org/wiki/CSS_grid_layout"
+              target="_blank"
+              rel="noopener noreferrer"
+              >CSS grid</a
+            >, but it's still just so much prettier to my eye than a bunch of
+            <code>&lt;div&gt;</code>s with class names designated differently
+            among developers. See, there's my footer, it's in the
+            <code>&lt;footer&gt;</code> tag. Woah dude, where's your sidebar?!
+            Well, it's in the <code>&lt;aside&gt;</code> tag, of course!
+          </p>
+          <p>
+            Your CSS will be cleaner as a result as well. Just type
+            <code>main &lcub;&rcub;</code> and you're good to go. I suppose it
+            doesn't really matter if it's a codebase only <em>you</em> will be
+            maintaining, but if everyone always wrote their HTML like this,
+            maintaining other's work would probably become a million times
+            easier.
+          </p>
+          <p>
+            Some of them are admittedly goofy and seem unnecessary. Take for
+            instance the <code>&lt;dfn&gt;</code> tag, which is short for
+            "definition element". It's supposed to represent a word that is to
+            be defined within the context of some part of a page. I mean,
+            cool... but is anyone actually going to remember to do that?
+            Probably not. I would imagine tags like this <em>do</em> see their
+            use in pages where accessibility is critical, however.
+          </p>
+          <p>
+            In conclusion, semantic HTML is simply <code>&lt;div&gt;</code>ine!
+          </p>
+        </article>
+        <hr
+          width="700px"
+          style="align-self: center; margin-top: 0; margin-bottom: 1rem"
+        />
+        <span class="bigText" style="margin: 0; margin-bottom: 1.5rem"
+          >&lt;/article&gt;</span
+        >
+      </main>
+
+      <footer></footer>
+    </div>
+  </body>
 </html>
