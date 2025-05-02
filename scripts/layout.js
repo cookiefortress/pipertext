@@ -17,7 +17,7 @@ function createSidebar() {
     dashboard.appendChild(pipertextIcon);
 
     function writeUTC() {
-      UTC = getUTC();
+      let UTC = getUTC();
       UTCtext.innerHTML = "UTC " + UTC;
       setTimeout(writeUTC, 1000);
     }
@@ -60,17 +60,17 @@ function createSidebar() {
     recentPosts.appendChild(recentPostsHeader);
 
     createRecentPost(
-      "/html/articles/tictactoeRevisited.html",
+      "/html/tictactoeRevisited.html",
       "Project - Tic Tac Toe Revisited",
       "2025/04/25",
     );
     createRecentPost(
-      "/html/articles/todo.html",
+      "/html/todo.html",
       "Project - Todo List",
       "2025/04/20",
     );
     createRecentPost(
-      "/html/articles/tictactoe.html",
+      "/html/tictactoe.html",
       "Project - Tic Tac Toe",
       "2025/04/12",
     );
@@ -138,13 +138,13 @@ function createNav() {
   let nav = document.querySelector("nav");
   nav.innerHTML = `
 		<ul>
-        	<li><a href="/index.html">home</a></li>
-            <li><a href="/resource/resource.html">resource</a></li>
-            <li><a href="/html/articles.html">articles</a></li>
-            <li><a href="/html/quotes.html">quotes</a></li>
-            <li><a href="/html/about.html">about</a></li>
-            <li><a href="/html/contact.html">contact</a></li>
-        </ul>`;
+      <li><a href="/index.html#homepage" id="navHome">home</a></li>
+      <li><a href="/index.html#resource" id="navResource">resource</a></li>
+      <li><a href="/index.html#articles" id="navArticles">articles</a></li>
+      <li><a href="/index.html#quotes" id="navQuotes">quotes</a></li>
+      <li><a href="/index.html#about" id="navAbout">about</a></li>
+      <li><a href="/index.html#contact" id="navContact">contact</a></li>
+    </ul>`;
 }
 
 // select the sidebar
@@ -153,3 +153,4 @@ createHeader();
 createSidebar();
 createNav();
 createFooter();
+
