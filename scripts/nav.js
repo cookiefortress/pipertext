@@ -318,38 +318,26 @@ window.addEventListener("DOMContentLoaded", () => {
   if(window.location.hash === "#homepage") {
     main.innerHTML = homepage;
     main.id = "homeMain";
-    main.className = "";
-    window.location.hash = "homepage";
   }
   else if(window.location.hash === "#resource") {
     main.innerHTML = resource;
-    window.location.hash = "resource";
     main.id = "resourceMain";
-    main.className = "";
   }
   else if(window.location.hash === "#articles") {
     main.innerHTML = articles;
-    window.location.hash = "articles";
     main.id = "articlesMain";
-    main.className = "";
   }
   else if(window.location.hash === "#quotes") {
     main.innerHTML = quotes;
-    window.location.hash = "quotes";
     main.id = "quotesMain";
-    main.className = "";
   }
   else if(window.location.hash === "#about") {
     main.innerHTML = about;
-    window.location.hash = "about";
     main.id = "aboutMain";
-    main.className = "";
   }
   else if(window.location.hash === "#contact") {
     main.innerHTML = contact;
-    window.location.hash = "contact";
     main.id = "contactMain";
-    main.className = "";
   }
 });
 
