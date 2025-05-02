@@ -315,7 +315,10 @@ const contact = `
 	`
 
 window.addEventListener("DOMContentLoaded", () => {
-  if(window.location.hash === "#homepage") {
+  if (document.referrer === 'www.pipertext.net/') {
+    return;
+  }
+  else if(window.location.hash === "#homepage") {
     main.innerHTML = homepage;
     main.id = "homeMain";
   }
@@ -347,7 +350,6 @@ document.querySelector("#navHome").addEventListener("click", () => {
   }
   main.innerHTML = homepage;
   main.id = "homeMain";
-  main.className = "";
   window.location.hash = "homepage";
 });
 
@@ -358,7 +360,6 @@ document.querySelector("#navResource").addEventListener("click", () => {
   main.innerHTML = resource;
   window.location.hash = "resource";
 	main.id = "resourceMain";
-  main.className = "";
 });
 
 document.querySelector("#navArticles").addEventListener("click", () => {
@@ -368,7 +369,6 @@ document.querySelector("#navArticles").addEventListener("click", () => {
   main.innerHTML = articles;
   window.location.hash = "articles";
 	main.id = "articlesMain";
-  main.className = "";
 });
 
 document.querySelector("#navQuotes").addEventListener("click", () => {
@@ -378,7 +378,6 @@ document.querySelector("#navQuotes").addEventListener("click", () => {
   main.innerHTML = quotes;
   window.location.hash = "quotes";
 	main.id = "quotesMain";
-  main.className = "";
 });
 
 document.querySelector("#navAbout").addEventListener("click", () => {
@@ -388,7 +387,6 @@ document.querySelector("#navAbout").addEventListener("click", () => {
   main.innerHTML = about;
   window.location.hash = "about";
 	main.id = "aboutMain";
-  main.className = "";
 });
 
 document.querySelector("#navContact").addEventListener("click", () => {
@@ -398,5 +396,4 @@ document.querySelector("#navContact").addEventListener("click", () => {
   main.innerHTML = contact;
   window.location.hash = "contact";
 	main.id = "contactMain";
-  main.className = "";
 })
