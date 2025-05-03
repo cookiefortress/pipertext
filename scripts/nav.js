@@ -315,33 +315,62 @@ const contact = `
 	`
 
 function renderContentFromHash() {
-  const hash = window.location.hash;
-  if (hash === "#homepage") {
-    main.innerHTML = homepage;
-    main.id = "homeMain";
-  } else if (hash === "#resource") {
-    main.innerHTML = resource;
-    main.id = "resourceMain";
-  } else if (hash === "#articles") {
-    main.innerHTML = articles;
-    main.id = "articlesMain";
-  } else if (hash === "#quotes") {
-    main.innerHTML = quotes;
-    main.id = "quotesMain";
-  } else if (hash === "#about") {
-    main.innerHTML = about;
-    main.id = "aboutMain";
-  } else if (hash === "#contact") {
-    main.innerHTML = contact;
-    main.id = "contactMain";
+  switch (window.location.hash) {
+    case "#homepage":
+      main.innerHTML = homepage;
+      main.id = "homeMain";
+      break;
+    case "#resource":
+      main.innerHTML = resource;
+      main.id = "resourceMain";
+      break;
+    case "#articles":
+      main.innerHTML = articles;
+      main.id = "articlesMain";
+      break;
+    case "#quotes":
+      main.innerHTML = quotes;
+      main.id = "quotesMain";
+      break;
+    case "#about":
+      main.innerHTML = about;
+      main.id = "aboutMain";
+      break;
+    case "#contact":
+      main.innerHTML = contact;
+      main.id = "contactMain";
+      break;
+    default:
+      window.location.hash = "#homepage"; // fallback
   }
 }
-  
-window.addEventListener("DOMContentLoaded", renderContentFromHash);
-window.addEventListener("hashchange", renderContentFromHash);
 
 window.addEventListener("DOMContentLoaded", () => {
   if (!window.location.hash) {
     window.location.hash = "#homepage";
+  } else {
+    renderContentFromHash();
   }
+});
+
+window.addEventListener("hashchange", renderContentFromHash);
+
+document.querySelector("#navHome").addEventListener("click", () => {
+  window.location.hash = "homepage";
+});
+document.querySelector("#navResource").addEventListener("click", () => {
+  window.location.hash = "resource";
+});
+document.querySelector("#navArticles").addEventListener("click", () => {
+  window.location.hash = "articles";
+});
+document.querySelector("#navQuotes").addEventListener("click", () => {
+  window.location.hash = "quotes";
+});
+document.querySelector("#navAbout").addEventListener("click", () => {
+  window.location.hash = "about";
+});
+
+document.querySelector("#navContact").addEventListener("click", () => {
+  window.location.hash = "contact";
 });
