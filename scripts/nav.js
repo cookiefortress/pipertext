@@ -344,7 +344,8 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-document.querySelector("#navHome").addEventListener("click", () => {
+document.querySelector("#navHome").addEventListener("click", (e) => {
+  e.preventDefault();
   if(window.location.hash === "#homepage") {
     return;
   }
@@ -353,7 +354,8 @@ document.querySelector("#navHome").addEventListener("click", () => {
   window.location.hash = "homepage";
 });
 
-document.querySelector("#navResource").addEventListener("click", () => {
+document.querySelector("#navResource").addEventListener("click", (e) => {
+  e.preventDefault();
   if(window.location.hash === "#resource") {
     return;
   }
@@ -362,7 +364,8 @@ document.querySelector("#navResource").addEventListener("click", () => {
 	main.id = "resourceMain";
 });
 
-document.querySelector("#navArticles").addEventListener("click", () => {
+document.querySelector("#navArticles").addEventListener("click", (e) => {
+  e.preventDefault();
   if(window.location.hash === "#articles") {
     return;
   }
@@ -371,7 +374,8 @@ document.querySelector("#navArticles").addEventListener("click", () => {
 	main.id = "articlesMain";
 });
 
-document.querySelector("#navQuotes").addEventListener("click", () => {
+document.querySelector("#navQuotes").addEventListener("click", (e) => {
+  e.preventDefault();
   if(window.location.hash === "#quotes") {
     return;
   }
@@ -380,7 +384,8 @@ document.querySelector("#navQuotes").addEventListener("click", () => {
 	main.id = "quotesMain";
 });
 
-document.querySelector("#navAbout").addEventListener("click", () => {
+document.querySelector("#navAbout").addEventListener("click", (e) => {
+  e.preventDefault();
   if(window.location.hash === "#about") {
     return;
   }
@@ -389,7 +394,8 @@ document.querySelector("#navAbout").addEventListener("click", () => {
 	main.id = "aboutMain";
 });
 
-document.querySelector("#navContact").addEventListener("click", () => {
+document.querySelector("#navContact").addEventListener("click", (e) => {
+  e.preventDefault();
   if(window.location.hash === "#contact") {
     return;
   }
