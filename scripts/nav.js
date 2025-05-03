@@ -363,16 +363,20 @@ document.querySelector("#navResource").addEventListener("click", (e) => {
   e.preventDefault();
   window.location.hash = "resource";
 });
-document.querySelector("#navArticles").addEventListener("click", () => {
+document.querySelector("#navArticles").addEventListener("click", (e) => {
+  e.preventDefault();
   window.location.hash = "articles";
 });
-document.querySelector("#navQuotes").addEventListener("click", () => {
+document.querySelector("#navQuotes").addEventListener("click", (e) => {
+  e.preventDefault();
   window.location.hash = "quotes";
 });
-document.querySelector("#navAbout").addEventListener("click", () => {
+document.querySelector("#navAbout").addEventListener("click", (e) => {
+  e.preventDefault();
   window.location.hash = "about";
 });
 
-document.querySelector("#navContact").addEventListener("click", () => {
+document.querySelector("#navContact").addEventListener("click", (e) => {
+  e.preventDefault();
   window.location.hash = "contact";
 });
