@@ -355,10 +355,12 @@ window.addEventListener("DOMContentLoaded", () => {
 
 window.addEventListener("hashchange", renderContentFromHash);
 
-document.querySelector("#navHome").addEventListener("click", () => {
+document.querySelector("#navHome").addEventListener("click", (e) => {
+  e.preventDefault();
   window.location.hash = "homepage";
 });
-document.querySelector("#navResource").addEventListener("click", () => {
+document.querySelector("#navResource").addEventListener("click", (e) => {
+  e.preventDefault();
   window.location.hash = "resource";
 });
 document.querySelector("#navArticles").addEventListener("click", () => {
