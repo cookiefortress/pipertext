@@ -48,7 +48,7 @@ const resource = `
           Welcome to the resource page! Here, I am continuously adding new
           materials for your use in web 1.0-esque designs. As always, if you
           think there's anything that should be added here, please
-          <a href="/html/contact.html">send it my way</a>!
+          <a href="/index.html#contact">send it my way</a>!
         </p>
         <hr>
         <div id="resourceContainer">
@@ -314,92 +314,28 @@ const contact = `
           </p>
 	`
 
-window.addEventListener("DOMContentLoaded", () => {
-  if (document.referrer === 'www.pipertext.net/') {
-    return;
-  }
-  else if(window.location.hash === "#homepage") {
+function renderContentFromHash() {
+  const hash = window.location.hash;
+  if (hash === "#homepage") {
     main.innerHTML = homepage;
     main.id = "homeMain";
-  }
-  else if(window.location.hash === "#resource") {
+  } else if (hash === "#resource") {
     main.innerHTML = resource;
     main.id = "resourceMain";
-  }
-  else if(window.location.hash === "#articles") {
+  } else if (hash === "#articles") {
     main.innerHTML = articles;
     main.id = "articlesMain";
-  }
-  else if(window.location.hash === "#quotes") {
+  } else if (hash === "#quotes") {
     main.innerHTML = quotes;
     main.id = "quotesMain";
-  }
-  else if(window.location.hash === "#about") {
+  } else if (hash === "#about") {
     main.innerHTML = about;
     main.id = "aboutMain";
-  }
-  else if(window.location.hash === "#contact") {
+  } else if (hash === "#contact") {
     main.innerHTML = contact;
     main.id = "contactMain";
   }
-});
-
-document.querySelector("#navHome").addEventListener("click", (e) => {
-  e.preventDefault();
-  if(window.location.hash === "#homepage") {
-    return;
-  }
-  main.innerHTML = homepage;
-  main.id = "homeMain";
-  window.location.hash = "homepage";
-});
-
-document.querySelector("#navResource").addEventListener("click", (e) => {
-  e.preventDefault();
-  if(window.location.hash === "#resource") {
-    return;
-  }
-  main.innerHTML = resource;
-  window.location.hash = "resource";
-	main.id = "resourceMain";
-});
-
-document.querySelector("#navArticles").addEventListener("click", (e) => {
-  e.preventDefault();
-  if(window.location.hash === "#articles") {
-    return;
-  }
-  main.innerHTML = articles;
-  window.location.hash = "articles";
-	main.id = "articlesMain";
-});
-
-document.querySelector("#navQuotes").addEventListener("click", (e) => {
-  e.preventDefault();
-  if(window.location.hash === "#quotes") {
-    return;
-  }
-  main.innerHTML = quotes;
-  window.location.hash = "quotes";
-	main.id = "quotesMain";
-});
-
-document.querySelector("#navAbout").addEventListener("click", (e) => {
-  e.preventDefault();
-  if(window.location.hash === "#about") {
-    return;
-  }
-  main.innerHTML = about;
-  window.location.hash = "about";
-	main.id = "aboutMain";
-});
-
-document.querySelector("#navContact").addEventListener("click", (e) => {
-  e.preventDefault();
-  if(window.location.hash === "#contact") {
-    return;
-  }
-  main.innerHTML = contact;
-  window.location.hash = "contact";
-	main.id = "contactMain";
-})
+}
+  
+window.addEventListener("DOMContentLoaded", renderContentFromHash);
+window.addEventListener("hashchange", renderContentFromHash);
