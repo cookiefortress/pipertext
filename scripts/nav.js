@@ -339,3 +339,9 @@ function renderContentFromHash() {
   
 window.addEventListener("DOMContentLoaded", renderContentFromHash);
 window.addEventListener("hashchange", renderContentFromHash);
+
+window.addEventListener("DOMContentLoaded", () => {
+  if (!window.location.hash) {
+    window.location.hash = "#homepage";
+  }
+});
