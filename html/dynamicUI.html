@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>pipertext</title>
+	<link rel="icon" type="image/x-icon" href="/img/pipe.png">
+	<link rel="icon" type="image/png" href="/img/pipe.png">
+	<link rel="stylesheet" href="/style.css">
+	<script src="/scripts/layout.js" defer></script>
+	<script src="/scripts/themes.js" defer></script>
+</head>
+<style>
+	.dropdown {
+		display: flex;
+		flex-flow: column nowrap;
+		font-size: .9rem;
+		align-items: center;
+		margin: 1rem 0;
+		height: 1rem;
+	}
+
+	.dropdown button {
+		width: 6rem;
+		text-align: center;
+		border-radius: 0;
+		font-family: consolas;
+	}
+
+	.dropdown ul {
+		list-style-type: none;
+		width: 5.5rem;
+		position: relative;
+	}
+
+	.dropdown ul a {
+		text-decoration: none;
+		text-align: center;
+		color: var(--secondary);
+	}
+
+	.dropdown ul a li {
+		border: 1px solid var(--secondary);
+		background-color: var(--primary);
+		font-size: .8rem;
+		text-align: start;
+		padding: .2rem;
+	}
+
+	.dropdown ul a li.odd {
+		background-color: var(--accentOne);
+	}
+
+	.frame {
+		margin: auto;
+		margin-top: 1rem;
+		height: 15rem;
+		width: 30rem;
+		background-color: transparent;
+		border: 2px ridge var(--accentOne);
+		position: relative;
+		overflow: hidden;
+	}
+	.pictures {
+		display: flex;
+		gap: .1875rem;
+		overflow: visible;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		/* 479px to move an img over */
+		right: 0px;
+	}
+	.pictures div {
+		min-height: 100%;
+		min-width: 100%;
+	}
+	.pictures div:nth-child(1) {
+		background-color: blue;
+	}
+	.pictures div:nth-child(2) {
+		background-color: red;
+	}
+	.pictures div:nth-child(3) {
+		background-color: green;
+	}
+	.pictures div:nth-child(4) {
+		background-color: yellow;
+	}
+	.frame .picButtons {
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+	div.picNavDots {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		gap: .5rem;
+		justify-content: center;
+		align-items: last baseline;
+	}
+	.picButtons .picNavDots button {
+		max-height: 1rem;
+		max-width: 1rem;
+		border-radius: 5rem;
+		background-color: rgba(192, 192, 192, 0.555);
+		margin-bottom: .5rem;
+	}
+	.picButtons .picNavDots button:nth-child(1) {
+		background-color: whitesmoke;
+	}
+	.frame button {
+		border: none;
+		cursor: pointer;
+		height: 100%;
+		width: 3rem;
+		background-color: transparent;
+		font-size: 2rem;
+	}
+	.frame button.picLeft {
+		background-image: linear-gradient(to right, rgba(128, 128, 128, 0.582), rgba(128, 128, 128, 0.233));
+	}
+	.frame button.picRight {
+		background-image: linear-gradient(to left, rgba(128, 128, 128, 0.582), rgba(128, 128, 128, 0.233))
+	}
+	.frame button.picLeft:hover {
+		background-color: var(--accentOne);
+		transition: all .3s ease;
+	}
+	.frame button.picRight:hover {
+		background-color: var(--accentOne);
+		transition: all .3s ease;
+	}
+	.frame button.picLeft:not(:hover) {
+		background-color: transparent;
+		transition: all .3s ease;
+	}
+	.frame button.picRight:not(:hover) {
+		background-color: transparent;
+		transition: all .3s ease;
+	}
+</style>
+
+<body>
+	<div class="container">
+		<header></header>
+		<nav></nav>
+		<aside></aside>
+
+		<main class="article">
+			<article>
+				<h2 class="articleHeader">Project - Dynamic UI</h2>
+				<time>UTC 2025-05-08 - May 8<sup>th</sup>, 2025</time>
+				<hr />
+				<p>
+					This little project was completed as part of
+					<a href="https://www.theodinproject.com/lessons/node-path-javascript-dynamic-user-interface-interactions"
+						target="_blank" rel="noopener noreferrer">The Odin Project's dynamic UI lesson</a>.
+				</p>
+
+				<h2>The dropdown menu</h2>
+				<div style="display: flex; justify-content: center; gap: 1rem;">
+					<div class="dropdown">
+						<button class="dropdownButton">stasis</button>
+						<ul class="dropdownList">
+							<a href="">
+								<li class="odd">g. freeman</li>
+							</a>
+							<a href="">
+								<li>a. shephard</li>
+							</a>
+							<a href="">
+								<li class="odd">a. vance</li>
+							</a>
+						</ul>
+					</div>
+					<div class="dropdown">
+						<button class="dropdownButton">tobacco</button>
+						<ul class="dropdownList">
+							<a href="">
+								<li class="odd">nightcap</li>
+							</a>
+							<a href="">
+								<li>cherrybomb</li>
+							</a>
+							<a href="">
+								<li class="odd">half & half</li>
+							</a>
+						</ul>
+					</div>
+					<div class="dropdown">
+						<button class="dropdownButton">monster</button>
+						<ul class="dropdownList">
+							<a href="">
+								<li class="odd">original</li>
+							</a>
+							<a href="">
+								<li>ultra black</li>
+							</a>
+							<a href="">
+								<li class="odd">khaotic</li>
+							</a>
+						</ul>
+					</div>
+				</div>
+				<p>
+					Ain't they beautiful? By the time you're reading this, I've likely replaced the old themes dropdown which used mere <code>&lt;select&gt;</code> tags (pictured below) with a variation on the dropdown shown here, which is much prettier. <code>&lt;select&gt;</code> tags are notoriously difficult to style!
+				</p>
+
+				<h2>The slideshow</h2>
+				<div class="frame">
+					<div class="pictures">
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+					<div class="picButtons">
+						<button class="picLeft">&lt;</button>
+						<div class="picNavDots">
+							<button></button>
+							<button></button>
+							<button></button>
+							<button></button>
+						</div>
+						<button class="picRight">&gt;</button>
+					</div>
+				</div>
+				<p>
+					This took me longer than I'd like to admit. Yeesh!
+				</p>
+
+				<script>
+					let buttons = Array.from(document.querySelectorAll(".dropdownButton"));
+					let lists = Array.from(document.querySelectorAll(".dropdownList"));
+
+					// hide the lists at page load
+					lists.forEach((item) => {
+						item.style.visibility = "hidden";
+					})
+
+					for(const button of buttons) {
+						const list = lists[buttons.indexOf(button)];
+
+						button.addEventListener("click", () => {
+							lists.forEach((ddList) => {
+								if(ddList === list) return;
+								ddList.style.visibility = "hidden";
+							})
+						let vis = list.style.visibility;
+						if (vis == "visible") {
+							list.style.visibility = "hidden";
+						}
+						else {
+							list.style.visibility = "visible";
+						}
+					});
+					}
+					
+
+					// handle clicks outside of the dropdown in order to close it on clicks outside
+					function handleClickOutside(event) {
+						function checkLists() {
+							let lists = Array.from(document.querySelectorAll(".dropdownList"));
+							for(const list of lists) {
+								if(list.contains(event.target)) {
+									return false;
+								}
+							}
+							return true;
+						}
+
+						if (document.querySelector(".dropdownList") && checkLists()) {
+							// prevent the visibility from being set to hidden when the button for the dropdown is clicked
+							let buttons = Array.from(document.querySelectorAll(".dropdownButton"));
+							for(let button of buttons) {
+								if (button.contains(event.target)) return;
+							}
+							
+							let lists = Array.from(document.querySelectorAll(".dropdownList"));
+							lists.forEach((item) => {
+								item.style.visibility = "hidden";
+							})
+						}
+					}
+					document.addEventListener('click', handleClickOutside);
+
+					let anchors = document.querySelectorAll(".dropdownList a");
+					// prevent anchors from trying to find a link
+					for (let anchor of anchors) {
+						anchor.addEventListener("click", (e) => {
+							e.preventDefault();
+						})
+					}
+
+					const pictures = document.querySelector(".pictures");
+					let position = pictures.style.right;
+					position = "0px";
+
+					const slideshow = (() => {
+
+						const leftButton = document.querySelector(".picLeft");
+						const rightButton = document.querySelector(".picRight");
+
+						let intervalID = setInterval(() => {
+							let num = parseInt(position);
+							position = `${parseInt(position) + 479}px`;
+
+							if(checkMax()) pictures.style.right = position;
+							else {
+								position = `${0}px`;
+								pictures.style.right = position;
+							}
+
+							let buttons = Array.from(document.querySelectorAll(".picNavDots button"));
+							for(let button of buttons) {
+									button.style.backgroundColor = "rgba(192, 192, 192, 0.555)";
+							}
+							for(let button of buttons) {
+								let num = parseInt(position) / 479;
+								if(num === (buttons.indexOf(button))) {
+									button.style.backgroundColor = "whitesmoke";
+								}
+							}
+						}, 5000);
+
+						leftButton.addEventListener("click", () => {
+							clearInterval(intervalID);
+							const current = parseInt(position);
+							const newNum = current - 479;
+							if(newNum < 0) {
+								return;
+							}
+							pictures.style.right = `${newNum}px`;
+							position = pictures.style.right;
+						})
+						rightButton.addEventListener("click", () => {
+							clearInterval(intervalID);
+							const current = parseInt(position);
+							const newNum = current + 479;
+							if(newNum >= (pictures.childElementCount) * 479) {
+								return;
+							}
+							pictures.style.right = `${newNum}px`;
+							position = pictures.style.right;
+						})
+
+						
+
+						function checkMax() {
+							if(parseInt(position) === (479 * (pictures.childElementCount))) {
+								return false;
+							}
+							return true;
+						}
+						
+					})();
+
+					const picNavButtons = (() => {
+						let buttons = Array.from(document.querySelectorAll(".picNavDots button"));
+						let pictures = document.querySelector(".pictures"); 
+
+						let counter = -479;
+						for(let button of buttons) {
+							button.addEventListener("click", () => {
+								pictures.style.right = `${buttons.indexOf(button) * 479}px`;
+								position = pictures.style.right;
+							})
+							counter += 479;
+						}
+
+						for(let button of buttons) {
+							button.addEventListener("click", () => {
+								for(let button of buttons) {
+									button.style.backgroundColor = "rgba(192, 192, 192, 0.555)";
+								}
+								let num = parseInt(position) / 479;
+								if(num === (buttons.indexOf(button))) {
+									button.style.backgroundColor = "whitesmoke";
+								}
+						})
+						}
+
+						const leftButton = document.querySelector(".picLeft");
+						const rightButton = document.querySelector(".picRight");
+
+						leftButton.addEventListener("click", () => {
+							for(let button of buttons) {
+									button.style.backgroundColor = "rgba(192, 192, 192, 0.555)";
+							}
+							for(let button of buttons) {
+								let num = parseInt(position) / 479;
+								if(num === (buttons.indexOf(button))) {
+									button.style.backgroundColor = "whitesmoke";
+								}
+							}
+						})
+						rightButton.addEventListener("click", () => {
+							for(let button of buttons) {
+									button.style.backgroundColor = "rgba(192, 192, 192, 0.555)";
+							}
+							for(let button of buttons) {
+								let num = parseInt(position) / 479;
+								if(num === (buttons.indexOf(button))) {
+									button.style.backgroundColor = "whitesmoke";
+								}
+							}
+						})
+					})();
+
+				</script>
+			</article>
+		</main>
+
+		<footer></footer>
+	</div>
+</body>
+
+</html>

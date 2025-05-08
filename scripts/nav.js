@@ -46,10 +46,13 @@ const resource = `
         <h2>Resource</h2>
         <p>
           Welcome to the resource page! Here, I am continuously adding new
-          materials for your use in web 1.0-esque designs. As always, if you
-          think there's anything that should be added here, please
+          materials for your use in web 1.0-esque designs, and other general web development stuff. If you
+          think there's anything that could be added here, please
           <a href="/index.html#contact">send it my way</a>!
         </p>
+        <hr>
+        <h2>Guides</h2>
+        <p>I am continuously adding new guides in the form of articles here. This serves not only as good practice for myself, but hopefully a decent resource for beginners to learn more about the tools of the trading in layman's terms!</p>
         <hr>
         <div id="resourceContainer">
           <a href="/resource/communities.html">
@@ -90,6 +93,12 @@ const articles = `
           topics are broad, and some contain cute little programs!
         </p>
         <ul>
+        <a href="/html/dynamicUI.html">
+            <li>
+              <span class="articleName">Project - Dynamic UI</span>
+              <time class="articleDate">2025/05/08</time>
+            </li>
+          </a>
           <a href="/html/tictactoeRevisited.html">
             <li>
               <span class="articleName">Project - Tic Tac Toe Revisited</span>
@@ -375,7 +384,6 @@ document.querySelector("#navAbout").addEventListener("click", (e) => {
   e.preventDefault();
   window.location.hash = "about";
 });
-
 document.querySelector("#navContact").addEventListener("click", (e) => {
   e.preventDefault();
   window.location.hash = "contact";
