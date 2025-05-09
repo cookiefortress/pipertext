@@ -105,31 +105,15 @@ function createFooter() {
 function createHeader() {
   let header = document.querySelector("header");
   header.innerHTML = `
-		<div>
+		    <div>
             <h1 class="pipertext">&gt; pipertext</h1>
         </div>
+
+        <div id="theme">
+            
+        </div>
+
         <div class="logo">
-            <label for="themes" hidden>themes</label>
-            <select name="themes" id="themes">
-                <option value="themes" selected disabled>themes</option>
-                <option value="cherry">cherry</option>
-                <option value="tobacco">tobacco</option>
-                <option value="haxor">haxor</option>
-                <option value="cypher">cypher</option>
-                <option value="steam">steam</option>
-                <option value="powershell">powershell</option>
-                <option value="pride">pride</option>
-                <option value="psycho">psycho</option>
-                <option value="cmd">cmd</option>
-				<option value="marnie">marnie</option>
-				<option value="freeDOS">freeDOS</option>
-            </select>
-            <select name="friends" id="friends">
-                <option value="">partners</option>
-                <option value="dog">coming</option>
-                <option value="cat">soon</option>
-                <option value="hamster">!!!</option>
-            </select>
             <img src="/img/pipe.png" alt="Pipertext logo">
         </div>`;
 }
