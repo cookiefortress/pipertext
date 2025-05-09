@@ -54,12 +54,6 @@ function changeTheme(theme) {
 			break;
 		case "2600":
 			writeStyles("#272728", "#dcdcdc", "#6a4832", "#7c2c31", "#272728", "0 10px 16px rgba(106, 72, 50, 0.5),0 6px 20px rgba(106, 72, 50, 0.5)");
-			document.documentElement.style.cssText = `
-				--primary: #272728;
-				--secondary: #dcdcdc;
-				--accentOne:rgb(106, 72, 50);
-				--accentTwo: #7c2c31;
-				--gradientTopLeft: #272728;`;
 			break;
 		case "monster":
 			writeStyles("#161616", "#ffffff", "rgb(144, 177, 0)", "#0b9936", "#161616", "0 10px 16px rgba(0, 90, 0, 0.5),0 6px 20px rgba(51, 255, 51, 0.5)");
@@ -71,7 +65,6 @@ function changeTheme(theme) {
 // IIFE for the theme selector UI
 (function () {
 	const buttonsHTML = `	
-		<button id="themeButton">themes</button>
         <div id="themeList">
 			<button onclick="changeTheme('cherry')">cherry</button>
 			<button onclick="changeTheme('tobacco')">tobacco</button>
@@ -88,38 +81,84 @@ function changeTheme(theme) {
 		</div>
 	`;
 
-	const themeDiv = document.querySelector("#theme");
-	themeDiv.innerHTML = buttonsHTML;
+		const themeWindow = document.createElement("div");
+		themeWindow.id = "wTheme";
+		const themeTitle = document.createElement("div");
+		themeTitle.innerHTML = `
+		<div>
+			<img src="/img/pipe.png" style="width: 2rem;">
+			<h4>themes</h4>
+		</div>
+		<div>
+			<button class="windowHide">x</button>
+		</div>
+		`
+		themeTitle.classList.add("windowTitle");
+		const themesDiv = document.createElement("div");
+		themesDiv.id = "themesDiv";
+		themesDiv.innerHTML = buttonsHTML;
+		themeWindow.appendChild(themeTitle);
+		themeWindow.appendChild(themesDiv);
 
-	const button = document.querySelector("#themeButton");
-	const list = document.querySelector("#themeList");
-	list.style.display = "none";
+		let isSelected = false;
+		let offsetX, offsetY;
+	
+		themeTitle.addEventListener("mousedown", (e) => {
+			isSelected = true;
+			offsetX = e.clientX - themeWindow.offsetLeft;
+			offsetY = e.clientY - themeWindow.offsetTop;
+	
+			document.body.style.userSelect = 'none';
+		})
+		document.addEventListener('mousemove', (e) => {
+			if (!isSelected) return;
+			themeWindow.style.left = e.clientX - offsetX + 'px';
+			themeWindow.style.top = e.clientY - offsetY + 'px';
+		  });
+		  
+		  document.addEventListener('mouseup', () => {
+			isSelected = false;
+			document.body.style.userSelect = '';
+		  });
 
-	button.addEventListener("click", () => {
-		if (list.style.display === "grid") {
-			list.style.display = "none";
+	document.querySelector("#themeButton").addEventListener("click", () => {
+		if (themeWindow.style.visibility === "visible") {
+			themeWindow.style.visibility = "hidden";
 		}
 		else {
-			list.style.display = "grid";
+			themeWindow.style.visibility = "visible";
 		}
 	});
+	window.onload=function() {
+		document.querySelector(".windowHide").addEventListener("click", () => {
+		if (themeWindow.style.visibility === "visible") {
+			themeWindow.style.visibility = "hidden";
+		}
+		else {
+			themeWindow.style.visibility = "visible";
+		}
+	});
+	}
+
+	themeWindow.style.visibility = "hidden";
+	document.querySelector(".container").appendChild(themeWindow);
 
 	// hide the list when the user clicks outside of it
-	document.addEventListener('click', (event) => {
-		const list = document.querySelector("#themeList");
-		const button = document.querySelector("#themeButton");
+	// document.addEventListener('click', (event) => {
+	// 	const list = document.querySelector("#themeList");
+	// 	const button = document.querySelector("#themeButton");
 
-		function checkLists() {
-			if (list.contains(event.target)) {
-				return false;
-			}
-			return true;
-		}
+	// 	function checkLists() {
+	// 		if (list.contains(event.target)) {
+	// 			return false;
+	// 		}
+	// 		return true;
+	// 	}
 
-		if (document.querySelector("#themeList") && checkLists()) {
-			// prevent the visibility from being set to hidden when the button for the dropdown is clicked
-			if (button.contains(event.target)) return;
-			document.querySelector("#themeList").style.display = "none";
-		}
-	});
+	// 	if (document.querySelector("#themeList") && checkLists()) {
+	// 		// prevent the visibility from being set to hidden when the button for the dropdown is clicked
+	// 		if (button.contains(event.target)) return;
+	// 		document.querySelector("#themeList").style.display = "none";
+	// 	}
+	// });
 })();

@@ -82,6 +82,8 @@ header div.logo select {
     background-color: var(--primary);
     cursor: pointer;
     padding: .2rem;
+    align-self: flex-start;
+    margin-left: 16rem;
 }
 #themeList {
     display: grid;
@@ -777,4 +779,47 @@ main#contactMain address a {
     padding: 0.3rem;
     background-color: var(--primary);
     border: 4px outset var(--winGrey);
+}
+
+#wTheme {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    background-color: var(--primary);
+    color: var(--secondary);
+    border: 1px ridge var(--accentTwo);
+    position: absolute;
+    top: 8rem;
+    left: 8rem;
+}
+.windowTitle {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 2rem;
+    gap: .52rem;
+}
+.windowTitle div {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: .4rem;
+}
+.windowTitle div:nth-child(2) {
+    margin-right: .3rem;
+}
+.windowTitle div:nth-child(2) button {
+    border: 2px ridge var(--accentOne);
+    padding: .1rem .3rem;
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+.windowTitle div:nth-child(2) button:hover {
+    border: 2px groove var(--accentTwo);
+    cursor: pointer;
 }

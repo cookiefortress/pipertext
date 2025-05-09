@@ -39,7 +39,6 @@ const homepage = `
             <p>under construction :P</p>
           </blockquote>
         </div>
-      
 	`
 const resource = `
 	
