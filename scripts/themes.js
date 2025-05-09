@@ -11,109 +11,62 @@ window.addEventListener("DOMContentLoaded", () => {
 
 // function for changing the color scheme
 function changeTheme(theme) {
+	function writeStyles(primary, secondary, accentOne, accentTwo, gradientTopLeft, bShadow) {
+		document.documentElement.style.cssText = `
+			--primary: ${primary};
+			--secondary: ${secondary};
+			--accentOne: ${accentOne};
+			--accentTwo: ${accentTwo};
+			--gradientTopLeft: ${gradientTopLeft};`;
+			document.querySelector(".container").style.boxShadow = `${bShadow}`;
+	}
+
 	switch (theme) {
 		case "cherry":
-			document.documentElement.style.cssText = `
-				--primary: #1b1717;
-				--secondary: #eeebdd;
-				--accentOne: #810000;
-				--accentTwo: #630000;
-				--gradientTopLeft: black;`;
+			writeStyles("#1b1717", "#eeebdd", "#810000", "#630000", "black", "0 10px 16px 0 rgba(255, 255, 255, 0.2),0 6px 20px 0 rgba(255, 255, 255, 0.2)");
 			break;
 		case "tobacco":
-			document.documentElement.style.cssText = `
-				--primary:rgb(54, 36, 24);
-				--secondary: #FED8B1;
-				--accentOne:rgb(134, 90, 69);
-				--accentTwo: #1b1717;
-				--gradientTopLeft: #1b1717`;
+			writeStyles("rgb(54, 36, 24)", "#FED8B1", "rgb(134, 90, 69)", "#1b1717", "#1b1717", "0 10px 16px 0 rgba(134, 90, 69, 0.5),0 6px 20px 0 rgba(134, 90, 69, 0.5)");
 			break;
 		case "haxor":
-			document.documentElement.style.cssText = `
-				--primary: black;
-				--secondary: #33FF33;
-				--accentOne:rgb(0, 90, 36);
-				--accentTwo: rgb(17, 97, 17);
-				--gradientTopLeft:rgb(0, 50, 4);`;
+			writeStyles("black", "#33FF33", "rgb(0, 90, 36)", "rgb(17, 97, 17)", "rgb(0, 50, 4)", "0 10px 16px rgba(0, 90, 0, 0.4),0 6px 20px rgba(51, 255, 51, 0.4)");
 			break;
 		case "cypher":
-			document.documentElement.style.cssText = `
-				--primary: #2f2617;
-				--secondary: #9d8457;
-				--accentOne: #732906;
-				--accentTwo: #201810;
-				--gradientTopLeft: #1b1717;`;
+			writeStyles("#2f2617", "#9d8457", "#732906", "#201810", "#1b1717", "0 10px 16px rgba(115, 41, 6, 0.6),0 6px 20px rgba(115, 41, 6, 0.6)");
 			break;
 		case "steam":
-			document.documentElement.style.cssText = `
-				--primary: #4c5844;
-				--secondary: #968732;
-				--accentOne:rgb(103, 117, 94);
-				--accentTwo: #4c5844;
-				--gradientTopLeft: #4c5844;`;
+			writeStyles("#4c5844", "#968732", "rgb(103, 117, 94)", "#4c5844", "#4c5844", "0 10px 16px rgba(76, 88, 68, 0.8),0 6px 20px rgba(76, 88, 68, 0.8)");
 			break;
 		case "powershell":
-			document.documentElement.style.cssText = `
-				--primary: #012456;
-				--secondary: #d4d8de;
-				--accentOne: #bac715;
-				--accentTwo: #012456;
-				--gradientTopLeft: #012456;`;
+			writeStyles("#012456", "#d4d8de", "#bac715", "#012456", "#012456", "0 10px 16px rgba(212, 216, 222, 0.4),0 6px 20px rgba(212, 216, 222, 0.4)");
 			break;
 		case "psycho":
-			document.documentElement.style.cssText = `
-				--primary: white;
-				--secondary: black;
-				--accentOne: grey;
-				--accentTwo: white;
-				--gradientTopLeft: whitesmoke;`;
+			writeStyles("white", "black", "grey", "white", "whitesmoke", "0 10px 16px rgba(112, 113, 116, 0.9),0 6px 20px rgba(112, 113, 116, 0.9)");
 			break;
 		case "cmd":
-			document.documentElement.style.cssText = `
-				--primary: black;
-				--secondary: white;
-				--accentOne: grey;
-				--accentTwo: black;
-				--gradientTopLeft: #1b1717;`;
+			writeStyles("black", "white", "grey", "black", "#1b1717", "0 10px 16px rgba(112, 113, 116, 0.7),0 6px 20px rgba(112, 113, 116, 0.7)");
 			break;
 		case "marnie":
-			document.documentElement.style.cssText = `
-				--primary: #FFF5E4;
-				--secondary: #443627;
-				--accentOne: #99BC85;
-				--accentTwo: #FFA725;
-				--gradientTopLeft: #FFF5E4;`;
+			writeStyles("#FFF5E4", "#443627", "#99BC85", "#FFA725", "#FFF5E4", "0 10px 16px rgba(255, 167, 37, 0.6),0 6px 20px rgba(255, 167, 37, 0.6)");
 			break;
 		case "freeDOS":
-			document.documentElement.style.cssText = `
-				--primary: #acaaac;
-				--secondary: #000000;
-				--accentOne: #0000ac;
-				--accentTwo: #00aaac;
-				--gradientTopLeft: #acaaac;`;
+			writeStyles("#acaaac", "#000000", "#0000ac", "#00aaac", "#acaaac", "0 10px 16px rgba(0, 170, 172, 0.5),0 6px 20px rgba(0, 170, 172, 0.5)");
 			break;
 		case "2600":
+			writeStyles("#272728", "#dcdcdc", "#6a4832", "#7c2c31", "#272728", "0 10px 16px rgba(106, 72, 50, 0.5),0 6px 20px rgba(106, 72, 50, 0.5)");
 			document.documentElement.style.cssText = `
 				--primary: #272728;
 				--secondary: #dcdcdc;
-				--accentOne: #6a4832;
+				--accentOne:rgb(106, 72, 50);
 				--accentTwo: #7c2c31;
 				--gradientTopLeft: #272728;`;
 			break;
 		case "monster":
-			document.documentElement.style.cssText = `
-				--primary: #161616;
-				--secondary: #ffffff;
-				--accentOne:rgb(144, 177, 0);
-				--accentTwo: #0b9936;
-				--gradientTopLeft: #161616;`;
+			writeStyles("#161616", "#ffffff", "rgb(144, 177, 0)", "#0b9936", "#161616", "0 10px 16px rgba(0, 90, 0, 0.5),0 6px 20px rgba(51, 255, 51, 0.5)");
 			break;
 	}
 	localStorage.setItem("selectedTheme", theme);
 }
-
-
-	// document.querySelector(".container").style.boxShadow = "0 10px 16px rgba(51, 255, 51, 0.4),0 6px 20px rgba(51, 255, 51, 0.4)";
 
 // IIFE for the theme selector UI
 (function () {

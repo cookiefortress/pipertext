@@ -497,6 +497,9 @@ figure.card figcaption a {
 a:visited {
     color: var(--accentOne);
 }
+a:not(:visited) {
+    color: var(--accentOne);
+}
 
 a:hover {
     color: var(--accentOne);
