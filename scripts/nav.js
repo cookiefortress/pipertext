@@ -264,11 +264,11 @@ const about = `
         <p>
           Secondly, you'll notice that in the footer, I have only validated my
           CSS through W3C's website. Their HTML validator
-          <strong>hates</strong> fun, and therefore <code>marquee</code> tags.
+          <strong>hates</strong> fun, and therefore <code>&lt;marquee&gt;</code> tags.
           So it won't pass Pipertext. Because I am stubborn, as well as a bit
           opinionated on whether or not HTML tags should be deprecated (don't
           break the web), I utterly refuse to rid of my
-          <code>marquee</code> tags. Sorry anti-fun dudes.
+          <code>&lt;marquee&gt;</code> tags. Sorry anti-fun dudes.
         </p>
         <p>
           I would love it if you sent any resources you think belong here my

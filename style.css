@@ -367,7 +367,7 @@ main p code {
     text-shadow: 1px 1px 1px rgb(0, 0, 0);
     letter-spacing: 1px;
     font-size: 0.8rem;
-    color: rgb(0, 218, 0);
+    color: var(--code);
 }
 
 /* figure component */
