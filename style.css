@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    background: url(img/spacex.gif);
+    background: url('/img/spacex.gif');
 }
 
 /* main container for page layout */
@@ -211,6 +211,7 @@ nav ul li {
 }
 
 nav ul li a {
+    color: var(--secondary);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -221,16 +222,12 @@ nav ul li a {
     padding: 0.75rem 0;
     text-decoration: none;
     background-color: var(--accentTwo);
-    color: var(--secondary);
 }
 
 nav ul li a:hover {
+    color: var(--secondary);
     background-color: var(--accentOne);
     border: 4px outset var(--accentTwo);
-}
-
-nav ul li a:visited {
-    color: var(--secondary);
 }
 
 /* sidebar */
@@ -496,10 +493,10 @@ figure.card figcaption a {
     }
 }
 
-a:visited {
+p a:visited {
     color: var(--accentOne);
 }
-a:not(:visited) {
+p a:not(:visited) {
     color: var(--accentOne);
 }
 

@@ -92,52 +92,52 @@ const articles = `
           topics are broad, and some contain cute little programs!
         </p>
         <ul>
-        <a href="/html/dynamicUI.html">
+        <a href='/html/dynamicUI.html'>
             <li>
-              <span class="articleName">Project - Dynamic UI</span>
-              <time class="articleDate">2025/05/08</time>
+              <span class='articleName'>Project - Dynamic UI</span>
+              <time class='articleDate'>2025/05/08</time>
             </li>
           </a>
-          <a href="/html/tictactoeRevisited.html">
+          <a href='/html/tictactoeRevisited.html'>
             <li>
-              <span class="articleName">Project - Tic Tac Toe Revisited</span>
-              <time class="articleDate">2025/04/25</time>
+              <span class='articleName'>Project - Tic Tac Toe Revisited</span>
+              <time class='articleDate'>2025/04/25</time>
             </li>
           </a>
-          <a href="/html/todo.html">
+          <a href='/html/todo.html'>
             <li>
-              <span class="articleName">Project - Todo List</span>
-              <time class="articleDate">2025/04/20</time>
+              <span class='articleName'>Project - Todo List</span>
+              <time class='articleDate'>2025/04/20</time>
             </li>
           </a>
-          <a href="/html/tictactoe.html">
+          <a href='/html/tictactoe.html'>
             <li>
-              <span class="articleName">Project - Tic Tac Toe</span>
-              <time class="articleDate">2025/04/12</time>
+              <span class='articleName'>Project - Tic Tac Toe</span>
+              <time class='articleDate'>2025/04/12</time>
             </li>
           </a>
-          <a href="/html/library.html">
+          <a href='/html/library.html'>
             <li>
-              <span class="articleName">Project - Library</span>
-              <time class="articleDate">2025/04/10</time>
+              <span class='articleName'>Project - Library</span>
+              <time class='articleDate'>2025/04/10</time>
             </li>
           </a>
-          <a href="/html/semanticHTML.html">
+          <a href='/html/semanticHTML.html'>
             <li>
-              <span class="articleName">The beauty of semantic HTML</span>
-              <time class="articleDate">2025/04/08</time>
+              <span class='articleName'>The beauty of semantic HTML</span>
+              <time class='articleDate'>2025/04/08</time>
             </li>
           </a>
-          <a href="/html/microsoft50.html">
+          <a href='/html/microsoft50.html'>
             <li>
-              <span class="articleName">50 years of Microsoft</span>
-              <time class="articleDate">2025/04/06</time>
+              <span class='articleName'>50 years of Microsoft</span>
+              <time class='articleDate'>2025/04/06</time>
             </li>
           </a>
-          <a href="/html/touchPipertext.html">
+          <a href='/html/touchPipertext.html'>
             <li>
-              <span class="articleName">touch pipertext.ptml</span>
-              <time class="articleDate">2025/04/06</time>
+              <span class='articleName'>touch pipertext.ptml</span>
+              <time class='articleDate'>2025/04/06</time>
             </li>
           </a>
         </ul>
@@ -148,7 +148,7 @@ const quotes = `
           This page is simply a collection of quotes which I really like. Enjoy!
         </p>
         <hr />
-        <div id="quotes">
+        <div id='quotes'>
           <blockquote>
             <div>
               “I wish it need not have happened in my time," said Frodo. "So do
@@ -173,24 +173,24 @@ const about = `
           until I can create it efficiently," but what's the fun in that,
           anyways? It's supposed to be a little unoptimized, right?!
         </p>
-        <figure class="card" id="ricostay">
+        <figure class='card' id='ricostay'>
           <img
-            src="/img/ricostay.png"
-            alt="A screencap of one of my first Web 1.0-themed website designs, Ricostay"
-            id="ricostayImg"
+            src='/img/ricostay.png'
+            alt='A screencap of one of my first Web 1.0-themed website designs, Ricostay'
+            id='ricostayImg'
           />
-          <figcaption id="ricostayCard">
+          <figcaption id='ricostayCard'>
             A screencap of Ricostay, an early webpage of mine
           </figcaption>
         </figure>
-        <p class="floatLeftFix">
+        <p class='floatLeftFix'>
           Regardless, I've wanted a website with web 1.0 aesthetics for as long
           as I can remember. Pictured on the left is one of my first decent
           attempts at doing so - a
           <a
-            href="https://developer.valvesoftware.com/wiki/Ricochet"
-            target="_blank"
-            rel="noopener noreferrer"
+            href='https://developer.valvesoftware.com/wiki/Ricochet'
+            target='_blank'
+            rel='noopener noreferrer'
             >Ricochet</a
           >
           (obscure game by Valve) fan/information page. Ricostay was never

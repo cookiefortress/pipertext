@@ -22,7 +22,7 @@ class Book {
   }
 }
 
-Book.prototype.changeReadStatus = function (hasRead) {
+Book.prototype.changeReadStatus = function () {
   if (this.hasRead === true) this.hasRead = false;
   else if (this.hasRead === false) this.hasRead = true;
   else console.log("how");
@@ -71,7 +71,7 @@ function createTable(arr) {
       libraryArr = newArray;
     });
 
-    changeReadStatusButton = document.createElement("button");
+    const changeReadStatusButton = document.createElement("button");
     changeReadStatusButton.textContent = "✓";
     changeReadStatusButton.style.backgroundColor = "blue";
     changeReadStatusButton.style.margin = ".4rem 0 0 .3rem";
@@ -96,7 +96,7 @@ function createForm() {
   form.style.textAlign = "center";
   form.style.margin = "0 auto";
   form.style.width = "50%";
-  for (i = 0; i < 4; i++) {
+  for (let i = 0; i < 4; i++) {
     let label = document.createElement("label");
     let input = document.createElement("input");
     input.type = "text";

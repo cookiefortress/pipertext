@@ -1,14 +1,3 @@
-// restore saved selection on page load
-window.addEventListener("DOMContentLoaded", () => {
-	const savedValue = localStorage.getItem("selectedTheme");
-	if (savedValue) {
-		changeTheme(savedValue);
-	}
-	else {
-		changeTheme("cherry");
-	}
-});
-
 // function for changing the color scheme
 function changeTheme(theme) {
 	function writeStyles(primary, secondary, accentOne, accentTwo, gradientTopLeft, bShadow, code) {
@@ -163,3 +152,16 @@ function changeTheme(theme) {
 	// 	}
 	// });
 })();
+
+// restore saved selection on page load
+window.addEventListener("DOMContentLoaded", () => {
+	const savedValue = localStorage.getItem("selectedTheme");
+	if (savedValue) {
+		changeTheme(savedValue);
+	}
+	else {
+		changeTheme("cherry");
+	}
+});
+
+window.changeTheme = changeTheme;

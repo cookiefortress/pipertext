@@ -154,7 +154,7 @@ const Game = (function () {
   return { currentBoard, playRound, getTurn, getPlayerScores };
 })();
 
-const drawBoard = (function () {
+(function () {
   let changeNameDiv = document.querySelector("#changeName");
   changeNameDiv.style.display = "flex";
   changeNameDiv.style.justifyContent = "space-between";
@@ -180,7 +180,7 @@ const drawBoard = (function () {
   let p1;
   let displayP1name = document.createElement("div");
   changeNameButton.addEventListener("click", () => {
-    p1name = nameInput.value;
+    let p1name = nameInput.value;
     p1 = p1name;
     displayP1name.textContent = p1name;
     divOne.appendChild(displayP1name);
@@ -188,7 +188,6 @@ const drawBoard = (function () {
 
   let status = document.createElement("div");
   status.textContent = "Start playing!";
-  three.appendChild(status);
 
   let nameInputTwo = document.createElement("input");
   nameInputTwo.type = "text";
@@ -211,7 +210,7 @@ const drawBoard = (function () {
   let p2;
   let displayP2name = document.createElement("div");
   changeNameButtonTwo.addEventListener("click", () => {
-    p2name = nameInputTwo.value;
+    let p2name = nameInputTwo.value;
     p2 = p2name;
     displayP2name.textContent = p2name;
     divTwo.appendChild(displayP2name);
@@ -322,7 +321,7 @@ const drawBoard = (function () {
       if (checkForRefresh === "Invalid move") {
         return;
       }
-      turn = Game.getTurn();
+      let turn = Game.getTurn();
       if (turn % 2 !== 0) {
         document.getElementById(`button${i}`).textContent = "X";
         console.log(`turn ${turn}`);
@@ -363,7 +362,7 @@ const drawBoard = (function () {
       if (checkForRefresh === "Invalid move") {
         return;
       }
-      turn = Game.getTurn();
+      let turn = Game.getTurn();
       if (turn % 2 !== 0) {
         document.getElementById(`button${i}`).textContent = "X";
         console.log(`turn ${turn}`);
@@ -404,7 +403,7 @@ const drawBoard = (function () {
       if (checkForRefresh === "Invalid move") {
         return;
       }
-      turn = Game.getTurn();
+      let turn = Game.getTurn();
       if (turn % 2 !== 0) {
         document.getElementById(`button${i}`).textContent = "X";
         console.log(`turn ${turn}`);

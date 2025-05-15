@@ -43,6 +43,9 @@ class TodoList {
 let defaultList = new TodoList("list");
 let defaultList2 = new TodoList("list 2");
 let defaultList3 = new TodoList("list 3");
+console.log(defaultList);
+console.log(defaultList2);
+console.log(defaultList3);
 // defaultList.newTodo("Test item", "Lorem ipsum blah blah", "2004/12/17", 2);
 // defaultList.newTodo("Eat cookies", "Yummy cookies, must eat!", "2025/04/20", 1);
 // defaultList.newTodo("Kill enemies", "Die!", "2025/04/20", 3);

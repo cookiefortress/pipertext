@@ -111,7 +111,7 @@ function newGame() {
 }
 
 // UI
-let assignButtons = (function () {
+(function () {
   let buttons = document.querySelectorAll(".square");
   let announcement = document.querySelector("#announcement h3");
 
