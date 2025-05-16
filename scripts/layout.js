@@ -1,10 +1,9 @@
 function createSidebar() {
   const mainMarquee = document.createElement("marquee");
   mainMarquee.innerHTML = `
-	<img src="/gif/bestvw.gif" alt="Best viewed with a computer and a monitor!">
-    <img src="/gif/fftake.gif" alt="Firefox - take back the web!">
-    <img src="/gif/css2.gif" alt="Made with CSS!">
-    <img src="/gif/gothtml.gif" alt="Got HTML?">`;
+	  <img src="/res/gif/bestvw.gif" alt="Best viewed with a computer and a monitor!">
+    <img src="/res/gif/css2.gif" alt="Made with CSS!">
+    <img src="/res/gif/gothtml.gif" alt="Got HTML?">`;
 
   function createDashboard() {
     let dashboard = document.createElement("div");
@@ -13,7 +12,7 @@ function createSidebar() {
     dashboard.appendChild(UTCtext);
     let pipertextIcon = document.createElement("div");
     pipertextIcon.innerHTML =
-      "<img src='/img/pipertext.png' alt='Pipertext 88x31 icon' width='88px'>";
+      "<img src='/res/img/pipertext.png' alt='Pipertext 88x31 icon' width='88px'>";
     dashboard.appendChild(pipertextIcon);
 
     function writeUTC() {
@@ -112,7 +111,7 @@ function createHeader() {
         <button id="themeButton">themes</button>
 
         <div class="logo">
-            <img src="/img/pipe.png" alt="Pipertext logo">
+            <img src="/res/img/pipe.png" alt="Pipertext logo">
         </div>`;
 }
 

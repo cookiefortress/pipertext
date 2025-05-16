@@ -76,7 +76,7 @@ function changeTheme(theme) {
 		const themeTitle = document.createElement("div");
 		themeTitle.innerHTML = `
 		<div>
-			<img src="/img/pipe.png" style="width: 2rem;">
+			<img src="/res/img/pipe.png" style="width: 2rem;">
 			<h4>themes</h4>
 		</div>
 		<div>

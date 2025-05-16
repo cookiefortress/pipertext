@@ -8,7 +8,7 @@ const homepage = `
           born too late to have seen it myself, but I nonetheless have grown
           very fond of the aesthetics and "society" of the time!
           </p><figure class="card">
-            <img src="/img/pheonix.png" alt="A picture of Netscape Navigator in 1995.">
+            <img src="/res/img/pheonix.png" alt="A picture of Netscape Navigator in 1995.">
             <figcaption>
               The original
               <a href="https://en.wikipedia.org/wiki/Firefox#History" target="_blank" rel="noopener noreferrer">Mozilla Firefox</a>
@@ -28,7 +28,7 @@ const homepage = `
         </p>
         <p>
           I've compiled
-          <a href="resource/resource.html">lots of resources</a> if you're
+          <a href="#resource">lots of resources</a> if you're
           interested in making your website look like it's straight out of the
           Y2K era as well. Keep on puffing! :D
         </p>
@@ -51,7 +51,7 @@ const resource = `
         </p>
         <hr>
         <h2>Guides</h2>
-        <p>I am continuously adding new guides in the form of articles here. This serves not only as good practice for myself, but hopefully a decent resource for beginners to learn more about the tools of the trading in layman's terms!</p>
+        <p>I am continuously adding new guides in the form of articles here. This serves not only as good practice for myself, but hopefully a decent resource for beginners to learn more about the tools of the trade in layman's terms!</p>
         <hr>
         <div id="resourceContainer">
           <a href="/resource/communities.html">
@@ -68,7 +68,7 @@ const resource = `
               <h2>Icons</h2>
               <p>
                 88x31 icons are like the heartbeat of the old web! Luckily,
-                there is a metric <em>shit</em> ton out there!
+                there is a metric shit ton out there!
               </p>
             </div>
           </a>
@@ -175,7 +175,7 @@ const about = `
         </p>
         <figure class='card' id='ricostay'>
           <img
-            src='/img/ricostay.png'
+            src='/res/img/ricostay.png'
             alt='A screencap of one of my first Web 1.0-themed website designs, Ricostay'
             id='ricostayImg'
           />
@@ -214,7 +214,7 @@ const about = `
         </p>
         <figure class="card">
           <img
-            src="/img/runningMan.png"
+            src="/res/img/runningMan.png"
             id="runningMan"
             alt="The AOL running man!"
           />
