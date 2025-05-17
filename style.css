@@ -73,6 +73,7 @@ header div.logo select {
     right: 32%;
     width: 14.25rem;
 }
+
 #themeButton {
     border: 2px solid var(--accentOne);
     font-size: 1rem;
@@ -85,6 +86,7 @@ header div.logo select {
     align-self: flex-start;
     margin-left: 16rem;
 }
+
 #themeList {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -92,6 +94,7 @@ header div.logo select {
     background-color: var(--accentTwo);
     padding: .3rem;
 }
+
 #themeList button {
     font-size: .8rem;
     font-family: Consolas, monospace, "MS UI Gothic";
@@ -100,66 +103,79 @@ header div.logo select {
     padding: .2rem;
     margin: .1rem;
 }
+
 #themeList button:nth-child(1) {
     border: 2px solid #810000;
     color: #eeebdd;
     background-color: #1b1717;
 }
+
 #themeList button:nth-child(2) {
     border: 2px solid rgb(54, 36, 24);
     color: #FED8B1;
     background-color: rgb(134, 90, 69);
 }
+
 #themeList button:nth-child(3) {
     border: 2px solid rgb(17, 97, 17);
     color: #1b1717;
     background-color: #33FF33;
 }
+
 #themeList button:nth-child(4) {
     border: 2px solid #732906;
     color: #9d8457;
     background-color: #2f2617;
 }
+
 #themeList button:nth-child(5) {
     border: 2px solid rgb(103, 117, 94);
     color: #968732;
     background-color: #4c5844;
 }
+
 #themeList button:nth-child(6) {
     border: 2px solid #bac715;
     color: #d4d8de;
     background-color: #012456;
 }
+
 #themeList button:nth-child(7) {
     border: 2px solid grey;
     color: black;
     background-color: white;
 }
+
 #themeList button:nth-child(8) {
     border: 2px solid grey;
     color: white;
     background-color: black;
 }
+
 #themeList button:nth-child(9) {
     border: 2px solid #99BC85;
     color: #443627;
     background-color: #FFF5E4;
 }
+
 #themeList button:nth-child(10) {
     border: 2px solid #0000ac;
     color: #000000;
     background-color: #acaaac;
 }
+
 #themeList button:nth-child(11) {
     border: 2px solid #272728;
     color: #dcdcdc;
     background-color: #6a4832;
 }
+
 #themeList button:nth-child(12) {
     border: 2px solid rgb(144, 177, 0);
     color: #ffffff;
-    background-color: #161616; 
+    background-color: #161616;
 }
+
 /* accentOne secondary primary */
 
 header div.logo select {
@@ -284,16 +300,44 @@ aside div.recentArticle p {
     margin-bottom: 0.2rem;
 }
 
-aside marquee {
+.marquee {
+    height: auto;
+    width: 90%;
+    padding: .5rem 0 .45rem 0;
+    margin-bottom: .7rem;
+    overflow: hidden;
+    position: relative;
+    background: #fefefe;
+    color: #333;
+    border: 1px solid #4a4a4a;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
     background-color: var(--accentOne);
     border: 2px ridge var(--accentTwo);
-    padding: 0.5rem 0 0 0;
-    margin-bottom: 0.5rem;
 }
 
-/* easter egg.. marnie! */
-aside .marnie:active {
-    transform: scale(2.5);
+.marquee img {
+
+    -moz-animation: scroll-left 3s linear infinite;
+    -webkit-animation: scroll-left 3s linear infinite;
+    animation: scroll-left 6s linear infinite;
+    height: 31px;
+}
+
+@keyframes scroll-left {
+    0% {
+        -moz-transform: translateX(290%);
+        -webkit-transform: translateX(290%);
+        transform: translateX(290%);
+    }
+
+    100% {
+        -moz-transform: translateX(-290%);
+        -webkit-transform: translateX(-290%);
+        transform: translateX(-290%);
+    }
 }
 
 /* footer */
@@ -496,6 +540,7 @@ figure.card figcaption a {
 p a:visited {
     color: var(--accentOne);
 }
+
 p a:not(:visited) {
     color: var(--accentOne);
 }
@@ -793,6 +838,7 @@ main#contactMain address a {
     top: 8rem;
     left: 8rem;
 }
+
 .windowTitle {
     display: flex;
     flex-flow: row nowrap;
@@ -802,21 +848,25 @@ main#contactMain address a {
     height: 2rem;
     gap: .52rem;
 }
+
 .windowTitle div {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     gap: .4rem;
 }
+
 .windowTitle div:nth-child(2) {
     margin-right: .3rem;
 }
+
 .windowTitle div:nth-child(2) button {
     border: 2px ridge var(--accentOne);
     padding: .1rem .3rem;
     background-color: var(--secondary);
     color: var(--primary);
 }
+
 .windowTitle div:nth-child(2) button:hover {
     border: 2px groove var(--accentTwo);
     cursor: pointer;

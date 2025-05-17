@@ -1,5 +1,6 @@
 function createSidebar() {
-  const mainMarquee = document.createElement("marquee");
+  const mainMarquee = document.createElement("div");
+  mainMarquee.classList.add("marquee");
   mainMarquee.innerHTML = `
 	  <img src="/res/gif/bestvw.gif" alt="Best viewed with a computer and a monitor!">
     <img src="/res/gif/css2.gif" alt="Made with CSS!">
