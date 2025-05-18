@@ -342,24 +342,23 @@ aside div.recentArticle p {
 }
 
 .marquee img {
-
-    -moz-animation: scroll-left 3s linear infinite;
-    -webkit-animation: scroll-left 3s linear infinite;
+    -moz-animation: scroll-left 6s linear infinite;
+    -webkit-animation: scroll-left 6s linear infinite;
     animation: scroll-left 6s linear infinite;
     height: 31px;
 }
 
 @keyframes scroll-left {
     0% {
-        -moz-transform: translateX(290%);
-        -webkit-transform: translateX(290%);
-        transform: translateX(290%);
+        -moz-transform: translateX(270%);
+        -webkit-transform: translateX(270%);
+        transform: translateX(270%);
     }
 
     100% {
-        -moz-transform: translateX(-290%);
-        -webkit-transform: translateX(-290%);
-        transform: translateX(-290%);
+        -moz-transform: translateX(-270%);
+        -webkit-transform: translateX(-270%);
+        transform: translateX(-270%);
     }
 }
 
