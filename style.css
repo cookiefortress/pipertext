@@ -636,10 +636,9 @@ main.resourcePage h2 {
 }
 
 .resGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-    grid-auto-rows: max-content;
-    gap: 1.2rem;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
 }
 
 .resGrid div {
@@ -649,16 +648,18 @@ main.resourcePage h2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 100%;
 }
 
 .resGrid div p {
-    text-indent: 0;
-    font-size: 0.8rem;
+    margin-right: 2rem;
+    margin-left: .5rem;
 }
 
-div.resGrid div img {
-    position: relative;
-    align-self: flex-end;
+.resGrid div p img {
+    float: right;
+    padding: .2rem;
+    margin-left: 1rem;
 }
 
 /* articles page */
