@@ -8,7 +8,7 @@ function changeTheme(theme) {
 			--accentTwo: ${accentTwo};
 			--gradientTopLeft: ${gradientTopLeft};
 			--code: ${code}`;
-			document.querySelector(".container").style.boxShadow = `${bShadow}`;
+		document.querySelector(".container").style.boxShadow = `${bShadow}`;
 	}
 
 	switch (theme) {
@@ -71,10 +71,10 @@ function changeTheme(theme) {
 		</div>
 	`;
 
-		const themeWindow = document.createElement("div");
-		themeWindow.id = "wTheme";
-		const themeTitle = document.createElement("div");
-		themeTitle.innerHTML = `
+	const themeWindow = document.createElement("div");
+	themeWindow.id = "wTheme";
+	const themeTitle = document.createElement("div");
+	themeTitle.innerHTML = `
 		<div>
 			<img src="/res/img/pipe.png" style="width: 2rem;">
 			<h4>themes</h4>
@@ -83,33 +83,33 @@ function changeTheme(theme) {
 			<button class="windowHide">x</button>
 		</div>
 		`
-		themeTitle.classList.add("windowTitle");
-		const themesDiv = document.createElement("div");
-		themesDiv.id = "themesDiv";
-		themesDiv.innerHTML = buttonsHTML;
-		themeWindow.appendChild(themeTitle);
-		themeWindow.appendChild(themesDiv);
+	themeTitle.classList.add("windowTitle");
+	const themesDiv = document.createElement("div");
+	themesDiv.id = "themesDiv";
+	themesDiv.innerHTML = buttonsHTML;
+	themeWindow.appendChild(themeTitle);
+	themeWindow.appendChild(themesDiv);
 
-		let isSelected = false;
-		let offsetX, offsetY;
-	
-		themeTitle.addEventListener("mousedown", (e) => {
-			isSelected = true;
-			offsetX = e.clientX - themeWindow.offsetLeft;
-			offsetY = e.clientY - themeWindow.offsetTop;
-	
-			document.body.style.userSelect = 'none';
-		})
-		document.addEventListener('mousemove', (e) => {
-			if (!isSelected) return;
-			themeWindow.style.left = e.clientX - offsetX + 'px';
-			themeWindow.style.top = e.clientY - offsetY + 'px';
-		  });
-		  
-		  document.addEventListener('mouseup', () => {
-			isSelected = false;
-			document.body.style.userSelect = '';
-		  });
+	let isSelected = false;
+	let offsetX, offsetY;
+
+	themeTitle.addEventListener("mousedown", (e) => {
+		isSelected = true;
+		offsetX = e.clientX - themeWindow.offsetLeft;
+		offsetY = e.clientY - themeWindow.offsetTop;
+
+		document.body.style.userSelect = 'none';
+	})
+	document.addEventListener('mousemove', (e) => {
+		if (!isSelected) return;
+		themeWindow.style.left = e.clientX - offsetX + 'px';
+		themeWindow.style.top = e.clientY - offsetY + 'px';
+	});
+
+	document.addEventListener('mouseup', () => {
+		isSelected = false;
+		document.body.style.userSelect = '';
+	});
 
 	document.querySelector("#themeButton").addEventListener("click", () => {
 		if (themeWindow.style.visibility === "visible") {
@@ -119,38 +119,19 @@ function changeTheme(theme) {
 			themeWindow.style.visibility = "visible";
 		}
 	});
-	window.onload=function() {
+	window.onload = function () {
 		document.querySelector(".windowHide").addEventListener("click", () => {
-		if (themeWindow.style.visibility === "visible") {
-			themeWindow.style.visibility = "hidden";
-		}
-		else {
-			themeWindow.style.visibility = "visible";
-		}
-	});
+			if (themeWindow.style.visibility === "visible") {
+				themeWindow.style.visibility = "hidden";
+			}
+			else {
+				themeWindow.style.visibility = "visible";
+			}
+		});
 	}
 
 	themeWindow.style.visibility = "hidden";
 	document.querySelector(".container").appendChild(themeWindow);
-
-	// hide the list when the user clicks outside of it
-	// document.addEventListener('click', (event) => {
-	// 	const list = document.querySelector("#themeList");
-	// 	const button = document.querySelector("#themeButton");
-
-	// 	function checkLists() {
-	// 		if (list.contains(event.target)) {
-	// 			return false;
-	// 		}
-	// 		return true;
-	// 	}
-
-	// 	if (document.querySelector("#themeList") && checkLists()) {
-	// 		// prevent the visibility from being set to hidden when the button for the dropdown is clicked
-	// 		if (button.contains(event.target)) return;
-	// 		document.querySelector("#themeList").style.display = "none";
-	// 	}
-	// });
 })();
 
 // restore saved selection on page load

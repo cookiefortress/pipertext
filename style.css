@@ -781,9 +781,8 @@ main#contactMain address a {
     border: 1px ridge var(--accentTwo);
     position: absolute;
     top: 8rem;
-    left: 8rem;
+    left: 80%;
 }
-
 .windowTitle {
     display: flex;
     flex-flow: row nowrap;
@@ -793,25 +792,24 @@ main#contactMain address a {
     height: 2rem;
     gap: .52rem;
 }
-
+.windowTitle h4 {
+    user-select: none;
+}
 .windowTitle div {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     gap: .4rem;
 }
-
 .windowTitle div:nth-child(2) {
     margin-right: .3rem;
 }
-
 .windowTitle div:nth-child(2) button {
     border: 2px ridge var(--accentOne);
     padding: .1rem .3rem;
     background-color: var(--secondary);
     color: var(--primary);
 }
-
 .windowTitle div:nth-child(2) button:hover {
     border: 2px groove var(--accentTwo);
     cursor: pointer;
