@@ -57,5 +57,3 @@ function createWindow(name, html, button) {
 	window.style.visibility = "hidden";
 	document.querySelector(".container").appendChild(window);
 }
-
-export { createWindow }
