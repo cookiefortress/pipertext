@@ -161,6 +161,15 @@ const quotes = `
               <cite>The Fellowship of the Ring</cite>
             </p>
           </blockquote>
+        <blockquote>
+            <div>
+              “Anyone who has lost track of time when using a computer knows the propensity to dream, the urge to make dreams come true and the tendency to miss lunch.”
+            </div>
+            <p>
+              <b>Tim Berners-Lee</b> interviewed by
+              <cite>Internet World</cite>, 1994
+            </p>
+        </blockquote>
         </div>
 	`
 const about = `
@@ -323,67 +332,67 @@ const contact = `
 	`
 
 function renderContentFromHash() {
-  switch (window.location.hash) {
-    case "#homepage":
-      main.innerHTML = homepage;
-      main.id = "homeMain";
-      break;
-    case "#resource":
-      main.innerHTML = resource;
-      main.id = "resourceMain";
-      break;
-    case "#articles":
-      main.innerHTML = articles;
-      main.id = "articlesMain";
-      break;
-    case "#quotes":
-      main.innerHTML = quotes;
-      main.id = "quotesMain";
-      break;
-    case "#about":
-      main.innerHTML = about;
-      main.id = "aboutMain";
-      break;
-    case "#contact":
-      main.innerHTML = contact;
-      main.id = "contactMain";
-      break;
-    default:
-      window.location.hash = "#homepage"; // fallback
-  }
+    switch (window.location.hash) {
+        case "#homepage":
+            main.innerHTML = homepage;
+            main.id = "homeMain";
+            break;
+        case "#resource":
+            main.innerHTML = resource;
+            main.id = "resourceMain";
+            break;
+        case "#articles":
+            main.innerHTML = articles;
+            main.id = "articlesMain";
+            break;
+        case "#quotes":
+            main.innerHTML = quotes;
+            main.id = "quotesMain";
+            break;
+        case "#about":
+            main.innerHTML = about;
+            main.id = "aboutMain";
+            break;
+        case "#contact":
+            main.innerHTML = contact;
+            main.id = "contactMain";
+            break;
+        default:
+            window.location.hash = "#homepage"; // fallback
+    }
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-  if (!window.location.hash) {
-    window.location.hash = "#homepage";
-  } else {
-    renderContentFromHash();
-  }
+    if (!window.location.hash) {
+        window.location.hash = "#homepage";
+    } else {
+        renderContentFromHash();
+    }
 });
 
 window.addEventListener("hashchange", renderContentFromHash);
 
 document.querySelector("#navHome").addEventListener("click", (e) => {
-  e.preventDefault();
-  window.location.hash = "homepage";
+    e.preventDefault();
+    window.location.hash = "homepage";
 });
 document.querySelector("#navResource").addEventListener("click", (e) => {
-  e.preventDefault();
-  window.location.hash = "resource";
+    e.preventDefault();
+    window.location.hash = "resource";
 });
 document.querySelector("#navArticles").addEventListener("click", (e) => {
-  e.preventDefault();
-  window.location.hash = "articles";
+    e.preventDefault();
+    window.location.hash = "articles";
 });
 document.querySelector("#navQuotes").addEventListener("click", (e) => {
-  e.preventDefault();
-  window.location.hash = "quotes";
+    e.preventDefault();
+    window.location.hash = "quotes";
 });
 document.querySelector("#navAbout").addEventListener("click", (e) => {
-  e.preventDefault();
-  window.location.hash = "about";
+    e.preventDefault();
+    window.location.hash = "about";
 });
 document.querySelector("#navContact").addEventListener("click", (e) => {
-  e.preventDefault();
-  window.location.hash = "contact";
+    e.preventDefault();
+    window.location.hash = "contact";
 });

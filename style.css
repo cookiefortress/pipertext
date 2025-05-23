@@ -692,7 +692,7 @@ main.resourcePage h2 {
     margin-bottom: 1rem;
 }
 
-#quotesMain {
+#quotes {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
     grid-auto-rows: max-content;
@@ -703,6 +703,8 @@ div#quotes blockquote {
     background-color: var(--accentTwo);
     padding: 1rem;
     border: 2px groove var(--accentOne);
+    display: flex;
+    flex-direction: column;
 }
 
 div#quotes blockquote div {

@@ -71,7 +71,7 @@ const themeButtons = `
 		</div>
 		`;
 
-const tWindow = themeWindow("themes", themeButtons, '#themeButton');
+themeWindow("themes", themeButtons, '#themeButton');
 
 // restore saved selection on page load
 document.addEventListener("DOMContentLoaded", () => {
