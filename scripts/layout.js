@@ -93,10 +93,8 @@ function createHeader() {
 		    <div>
             <h1 class="pipertext">&gt; pipertext</h1>
         </div>
-
-        <button id="themeButton">themes</button>
-
         <div class="logo">
+            <button id="themeButton">themes</button>
             <img src="/res/img/pipe.png" alt="Pipertext logo">
         </div>`;
 }

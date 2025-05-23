@@ -72,6 +72,7 @@ header {
     cursor: pointer;
     padding: .2rem;
     align-self: flex-start;
+    margin-right: 2rem;
     margin-left: 16rem;
 }
 #themeList {
@@ -148,6 +149,9 @@ header {
     border: 2px solid rgb(144, 177, 0);
     color: #ffffff;
     background-color: #161616;
+}
+header div.logo {
+    display: flex;
 }
 header div.logo img {
     width: 6rem;
