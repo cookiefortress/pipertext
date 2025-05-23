@@ -769,7 +769,7 @@ main#contactMain address a {
     border: 4px outset var(--winGrey);
 }
 
-#wTheme {
+.window {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;

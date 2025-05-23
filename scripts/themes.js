@@ -1,3 +1,5 @@
+import { window as themeWindow } from '/scripts/window.js';
+
 // function for changing the color scheme
 function changeTheme(theme) {
 	function writeStyles(primary, secondary, accentOne, accentTwo, gradientTopLeft, bShadow, code) {
@@ -52,9 +54,7 @@ function changeTheme(theme) {
 	localStorage.setItem("selectedTheme", theme);
 }
 
-// IIFE for the theme selector UI
-(function () {
-	const buttonsHTML = `	
+const themeButtons = `	
         <div id="themeList">
 			<button onclick="changeTheme('cherry')">cherry</button>
 			<button onclick="changeTheme('tobacco')">tobacco</button>
@@ -69,73 +69,12 @@ function changeTheme(theme) {
 			<button onclick="changeTheme('2600')">2600</button>
 			<button onclick="changeTheme('monster')">monster</button>
 		</div>
-	`;
+		`;
 
-	const themeWindow = document.createElement("div");
-	themeWindow.id = "wTheme";
-	const themeTitle = document.createElement("div");
-	themeTitle.innerHTML = `
-		<div>
-			<img src="/res/img/pipe.png" style="width: 2rem;">
-			<h4>themes</h4>
-		</div>
-		<div>
-			<button class="windowHide">x</button>
-		</div>
-		`
-	themeTitle.classList.add("windowTitle");
-	const themesDiv = document.createElement("div");
-	themesDiv.id = "themesDiv";
-	themesDiv.innerHTML = buttonsHTML;
-	themeWindow.appendChild(themeTitle);
-	themeWindow.appendChild(themesDiv);
-
-	let isSelected = false;
-	let offsetX, offsetY;
-
-	themeTitle.addEventListener("mousedown", (e) => {
-		isSelected = true;
-		offsetX = e.clientX - themeWindow.offsetLeft;
-		offsetY = e.clientY - themeWindow.offsetTop;
-
-		document.body.style.userSelect = 'none';
-	})
-	document.addEventListener('mousemove', (e) => {
-		if (!isSelected) return;
-		themeWindow.style.left = e.clientX - offsetX + 'px';
-		themeWindow.style.top = e.clientY - offsetY + 'px';
-	});
-
-	document.addEventListener('mouseup', () => {
-		isSelected = false;
-		document.body.style.userSelect = '';
-	});
-
-	document.querySelector("#themeButton").addEventListener("click", () => {
-		if (themeWindow.style.visibility === "visible") {
-			themeWindow.style.visibility = "hidden";
-		}
-		else {
-			themeWindow.style.visibility = "visible";
-		}
-	});
-	window.onload = function () {
-		document.querySelector(".windowHide").addEventListener("click", () => {
-			if (themeWindow.style.visibility === "visible") {
-				themeWindow.style.visibility = "hidden";
-			}
-			else {
-				themeWindow.style.visibility = "visible";
-			}
-		});
-	}
-
-	themeWindow.style.visibility = "hidden";
-	document.querySelector(".container").appendChild(themeWindow);
-})();
+const tWindow = themeWindow("themes", themeButtons, '#themeButton');
 
 // restore saved selection on page load
-window.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
 	const savedValue = localStorage.getItem("selectedTheme");
 	if (savedValue) {
 		changeTheme(savedValue);

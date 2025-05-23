@@ -1,26 +1,22 @@
-function createWindow(name, html, button) {
-
+function window(name, html, buttonID) {
 	const window = document.createElement("div");
-	window.classList.add("window");
+	window.classList.add(`window`);
 
 	const windowTitle = document.createElement("div");
+	windowTitle.classList.add(`windowTitle`);
 	windowTitle.innerHTML = `
 		<div>
 			<img src="/res/img/pipe.png" style="width: 2rem;">
 			<h4>${name}</h4>
 		</div>
 		<div>
-			<button class="${name}Window">x</button>
+			<button class="windowHide">x</button>
 		</div>
-		`
-	windowTitle.classList.add("windowTitle");
+		`;
 
 	const windowContent = document.createElement("div");
-	windowContent.classList.add("windowContent")
-	windowContent.innerHTML = html;
-
-	window.appendChild(windowTitle);
-	window.appendChild(windowContent);
+	windowContent.classList.add("windowContent");
+	windowContent.innerHTML = `${html}`;
 
 	let isSelected = false;
 	let offsetX, offsetY;
@@ -43,17 +39,30 @@ function createWindow(name, html, button) {
 		document.body.style.userSelect = '';
 	});
 
-	if (button) {
-		document.querySelector(`${button}`).addEventListener("click", () => {
-			if (window.style.visibility === "visible") {
-				window.style.visibility = "hidden";
-			}
-			else {
-				window.style.visibility = "visible";
-			}
-		});
-	}
-
 	window.style.visibility = "hidden";
+	window.appendChild(windowTitle);
+	window.appendChild(windowContent);
+
 	document.querySelector(".container").appendChild(window);
+
+	document.querySelector(`${buttonID}`).addEventListener("click", () => {
+		if (window.style.visibility === "visible") {
+			window.style.visibility = "hidden";
+		}
+		else {
+			window.style.visibility = "visible";
+		}
+	});
+	document.querySelector(".windowHide").addEventListener("click", () => {
+		if (window.style.visibility === "visible") {
+			window.style.visibility = "hidden";
+		}
+		else {
+			window.style.visibility = "visible";
+		}
+	});
+
+	return window;
 }
+
+export { window };
