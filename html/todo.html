@@ -1,118 +1,132 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pipertext</title>
-    <link rel="icon" type="image/x-icon" href="/res/img/pipe.png" />
-    <link rel="icon" type="image/png" href="/res/img/pipe.png" />
-    <link rel="stylesheet" href="/style.css" />
-    <script src="/scripts/layout.js" defer></script>
-    <script src="/scripts/themes.js" defer></script>
-    <script src="/scripts/articleScripts/todo.js" defer></script>
 
-    <style>
-      #todoList {
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-      }
-      #addNewTodo {
-        width: 20%;
-        border: 2px solid var(--accentOne);
-        padding: 0.3rem;
-        cursor: pointer;
-        margin-bottom: 1rem;
-      }
-      form {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        margin-top: 1rem;
-      }
-      form div {
-        display: flex;
-        flex-flow: column nowrap;
-      }
-      form input {
-        width: 150px;
-      }
-      form input#description {
-        height: 100px;
-      }
-      #submit {
-        padding: 0.3rem 0.5rem;
-        border: 2px solid var(--accentOne);
-        cursor: pointer;
-      }
-      #menu {
-        margin-bottom: 1rem;
-      }
-      #menu button {
-        padding: 0.3rem 0.5rem;
-        border: 2px solid var(--accentTwo);
-      }
-      #list {
-        margin-top: 1rem;
-      }
-      div#list {
-        padding: 0.5rem;
-      }
-      ul#menu button {
-        margin: 0 0.5rem;
-      }
-      div p {
-        border-left: none;
-        text-indent: 0;
-        margin-left: 0;
-        padding-left: 0;
-      }
-      .deleteButton,
-      .isDoneButton {
-        padding: 0.4rem;
-      }
-      .isDoneButton {
-        border: 2px solid var(--accentOne);
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <header></header>
-      <nav></nav>
-      <aside></aside>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pipertext</title>
+  <link rel="icon" type="image/x-icon" href="/res/img/pipe.png" />
+  <link rel="icon" type="image/png" href="/res/img/pipe.png" />
+  <link rel="stylesheet" href="/style.css" />
+  <script src="/scripts/layout.js" type="module" defer></script>
+  <script src="/scripts/themes.js" type="module" defer></script>
+  <script src="/scripts/articleScripts/todo.js" defer></script>
 
-      <main class="article">
-        <article>
-          <h2 class="articleHeader">Project - Todo List</h2>
-          <time>UTC 2025-04-20 - April 20<sup>th</sup>, 2025</time>
-          <hr />
-          <p>
-            This project was completed as part of
-            <a
-              href="https://www.theodinproject.com/lessons/node-path-javascript-todo-list"
-              target="_blank"
-              rel="noopener noreferrer"
-              >The Odin Project's Todo List project</a
-            >. I initially attempted making this outside of Pipertext, but I
-            wanted to redo it because it honestly really sucked. And I figured
-            I'd do it on here now. You're welcome! :D
-          </p>
+  <style>
+    #todoList {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+    }
 
-          <div id="todoList">
-            <ul id="menu">
-              <h2>Todo Lists</h2>
-            </ul>
-            <button id="addNewTodo">Add new todo!</button>
-            <div id="formDiv"></div>
-            <div id="list"></div>
-          </div>
-        </article>
-      </main>
+    #addNewTodo {
+      width: 20%;
+      border: 2px solid var(--accentOne);
+      padding: 0.3rem;
+      cursor: pointer;
+      margin-bottom: 1rem;
+    }
 
-      <footer></footer>
-    </div>
-  </body>
+    form {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    form div {
+      display: flex;
+      flex-flow: column nowrap;
+    }
+
+    form input {
+      width: 150px;
+    }
+
+    form input#description {
+      height: 100px;
+    }
+
+    #submit {
+      padding: 0.3rem 0.5rem;
+      border: 2px solid var(--accentOne);
+      cursor: pointer;
+    }
+
+    #menu {
+      margin-bottom: 1rem;
+    }
+
+    #menu button {
+      padding: 0.3rem 0.5rem;
+      border: 2px solid var(--accentTwo);
+    }
+
+    #list {
+      margin-top: 1rem;
+    }
+
+    div#list {
+      padding: 0.5rem;
+    }
+
+    ul#menu button {
+      margin: 0 0.5rem;
+    }
+
+    div p {
+      border-left: none;
+      text-indent: 0;
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+    .deleteButton,
+    .isDoneButton {
+      padding: 0.4rem;
+    }
+
+    .isDoneButton {
+      border: 2px solid var(--accentOne);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header></header>
+    <nav></nav>
+    <aside></aside>
+
+    <main class="article">
+      <article>
+        <h2 class="articleHeader">Project - Todo List</h2>
+        <time>UTC 2025-04-20 - April 20<sup>th</sup>, 2025</time>
+        <hr />
+        <p>
+          This project was completed as part of
+          <a href="https://www.theodinproject.com/lessons/node-path-javascript-todo-list" target="_blank"
+            rel="noopener noreferrer">The Odin Project's Todo List project</a>. I initially attempted making this
+          outside of Pipertext, but I
+          wanted to redo it because it honestly really sucked. And I figured
+          I'd do it on here now. You're welcome! :D
+        </p>
+
+        <div id="todoList">
+          <ul id="menu">
+            <h2>Todo Lists</h2>
+          </ul>
+          <button id="addNewTodo">Add new todo!</button>
+          <div id="formDiv"></div>
+          <div id="list"></div>
+        </div>
+      </article>
+    </main>
+
+    <footer></footer>
+  </div>
+</body>
+
 </html>
