@@ -1,95 +1,80 @@
+import { writeUTC } from '/scripts/UTC.js'
+
 function createSidebar() {
-  const mainMarquee = document.createElement("div");
-  mainMarquee.classList.add("marquee");
-  mainMarquee.innerHTML = `
+  function marquee() {
+    const marquee = document.createElement("div");
+    marquee.classList.add("marquee");
+    marquee.innerHTML = `
 	  <img src="/res/gif/bestvw.gif" alt="Best viewed with a computer and a monitor!">
     <img src="/res/gif/css2.gif" alt="Made with CSS!">
     <img src="/res/gif/gothtml.gif" alt="Got HTML?">`;
+    return marquee;
+  }
 
-  function createDashboard() {
-    let dashboard = document.createElement("div");
+  function dashboard() {
+    const dashboard = document.createElement("div");
     dashboard.classList.add("dashboard");
-    let UTCtext = document.createElement("time");
+    const UTCtext = document.createElement("time");
     dashboard.appendChild(UTCtext);
-    let pipertextIcon = document.createElement("div");
+    const pipertextIcon = document.createElement("div");
     pipertextIcon.innerHTML =
       "<img src='/res/img/pipertext.png' alt='Pipertext 88x31 icon' width='88px'>";
     dashboard.appendChild(pipertextIcon);
-
-    function writeUTC() {
-      let UTC = getUTC();
-      UTCtext.innerHTML = "UTC " + UTC;
-      setTimeout(writeUTC, 1000);
-    }
-
-    function getUTC() {
-      const now = new Date();
-      const year = now.getUTCFullYear();
-      const month = now.getUTCMonth();
-      const date = now.getUTCDate();
-      const hours = now.getUTCHours();
-      const minutes = now.getUTCMinutes();
-      const seconds = now.getUTCSeconds();
-      let UTC = `${hours}:${minutes}:${seconds} ${year}-${month + 1}-${date}`;
-      return UTC;
-    }
-
-    writeUTC();
+    writeUTC(UTCtext);
     return dashboard;
   }
 
-  function createRecentPost(href, title, date) {
-    let recentPost = document.createElement("div");
-    recentPost.classList.add("recentArticle");
+  function recentPosts() {
+    function createRecentPost(href, title, date) {
+      const recentPost = document.createElement("div");
+      recentPost.classList.add("recentArticle");
 
-    let postLink = document.createElement("a");
-    postLink.href = href;
-    postLink.textContent = title;
-    let postDate = document.createElement("p");
-    postDate.textContent = date;
+      const postLink = document.createElement("a");
+      postLink.href = href;
+      postLink.textContent = title;
+      const postDate = document.createElement("p");
+      postDate.textContent = date;
 
-    recentPost.appendChild(postLink);
-    recentPost.appendChild(postDate);
-    recentPosts.appendChild(recentPost);
+      recentPost.appendChild(postLink);
+      recentPost.appendChild(postDate);
+      recentPosts.appendChild(recentPost);
+    }
+
+    function createRecentPosts() {
+      const recentPostsHeader = document.createElement("h3");
+      recentPostsHeader.textContent = "Recent posts";
+
+      recentPosts.appendChild(recentPostsHeader);
+
+      createRecentPost(
+        "/html/dynamicUI.html",
+        "Project - Dynamic UI",
+        "2025/05/08",
+      );
+      createRecentPost(
+        "/html/tictactoeRevisited.html",
+        "Project - Tic Tac Toe Revisited",
+        "2025/04/25",
+      );
+      createRecentPost(
+        "/html/todo.html",
+        "Project - Todo List",
+        "2025/04/20",
+      );
+    }
+
+    const recentPosts = document.createElement("div");
+    createRecentPosts();
+    return recentPosts;
   }
 
-  function createRecentPosts() {
-    let recentPosts = document.createElement("div");
-    let recentPostsHeader = document.createElement("h3");
-    recentPostsHeader.textContent = "Recent posts";
-    recentPosts.appendChild(recentPostsHeader);
-
-    createRecentPost(
-      "/html/dynamicUI.html",
-      "Project - Dynamic UI",
-      "2025/05/08",
-    );
-    createRecentPost(
-      "/html/tictactoeRevisited.html",
-      "Project - Tic Tac Toe Revisited",
-      "2025/04/25",
-    );
-    createRecentPost(
-      "/html/todo.html",
-      "Project - Todo List",
-      "2025/04/20",
-    );
-  }
-
-  let recentPosts = document.createElement("div");
-  let recentPostsHeader = document.createElement("h3");
-  recentPostsHeader.textContent = "Recent posts";
-  recentPosts.appendChild(recentPostsHeader);
-  createRecentPosts();
-
-  // append the marquee, dashboard, and recentPosts to the sidebar
-  sidebar.appendChild(mainMarquee);
-  sidebar.appendChild(createDashboard());
-  sidebar.appendChild(recentPosts);
+  sidebar.appendChild(marquee());
+  sidebar.appendChild(dashboard());
+  sidebar.appendChild(recentPosts());
 }
 
 function createFooter() {
-  let footer = document.querySelector("footer");
+  const footer = document.querySelector("footer");
   footer.innerHTML = `
 		<small class="flame-text">pipertext.net</small>
         <small>&#169; 2025</small>
@@ -103,7 +88,7 @@ function createFooter() {
 }
 
 function createHeader() {
-  let header = document.querySelector("header");
+  const header = document.querySelector("header");
   header.innerHTML = `
 		    <div>
             <h1 class="pipertext">&gt; pipertext</h1>
@@ -117,7 +102,7 @@ function createHeader() {
 }
 
 function createNav() {
-  let nav = document.querySelector("nav");
+  const nav = document.querySelector("nav");
   nav.innerHTML = `
 		<ul>
       <li><a href="/index.html#homepage" id="navHome">home</a></li>
@@ -129,7 +114,6 @@ function createNav() {
     </ul>`;
 }
 
-// select the sidebar
 const sidebar = document.querySelector("aside");
 createHeader();
 createSidebar();
