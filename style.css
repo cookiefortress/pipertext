@@ -7,6 +7,7 @@ html {
     --winGrey: #6c6c6c;
     --winGreen: #208c71;
     --sysGrey: #c6c6c6;
+    scrollbar-gutter: stable;
 }
 body {
     background: url('/res/img/spacex.gif');
@@ -313,7 +314,17 @@ footer {
     align-items: center;
     flex-flow: column nowrap;
     gap: 0.25rem;
-    padding: 2rem;
+    padding: 1.2rem;
+}
+small.withlove {
+    color: var(--accentOne);
+    width: 13rem;
+    border: 2px solid var(--accentOne);
+    padding: .3rem;
+    margin-top: .2rem;
+    text-align: center;
+    cursor: default;
+    user-select: none;
 }
 
 .dashboard {
@@ -408,6 +419,7 @@ figure.card figcaption {
 
 figure.card figcaption a {
     text-decoration: none;
+    color: var(--accentOne);
 }
 
 /* flaming text */
@@ -531,16 +543,16 @@ figure.card figcaption a {
 }
 
 p a:visited {
-    color: var(--accentOne);
+    color: var(--accentOne) !important;
 }
 
 p a:not(:visited) {
-    color: var(--accentOne);
+    color: var(--accentOne) !important;
 }
 
 a:hover {
     color: var(--accentOne);
-    font-weight: bolder;
+    font-weight: bold;
 }
 
 /* homepage */

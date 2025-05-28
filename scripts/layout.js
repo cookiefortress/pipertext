@@ -77,15 +77,9 @@ function createSidebar() {
 function createFooter() {
   const footer = document.querySelector("footer");
   footer.innerHTML = `
-		<small class="flame-text">pipertext.net</small>
-        <small>&#169; 2025</small>
-        <p>
-            <a href="https://jigsaw.w3.org/css-validator/check/referer" rel="noopener">
-            	<img style="border:0;width:88px;height:31px"
-            		src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
-            		alt="Valid CSS!">
-            </a>
-        </p>`;
+		<a href="https://www.pipertext.net" style="text-decoration: none;"><small class="flame-text">pipertext.net</small></a>
+        <small class="withlove"><em>lovingly handmade with HTML, CSS, and JavaScript</em></small>
+        <p></p>`;
 }
 
 function createHeader() {

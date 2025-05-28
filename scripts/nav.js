@@ -2,11 +2,10 @@ const main = document.querySelector("main");
 const homepage = `
         <h2>Homepage</h2>
         <p>
-          Pipertext is my love letter to the old web; a time when the net seemed
-          to be an underground honey hole with a vast library of talented,
-          creative people showing off the things they love. I was personally
-          born too late to have seen it myself, but I nonetheless have grown
-          very fond of the aesthetics and "society" of the time!
+          Pipertext is a love letter to the old web; when it seemed
+          to be a never-ending adventure through others' little corners of the grand series of tubes you're viewing this website through. I was personally
+          born too late to have seen it myself, but regardless I have become
+          very fond of the aesthetics and culture of the time.
           </p><figure class="card">
             <img src="/res/img/pheonix.png" alt="A picture of Netscape Navigator in 1995.">
             <figcaption>
@@ -16,21 +15,19 @@ const homepage = `
               later <i>Firebird</i>, before rebranding to <i>Firefox</i>
             </figcaption>
           </figure>
-        <p></p>
         <p>
-          The early web represented a <em>human</em> experience. It wasn't
-          without its flaws, but what is? Compared to today, it seems so
-          beautiful; pages handcrafted by people of all walks of life, showing
-          off their interests, passions, and awesome websites. I've grown up in
+          The early web represented a more human, artistic experience. Everything seemed handmade. Compared to today, it seems so
+          awesome; websites weren't so cookie cutter and lifeless, and were made by people of all walks of life, showing
+          off their interests, passions, and ability to write kickass code. I've grown up in
           a world where the web is primarily accessed through social media;
           divisive content designed to keep you addicted is the name of the
-          game. This site is my contribution to the fun &amp; human-centric net!
+          game. This site is my contribution to the human-centric web!
         </p>
         <p>
           I've compiled
           <a href="#resource">lots of resources</a> if you're
           interested in making your website look like it's straight out of the
-          Y2K era as well. Keep on puffing! :D
+          Y2K era. But I'm sure many would agree that the best strategy for that is just to <a href="https://www.theodinproject.com/" target="_blank" rel="noopener noreferrer">dive in</a>. Keep on puffing! :D
         </p>
         <div class="chatbox">
           <h3>the smoke lounge</h3>
@@ -41,7 +38,6 @@ const homepage = `
         </div>
 	`
 const resource = `
-	
         <h2>Resource</h2>
         <p>
           Welcome to the resource page! Here, I am continuously adding new
@@ -180,7 +176,7 @@ const about = `
           just for myself, but for anyone with an interest in this bygone era.
           I'm still in college, studying computer science; I kept saying "not
           until I can create it efficiently," but what's the fun in that,
-          anyways? It's supposed to be a little unoptimized, right?!
+          anyways? It's supposed to be a little unoptimized, right?
         </p>
         <figure class='card' id='ricostay'>
           <img
@@ -193,7 +189,7 @@ const about = `
           </figcaption>
         </figure>
         <p class='floatLeftFix'>
-          Regardless, I've wanted a website with web 1.0 aesthetics for as long
+          I've wanted a website with web 1.0 aesthetics for as long
           as I can remember. Pictured on the left is one of my first decent
           attempts at doing so - a
           <a
@@ -204,22 +200,14 @@ const about = `
           >
           (obscure game by Valve) fan/information page. Ricostay was never
           actually hosted, but it was a cute little way for me to practice a bit
-          of design. If you couldn't tell yet, I absolutely love
-          <a
-            href="https://en.wikipedia.org/wiki/Consolas"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Consolas</a
-          >.
+          of design.
         </p>
         <p>
-          Pipertext is meant to be my love letter to the old web. As is
-          mentioned on the homepage, I was born in 2004. I unfortunately didn't
-          get to experience the Net in its infancy. Most consider web 1.0 to
+          Pipertext is meant to be my display of appreciation for what the old web was. I was born in 2004; I unfortunately didn't
+          get to experience the web in its infancy. Most consider Web 1.0 to
           have "ended" in 2004, but it's really an arbitrary definition.
           Nonetheless, I was an Annoying Orange kid. I grew up knowing the web
-          in a way similar to what it is today: commercialized, and largely
-          centralized, too.
+          in a way similar to what it is today: commercialized. Bland is a word that can honestly describe most sites today. I hate to be negative like that, but it's true! How often do you stumble across websites that make you go "cool", just through their design or content, without specifically scouting it out via a site like Neocities? This is known as <a href="https://lawsofux.com/jakobs-law/" target="_blank" rel="noopener noreferrer">Jakob's Law</a>, and it's an unfortunate consequence of a consumer-driven web, as opposed to a human-driven web, if that makes sense. That's not to say there is no place for familiarity in UI design, but to say that it has stripped most of the web of its charm is an understatement.
         </p>
         <figure class="card">
           <img
@@ -230,54 +218,26 @@ const about = `
           <figcaption id="runningManCard">The running man!</figcaption>
         </figure>
         <p>
-          The nerdy and more wholesome nature of the young web is something I
-          missed out on, but I strongly believe it can live on. We don't need to
-          make this place so polarizing and patronizing, and we don't need to
-          use the social media applications that encourage it. Today, the Web is
-          seen as a negative thing, and it <em>often is</em>, but it doesn't
-          need to be that way. It wasn't initially; don't get me wrong, there's
-          three things you can't escape: death, taxes, and dickheads on the
-          Internet. We can nonetheless work to support a more productive and
-          positive community on the Web.
+          The nerdy and more wholesome nature of the young web seems foregone, but it does live on. It doesn't need to be so polarizing and patronizing, and we don't need to
+          use the social media applications that encourage negativity. Every day, I see some asshole sharing his dumb opinion on how their thing is objectively superior to your thing, unneccesarily being as much of a jerk as possible, and it just makes you wonder: how does one decide, "yep, this is contributing something to society"? I'm ranting, but still. Life is too short to moan and shout how someone's favorite video game is dead, or whatever. Be kind. :&#41;
         </p>
 
         <p>
-          The goal is for Pipertext to reference, archive, and detail anything
+          One of my intentions for the site is to, archive and detail anything
           and everything related to the old web. Designs, components,
           pictures/backgrounds, old websites that are still running, old
           websites that have been archived in some way, modern depictions of web
           1.0, and everything in between. Again, compiling a lot of this sort of
-          information onto one website will be really interesting and helpful
-          for me, but also, hopefully, for you.
-        </p>
-        <p>
-          I enjoy modern depictions of the style about as much as authentic old
-          ones. What I mean is that I also want to archive things I see as
-          uplifting and innocent; perhaps these are not old websites, nor even
-          modern websites made with the style in mind, just those that try to
-          spread a positive message of some kind. To me, that seems in line with
-          the aura of the pre-2010s web, too.
+          information onto one website is really interesting and helpful
+          for me, but also hopefully for you!
         </p>
         <hr />
-        <h2>A Few Notes</h2>
+        <h2>The design of Pipertext</h2>
         <p>
-          Firstly, this website is designed desktop-first. As described above, I
-          really dislike the polarizing nature of the current web; I can only
-          imagine the emails that will one day find themselves in my inbox due
-          to a decision like that one. For the purposes of Pipertext, there's
-          really not much reason to have amazing support on smaller screens. For
+          This website is designed desktop-first. It should work on your 320px phone. Just don't expect beauty. For
           me, anyways, I tend to find it easier to collapse a design than to
           expand it. Personal preference! I do make sure it's <em>legible</em>,
           but pretty? You be the judge! :-D
-        </p>
-        <p>
-          Secondly, you'll notice that in the footer, I have only validated my
-          CSS through W3C's website. Their HTML validator
-          <strong>hates</strong> fun, and therefore <code>&lt;marquee&gt;</code> tags.
-          So it won't pass Pipertext. Because I am stubborn, as well as a bit
-          opinionated on whether or not HTML tags should be deprecated (don't
-          break the web), I utterly refuse to rid of my
-          <code>&lt;marquee&gt;</code> tags. Sorry anti-fun dudes.
         </p>
         <p>
           I would love it if you sent any resources you think belong here my
@@ -285,16 +245,10 @@ const about = `
           addresses you can contact me at.
         </p>
         <p>
-          Because I am certain that the brave netizens who scour these lands
-          will ask at some point: I do indeed actually smoke a pipe. I know
-          society tends to lump all tobacco together now, and that may be for
-          the best! It's not good for you. But I can assure you it is not
-          addiction (I can quit any day I swear), and I do not inhale. :D
+          I do indeed actually smoke a pipe. I know
+          society tends to view all tobacco as a cancer-slingin' conglomerate, and that's maybe for the best. It's not good for you. I can assure you, however: it is not
+          addiction (I can quit any day, I swear).
         </p>
-        <img
-          src="/gif/smiley_smoke.gif"
-          alt="A little smiley, seemingly enjoying a cigarette"
-        />
 	`
 const contact = `
           <h2>Contact</h2>
@@ -332,67 +286,67 @@ const contact = `
 	`
 
 function renderContentFromHash() {
-    switch (window.location.hash) {
-        case "#homepage":
-            main.innerHTML = homepage;
-            main.id = "homeMain";
-            break;
-        case "#resource":
-            main.innerHTML = resource;
-            main.id = "resourceMain";
-            break;
-        case "#articles":
-            main.innerHTML = articles;
-            main.id = "articlesMain";
-            break;
-        case "#quotes":
-            main.innerHTML = quotes;
-            main.id = "quotesMain";
-            break;
-        case "#about":
-            main.innerHTML = about;
-            main.id = "aboutMain";
-            break;
-        case "#contact":
-            main.innerHTML = contact;
-            main.id = "contactMain";
-            break;
-        default:
-            window.location.hash = "#homepage"; // fallback
-    }
+  switch (window.location.hash) {
+    case "#homepage":
+      main.innerHTML = homepage;
+      main.id = "homeMain";
+      break;
+    case "#resource":
+      main.innerHTML = resource;
+      main.id = "resourceMain";
+      break;
+    case "#articles":
+      main.innerHTML = articles;
+      main.id = "articlesMain";
+      break;
+    case "#quotes":
+      main.innerHTML = quotes;
+      main.id = "quotesMain";
+      break;
+    case "#about":
+      main.innerHTML = about;
+      main.id = "aboutMain";
+      break;
+    case "#contact":
+      main.innerHTML = contact;
+      main.id = "contactMain";
+      break;
+    default:
+      window.location.hash = "#homepage"; // fallback
+  }
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-    if (!window.location.hash) {
-        window.location.hash = "#homepage";
-    } else {
-        renderContentFromHash();
-    }
+  if (!window.location.hash) {
+    window.location.hash = "#homepage";
+  } else {
+    renderContentFromHash();
+  }
 });
 
 window.addEventListener("hashchange", renderContentFromHash);
 
 document.querySelector("#navHome").addEventListener("click", (e) => {
-    e.preventDefault();
-    window.location.hash = "homepage";
+  e.preventDefault();
+  window.location.hash = "homepage";
 });
 document.querySelector("#navResource").addEventListener("click", (e) => {
-    e.preventDefault();
-    window.location.hash = "resource";
+  e.preventDefault();
+  window.location.hash = "resource";
 });
 document.querySelector("#navArticles").addEventListener("click", (e) => {
-    e.preventDefault();
-    window.location.hash = "articles";
+  e.preventDefault();
+  window.location.hash = "articles";
 });
 document.querySelector("#navQuotes").addEventListener("click", (e) => {
-    e.preventDefault();
-    window.location.hash = "quotes";
+  e.preventDefault();
+  window.location.hash = "quotes";
 });
 document.querySelector("#navAbout").addEventListener("click", (e) => {
-    e.preventDefault();
-    window.location.hash = "about";
+  e.preventDefault();
+  window.location.hash = "about";
 });
 document.querySelector("#navContact").addEventListener("click", (e) => {
-    e.preventDefault();
-    window.location.hash = "contact";
+  e.preventDefault();
+  window.location.hash = "contact";
 });
