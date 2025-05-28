@@ -438,65 +438,95 @@ figure.card figcaption a {
 }
 
 /* media queries */
-@media screen and (max-width: 550px) {
-    header {
-        flex-wrap: wrap;
-        margin: 4rem 0;
-        justify-content: center;
+@media screen and (max-width: 1050px) {
+    body {
+        padding: 0 1rem;
     }
-
-    header h1 {
-        font-size: 2.3rem;
-    }
-
-    header div.logo select {
-        border-radius: 0;
-        padding: 0.1rem 0.3rem;
-        align-self: start;
-        margin-top: 2rem;
-    }
-
-    nav ul {
+    .container {
         display: flex;
-        flex-flow: row wrap;
-        width: 100%;
-        height: 20%;
-        list-style-type: none;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 3rem;
+        flex-flow: column wrap;
+        margin: 0;
     }
-
-    nav ul li {
-        min-width: 30%;
+    header {
+        display: flex;
+        flex-flow: row nowrap;
         margin-bottom: 1rem;
     }
-
+    header div:nth-child(2) {
+        display: flex;
+        flex-flow: column nowrap;
+        margin-top: 2rem;
+    }
+    header div:nth-child(2) img {
+        width: 5rem;
+    }
+    header h1 {
+        width: 100%;
+    }
+    header .logo {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+    header #themeButton {
+        margin: 0;
+    }
+    nav ul {
+        justify-content: center;
+        gap: .5rem;
+    }
+    nav ul li {
+        min-width: 25%;
+        max-width: 2rem;
+    }
+    aside {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        min-height: 0;
+        border-right: none;
+        padding: 1rem 0;
+        min-width: 0;
+    }
+    aside .recentPosts {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    div.marquee {
+        max-width: 20%;
+        min-width: 15%;
+    }
+    div.window {
+        top: 45%;
+        left: 35%;
+    }
+}
+@media screen and (max-width: 600px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+    nav ul li {
+        max-width: 8rem;
+    }
     nav ul li a {
-        font-size: 0.6rem;
+        font-size: .7rem;
     }
-
-    nav {
-        padding: 0.2rem;
-        margin-bottom: 2rem;
+    figure#ricostay {
+        width: 15rem;
     }
-
-    aside .dashboard {
-        max-width: 90%;
+}
+@media screen and (max-width: 515px) {
+    header h1 {
+        font-size: 2rem;
     }
-
-    figure.card {
-        max-width: 40%;
-        margin-left: 25%;
-        float: none;
-    }
-
-    figure img {
-        max-width: 200%;
-    }
-
-    figure figcaption {
-        max-width: 150%;
+}
+@media screen and (max-width: 370px) {
+    header h1 {
+        font-size: 1.2rem;
     }
 }
 

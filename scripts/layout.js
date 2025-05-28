@@ -64,6 +64,7 @@ function createSidebar() {
     }
 
     const recentPosts = document.createElement("div");
+    recentPosts.classList.add("recentPosts");
     createRecentPosts();
     return recentPosts;
   }
