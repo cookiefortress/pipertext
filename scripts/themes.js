@@ -1,7 +1,7 @@
 import { window as themeWindow } from '/scripts/window.js';
 
 // function for changing the color scheme
-function changeTheme(theme) {
+function changeTheme(theme, isSaved = true) {
 	function writeStyles(primary, secondary, accentOne, accentTwo, gradientTopLeft, bShadow, code) {
 		document.documentElement.style.cssText = `
 			--primary: ${primary};
@@ -50,12 +50,25 @@ function changeTheme(theme) {
 		case "monster":
 			writeStyles("#161616", "#ffffff", "rgb(144, 177, 0)", "#0b9936", "#161616", "0 10px 16px rgba(0, 90, 0, 0.5),0 6px 20px rgba(51, 255, 51, 0.5)", "rgb(0, 218, 0)");
 			break;
+
+		// -- holidays --
+		case "christmas":
+			writeStyles("rgb(14, 78, 14)", "white", "rgb(110, 0, 0)", "rgb(120, 0, 0)", "rgb(14, 78, 14)", "0 10px 16px rgba(0, 90, 0, 0.5),0 6px 20px rgba(255, 255, 255, 0.79)", "gold");
+			break;
+		case "halloween":
+			writeStyles("rgb(190, 89, 0)", "rgb(226, 223, 208)", "rgb(50, 1, 47)", "rgb(82, 76, 66)", "rgb(190, 89, 0)", "0 10px 16px 	rgba(149, 23, 177, 0.93),0 6px 20px rgb(50, 1, 47)", "rgb(0, 218, 0)");
+			break;
 	}
-	localStorage.setItem("selectedTheme", theme);
+	if (isSaved) {
+		localStorage.setItem("selectedTheme", theme);
+	}
 }
 
-const themeButtons = `	
-        <div id="themeList">
+window.changeTheme = changeTheme;
+
+themeWindow(`themes`,
+	`
+	    <div id="themeList">
 			<button onclick="changeTheme('cherry')">cherry</button>
 			<button onclick="changeTheme('tobacco')">tobacco</button>
 			<button onclick="changeTheme('haxor')">haxor</button>
@@ -69,12 +82,14 @@ const themeButtons = `
 			<button onclick="changeTheme('2600')">2600</button>
 			<button onclick="changeTheme('monster')">monster</button>
 		</div>
-		`;
-
-themeWindow("themes", themeButtons, '#themeButton');
+	`,
+	'#themeButton');
 
 // restore saved selection on page load
 document.addEventListener("DOMContentLoaded", () => {
+	if (holidayCheck()) {
+		return;
+	}
 	const savedValue = localStorage.getItem("selectedTheme");
 	if (savedValue) {
 		changeTheme(savedValue);
@@ -82,6 +97,24 @@ document.addEventListener("DOMContentLoaded", () => {
 	else {
 		changeTheme("cherry");
 	}
+
+	setInterval(holidayCheck, 100000);
 });
 
-window.changeTheme = changeTheme;
+function holidayCheck() {
+	const christmas = /^12-(?:20|21|22|23|24|25|26)$/;
+	const halloween = /^10-31/;
+
+	const UTC = document.querySelector(".dashboard time").textContent;
+	let date = UTC.slice(18, UTC.length);
+
+	if (christmas.test(date)) {
+		changeTheme("christmas", false);
+		return true;
+	}
+	if (halloween.test(date)) {
+		changeTheme("halloween", false);
+		return true;
+	}
+	return false;
+}
