@@ -16,12 +16,10 @@ const homepage = `
             </figcaption>
           </figure>
         <p>
-          The early web represented a more human, artistic experience. Everything seemed handmade. Compared to today, it seems so
-          awesome; websites weren't so cookie cutter and lifeless, and were made by people of all walks of life, showing
-          off their interests, passions, and ability to write kickass code. I've grown up in
+          The early web was a human experience. Compared to today, anyways; websites weren't so cookie cutter and lifeless, and websites made by ordinary people were the majority, showing
+          off their interests, passions, and ability to write killer sites. I've grown up in
           a world where the web is primarily accessed through social media;
-          divisive content designed to keep you addicted is the name of the
-          game. This site is my contribution to the human-centric web!
+          divisive content designed to keep you addicted is the norm. This site is my contribution to the human-centric web!
         </p>
         <p>
           I've compiled
