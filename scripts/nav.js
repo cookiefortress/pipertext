@@ -251,16 +251,12 @@ const about = `
 const contact = `
           <h2>Contact</h2>
           <p>
-            There a couple of ways to get in contact with me, if you need to
+            Below are a couple of ways to get in contact with me, if you ever need to
             (for whatever reason that may be... I know my devilish looks can be
             mystifying).
           </p>
           <p>
-            The first following email address is probably the most ideal way,
-            but it really doesn't matter. It automatically forwards emails to my
-            primary email. If you have any recommendations, questions, or
-            comments otherwise, I will reply to you from my primary email
-            address which is listed below as well.
+            The contact form below is probably the preferred method. You can alternatively directly contact me at either of the email addresses listed below.
           </p>
           <div>
             <address>
@@ -281,6 +277,14 @@ const contact = `
               >l33t</a
             >.
           </p>
+          <h2>Contact Form</h2>
+          <form id='contactForm' onsubmit="event.preventDefault(); window.location.href = '/html/thx.html';" netlify>
+            <label for="userEmail">your email</label>
+            <input type="email" id='userEmail' name='userEmail' placeholder='gfreeman@blackmesa.com' required>
+            <label for="userComments">your beautiful comments</label>
+            <textarea name="userComments" id="userComments" required placeholder="wow your website is gorgeous man wow" ></textarea>
+            <button type="submit">submit!</button>
+          </form>
 	`
 
 function renderContentFromHash() {

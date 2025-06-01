@@ -786,13 +786,11 @@ div#quotes blockquote p {
     justify-content: center;
     gap: 2rem;
 }
-
 main#contactMain address {
     display: flex;
     gap: 3rem;
     flex-wrap: wrap;
 }
-
 main#contactMain address a {
     margin: auto;
     text-decoration: none;
@@ -800,6 +798,37 @@ main#contactMain address a {
     padding: 0.3rem;
     background-color: var(--primary);
     border: 4px outset var(--winGrey);
+}
+#contactForm {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 24rem;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    text-align: center;
+}
+#contactForm label {
+    margin-top: .5rem;
+    margin-bottom: .2rem;
+}
+#contactForm input {
+    font-family: Consolas;
+}
+#contactForm button {
+    width: 5rem;
+    padding: .2rem .5rem;
+    border-radius: 0;
+    color: var(--secondary);
+    border-color: var(--primary);
+    background-color: var(--accentOne);
+    margin: 0 auto;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+#contactForm button:hover {
+    color: var(--secondary);
+    border-color: var(--primary);
+    background-color: var(--accentTwo);
 }
 
 .window {
