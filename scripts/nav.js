@@ -278,7 +278,7 @@ const contact = `
             >.
           </p>
           <h2>Contact Form</h2>
-          <form id='contactForm' name='contactForm' data-netlify="true" data-netlify-honeypot="bot-field" method='POST' netlify onsubmit="event.preventDefault(); window.location.href = '/html/thx.html';">
+          <form id='contactForm' name='contactForm' method='POST' onsubmit="event.preventDefault(); window.location.href = '/html/thx.html';" action="https://formspree.io/f/mzzgbbkn">
             <label for="userEmail">your email</label>
             <input type="email" id='userEmail' name='userEmail' placeholder='gfreeman@blackmesa.com' required>
             <label for="userComments">your beautiful comments</label>
