@@ -440,6 +440,7 @@ figure.card figcaption a {
         display: flex;
         flex-flow: column wrap;
         margin: 0;
+        margin-bottom: 1rem;
     }
     header {
         display: flex;
@@ -497,6 +498,12 @@ figure.card figcaption a {
     div.window {
         top: 45%;
         left: 35%;
+    }
+    #homeMain figure {
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
     }
 }
 @media screen and (max-width: 600px) {
