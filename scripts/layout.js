@@ -78,8 +78,9 @@ function createFooter() {
   const footer = document.querySelector("footer");
   footer.innerHTML = `
 		<a href="https://www.pipertext.net" style="text-decoration: none;"><small class="flame-text">pipertext.net</small></a>
-        <small class="withlove"><em>lovingly handmade with HTML, CSS, and JavaScript</em></small>
-        <p></p>`;
+    <img src='/res/img/pipe.png' style='width: 2rem; filter: invert() drop-shadow(2px 2px 1px #100000);'>
+    <small class="withlove"><em>lovingly handmade with HTML, CSS, and JavaScript</em></small>
+    <p></p>`;
 }
 
 function createHeader() {

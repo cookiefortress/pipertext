@@ -301,8 +301,11 @@ footer {
     padding: 1.2rem;
 }
 small.withlove {
-    color: var(--accentOne);
-    width: 100%;
+    color: var(--secondary);
+    background-color: var(--accentOne);
+    border: 2px dotted var(--accentTwo);
+    width: 40%;
+    padding: .3rem;
     margin-top: .2rem;
     text-align: center;
     cursor: default;
