@@ -538,11 +538,17 @@ a:hover {
 }
 
 /* homepage */
+#mainBottom {
+    display: flex;
+    width: 100%;
+}
+
 .chatbox {
     background-color: var(--accentTwo);
     border: 4px ridge var(--accentOne);
-    max-width: 68%;
+    max-width: 70%;
     height: 13rem;
+    flex: 1;
 }
 
 .chatbox h3 {

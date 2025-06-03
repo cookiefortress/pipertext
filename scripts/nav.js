@@ -1,12 +1,7 @@
 const main = document.querySelector("main");
 const homepage = `
         <h2>Homepage</h2>
-        <p>
-          Pipertext is a love letter to the old web; when it seemed
-          to be a never-ending adventure through others' little corners of the grand series of tubes you're viewing this website through. I was personally
-          born too late to have seen it myself, but regardless I have become
-          very fond of the aesthetics and culture of the time.
-          </p><figure class="card">
+        <figure class="card">
             <img src="/res/img/pheonix.png" alt="A picture of Netscape Navigator in 1995.">
             <figcaption>
               The original
@@ -16,6 +11,12 @@ const homepage = `
             </figcaption>
           </figure>
         <p>
+          Pipertext is a love letter to the old web; when it seemed
+          to be a never-ending adventure through others' little corners of the grand series of tubes you're viewing this website through. I was personally
+          born too late to have seen it myself, but regardless I have become
+          very fond of the aesthetics and culture of the time.
+          </p>
+        <p>
           The early web was a human experience. Compared to today, anyways; websites weren't so cookie cutter and lifeless, and websites made by ordinary people were the majority, showing
           off their interests, passions, and ability to write killer sites. I've grown up in
           a world where the web is primarily accessed through social media;
@@ -23,16 +24,21 @@ const homepage = `
         </p>
         <p>
           I've compiled
-          <a href="#resource">lots of resources</a> if you're
+          <a href="#resource">some resources</a> if you're
           interested in making your website look like it's straight out of the
-          Y2K era. But I'm sure many would agree that the best strategy for that is just to <a href="https://www.theodinproject.com/" target="_blank" rel="noopener noreferrer">dive in</a>. Keep on puffing! :D
+          Y2K era. But make sure to start with <a href="https://www.theodinproject.com/" target="_blank" rel="noopener noreferrer">the basics</a>! Keep on puffing! :D
         </p>
-        <div class="chatbox">
-          <h3>the smoke lounge</h3>
-          <!-- more to come -->
-          <blockquote>
-            <p>under construction :P</p>
-          </blockquote>
+        <div id='mainBottom'>
+          <div class="chatbox">
+            <h3>the smoke lounge</h3>
+            <!-- more to come -->
+            <blockquote>
+              <p>under construction :P</p>
+            </blockquote>
+          </div>
+          <div id='3dPipe'>
+            
+          </div>
         </div>
 	`
 const resource = `
@@ -288,67 +294,67 @@ const contact = `
 	`
 
 function renderContentFromHash() {
-  switch (window.location.hash) {
-    case "#homepage":
-      main.innerHTML = homepage;
-      main.id = "homeMain";
-      break;
-    case "#resource":
-      main.innerHTML = resource;
-      main.id = "resourceMain";
-      break;
-    case "#articles":
-      main.innerHTML = articles;
-      main.id = "articlesMain";
-      break;
-    case "#quotes":
-      main.innerHTML = quotes;
-      main.id = "quotesMain";
-      break;
-    case "#about":
-      main.innerHTML = about;
-      main.id = "aboutMain";
-      break;
-    case "#contact":
-      main.innerHTML = contact;
-      main.id = "contactMain";
-      break;
-    default:
-      window.location.hash = "#homepage"; // fallback
-  }
+	switch (window.location.hash) {
+		case "#homepage":
+			main.innerHTML = homepage;
+			main.id = "homeMain";
+			break;
+		case "#resource":
+			main.innerHTML = resource;
+			main.id = "resourceMain";
+			break;
+		case "#articles":
+			main.innerHTML = articles;
+			main.id = "articlesMain";
+			break;
+		case "#quotes":
+			main.innerHTML = quotes;
+			main.id = "quotesMain";
+			break;
+		case "#about":
+			main.innerHTML = about;
+			main.id = "aboutMain";
+			break;
+		case "#contact":
+			main.innerHTML = contact;
+			main.id = "contactMain";
+			break;
+		default:
+			window.location.hash = "#homepage"; // fallback
+	}
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-  if (!window.location.hash) {
-    window.location.hash = "#homepage";
-  } else {
-    renderContentFromHash();
-  }
+	if (!window.location.hash) {
+		window.location.hash = "#homepage";
+	} else {
+		renderContentFromHash();
+	}
 });
 
 window.addEventListener("hashchange", renderContentFromHash);
 
 document.querySelector("#navHome").addEventListener("click", (e) => {
-  e.preventDefault();
-  window.location.hash = "homepage";
+	e.preventDefault();
+	window.location.hash = "homepage";
 });
 document.querySelector("#navResource").addEventListener("click", (e) => {
-  e.preventDefault();
-  window.location.hash = "resource";
+	e.preventDefault();
+	window.location.hash = "resource";
 });
 document.querySelector("#navArticles").addEventListener("click", (e) => {
-  e.preventDefault();
-  window.location.hash = "articles";
+	e.preventDefault();
+	window.location.hash = "articles";
 });
 document.querySelector("#navQuotes").addEventListener("click", (e) => {
-  e.preventDefault();
-  window.location.hash = "quotes";
+	e.preventDefault();
+	window.location.hash = "quotes";
 });
 document.querySelector("#navAbout").addEventListener("click", (e) => {
-  e.preventDefault();
-  window.location.hash = "about";
+	e.preventDefault();
+	window.location.hash = "about";
 });
 document.querySelector("#navContact").addEventListener("click", (e) => {
-  e.preventDefault();
-  window.location.hash = "contact";
+	e.preventDefault();
+	window.location.hash = "contact";
 });
