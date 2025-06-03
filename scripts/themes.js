@@ -42,7 +42,7 @@ function changeTheme(theme, isSaved = true) {
 			writeStyles("#FFF5E4", "#443627", "#99BC85", "#FFA725", "#FFF5E4", "0 10px 16px rgba(255, 167, 37, 0.6),0 6px 20px rgba(255, 167, 37, 0.6)", "rgb(0, 218, 0)");
 			break;
 		case "freeDOS":
-			writeStyles("#acaaac", "#000000", "#0000ac", "#00aaac", "#acaaac", "0 10px 16px rgba(0, 170, 172, 0.5),0 6px 20px rgba(0, 170, 172, 0.5)", "rgb(0, 218, 0)");
+			writeStyles("#acaaac", "#000000", "#0000FF", "#00aaac", "#acaaac", "0 10px 16px rgba(0, 170, 172, 0.5),0 6px 20px rgba(0, 170, 172, 0.5)", "rgb(0, 218, 0)");
 			break;
 		case "2600":
 			writeStyles("#272728", "#dcdcdc", "#6a4832", "#7c2c31", "#272728", "0 10px 16px rgba(106, 72, 50, 0.5),0 6px 20px rgba(106, 72, 50, 0.5)", "rgb(0, 218, 0)");
