@@ -528,9 +528,9 @@ figure.card figcaption a {
         font-size: 2rem;
     }
 }
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 380px) {
     header h1 {
-        font-size: 1.2rem;
+        font-size: 1.7rem;
     }
 }
 

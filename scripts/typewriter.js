@@ -19,15 +19,11 @@
   }
 
   async function typewriter(str) {
-    /* clears the header content because layout.js automatically inserts 
-    "> pipertext" into the header */
     header.textContent = "";
-    // for each character of the string, add the character incrementally in spans of .2 seconds starting from the beginning
     for (let i = 0; i < str.length; i++) {
       await new Promise((resolve) => {
         setTimeout(() => {
           header.textContent += str[i];
-          // this line makes the arrow bracket and a space following it appear at the same time
           if (str[i] == ">") header.textContent += " ";
           resolve();
         }, 200);
