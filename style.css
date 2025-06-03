@@ -736,6 +736,7 @@ div#quotes blockquote {
     border: 2px groove var(--accentOne);
     display: flex;
     flex-direction: column;
+    height: min-content;
 }
 
 div#quotes blockquote div {
