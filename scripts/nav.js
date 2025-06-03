@@ -36,10 +36,6 @@ const homepage = `
               <p>under construction :P</p>
             </blockquote>
           </div>
-          <div id='3dPipe'>
-            
-          </div>
-        </div>
 	`
 const resource = `
         <h2>Resource</h2>
