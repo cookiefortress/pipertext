@@ -1,4 +1,4 @@
-import { writeUTC } from '/scripts/UTC.js'
+import { writeUTC } from '/scripts/UTC.js';
 
 function createSidebar() {
   function marquee() {

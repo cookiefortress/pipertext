@@ -1,39 +1,48 @@
-(function () {
-  // select the h1 with class "pipertext"
-  let header = document.querySelector(".pipertext");
+function typewriter(target, string = document.querySelector(target).textContent, speed = 200, isBlink = false, isCursor = false, isTypewriter = true) {
+	const targetElement = document.querySelector(target);
 
-  // makes pipertext invisible
-  function makeInvis() {
-    header.style.visibility = "hidden";
-  }
-  // makes pipertext visible
-  function makeVis() {
-    header.style.visibility = "visible";
-  }
-  // makes pipertext blink (invis, vis, invis etc.)
-  function blink() {
-    for (let i = 0; i < 2; i++) {
-      setTimeout(() => makeInvis(), i * 600);
-      setTimeout(() => makeVis(), i * 600 + 300);
-    }
-  }
+	function typeString() {
+		targetElement.textContent = "";
+		for (let i = 0; i < string.length; i++) {
+			setTimeout(() => {
+				targetElement.textContent += string[i];
+			}, speed * i)
+		}
+	}
 
-  async function typewriter(str) {
-    header.textContent = "";
-    for (let i = 0; i < str.length; i++) {
-      await new Promise((resolve) => {
-        setTimeout(() => {
-          header.textContent += str[i];
-          if (str[i] == ">") header.textContent += " ";
-          resolve();
-        }, 200);
-      });
-    }
-    setTimeout(() => {
-      blink();
-    }, 200);
-  }
+	function blink() {
+		for (let i = 0; i < 2; i++) {
+			setTimeout(() => {
+				targetElement.style.visibility = "hidden";
+			}, 800 * i);
+			setTimeout(() => {
+				targetElement.style.visibility = "visible";
+			}, 800 * i + 400)
+		}
+	}
 
-  const pipertext = ">pipertext";
-  typewriter(pipertext);
-})();
+	function cursor() {
+		setInterval(() => {
+			if (targetElement.textContent.length === (string.length + 1)) {
+				targetElement.textContent = string;
+			}
+			else {
+				targetElement.textContent += "_";
+			}
+		}, 500);
+	}
+
+	if(isTypewriter) {
+		typeString();
+	}
+	if(isBlink) {
+		setTimeout(blink, 2300);
+	}
+	if(isCursor) {
+		setTimeout(cursor, 3600);
+	}
+}
+
+typewriter(".pipertext", "> pipertext", 200, true, true)
+
+export { typewriter };
