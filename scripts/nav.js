@@ -240,14 +240,27 @@ const about = `
           but pretty? You be the judge! :-D
         </p>
         <p>
-          I would love it if you sent any resources you think belong here my
-          way. The <a href="contact.html">contact page</a> lists two email
-          addresses you can contact me at.
+          I know I talk a lot about the old web here, but a lot of the design choices I make come from stuff like <a href="https://en.wikipedia.org/wiki/Bulletin_board_system" target="_blank" rel="noopener noreferrer">BBSes</a> as well as just general software/CLIs from the time around Y2K. Hence the monospace font(s) and whatnot. I also have a keen interest for knick-knacks, for lack of a better term. For example, the UTC timer on the sidebar, and blinking cursor when you are on <code>index.html</code>. I plan to implement much more; in particular, <em>the smoke lounge</em>, where surely nobody will ever type anything mean or vulgar.
         </p>
         <p>
+          I would love it if you sent any resources you think belong here my
+          way. Visit the <a href="contact.html">contact page</a>. It would also be amazing if you had any thoughts about the website or things I should add/improve on that you could send my way!
+        </p>
+        <hr>
+        <h2>About myself</h2>
+        <p>
           I do indeed actually smoke a pipe. I know
-          society tends to view all tobacco as a cancer-slingin' conglomerate, and that's maybe for the best. It's not good for you. I can assure you, however: it is not
-          addiction (I can quit any day, I swear).
+          society tends to view all tobacco as a cancer-slingin' conglomerate, and that's probably for the best. It's not good for you. I can assure you, however: it is not
+          addiction (I can quit any day, I swear). For me, at least, it's a hobby, similar in spirit to something like wine tasting or being a foodie. I don't like alcohol, and my taste in culinary is rather bland, so I found my way to pipes in one way or another.
+        </p>
+        <p>
+          There's many reasons I enjoy it, but I think the main one is just that it gets me outside, and gives me something to enjoy while I observe nature for a while, or listen to a podcast. It's also a lot of fun trying new tobaccos, there's much more out there than one might imagine, given that the hobby seems more antique than anything else these days (I believe it's more popular in western Europe overall). I initially started with cigars, but these days I gravitate much more towards pipe smoking as the flavors seem much more varied as opposed to cigars. There's something personal and charming about filling up the chamber and lighting up. Plus, you usually smell like incense rather than cigarettes.
+        </p>
+        <p>
+          It's hard to pinpoint where I developed a love for everything from 25-ish years ago and beyond. This website is just one example of my obsession, but I also am deeply fascinated with early 3D video games, in particular, those running on the <a href="https://developer.valvesoftware.com/wiki/GoldSrc" target="_blank" rel="noopener noreferrer">Goldsrc</a> engine. It feels like home, and I have no idea why.
+        </p>
+        <p>
+          I was born in 2004 and grew up with stuff like the Wii and Xbox 360/PS3, when 3D was getting pretty far removed from its roots. Regardless, I have sunk far more hours into games made before I was born than ones which released after me. A particular favorite of mine is <a href="https://combineoverwiki.net/wiki/Deathmatch_Classic" target="_blank" rel="noopener noreferrer">Deathmatch Classic</a>, an obscure game from Valve meant to be a tribute to the original Quake. Sometimes I just boot it and run around solo in my favorite maps. I'm weird, but who isn't!?
         </p>
 	`
 const contact = `
@@ -290,67 +303,67 @@ const contact = `
 	`
 
 function renderContentFromHash() {
-	switch (window.location.hash) {
-		case "#homepage":
-			main.innerHTML = homepage;
-			main.id = "homeMain";
-			break;
-		case "#resource":
-			main.innerHTML = resource;
-			main.id = "resourceMain";
-			break;
-		case "#articles":
-			main.innerHTML = articles;
-			main.id = "articlesMain";
-			break;
-		case "#quotes":
-			main.innerHTML = quotes;
-			main.id = "quotesMain";
-			break;
-		case "#about":
-			main.innerHTML = about;
-			main.id = "aboutMain";
-			break;
-		case "#contact":
-			main.innerHTML = contact;
-			main.id = "contactMain";
-			break;
-		default:
-			window.location.hash = "#homepage"; // fallback
-	}
+  switch (window.location.hash) {
+    case "#homepage":
+      main.innerHTML = homepage;
+      main.id = "homeMain";
+      break;
+    case "#resource":
+      main.innerHTML = resource;
+      main.id = "resourceMain";
+      break;
+    case "#articles":
+      main.innerHTML = articles;
+      main.id = "articlesMain";
+      break;
+    case "#quotes":
+      main.innerHTML = quotes;
+      main.id = "quotesMain";
+      break;
+    case "#about":
+      main.innerHTML = about;
+      main.id = "aboutMain";
+      break;
+    case "#contact":
+      main.innerHTML = contact;
+      main.id = "contactMain";
+      break;
+    default:
+      window.location.hash = "#homepage"; // fallback
+  }
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-	if (!window.location.hash) {
-		window.location.hash = "#homepage";
-	} else {
-		renderContentFromHash();
-	}
+  if (!window.location.hash) {
+    window.location.hash = "#homepage";
+  } else {
+    renderContentFromHash();
+  }
 });
 
 window.addEventListener("hashchange", renderContentFromHash);
 
 document.querySelector("#navHome").addEventListener("click", (e) => {
-	e.preventDefault();
-	window.location.hash = "homepage";
+  e.preventDefault();
+  window.location.hash = "homepage";
 });
 document.querySelector("#navResource").addEventListener("click", (e) => {
-	e.preventDefault();
-	window.location.hash = "resource";
+  e.preventDefault();
+  window.location.hash = "resource";
 });
 document.querySelector("#navArticles").addEventListener("click", (e) => {
-	e.preventDefault();
-	window.location.hash = "articles";
+  e.preventDefault();
+  window.location.hash = "articles";
 });
 document.querySelector("#navQuotes").addEventListener("click", (e) => {
-	e.preventDefault();
-	window.location.hash = "quotes";
+  e.preventDefault();
+  window.location.hash = "quotes";
 });
 document.querySelector("#navAbout").addEventListener("click", (e) => {
-	e.preventDefault();
-	window.location.hash = "about";
+  e.preventDefault();
+  window.location.hash = "about";
 });
 document.querySelector("#navContact").addEventListener("click", (e) => {
-	e.preventDefault();
-	window.location.hash = "contact";
+  e.preventDefault();
+  window.location.hash = "contact";
 });
