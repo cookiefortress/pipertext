@@ -61,7 +61,7 @@ const resource = `
             <div>
               <h2>Icons</h2>
               <p>
-                88x31 icons are like the heartbeat of the old web! Luckily,
+                Icons are like the heartbeat of the old web! Luckily,
                 there is a metric shit ton out there!
               </p>
             </div>
@@ -347,4 +347,5 @@ document.querySelector("#navAbout").addEventListener("click", (e) => {
 document.querySelector("#navContact").addEventListener("click", (e) => {
   e.preventDefault();
   window.location.hash = "contact";
+  ''
 });
