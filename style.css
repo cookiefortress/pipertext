@@ -301,8 +301,11 @@ footer {
     padding: 1.2rem;
 }
 small.withlove {
-    color: var(--accentOne);
-    width: 100%;
+    color: var(--secondary);
+    background-color: var(--accentOne);
+    border: 2px dotted var(--accentTwo);
+    width: 40%;
+    padding: .3rem;
     margin-top: .2rem;
     text-align: center;
     cursor: default;
@@ -440,6 +443,7 @@ figure.card figcaption a {
         display: flex;
         flex-flow: column wrap;
         margin: 0;
+        margin-bottom: 1rem;
     }
     header {
         display: flex;
@@ -498,6 +502,12 @@ figure.card figcaption a {
         top: 45%;
         left: 35%;
     }
+    #homeMain figure {
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
 }
 @media screen and (max-width: 600px) {
     header h1 {
@@ -518,9 +528,9 @@ figure.card figcaption a {
         font-size: 2rem;
     }
 }
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 380px) {
     header h1 {
-        font-size: 1.2rem;
+        font-size: 1.7rem;
     }
 }
 
@@ -538,11 +548,17 @@ a:hover {
 }
 
 /* homepage */
+#mainBottom {
+    display: flex;
+    width: 100%;
+}
+
 .chatbox {
     background-color: var(--accentTwo);
     border: 4px ridge var(--accentOne);
-    max-width: 68%;
+    max-width: 70%;
     height: 13rem;
+    flex: 1;
 }
 
 .chatbox h3 {
@@ -736,6 +752,7 @@ div#quotes blockquote {
     border: 2px groove var(--accentOne);
     display: flex;
     flex-direction: column;
+    height: min-content;
 }
 
 div#quotes blockquote div {
@@ -786,13 +803,11 @@ div#quotes blockquote p {
     justify-content: center;
     gap: 2rem;
 }
-
 main#contactMain address {
     display: flex;
     gap: 3rem;
     flex-wrap: wrap;
 }
-
 main#contactMain address a {
     margin: auto;
     text-decoration: none;
@@ -800,6 +815,37 @@ main#contactMain address a {
     padding: 0.3rem;
     background-color: var(--primary);
     border: 4px outset var(--winGrey);
+}
+#contactForm {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 24rem;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    text-align: center;
+}
+#contactForm label {
+    margin-top: .5rem;
+    margin-bottom: .2rem;
+}
+#contactForm input {
+    font-family: Consolas;
+}
+#contactForm button {
+    width: 5rem;
+    padding: .2rem .5rem;
+    border-radius: 0;
+    color: var(--secondary);
+    border-color: var(--primary);
+    background-color: var(--accentOne);
+    margin: 0 auto;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+#contactForm button:hover {
+    color: var(--secondary);
+    border-color: var(--primary);
+    background-color: var(--accentTwo);
 }
 
 .window {

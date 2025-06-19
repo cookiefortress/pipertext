@@ -1,12 +1,7 @@
 const main = document.querySelector("main");
 const homepage = `
         <h2>Homepage</h2>
-        <p>
-          Pipertext is a love letter to the old web; when it seemed
-          to be a never-ending adventure through others' little corners of the grand series of tubes you're viewing this website through. I was personally
-          born too late to have seen it myself, but regardless I have become
-          very fond of the aesthetics and culture of the time.
-          </p><figure class="card">
+        <figure class="card">
             <img src="/res/img/pheonix.png" alt="A picture of Netscape Navigator in 1995.">
             <figcaption>
               The original
@@ -16,6 +11,12 @@ const homepage = `
             </figcaption>
           </figure>
         <p>
+          Pipertext is a love letter to the old web; when it seemed
+          to be a never-ending adventure through others' little corners of the grand series of tubes you're viewing this website through. I was personally
+          born too late to have seen it myself, but regardless I have become
+          very fond of the aesthetics and culture of the time.
+          </p>
+        <p>
           The early web was a human experience. Compared to today, anyways; websites weren't so cookie cutter and lifeless, and websites made by ordinary people were the majority, showing
           off their interests, passions, and ability to write killer sites. I've grown up in
           a world where the web is primarily accessed through social media;
@@ -23,17 +24,18 @@ const homepage = `
         </p>
         <p>
           I've compiled
-          <a href="#resource">lots of resources</a> if you're
+          <a href="#resource">some resources</a> if you're
           interested in making your website look like it's straight out of the
-          Y2K era. But I'm sure many would agree that the best strategy for that is just to <a href="https://www.theodinproject.com/" target="_blank" rel="noopener noreferrer">dive in</a>. Keep on puffing! :D
+          Y2K era. But make sure to start with <a href="https://www.theodinproject.com/" target="_blank" rel="noopener noreferrer">the basics</a>! Keep on puffing! :D
         </p>
-        <div class="chatbox">
-          <h3>the smoke lounge</h3>
-          <!-- more to come -->
-          <blockquote>
-            <p>under construction :P</p>
-          </blockquote>
-        </div>
+        <div id='mainBottom'>
+          <div class="chatbox">
+            <h3>the smoke lounge</h3>
+            <!-- more to come -->
+            <blockquote>
+              <p>under construction :P</p>
+            </blockquote>
+          </div>
 	`
 const resource = `
         <h2>Resource</h2>
@@ -238,29 +240,38 @@ const about = `
           but pretty? You be the judge! :-D
         </p>
         <p>
-          I would love it if you sent any resources you think belong here my
-          way. The <a href="contact.html">contact page</a> lists two email
-          addresses you can contact me at.
+          I know I talk a lot about the old web here, but a lot of the design choices I make come from stuff like <a href="https://en.wikipedia.org/wiki/Bulletin_board_system" target="_blank" rel="noopener noreferrer">BBSes</a> as well as just general software/CLIs from the time around Y2K. Hence the monospace font(s) and whatnot. I also have a keen interest for knick-knacks, for lack of a better term. For example, the UTC timer on the sidebar, and blinking cursor when you are on <code>index.html</code>. I plan to implement much more; in particular, <em>the smoke lounge</em>, where surely nobody will ever type anything mean or vulgar.
         </p>
         <p>
+          I would love it if you sent any resources you think belong here my
+          way. Visit the <a href="contact.html">contact page</a>. It would also be amazing if you had any thoughts about the website or things I should add/improve on that you could send my way!
+        </p>
+        <hr>
+        <h2>About myself</h2>
+        <p>
           I do indeed actually smoke a pipe. I know
-          society tends to view all tobacco as a cancer-slingin' conglomerate, and that's maybe for the best. It's not good for you. I can assure you, however: it is not
-          addiction (I can quit any day, I swear).
+          society tends to view all tobacco as a cancer-slingin' conglomerate, and that's probably for the best. It's not good for you. I can assure you, however: it is not
+          addiction (I can quit any day, I swear). For me, at least, it's a hobby, similar in spirit to something like wine tasting or being a foodie. I don't like alcohol, and my taste in culinary is rather bland, so I found my way to pipes in one way or another.
+        </p>
+        <p>
+          There's many reasons I enjoy it, but I think the main one is just that it gets me outside, and gives me something to enjoy while I observe nature for a while, or listen to a podcast. It's also a lot of fun trying new tobaccos, there's much more out there than one might imagine, given that the hobby seems more antique than anything else these days (I believe it's more popular in western Europe overall). I initially started with cigars, but these days I gravitate much more towards pipe smoking as the flavors seem much more varied as opposed to cigars. There's something personal and charming about filling up the chamber and lighting up. Plus, you usually smell like incense rather than cigarettes.
+        </p>
+        <p>
+          It's hard to pinpoint where I developed a love for everything from 25-ish years ago and beyond. This website is just one example of my obsession, but I also am deeply fascinated with early 3D video games, in particular, those running on the <a href="https://developer.valvesoftware.com/wiki/GoldSrc" target="_blank" rel="noopener noreferrer">Goldsrc</a> engine. It feels like home, and I have no idea why.
+        </p>
+        <p>
+          I was born in 2004 and grew up with stuff like the Wii and Xbox 360/PS3, when 3D was getting pretty far removed from its roots. Regardless, I have sunk far more hours into games made before I was born than ones which released after me. A particular favorite of mine is <a href="https://combineoverwiki.net/wiki/Deathmatch_Classic" target="_blank" rel="noopener noreferrer">Deathmatch Classic</a>, an obscure game from Valve meant to be a tribute to the original Quake. Sometimes I just boot it and run around solo in my favorite maps. I'm weird, but who isn't!?
         </p>
 	`
 const contact = `
           <h2>Contact</h2>
           <p>
-            There a couple of ways to get in contact with me, if you need to
+            Below are a couple of ways to get in contact with me, if you ever need to
             (for whatever reason that may be... I know my devilish looks can be
             mystifying).
           </p>
           <p>
-            The first following email address is probably the most ideal way,
-            but it really doesn't matter. It automatically forwards emails to my
-            primary email. If you have any recommendations, questions, or
-            comments otherwise, I will reply to you from my primary email
-            address which is listed below as well.
+            The contact form below is probably the preferred method. You can alternatively directly contact me at either of the email addresses listed below.
           </p>
           <div>
             <address>
@@ -281,6 +292,14 @@ const contact = `
               >l33t</a
             >.
           </p>
+          <h2>Contact Form</h2>
+          <form id='contactForm' name='contactForm' method='POST' action="https://formspree.io/f/mzzgbbkn">
+            <label for="userEmail">your email</label>
+            <input type="email" id='userEmail' name='userEmail' placeholder='gfreeman@blackmesa.com' required>
+            <label for="userComments">your beautiful comments</label>
+            <textarea name="userComments" id="userComments" required placeholder="wow your website is gorgeous man wow" ></textarea>
+            <button type="submit">submit!</button>
+          </form>
 	`
 
 function renderContentFromHash() {
