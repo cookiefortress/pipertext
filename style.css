@@ -340,6 +340,7 @@ main {
     padding-top: 1rem;
     padding-left: 1.5rem;
     border-top: 2px solid var(--secondary);
+    height: 100%;
 }
 
 main h2 {
@@ -892,4 +893,20 @@ main#contactMain address a {
 .windowTitle div:nth-child(2) button:hover {
     border: 2px groove var(--accentTwo);
     cursor: pointer;
+}
+
+/* kapnismology */
+.kapnismologySubtext {
+    text-align: center;
+    font-size: .8rem;
+    font-style: italic;
+    border: 2px solid var(--accentTwo);
+    max-width: 50%;
+    margin: 0 auto;
+    margin-bottom: .4rem;
+    padding: .1rem;
+}
+.kapnismologySubtext a {
+    text-decoration: none;
+    color: var(--accentOne);
 }

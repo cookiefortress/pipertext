@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		return;
 	}
 	const savedValue = localStorage.getItem("selectedTheme");
-	if (savedValue) {
+	if (localStorage.getItem("selectedTheme")) {
 		changeTheme(savedValue);
 	}
 	else {

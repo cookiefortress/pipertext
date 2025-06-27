@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>pipertext</title>
+	<link rel="icon" type="image/x-icon" href="/res/img/pipe.png" />
+	<link rel="icon" type="image/png" href="/res/img/pipe.png" />
+	<link rel="stylesheet" href="/style.css">
+	<script src="/scripts/layout.js" type="module" defer></script>
+	<script src="/scripts/themes.js" type="module" defer></script>
+	<style>
+		#kapnismologyNav {
+			display: flex;
+			flex-flow: row wrap;
+			gap: 3rem;
+		}
+
+		#kapnismologyNav a {
+			text-decoration: none;
+			color: var(--secondary);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			word-wrap: break-word;
+		}
+
+		#introduction {
+			width: 40%;
+			min-height: 9rem;
+			min-width: 13rem;
+			padding: .5rem;
+			font-size: 1.5rem;
+			font-weight: bold;
+			text-shadow: 2px 2px var(--accentOne);
+			background-image:
+				linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+				url('/res/img/pipe.png');
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-color: var(--accentOne);
+			background-blend-mode: multiply;
+			border: 3px ridge var(--accentOne);
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<header></header>
+		<nav aria-label="primary"></nav>
+		<aside></aside>
+
+		<main>
+			<h2>Kapnismology</h2>
+			<p>Welcome to the <a href="https://pipedia.org/wiki/Whatever_Happened_to_Plain_Speak" target="_blank"
+					rel="noopener noreferrer">kapnismology</a> page! What kind of website would this be without a
+				section dedicated to the beautiful art of pipe smoking? Here I will discuss everything from pipe shapes
+				to softy bits!
+			</p>
+			<p>Just to be clear: pipertext is <em>not</em> solely about pipe smoking; I update this website with no
+				true "goal" in mind! However, given the beautiful, absolute creative masterpiece of a name, how could I
+				not have a section such as this? Now, put that in your pipe and smoke it!</p>
+			<nav aria-label="secondary" id="kapnismologyNav">
+				<a href="/html/kapnismology/introduction.html" id="introduction">Introduction to Pipe Smokin'</a>
+			</nav>
+		</main>
+
+		<footer></footer>
+	</div>
+</body>
+
+</html>
