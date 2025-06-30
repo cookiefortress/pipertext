@@ -50,7 +50,7 @@ const resource = `
         <p>I am continuously adding new guides in the form of articles here. This serves not only as good practice for myself, but hopefully a decent resource for beginners to learn more about the tools of the trade in layman's terms!</p>
         <hr>
         <div id="resourceContainer">
-          <a href="/resource/communities.html">
+          <a href="/html/resource/communities.html">
             <div>
               <h2>Communities</h2>
               <p>
@@ -59,7 +59,7 @@ const resource = `
               </p>
             </div>
           </a>
-          <a href="/resource/icons.html">
+          <a href="/html/resource/icons.html">
             <div>
               <h2>Icons</h2>
               <p>
@@ -68,7 +68,7 @@ const resource = `
               </p>
             </div>
           </a>
-          <a href="/resource/websites.html">
+          <a href="/html/resource/websites.html">
             <div>
               <h2>Websites</h2>
               <p>
