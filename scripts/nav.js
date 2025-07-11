@@ -48,8 +48,28 @@ const resource = `
         <hr>
         <h2>Guides</h2>
         <p>I am continuously adding new guides in the form of articles here. This serves not only as good practice for myself, but hopefully a decent resource for beginners to learn more about the tools of the trade in layman's terms!</p>
+        <div class="resourceGuides">
+          <a href=''>
+            <div>
+              <h2>HTML</h2>
+            </div>
+          </a>
+          <a href=''>
+            <div>
+              <h2>CSS</h2>
+            </div>
+          </a>
+          <a href=''>
+            <div>
+              <h2>JavaScript</h2>
+            </div>
+          </a>
+        </div>
         <hr>
-        <div id="resourceContainer">
+        <h2>Links</h2>
+        <p>Below are links to pages, in which I have compiled external links to various websites which I think would be useful to an adventurous web developer. For example, going to the <a href='/resource/icons.html'>Icons</a> page links to a bunch of webpages that have compiled small images for use in your own sites.</p>
+        <p>If any of the links are broken or don't seem to match up with what my description of them detailed, please head to <a href='#contact'>the contact page</a> and let me know!</p>
+        <div class="resourceContainer">
           <a href="/html/resource/communities.html">
             <div>
               <h2>Communities</h2>

@@ -578,7 +578,7 @@ a:hover {
 }
 
 /* resource page(s) */
-#resourceContainer {
+.resourceContainer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     grid-auto-rows: max-content;
@@ -587,7 +587,7 @@ a:hover {
     text-decoration: none;
 }
 
-#resourceContainer div {
+.resourceContainer div {
     color: var(--secondary);
     background: linear-gradient(to bottom right,
             var(--accentOne),
@@ -597,17 +597,65 @@ a:hover {
     padding: .4rem;
 }
 
-#resourceContainer a {
+.resourceGuides {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    margin-bottom: 1rem;
+}
+.resourceGuides a div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary);
+    font-size: 1.2rem;
+    text-shadow: 2px 2px var(--accentOne);
+}
+.resourceGuides a:nth-child(1) div {
+    background-image: linear-gradient(to right bottom, rgb(0 0 0 / .7),var(--primary)),url('/res/img/resourceHTML.png');
+    border: 3px groove var(--accentTwo);
+}
+.resourceGuides a:nth-child(2) div {
+    background-image: linear-gradient(to right bottom, rgb(0 0 0 / .7),var(--primary)),url('/res/img/resourceCSS.png');
+    border: 3px groove var(--accentTwo);
+}
+.resourceGuides a:nth-child(3) div {
+    background-image: linear-gradient(to right bottom, rgb(0 0 0 / .7),var(--primary)),url('/res/img/resourceJS.png');
+    border: 3px groove var(--accentTwo);
+}
+.resourceGuides a:nth-child(1) div:hover {
+    background-image: linear-gradient(to right bottom, rgb(0 0 0 / .8),var(--primary)),url('/res/img/resourceHTML.png');
+}
+.resourceGuides a:nth-child(2) div:hover {
+    background-image: linear-gradient(to right bottom, rgb(0 0 0 / .8),var(--primary)),url('/res/img/resourceCSS.png');
+}
+.resourceGuides a:nth-child(3) div:hover {
+    background-image: linear-gradient(to right bottom, rgb(0 0 0 / .8),var(--primary)),url('/res/img/resourceJS.png');
+}
+.resourceGuides a {
+    flex: 1;
+    height: 14rem;
+    min-height: 12rem;
+    max-width: 14rem;
+    min-width: 12rem;
     text-decoration: none;
 }
 
-#resourceContainer a:hover div {
+.resourceContainer a {
+    text-decoration: none;
+}
+
+.resourceContainer a:hover div {
     background: linear-gradient(to bottom right,
             var(--primary),
             var(--accentOne));
 }
 
-div#resourceContainer a div p {
+div.resourceContainer a div p {
     border: none;
     padding: 0;
     margin: 0;
