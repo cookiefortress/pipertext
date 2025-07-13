@@ -967,3 +967,11 @@ main#contactMain address a {
 #seriesArticle img {
     border: 4px ridge var(--accentTwo);
 }
+#seriesArticle ul {
+    margin: 0 auto;
+    max-width: 80%;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
