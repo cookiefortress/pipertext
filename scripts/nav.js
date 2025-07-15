@@ -108,6 +108,13 @@ const articles = `
           topics are broad, and some contain cute little programs!
         </p>
         <ul>
+        <a href='/html/JACKlinuxFix.html'>
+            <li>
+              <span class='articleName'>Running JACK on Linux</span>
+              <time class='articleDate'>2025/07/14</time>
+            </li>
+          </a>
+
         <a href='/html/dynamicUI.html'>
             <li>
               <span class='articleName'>Project - Dynamic UI</span>
