@@ -3,39 +3,37 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 html {
     --winGrey: #6c6c6c;
     --winGreen: #208c71;
     --sysGrey: #c6c6c6;
     scrollbar-gutter: stable;
 }
+
 body {
     background: url('/res/img/spacex.gif');
     font-family: Consolas, 'Liberation Mono', 'Adwaita Mono', monospace;
-    font-weight: 300; 
     color: var(--secondary);
 }
 
 /* main container for page layout */
-/* inserted via layout.js */
 .container {
     display: grid;
     grid-template-columns: 0.9fr 1fr 3fr;
     grid-template-rows: auto auto 5fr auto;
     margin: auto;
     margin-bottom: 1rem;
-    width: 100%;
     max-width: 60rem;
     /* fallback bgcolor */
     background-color: var(--primary);
     background-image: linear-gradient(to bottom right,
             var(--gradientTopLeft),
-            var(--primary));   
+            var(--primary));
 }
 
 /* header */
-/* inserted via layout.js */
-header {
+#layoutHeader {
     grid-area: 1 / 1 / 2 / 4;
     display: flex;
     flex-flow: row nowrap;
@@ -44,9 +42,24 @@ header {
     font-size: 1.4rem;
     padding: 0 2rem;
     width: 100%;
-    min-height: 6rem;
-    max-height: 6rem;
 }
+
+#layoutHeader h1 {
+    padding-left: 0rem;
+    margin: 1rem 0 0 0;
+    text-shadow: 2px 2px 0px var(--accentTwo);
+    width: 100%;
+}
+
+#layoutHeader .logo {
+    display: flex;
+}
+
+#layoutHeader .logo img {
+    width: 6rem;
+    filter: invert() drop-shadow(10px 10px 4px var(--winGrey));
+}
+
 #themeButton {
     border: 2px solid var(--accentOne);
     font-size: 1rem;
@@ -58,8 +71,8 @@ header {
     padding: .2rem;
     align-self: flex-start;
     margin-right: 2rem;
-    margin-left: 16rem;
 }
+
 #themeList {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -67,6 +80,7 @@ header {
     background-color: var(--accentTwo);
     padding: .3rem;
 }
+
 #themeList button {
     font-size: .8rem;
     font-family: Consolas, 'Liberation Mono', 'Adwaita Mono', monospace;
@@ -75,110 +89,104 @@ header {
     padding: .2rem;
     margin: .1rem;
 }
-#themeList button:nth-child(1) { /* accentOne secondary primary */
+
+#themeList button:nth-child(1) {
+    /* accentOne secondary primary */
     border: 2px solid #810000;
     color: #eeebdd;
     background-color: #1b1717;
 }
+
 #themeList button:nth-child(2) {
     border: 2px solid rgb(54, 36, 24);
     color: #FED8B1;
     background-color: rgb(134, 90, 69);
 }
+
 #themeList button:nth-child(3) {
     border: 2px solid rgb(17, 97, 17);
     color: #1b1717;
     background-color: #33FF33;
 }
+
 #themeList button:nth-child(4) {
     border: 2px solid #732906;
     color: #9d8457;
     background-color: #2f2617;
 }
+
 #themeList button:nth-child(5) {
     border: 2px solid rgb(103, 117, 94);
     color: #968732;
     background-color: #4c5844;
 }
+
 #themeList button:nth-child(6) {
     border: 2px solid #bac715;
     color: #d4d8de;
     background-color: #012456;
 }
+
 #themeList button:nth-child(7) {
     border: 2px solid grey;
     color: black;
     background-color: white;
 }
+
 #themeList button:nth-child(8) {
     border: 2px solid grey;
     color: white;
     background-color: black;
 }
+
 #themeList button:nth-child(9) {
     border: 2px solid #99BC85;
     color: #443627;
     background-color: #FFF5E4;
 }
+
 #themeList button:nth-child(10) {
     border: 2px solid #0000ac;
     color: #000000;
     background-color: #acaaac;
 }
+
 #themeList button:nth-child(11) {
     border: 2px solid #272728;
     color: #dcdcdc;
     background-color: #6a4832;
 }
+
 #themeList button:nth-child(12) {
     border: 2px solid rgb(144, 177, 0);
     color: #ffffff;
     background-color: #161616;
 }
-header div.logo {
-    display: flex;
-}
-header div.logo img {
-    width: 6rem;
-    filter: invert() drop-shadow(10px 10px 4px var(--winGrey));
-}
-header h1 {
-    padding-left: 0rem;
-    margin: 1rem 0 0 0;
-    text-shadow: 2px 2px 0px var(--accentTwo);
-    width: 100%;
-}
 
 /* navbar */
-/* inserted via layout.js */
-nav {
+#layoutNav {
     grid-area: 2 / 1 / 3 / 4;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding: 1rem;
 }
-nav ul {
+
+#layoutNav ul {
     display: flex;
     flex-flow: row wrap;
-    width: 100%;
-    height: 100%;
     list-style-type: none;
 }
-nav ul li {
+
+#layoutNav ul li {
     flex: 1;
     display: flex;
     justify-content: center;
     text-decoration: none;
-    min-height: 100%;
 }
-nav ul li a {
+
+#layoutNav ul li a {
     color: var(--secondary);
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Consolas, 'Liberation Mono', 'Adwaita Mono', monospace;
     font-size: 1rem;
     width: 60%;
     border: 4px outset var(--accentOne);
@@ -186,14 +194,14 @@ nav ul li a {
     text-decoration: none;
     background-color: var(--accentTwo);
 }
-nav ul li a:hover {
+
+#layoutNav ul li a:hover {
     color: var(--secondary);
     background-color: var(--accentOne);
 }
 
 /* sidebar */
-/* inserted via layout.js */
-aside {
+#layoutSidebar {
     grid-area: 3 / 1 / 4 / 2;
     border-right: 2px solid var(--secondary);
     border-top: 2px solid var(--secondary);
@@ -206,18 +214,18 @@ aside {
     min-width: 10rem;
 }
 
-aside h3 {
+#layoutSidebar h3 {
     border-bottom: 2px solid var(--accentTwo);
     text-align: center;
     margin: 0 1rem;
     margin-top: 0.5rem;
 }
 
-aside div h3 {
+#layoutSidebar div h3 {
     width: 9rem;
 }
 
-aside div.recentArticle {
+#layoutSidebar .recentArticle {
     font-size: 0.6rem;
     padding: 0 0 0 1rem;
     margin-top: 0.4rem;
@@ -226,27 +234,48 @@ aside div.recentArticle {
     height: max-content;
 }
 
-aside div.recentArticle a {
+#layoutSidebar .recentArticle a {
     font-size: 0.8rem;
     text-decoration: none;
     color: var(--secondary);
     font-style: italic;
 }
 
-aside button:hover {
+#layoutSidebar button:hover {
     cursor: pointer;
 }
 
-aside button:active {
+#layoutSidebar button:active {
     filter: brightness(200%);
 }
 
-div.recentArticle a:hover {
+#layoutSidebar .recentArticle a:hover {
     color: var(--accentOne);
 }
 
-aside div.recentArticle p {
+#layoutSidebar .recentArticle p {
     margin-bottom: 0.2rem;
+}
+
+#layoutSidebar .dashboard {
+    background-color: black;
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.274)),
+        url(/res/img/spacex.gif);
+    border: 2px ridge var(--accentOne);
+    width: 8.875rem;
+    height: 10rem;
+    padding: 0.2rem;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#layoutSidebar .dashboard time {
+    color: #eeebdd;
 }
 
 .marquee {
@@ -289,8 +318,7 @@ aside div.recentArticle p {
 }
 
 /* footer */
-/* inserted via layout.js */
-footer {
+#layoutFooter {
     grid-area: 4 / 1 / 5 / 4;
     border-top: 2px solid var(--secondary);
     display: flex;
@@ -300,11 +328,12 @@ footer {
     gap: .2rem;
     padding: 1.2rem;
 }
-small.withlove {
+
+#layoutFooter .withlove {
     color: var(--secondary);
     background-color: var(--accentOne);
     border: 2px dotted var(--accentTwo);
-    width: 40%;
+    width: 42%;
     padding: .3rem;
     margin-top: .2rem;
     text-align: center;
@@ -312,25 +341,31 @@ small.withlove {
     user-select: none;
 }
 
-.dashboard {
-    background-color: black;
-    background:
-        linear-gradient(rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.274)),
-        url(/res/img/spacex.gif);
-    border: 2px ridge var(--accentOne);
-    width: 8.875rem;
-    height: 10rem;
-    padding: 0.2rem;
-    text-align: center;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
+/* flaming text */
+@keyframes colorCycle {
+    0% {
+        color: red;
+    }
+
+    25% {
+        color: orange;
+    }
+
+    50% {
+        color: rgb(26, 3, 3);
+    }
+
+    75% {
+        color: orangered;
+    }
+
+    100% {
+        color: red;
+    }
 }
 
-div.dashboard time {
-    color: #eeebdd;
+.flame-text {
+    animation: colorCycle 0.9s infinite linear;
 }
 
 /* main content, all pages */
@@ -348,7 +383,7 @@ main h2 {
     text-align: center;
 }
 
-h2:nth-child(n + 2) {
+main h2:nth-child(n + 2) {
     margin-top: 0.8rem;
 }
 
@@ -408,76 +443,59 @@ figure.card figcaption a {
     color: var(--accentOne);
 }
 
-/* flaming text */
-@keyframes colorCycle {
-    0% {
-        color: red;
-    }
-
-    25% {
-        color: orange;
-    }
-
-    50% {
-        color: rgb(26, 3, 3);
-    }
-
-    75% {
-        color: orangered;
-    }
-
-    100% {
-        color: red;
-    }
-}
-
-.flame-text {
-    animation: colorCycle 0.9s infinite linear;
-}
-
 /* media queries */
 @media screen and (max-width: 1050px) {
     body {
         padding: 0 1rem;
     }
+
     .container {
         display: flex;
         flex-flow: column wrap;
         margin: 0;
         margin-bottom: 1rem;
     }
+
     header {
         display: flex;
         flex-flow: row nowrap;
         margin-bottom: 1rem;
     }
+
     header div:nth-child(2) {
         display: flex;
         flex-flow: column nowrap;
         margin-top: 2rem;
     }
+
     header div:nth-child(2) img {
         width: 5rem;
     }
+
     header h1 {
         width: 100%;
     }
+
     header .logo {
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
     }
+
     header #themeButton {
         margin: 0;
     }
+
     nav ul {
         justify-content: center;
         gap: .5rem;
     }
+
     nav ul li {
         min-width: 25%;
         max-width: 2rem;
     }
+
     aside {
         display: flex;
         flex-flow: row wrap;
@@ -489,20 +507,24 @@ figure.card figcaption a {
         padding: 1rem 0;
         min-width: 0;
     }
+
     aside .recentPosts {
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
     }
+
     div.marquee {
         max-width: 20%;
         min-width: 15%;
     }
+
     div.window {
         top: 45%;
         left: 35%;
     }
+
     #homeMain figure {
         width: 100%;
         margin: 0 auto;
@@ -510,37 +532,44 @@ figure.card figcaption a {
         margin-top: 1rem;
     }
 }
+
 @media screen and (max-width: 600px) {
     header h1 {
         font-size: 2.5rem;
     }
+
     nav ul li {
         max-width: 8rem;
     }
+
     nav ul li a {
         font-size: .7rem;
     }
+
     figure#ricostay {
         width: 15rem;
     }
 }
+
 @media screen and (max-width: 515px) {
     header h1 {
         font-size: 2rem;
     }
 }
+
 @media screen and (max-width: 380px) {
     header h1 {
         font-size: 1.7rem;
     }
 }
 
+/* site-wide styles */
 p a:visited {
-    color: var(--accentOne) !important;
+    color: var(--accentOne);
 }
 
 p a:not(:visited) {
-    color: var(--accentOne) !important;
+    color: var(--accentOne);
 }
 
 a:hover {
@@ -573,6 +602,7 @@ a:hover {
     margin: 0;
     text-indent: 0;
 }
+
 #homeMain {
     padding-bottom: 1rem;
 }
@@ -596,55 +626,6 @@ a:hover {
     height: 100%;
     padding: .4rem;
 }
-
-.resourceGuides {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    gap: .5rem;
-    margin-bottom: 1rem;
-}
-.resourceGuides a div {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--secondary);
-    font-size: 1.2rem;
-    text-shadow: 2px 2px var(--accentOne);
-}
-.resourceGuides a:nth-child(1) div {
-    background-image: linear-gradient(to right bottom, rgb(0 0 0 / .7),var(--primary)),url('/res/img/resourceHTML.png');
-    border: 3px groove var(--accentTwo);
-}
-.resourceGuides a:nth-child(2) div {
-    background-image: linear-gradient(to right bottom, rgb(0 0 0 / .7),var(--primary)),url('/res/img/resourceCSS.png');
-    border: 3px groove var(--accentTwo);
-}
-.resourceGuides a:nth-child(3) div {
-    background-image: linear-gradient(to right bottom, rgb(0 0 0 / .7),var(--primary)),url('/res/img/resourceJS.png');
-    border: 3px groove var(--accentTwo);
-}
-.resourceGuides a:nth-child(1) div:hover {
-    background-image: linear-gradient(to right bottom, rgb(0 0 0 / .8),var(--primary)),url('/res/img/resourceHTML.png');
-}
-.resourceGuides a:nth-child(2) div:hover {
-    background-image: linear-gradient(to right bottom, rgb(0 0 0 / .8),var(--primary)),url('/res/img/resourceCSS.png');
-}
-.resourceGuides a:nth-child(3) div:hover {
-    background-image: linear-gradient(to right bottom, rgb(0 0 0 / .8),var(--primary)),url('/res/img/resourceJS.png');
-}
-.resourceGuides a {
-    flex: 1;
-    height: 14rem;
-    min-height: 12rem;
-    max-width: 14rem;
-    min-width: 12rem;
-    text-decoration: none;
-}
-
 .resourceContainer a {
     text-decoration: none;
 }
@@ -655,13 +636,70 @@ a:hover {
             var(--accentOne));
 }
 
-div.resourceContainer a div p {
+.resourceContainer a div p {
     border: none;
     padding: 0;
     margin: 0;
     text-indent: 0;
     text-align: center;
     margin-bottom: 0.5rem;
+}
+
+
+.resourceGuides {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    margin-bottom: 1rem;
+}
+
+.resourceGuides a div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary);
+    font-size: 1.2rem;
+    text-shadow: 2px 2px var(--accentOne);
+}
+
+.resourceGuides a:nth-child(1) div {
+    background-image: linear-gradient(to right bottom, rgb(0 0 0 / .7), var(--primary)), url('/res/img/resourceHTML.png');
+    border: 3px groove var(--accentTwo);
+}
+
+.resourceGuides a:nth-child(2) div {
+    background-image: linear-gradient(to right bottom, rgb(0 0 0 / .7), var(--primary)), url('/res/img/resourceCSS.png');
+    border: 3px groove var(--accentTwo);
+}
+
+.resourceGuides a:nth-child(3) div {
+    background-image: linear-gradient(to right bottom, rgb(0 0 0 / .7), var(--primary)), url('/res/img/resourceJS.png');
+    border: 3px groove var(--accentTwo);
+}
+
+.resourceGuides a:nth-child(1) div:hover {
+    background-image: linear-gradient(to right bottom, rgb(0 0 0 / .8), var(--primary)), url('/res/img/resourceHTML.png');
+}
+
+.resourceGuides a:nth-child(2) div:hover {
+    background-image: linear-gradient(to right bottom, rgb(0 0 0 / .8), var(--primary)), url('/res/img/resourceCSS.png');
+}
+
+.resourceGuides a:nth-child(3) div:hover {
+    background-image: linear-gradient(to right bottom, rgb(0 0 0 / .8), var(--primary)), url('/res/img/resourceJS.png');
+}
+
+.resourceGuides a {
+    flex: 1;
+    height: 14rem;
+    min-height: 12rem;
+    max-width: 14rem;
+    min-width: 12rem;
+    text-decoration: none;
 }
 
 main.resourcePage h2 {
@@ -759,14 +797,14 @@ main.resourcePage h2 {
     border: 2px solid var(--secondary);
 }
 
-.article div.imgRow {
+.article .imgRow {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
 }
 
-.article div.imgRow img {
+.article .imgRow img {
     width: 25%;
     margin: 0;
     margin-top: 1rem;
@@ -795,7 +833,7 @@ main.resourcePage h2 {
     gap: 1.2rem;
 }
 
-div#quotes blockquote {
+#quotes blockquote {
     background-color: var(--accentTwo);
     padding: 1rem;
     border: 2px groove var(--accentOne);
@@ -804,14 +842,14 @@ div#quotes blockquote {
     height: min-content;
 }
 
-div#quotes blockquote div {
+#quotes blockquote div {
     padding: 0.5rem;
     border: 2px groove var(--accentOne);
     text-indent: 1rem;
     line-height: 1.3rem;
 }
 
-div#quotes blockquote p {
+#quotes blockquote p {
     text-align: center;
     border-left: none;
     text-indent: 0;
@@ -852,12 +890,14 @@ div#quotes blockquote p {
     justify-content: center;
     gap: 2rem;
 }
-main#contactMain address {
+
+#contactMain address {
     display: flex;
     gap: 3rem;
     flex-wrap: wrap;
 }
-main#contactMain address a {
+
+#contactMain address a {
     margin: auto;
     text-decoration: none;
     color: var(--secondary);
@@ -865,6 +905,7 @@ main#contactMain address a {
     background-color: var(--primary);
     border: 4px outset var(--winGrey);
 }
+
 #contactForm {
     display: flex;
     flex-flow: column nowrap;
@@ -873,13 +914,16 @@ main#contactMain address a {
     font-size: 1.2rem;
     text-align: center;
 }
+
 #contactForm label {
     margin-top: .5rem;
     margin-bottom: .2rem;
 }
+
 #contactForm input {
-    font-family: Consolas;
+    font-family: Consolas, monospace;
 }
+
 #contactForm button {
     width: 5rem;
     padding: .2rem .5rem;
@@ -891,12 +935,14 @@ main#contactMain address a {
     margin-top: 1rem;
     cursor: pointer;
 }
+
 #contactForm button:hover {
     color: var(--secondary);
     border-color: var(--primary);
     background-color: var(--accentTwo);
 }
 
+/* window */
 .window {
     display: flex;
     flex-flow: column nowrap;
@@ -911,6 +957,7 @@ main#contactMain address a {
     top: 8rem;
     left: 80%;
 }
+
 .windowTitle {
     display: flex;
     flex-flow: row nowrap;
@@ -920,24 +967,29 @@ main#contactMain address a {
     height: 2rem;
     gap: .52rem;
 }
+
 .windowTitle h4 {
     user-select: none;
 }
+
 .windowTitle div {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     gap: .4rem;
 }
+
 .windowTitle div:nth-child(2) {
     margin-right: .3rem;
 }
+
 .windowTitle div:nth-child(2) button {
     border: 2px ridge var(--accentOne);
     padding: .1rem .3rem;
     background-color: var(--secondary);
     color: var(--primary);
 }
+
 .windowTitle div:nth-child(2) button:hover {
     border: 2px groove var(--accentTwo);
     cursor: pointer;
@@ -954,19 +1006,24 @@ main#contactMain address a {
     margin-bottom: .9rem;
     padding: .3rem .1rem;
 }
+
 .seriesHeaderSubtext a {
     text-decoration: none;
     color: var(--accentOne);
 }
+
 #seriesFirstPara {
     margin-top: 1rem;
 }
+
 #seriesArticle p {
     font-size: 1rem;
 }
+
 #seriesArticle img {
     border: 4px ridge var(--accentTwo);
 }
+
 #seriesArticle ul {
     margin: 0 auto;
     max-width: 80%;

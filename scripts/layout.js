@@ -72,10 +72,12 @@ function createSidebar() {
   sidebar.appendChild(marquee());
   sidebar.appendChild(dashboard());
   sidebar.appendChild(recentPosts());
+  sidebar.id = 'layoutSidebar';
 }
 
 function createFooter() {
   const footer = document.querySelector("footer");
+  footer.id = 'layoutFooter';
   footer.innerHTML = `
 		<a href="https://www.pipertext.net" style="text-decoration: none;"><small class="flame-text">pipertext.net</small></a>
     <img src='/res/img/pipe.png' style='width: 2rem; filter: invert() drop-shadow(2px 2px 1px #100000);'>
@@ -85,6 +87,7 @@ function createFooter() {
 
 function createHeader() {
   const header = document.querySelector("header");
+  header.id = 'layoutHeader';
   header.innerHTML = `
 		    <div>
             <h1 class="pipertext">&gt; pipertext</h1>
@@ -97,6 +100,7 @@ function createHeader() {
 
 function createNav() {
   const nav = document.querySelector("nav");
+  nav.id = 'layoutNav';
   nav.innerHTML = `
 		<ul>
       <li><a href="/index.html#homepage" id="navHome">home</a></li>
