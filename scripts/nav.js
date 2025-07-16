@@ -41,7 +41,7 @@ const resource = `
         <h2>Resource</h2>
         <p>
           Welcome to the resource page! Here, I am continuously adding new
-          materials for your use in web 1.0-esque designs, and other general web development stuff. If you
+          materials for your use in web 1.0-esque designs, general web development stuff, and archives of other random stuff I like. If you
           think there's anything that could be added here, please
           <a href="/index.html#contact">send it my way</a>!
         </p>

@@ -278,6 +278,22 @@ body {
     color: #eeebdd;
 }
 
+#seriesList a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--accentOne);
+    color: var(--secondary);
+    margin: 0 auto;
+    margin-top: .5rem;
+    padding: .3rem;
+    border: 2px outset var(--accentTwo);
+    width: 80%;
+}
+#seriesList a:hover {
+    border: 2px inset var(--accentTwo);
+}
+
 .marquee {
     height: auto;
     width: 90%;
