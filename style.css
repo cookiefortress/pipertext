@@ -290,6 +290,7 @@ body {
     border: 2px outset var(--accentTwo);
     width: 80%;
 }
+
 #seriesList a:hover {
     border: 2px inset var(--accentTwo);
 }
@@ -512,7 +513,7 @@ figure.card figcaption a {
         max-width: 2rem;
     }
 
-    aside {
+    #layoutSidebar {
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
@@ -522,6 +523,7 @@ figure.card figcaption a {
         border-right: none;
         padding: 1rem 0;
         min-width: 0;
+        border-right: none;
     }
 
     aside .recentPosts {
@@ -560,6 +562,10 @@ figure.card figcaption a {
 
     nav ul li a {
         font-size: .7rem;
+    }
+
+    #layoutNav ul li a {
+        font-size: .8rem;
     }
 
     figure#ricostay {
@@ -642,6 +648,7 @@ a:hover {
     height: 100%;
     padding: .4rem;
 }
+
 .resourceContainer a {
     text-decoration: none;
 }
@@ -783,6 +790,28 @@ main.resourcePage h2 {
 
 #articlesMain ul li span {
     flex: 1;
+}
+
+#articleSearch {
+    display: block;
+    margin: 0 auto;
+    margin-top: .3rem;
+    margin-bottom: 1rem;
+    height: 2rem;
+    width: 40%;
+    font-family: Consolas, monospace;
+    font-size: 1.2rem;
+    border: 3px solid var(--accentTwo);
+    background-color: var(--secondary);
+    color: var(--primary);
+    outline: none !important;
+    padding: .3rem;
+}
+#articleSearchHeader {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 0;
 }
 
 /* individual articles */

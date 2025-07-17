@@ -68,7 +68,7 @@ const resource = `
         <hr>
         <h2>Links</h2>
         <p>Below are links to pages, in which I have compiled external links to various websites which I think would be useful to an adventurous web developer. For example, going to the <a href='/resource/icons.html'>Icons</a> page links to a bunch of webpages that have compiled small images for use in your own sites.</p>
-        <p>If any of the links are broken or don't seem to match up with what my description of them detailed, please head to <a href='#contact'>the contact page</a> and let me know!</p>
+        <p>If any of the links are broken or don't seem to match up with what my description of them detailed, please head to <a href='/index.html#contact'>the contact page</a> and let me know!</p>
         <div class="resourceContainer">
           <a href="/html/resource/communities.html">
             <div>
@@ -107,6 +107,8 @@ const articles = `
           The following list sorts all articles from newest to oldest. Article
           topics are broad, and some contain cute little programs!
         </p>
+        <h3 id='articleSearchHeader'>Search for an article!</h3>
+        <input type='text' id='articleSearch'>
         <ul id='articleList'>
         
         </ul>
@@ -217,7 +219,7 @@ const about = `
         </p>
         <p>
           I would love it if you sent any resources you think belong here my
-          way. Visit the <a href="contact.html">contact page</a>. It would also be amazing if you had any thoughts about the website or things I should add/improve on that you could send my way!
+          way. Visit the <a href="/index.html#contact">contact page</a>. It would also be amazing if you had any thoughts about the website or things I should add/improve on that you could send my way!
         </p>
         <hr>
         <h2>About myself</h2>
@@ -289,6 +291,9 @@ function renderContentFromHash() {
 			main.innerHTML = articles;
 			main.id = "articlesMain";
 			listArticles();
+			document.querySelector("#articleSearch").addEventListener("input", () => {
+				searchArticles();
+			})
 			break;
 		case "#quotes":
 			main.innerHTML = quotes;
@@ -344,37 +349,44 @@ document.querySelector("#navContact").addEventListener("click", (e) => {
 });
 
 // articles page, list articles
-function listArticles() {
+function listArticles(searchValue) {
 	const articleList = document.querySelector("#articleList");
-	if(document.querySelector(".articleName")) {
-		return;
-	}
+	articleList.innerHTML = '';
 
 	fetch('/html/articles/_articleList.json')
 		.then(response => response.json())
 		.then(articles => {
 			articles.slice().reverse().forEach(article => {
-				const values = Object.values(article);
+				const [titleText, dateText, link] = Object.values(article);
+
+				if (searchValue && !titleText.toLowerCase().includes(searchValue.toLowerCase())) {
+					return;
+				}
 
 				const anchor = document.createElement("a");
-				anchor.href = `${values[2]}`
+				anchor.href = link;
 
 				const title = document.createElement("span");
 				title.classList.add("articleName");
-				title.textContent = `${values[0]}`;
+				title.textContent = titleText;
 
 				const date = document.createElement("time");
 				date.classList.add("articleDate");
-				date.textContent = `${values[1]}`;
+				date.textContent = dateText;
 
 				const listItem = document.createElement("li");
 				listItem.appendChild(title);
 				listItem.appendChild(date);
 
 				anchor.appendChild(listItem);
-
 				articleList.appendChild(anchor);
 			});
 		})
-		.catch(error => console.error('Error loading JSON:', error));
+		.catch(error => console.error('error loading JSON file!!! - ', error));
+}
+
+function searchArticles() {
+	const searchValue = document.querySelector('input#articleSearch').value;
+	console.log(searchValue)
+	listArticles(searchValue);
 }
