@@ -47,17 +47,17 @@ function createSidebar() {
             recentPosts.appendChild(recentPostsHeader);
 
             createRecentPost(
-                "/html/JACKlinuxFix.html",
+                "/html/articles/JACKlinuxFix.html",
                 "Running JACK on Linux",
-                "2025/07/14",
+                "2025/07/15",
             );
             createRecentPost(
-                "/html/dynamicUI.html",
+                "/html/articles/dynamicUI.html",
                 "Project - Dynamic UI",
                 "2025/05/08",
             );
             createRecentPost(
-                "/html/tictactoeRevisited.html",
+                "/html/articles/tictactoeRevisited.html",
                 "Project - Tic Tac Toe Revisited",
                 "2025/04/25",
             );

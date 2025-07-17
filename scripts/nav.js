@@ -107,62 +107,8 @@ const articles = `
           The following list sorts all articles from newest to oldest. Article
           topics are broad, and some contain cute little programs!
         </p>
-        <ul>
-        <a href='/html/JACKlinuxFix.html'>
-            <li>
-              <span class='articleName'>Running JACK on Linux</span>
-              <time class='articleDate'>2025/07/14</time>
-            </li>
-          </a>
-
-        <a href='/html/dynamicUI.html'>
-            <li>
-              <span class='articleName'>Project - Dynamic UI</span>
-              <time class='articleDate'>2025/05/08</time>
-            </li>
-          </a>
-          <a href='/html/tictactoeRevisited.html'>
-            <li>
-              <span class='articleName'>Project - Tic Tac Toe Revisited</span>
-              <time class='articleDate'>2025/04/25</time>
-            </li>
-          </a>
-          <a href='/html/todo.html'>
-            <li>
-              <span class='articleName'>Project - Todo List</span>
-              <time class='articleDate'>2025/04/20</time>
-            </li>
-          </a>
-          <a href='/html/tictactoe.html'>
-            <li>
-              <span class='articleName'>Project - Tic Tac Toe</span>
-              <time class='articleDate'>2025/04/12</time>
-            </li>
-          </a>
-          <a href='/html/library.html'>
-            <li>
-              <span class='articleName'>Project - Library</span>
-              <time class='articleDate'>2025/04/10</time>
-            </li>
-          </a>
-          <a href='/html/semanticHTML.html'>
-            <li>
-              <span class='articleName'>The beauty of semantic HTML</span>
-              <time class='articleDate'>2025/04/08</time>
-            </li>
-          </a>
-          <a href='/html/microsoft50.html'>
-            <li>
-              <span class='articleName'>50 years of Microsoft</span>
-              <time class='articleDate'>2025/04/06</time>
-            </li>
-          </a>
-          <a href='/html/touchPipertext.html'>
-            <li>
-              <span class='articleName'>touch pipertext.ptml</span>
-              <time class='articleDate'>2025/04/06</time>
-            </li>
-          </a>
+        <ul id='articleList'>
+        
         </ul>
 	`
 const quotes = `
@@ -330,68 +276,105 @@ const contact = `
 	`
 
 function renderContentFromHash() {
-  switch (window.location.hash) {
-    case "#homepage":
-      main.innerHTML = homepage;
-      main.id = "homeMain";
-      break;
-    case "#resource":
-      main.innerHTML = resource;
-      main.id = "resourceMain";
-      break;
-    case "#articles":
-      main.innerHTML = articles;
-      main.id = "articlesMain";
-      break;
-    case "#quotes":
-      main.innerHTML = quotes;
-      main.id = "quotesMain";
-      break;
-    case "#about":
-      main.innerHTML = about;
-      main.id = "aboutMain";
-      break;
-    case "#contact":
-      main.innerHTML = contact;
-      main.id = "contactMain";
-      break;
-    default:
-      window.location.hash = "#homepage"; // fallback
-  }
+	switch (window.location.hash) {
+		case "#homepage":
+			main.innerHTML = homepage;
+			main.id = "homeMain";
+			break;
+		case "#resource":
+			main.innerHTML = resource;
+			main.id = "resourceMain";
+			break;
+		case "#articles":
+			main.innerHTML = articles;
+			main.id = "articlesMain";
+			listArticles();
+			break;
+		case "#quotes":
+			main.innerHTML = quotes;
+			main.id = "quotesMain";
+			break;
+		case "#about":
+			main.innerHTML = about;
+			main.id = "aboutMain";
+			break;
+		case "#contact":
+			main.innerHTML = contact;
+			main.id = "contactMain";
+			break;
+		default:
+			window.location.hash = "#homepage"; // fallback
+	}
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-  if (!window.location.hash) {
-    window.location.hash = "#homepage";
-  } else {
-    renderContentFromHash();
-  }
+	if (!window.location.hash) {
+		window.location.hash = "#homepage";
+	} else {
+		renderContentFromHash();
+	}
 });
 
 window.addEventListener("hashchange", renderContentFromHash);
 
 document.querySelector("#navHome").addEventListener("click", (e) => {
-  e.preventDefault();
-  window.location.hash = "homepage";
+	e.preventDefault();
+	window.location.hash = "homepage";
 });
 document.querySelector("#navResource").addEventListener("click", (e) => {
-  e.preventDefault();
-  window.location.hash = "resource";
+	e.preventDefault();
+	window.location.hash = "resource";
 });
 document.querySelector("#navArticles").addEventListener("click", (e) => {
-  e.preventDefault();
-  window.location.hash = "articles";
+	e.preventDefault();
+	window.location.hash = "articles";
 });
 document.querySelector("#navQuotes").addEventListener("click", (e) => {
-  e.preventDefault();
-  window.location.hash = "quotes";
+	e.preventDefault();
+	window.location.hash = "quotes";
 });
 document.querySelector("#navAbout").addEventListener("click", (e) => {
-  e.preventDefault();
-  window.location.hash = "about";
+	e.preventDefault();
+	window.location.hash = "about";
 });
 document.querySelector("#navContact").addEventListener("click", (e) => {
-  e.preventDefault();
-  window.location.hash = "contact";
-  ''
+	e.preventDefault();
+	window.location.hash = "contact";
+	''
 });
+
+// articles page, list articles
+function listArticles() {
+	const articleList = document.querySelector("#articleList");
+	if(document.querySelector(".articleName")) {
+		return;
+	}
+
+	fetch('/html/articles/_articleList.json')
+		.then(response => response.json())
+		.then(articles => {
+			articles.slice().reverse().forEach(article => {
+				const values = Object.values(article);
+
+				const anchor = document.createElement("a");
+				anchor.href = `${values[2]}`
+
+				const title = document.createElement("span");
+				title.classList.add("articleName");
+				title.textContent = `${values[0]}`;
+
+				const date = document.createElement("time");
+				date.classList.add("articleDate");
+				date.textContent = `${values[1]}`;
+
+				const listItem = document.createElement("li");
+				listItem.appendChild(title);
+				listItem.appendChild(date);
+
+				anchor.appendChild(listItem);
+
+				articleList.appendChild(anchor);
+			});
+		})
+		.catch(error => console.error('Error loading JSON:', error));
+}

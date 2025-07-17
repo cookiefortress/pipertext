@@ -1,0 +1,47 @@
+[
+  {
+    "name": "touch pipertext.ptml",
+    "publish_date": "2025/04/06",
+    "html_file": "/html/articles/touchPipertext.html"
+  },
+  {
+    "name": "50 years of Microsoft",
+    "publish_date": "2025/04/06",
+    "html_file": "/html/articles/microsoft50.html"
+  },
+  {
+    "name": "The beauty of semantic HTML",
+    "publish_date": "2025/04/08",
+    "html_file": "/html/articles/semanticHTML.html"
+  },
+  {
+    "name": "Project - Library",
+    "publish_date": "2025/04/10",
+    "html_file": "/html/articles/library.html"
+  },
+  {
+    "name": "Project - Tic Tac Toe",
+    "publish_date": "2025/04/12",
+    "html_file": "/html/articles/tictactoe.html"
+  },
+  {
+    "name": "Project - Todo List",
+    "publish_date": "2025/04/20",
+    "html_file": "/html/articles/todo.html"
+  },
+  {
+    "name": "Project - Tic Tac Toe Revisited",
+    "publish_date": "2025/04/25",
+    "html_file": "/html/articles/tictactoeRevisited.html"
+  },
+  {
+    "name": "Project - Dynamic UI",
+    "publish_date": "2025/05/08",
+    "html_file": "/html/articles/dynamicUI.html"
+  },
+  {
+    "name": "Running JACK on Linux",
+    "publish_date": "2025/07/15",
+    "html_file": "/html/articles/JACKlinuxFix.html"
+  }
+]
