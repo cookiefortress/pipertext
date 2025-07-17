@@ -211,7 +211,7 @@ body {
     padding: 0.5rem;
     padding-top: 1rem;
     min-height: 24.375rem;
-    min-width: 10rem;
+    min-width: 11rem;
 }
 
 #layoutSidebar h3 {
@@ -522,7 +522,7 @@ figure.card figcaption a {
         min-height: 0;
         border-right: none;
         padding: 1rem 0;
-        min-width: 0;
+        max-width: 100%;
         border-right: none;
     }
 
@@ -568,8 +568,8 @@ figure.card figcaption a {
         font-size: .8rem;
     }
 
-    figure#ricostay {
-        width: 15rem;
+    #ricostay {
+        max-width: 30rem;
     }
 }
 
@@ -967,7 +967,6 @@ main.resourcePage h2 {
 
 #contactForm input {
     font-family: Consolas, monospace;
-    min-width: 6rem;
 }
 
 #contactForm button {
