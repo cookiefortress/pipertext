@@ -575,7 +575,7 @@ figure.card figcaption a {
 
 @media screen and (max-width: 380px) {
     header h1 {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -925,7 +925,7 @@ main.resourcePage h2 {
 #contactForm {
     display: flex;
     flex-flow: column nowrap;
-    width: 24rem;
+    max-width: 24rem;
     margin: 0 auto;
     font-size: 1.2rem;
     text-align: center;
@@ -938,6 +938,7 @@ main.resourcePage h2 {
 
 #contactForm input {
     font-family: Consolas, monospace;
+    min-width: 6rem;
 }
 
 #contactForm button {
