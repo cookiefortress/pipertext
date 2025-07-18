@@ -549,6 +549,15 @@ figure.card figcaption a {
         margin-bottom: 1rem;
         margin-top: 1rem;
     }
+    #asciiPipe {
+    font-size: .6rem;
+    margin: auto;
+    display: block;
+    text-align: center;
+    }
+    #ricostay {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -570,6 +579,9 @@ figure.card figcaption a {
 
     #ricostay {
         max-width: 30rem;
+    }
+    #asciiPipe {
+        font-size: .2rem;
     }
 }
 

@@ -237,6 +237,35 @@ const about = `
         <p>
           I was born in 2004 and grew up with stuff like the Wii and Xbox 360/PS3, when 3D was getting pretty far removed from its roots. Regardless, I have sunk far more hours into games made before I was born than ones which released after me. A particular favorite of mine is <a href="https://combineoverwiki.net/wiki/Deathmatch_Classic" target="_blank" rel="noopener noreferrer">Deathmatch Classic</a>, an obscure game from Valve meant to be a tribute to the original Quake. Sometimes I just boot it and run around solo in my favorite maps. I'm weird, but who isn't!?
         </p>
+        <p>
+
+        </p>
+        <pre id='asciiPipe'>
+                                                                              @@@@@@@@@@@@@@@     
+                                                                       @@@@@@@@@@@@@@@@@@@@@@@    
+                                                                   @@@@@@@@@@@@@@@@@@@@@@@@@@     
+                                                                @@@@@@@@@@@@@@@                   
+             @@@@@@@@@@@@@@                                  @@@@@@@@@@@@@                        
+         @@@@              @@@@                            @@@@@@@@@@@@@                          
+        @@@                  @@@                        @@@@@@@@@@@@@                             
+        @@@@@@@@@@@@@@@@@@@@@@@@                      @@@@@@@@@@@@@@                              
+       @@@@@@@@@@@@@@@@@@@@@@@@@                    @@@@@@@@@@@@@@                                
+       @@@@@@@@@@@@@@@@@@@@@@@@@@                @@@@@@@@@@@@@@@                                  
+      @@@@@@@@@@@@@@@@@@@@@@@@@@@              @@@@@@@@@@@@@@@                                    
+      @@@@@@@@@@@@@@@@@@@@@@@@@@@           @@@@@@@@@@@@@@@@@                                     
+      @@@@@@@@@@@@@@@@@@@@@@@@@@@@        @@@@@@@@@@@@@@@@@                                       
+      @@@@@@@@@@@@@@@@@@@@@@@@@@@@     @@@@@@@@@@@@@@@@@@                                         
+      @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                           
+       @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                            
+       @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                              
+        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                                
+        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                                  
+         @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                                    
+           @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                                       
+             @@@@@@@@@@@@@@@@@@@@@@@@@@@@                                                         
+                @@@@@@@@@@@@@@@@@@@@@                                                             
+                    @@@@@@@@@@@@                                                                  
+        </pre>
 	`
 const contact = `
           <h2>Contact</h2>
