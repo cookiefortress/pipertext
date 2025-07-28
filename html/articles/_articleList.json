@@ -43,5 +43,10 @@
     "name": "Running JACK on Linux",
     "publish_date": "2025/07/15",
     "html_file": "/html/articles/JACKlinuxFix.html"
+  },
+  {
+    "name": "Project - Weather App",
+    "publish_date": "2025/07/28",
+    "html_file": "/html/articles/weatherApp.html"
   }
 ]

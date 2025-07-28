@@ -2,36 +2,55 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>pipertext</title>
-  <link rel="icon" type="image/x-icon" href="/res/img/pipe.png" />
-  <link rel="icon" type="image/png" href="/res/img/pipe.png" />
-  <link rel="stylesheet" href="/style.css" />
-  <script src="/scripts/layout.js" type="module" defer></script>
-  <script src="/scripts/themes.js" type="module" defer></script>
-  <script src="/scripts/articleScripts/weatherApp.js" defer>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>pipertext</title>
+	<link rel="icon" type="image/x-icon" href="/res/img/pipe.png" />
+	<link rel="icon" type="image/png" href="/res/img/pipe.png" />
+	<link rel="stylesheet" href="/style.css" />
+	<script src="/scripts/layout.js" type="module" defer></script>
+	<script src="/scripts/themes.js" type="module" defer></script>
+	<script src="/scripts/articleScripts/weatherApp.js" defer>
 
-  </script>
+	</script>
 </head>
 
 <body>
-  <div class="container">
-    <header></header>
-    <nav></nav>
-    <aside></aside>
+	<div class="container">
+		<header></header>
+		<nav></nav>
+		<aside></aside>
 
-    <main class="article">
-      <article>
-        <h2 class="articleHeader">Project - Weather App</h2>
-        <time>UTC 2025-04-10 - April 10<sup>th</sup>, 2025</time>
-        <hr />
-        
-      </article>
-    </main>
+		<main class="article">
+			<article>
+				<h2 class="articleHeader">Project - Weather App</h2>
+				<time>UTC 2025-07-28 - July 28<sup>th</sup>, 2025</time>
+				<hr />
+				<p>I made this small weather program as part of <a
+						href="https://www.theodinproject.com/lessons/node-path-javascript-weather-app" target="_blank"
+						rel="noopener noreferrer">The Odin Project</a>. Enter in your location and be greeted with
+					awesomeness. Not really, it's actually quite mundane. But y'know.
+				</p>
+				<p>
+					All results are in Fahrenheit. Give me Fahrenheit or give me death!
+				</p>
+				<form id="weatherAppForm">
+					<div>
+						<label for="city" id="cityLabel">city</label>
+						<input type="text" name="city" id="city" class="input">
+					</div>
+					<div>
+						<label for="state" id="stateLabel">state</label>
+						<input type="text" name="state" id="state" class="input">
+					</div>
+					<button id="weatherSubmit" class="button">submit</button>
+				</form>
 
-    <footer></footer>
-  </div>
+			</article>
+		</main>
+
+		<footer></footer>
+	</div>
 </body>
 
 </html>

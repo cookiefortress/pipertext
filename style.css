@@ -17,6 +17,26 @@ body {
     color: var(--secondary);
 }
 
+/* standards */
+.input {
+    border-radius: 0;
+    padding: .5rem;
+    font-size: 1rem;
+    font-family: Consolas, 'Liberation Mono', 'Adwaita Mono', monospace;
+    border: 3px ridge var(--accentOne);
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
+.button {
+    font-family: Consolas, 'Liberation Mono', 'Adwaita Mono', monospace;
+    padding: .5rem 1rem;
+    border-radius: 0;
+    border: 3px outset var(--accentOne);
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
 /* main container for page layout */
 .container {
     display: grid;
@@ -549,12 +569,14 @@ figure.card figcaption a {
         margin-bottom: 1rem;
         margin-top: 1rem;
     }
+
     #asciiPipe {
-    font-size: .6rem;
-    margin: auto;
-    display: block;
-    text-align: center;
+        font-size: .6rem;
+        margin: auto;
+        display: block;
+        text-align: center;
     }
+
     #ricostay {
         display: none;
     }
@@ -580,6 +602,7 @@ figure.card figcaption a {
     #ricostay {
         max-width: 30rem;
     }
+
     #asciiPipe {
         font-size: .2rem;
     }
@@ -819,6 +842,7 @@ main.resourcePage h2 {
     outline: none !important;
     padding: .3rem;
 }
+
 #articleSearchHeader {
     display: block;
     margin: 0 auto;
@@ -1088,4 +1112,37 @@ main.resourcePage h2 {
     flex-flow: column nowrap;
     gap: 1rem;
     margin-bottom: 1.5rem;
+}
+
+/* weather app */
+#weatherApp {
+    margin-top: 2rem;
+}
+
+#weatherApp p {
+    text-align: center;
+    border: none;
+    line-height: .5rem;
+    font-size: 1rem;
+    text-indent: 0;
+}
+
+#weatherHeader {
+    margin-bottom: 1rem;
+    border-top: 2px solid var(--accentOne);
+    border-bottom: 2px solid var(--accentOne);
+}
+
+#weatherHeader p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 2rem;
+}
+
+#weatherAppForm {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-flow: row wrap;
+    align-items: center;
 }

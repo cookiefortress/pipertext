@@ -47,6 +47,11 @@ function createSidebar() {
             recentPosts.appendChild(recentPostsHeader);
 
             createRecentPost(
+                "/html/articles/weatherApp.html",
+                "Project - Weather App",
+                "2025/07/28",
+            );
+            createRecentPost(
                 "/html/articles/JACKlinuxFix.html",
                 "Running JACK on Linux",
                 "2025/07/15",
@@ -55,11 +60,6 @@ function createSidebar() {
                 "/html/articles/dynamicUI.html",
                 "Project - Dynamic UI",
                 "2025/05/08",
-            );
-            createRecentPost(
-                "/html/articles/tictactoeRevisited.html",
-                "Project - Tic Tac Toe Revisited",
-                "2025/04/25",
             );
         }
 
