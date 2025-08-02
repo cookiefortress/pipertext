@@ -6,7 +6,7 @@ function window(name, html, buttonID) {
 	windowTitle.classList.add(`windowTitle`);
 	windowTitle.innerHTML = `
 		<div>
-			<img src="/res/img/pipe.png" style="width: 2rem;">
+			<img src="/media/img/pipe.png" style="width: 2rem;">
 			<h4>${name}</h4>
 		</div>
 		<div>

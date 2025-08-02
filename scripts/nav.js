@@ -2,7 +2,7 @@ const main = document.querySelector("main");
 const homepage = `
         <h2>Homepage</h2>
         <figure class="card">
-            <img src="/res/img/pheonix.png" alt="A picture of Netscape Navigator in 1995.">
+            <img src="/media/img/pheonix.png" alt="A picture of Netscape Navigator in 1995.">
             <figcaption>
               The original
               <a href="https://en.wikipedia.org/wiki/Firefox#History" target="_blank" rel="noopener noreferrer">Mozilla Firefox</a>
@@ -155,7 +155,7 @@ const about = `
         </p>
         <figure class='card' id='ricostay'>
           <img
-            src='/res/img/ricostay.png'
+            src='/media/img/ricostay.png'
             alt='A screencap of one of my first Web 1.0-themed website designs, Ricostay'
             id='ricostayImg'
           />
@@ -186,7 +186,7 @@ const about = `
         </p>
         <figure class="card">
           <img
-            src="/res/img/runningMan.png"
+            src="/media/img/runningMan.png"
             id="runningMan"
             alt="The AOL running man!"
           />

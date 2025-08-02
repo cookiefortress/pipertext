@@ -12,7 +12,7 @@ html {
 }
 
 body {
-    background: url('/res/img/spacex.gif');
+    background: url('/media/img/spacex.gif');
     font-family: Consolas, 'Liberation Mono', 'Adwaita Mono', monospace;
     color: var(--secondary);
 }
@@ -281,7 +281,7 @@ body {
     background-color: black;
     background:
         linear-gradient(rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.274)),
-        url(/res/img/spacex.gif);
+        url(/media/img/spacex.gif);
     border: 2px ridge var(--accentOne);
     width: 8.875rem;
     height: 10rem;
@@ -725,30 +725,30 @@ a:hover {
 }
 
 .resourceGuides a:nth-child(1) div {
-    background-image: linear-gradient(to right bottom, rgb(0 0 0 / .7), var(--primary)), url('/res/img/resourceHTML.png');
+    background-image: linear-gradient(to right bottom, rgb(0 0 0 / .7), var(--primary)), url('/media/img/resourceHTML.png');
     border: 3px groove var(--accentTwo);
 }
 
 .resourceGuides a:nth-child(2) div {
-    background-image: linear-gradient(to right bottom, rgb(0 0 0 / .7), var(--primary)), url('/res/img/resourceCSS.png');
+    background-image: linear-gradient(to right bottom, rgb(0 0 0 / .7), var(--primary)), url('/media/img/resourceCSS.png');
     border: 3px groove var(--accentTwo);
 }
 
 .resourceGuides a:nth-child(3) div {
-    background-image: linear-gradient(to right bottom, rgb(0 0 0 / .7), var(--primary)), url('/res/img/resourceJS.png');
+    background-image: linear-gradient(to right bottom, rgb(0 0 0 / .7), var(--primary)), url('/media/img/resourceJS.png');
     border: 3px groove var(--accentTwo);
 }
 
 .resourceGuides a:nth-child(1) div:hover {
-    background-image: linear-gradient(to right bottom, rgb(0 0 0 / .8), var(--primary)), url('/res/img/resourceHTML.png');
+    background-image: linear-gradient(to right bottom, rgb(0 0 0 / .8), var(--primary)), url('/media/img/resourceHTML.png');
 }
 
 .resourceGuides a:nth-child(2) div:hover {
-    background-image: linear-gradient(to right bottom, rgb(0 0 0 / .8), var(--primary)), url('/res/img/resourceCSS.png');
+    background-image: linear-gradient(to right bottom, rgb(0 0 0 / .8), var(--primary)), url('/media/img/resourceCSS.png');
 }
 
 .resourceGuides a:nth-child(3) div:hover {
-    background-image: linear-gradient(to right bottom, rgb(0 0 0 / .8), var(--primary)), url('/res/img/resourceJS.png');
+    background-image: linear-gradient(to right bottom, rgb(0 0 0 / .8), var(--primary)), url('/media/img/resourceJS.png');
 }
 
 .resourceGuides a {

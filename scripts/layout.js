@@ -5,9 +5,9 @@ function createSidebar() {
         const marquee = document.createElement("div");
         marquee.classList.add("marquee");
         marquee.innerHTML = `
-	  <img src="/res/gif/bestvw.gif" alt="Best viewed with a computer and a monitor!">
-    <img src="/res/gif/css2.gif" alt="Made with CSS!">
-    <img src="/res/gif/gothtml.gif" alt="Got HTML?">`;
+	  <img src="/media/gif/bestvw.gif" alt="Best viewed with a computer and a monitor!">
+    <img src="/media/gif/css2.gif" alt="Made with CSS!">
+    <img src="/media/gif/gothtml.gif" alt="Got HTML?">`;
         return marquee;
     }
 
@@ -18,7 +18,7 @@ function createSidebar() {
         dashboard.appendChild(UTCtext);
         const pipertextIcon = document.createElement("div");
         pipertextIcon.innerHTML =
-            "<img src='/res/img/pipertext.png' alt='Pipertext 88x31 icon' width='88px'>";
+            "<img src='/media/img/pipertext.png' alt='Pipertext 88x31 icon' width='88px'>";
         dashboard.appendChild(pipertextIcon);
         writeUTC(UTCtext);
         return dashboard;
@@ -97,7 +97,7 @@ function createFooter() {
     footer.id = 'layoutFooter';
     footer.innerHTML = `
 		<a href="https://www.pipertext.net" style="text-decoration: none;"><small class="flame-text">pipertext.net</small></a>
-    <img src='/res/img/pipe.png' style='width: 2rem; filter: invert() drop-shadow(2px 2px 1px #100000);'>
+    <img src='/media/img/pipe.png' style='width: 2rem; filter: invert() drop-shadow(2px 2px 1px #100000);'>
     <small class="withlove"><em>lovingly handmade with HTML, CSS, and JavaScript</em></small>
     <p></p>`;
 }
@@ -111,7 +111,7 @@ function createHeader() {
         </div>
         <div class="logo">
             <button id="themeButton">themes</button>
-            <img src="/res/img/pipe.png" alt="Pipertext logo">
+            <img src="/media/img/pipe.png" alt="Pipertext logo">
         </div>`;
 }
 
