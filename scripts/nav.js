@@ -1,4 +1,5 @@
 const main = document.querySelector("main");
+
 const homepage = `
         <h2>Homepage</h2>
         <figure class="card">
@@ -307,75 +308,39 @@ const contact = `
 	`
 
 function renderContentFromHash() {
+
+  function changePage(page, id) {
+    main.innerHTML = page;
+    main.id = `${id}Main`
+  }
+  
 	switch (window.location.hash) {
 		case "#homepage":
-			main.innerHTML = homepage;
-			main.id = "homeMain";
+			changePage(homepage, 'home');
 			break;
 		case "#resource":
-			main.innerHTML = resource;
-			main.id = "resourceMain";
+			changePage(resource, 'resource');
 			break;
 		case "#articles":
-			main.innerHTML = articles;
-			main.id = "articlesMain";
+			changePage(articles, 'articles');
 			listArticles();
 			document.querySelector("#articleSearch").addEventListener("input", () => {
 				searchArticles();
 			})
 			break;
 		case "#quotes":
-			main.innerHTML = quotes;
-			main.id = "quotesMain";
+			changePage(quotes, 'quotes');
 			break;
 		case "#about":
-			main.innerHTML = about;
-			main.id = "aboutMain";
+			changePage(about, 'about');
 			break;
 		case "#contact":
-			main.innerHTML = contact;
-			main.id = "contactMain";
+			changePage(contact, 'contact');
 			break;
 		default:
-			window.location.hash = "#homepage"; // fallback
+			window.location.hash = "#homepage";
 	}
 }
-
-window.addEventListener("DOMContentLoaded", () => {
-	if (!window.location.hash) {
-		window.location.hash = "#homepage";
-	} else {
-		renderContentFromHash();
-	}
-});
-
-window.addEventListener("hashchange", renderContentFromHash);
-
-document.querySelector("#navHome").addEventListener("click", (e) => {
-	e.preventDefault();
-	window.location.hash = "homepage";
-});
-document.querySelector("#navResource").addEventListener("click", (e) => {
-	e.preventDefault();
-	window.location.hash = "resource";
-});
-document.querySelector("#navArticles").addEventListener("click", (e) => {
-	e.preventDefault();
-	window.location.hash = "articles";
-});
-document.querySelector("#navQuotes").addEventListener("click", (e) => {
-	e.preventDefault();
-	window.location.hash = "quotes";
-});
-document.querySelector("#navAbout").addEventListener("click", (e) => {
-	e.preventDefault();
-	window.location.hash = "about";
-});
-document.querySelector("#navContact").addEventListener("click", (e) => {
-	e.preventDefault();
-	window.location.hash = "contact";
-	''
-});
 
 // articles page, list articles
 function listArticles(searchValue) {
@@ -419,3 +384,39 @@ function searchArticles() {
 	console.log(searchValue)
 	listArticles(searchValue);
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+	if (!window.location.hash) {
+		window.location.hash = "#homepage";
+	} else {
+		renderContentFromHash();
+	}
+});
+
+window.addEventListener("hashchange", renderContentFromHash);
+
+document.querySelector("#navHome").addEventListener("click", (e) => {
+	e.preventDefault();
+	window.location.hash = "homepage";
+});
+document.querySelector("#navResource").addEventListener("click", (e) => {
+	e.preventDefault();
+	window.location.hash = "resource";
+});
+document.querySelector("#navArticles").addEventListener("click", (e) => {
+	e.preventDefault();
+	window.location.hash = "articles";
+});
+document.querySelector("#navQuotes").addEventListener("click", (e) => {
+	e.preventDefault();
+	window.location.hash = "quotes";
+});
+document.querySelector("#navAbout").addEventListener("click", (e) => {
+	e.preventDefault();
+	window.location.hash = "about";
+});
+document.querySelector("#navContact").addEventListener("click", (e) => {
+	e.preventDefault();
+	window.location.hash = "contact";
+	''
+});

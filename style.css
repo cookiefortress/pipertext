@@ -183,6 +183,18 @@ body {
     background-color: #161616;
 }
 
+#themeList button:nth-child(13) {
+    border: 2px solid #260000ff;
+    color: #89000bff;
+    background-color: #000000;
+}
+
+#themeList button:nth-child(14) {
+    border: 2px solid #be0b31;
+    color: #003693ff;
+    background-color: #ffffff;
+}
+
 /* navbar */
 #layoutNav {
     grid-area: 2 / 1 / 3 / 4;
@@ -244,7 +256,9 @@ body {
 #layoutSidebar div h3 {
     width: 9rem;
 }
-
+.recentPosts {
+    position: relative; 
+}
 #layoutSidebar .recentArticle {
     font-size: 0.6rem;
     padding: 0 0 0 1rem;
@@ -298,6 +312,10 @@ body {
     color: #eeebdd;
 }
 
+#seriesList {
+    position: relative;
+}
+
 #seriesList a {
     display: block;
     text-align: center;
@@ -340,6 +358,46 @@ body {
     height: 31px;
 }
 
+.recentPostsDetail,
+.tinnoteDetail {
+    cursor: help;
+}
+
+.recentPostsDetailText,
+.tinnoteDetailText {
+    width: 15rem;
+    font-size: .9rem;
+    background-color: var(--accentTwo);
+    color: var(--secondary);
+    padding: .5rem;
+    border: 2px ridge var(--accentOne);
+    text-align: center;
+    position: absolute;
+    transform: translateY(-50%);
+    margin-left: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 1000;
+    box-shadow: 3px 3px var(--accentOne);
+}
+
+.recentPostsDetailText {
+    right: -20%;
+    top: 40%;
+}
+
+.tinnoteDetailText {
+    left: -20%;
+    top: 122%;
+}
+
+.recentPostsDetail:hover + .recentPostsDetailText,
+.tinnoteDetail:hover + .tinnoteDetailText {
+    visibility: visible;
+    opacity: 1;
+}
+
 @keyframes scroll-left {
     0% {
         -moz-transform: translateX(270%);
@@ -369,7 +427,7 @@ body {
 #layoutFooter .withlove {
     color: var(--secondary);
     background-color: var(--accentOne);
-    border: 2px dotted var(--accentTwo);
+    border: 3px double var(--accentTwo);
     width: 42%;
     padding: .3rem;
     margin-top: .2rem;
@@ -377,6 +435,7 @@ body {
     cursor: default;
     user-select: none;
 }
+
 
 /* flaming text */
 @keyframes colorCycle {
@@ -1001,8 +1060,14 @@ main.resourcePage h2 {
     margin-bottom: .2rem;
 }
 
-#contactForm input {
-    font-family: Consolas, monospace;
+#contactForm input,
+#contactForm textarea {
+    border: 2px ridge var(--accentOne);
+    padding: .2rem;
+    background-color: transparent;
+    color: var(--secondary);
+    font-size: .85rem;
+    font-family: Consolas, 'Liberation Mono', 'Adwaita Mono', monospace;
 }
 
 #contactForm button {
