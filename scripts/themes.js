@@ -67,7 +67,7 @@ function changeTheme(theme, isSaved = true) {
 			break;
 	}
 	if(theme !== "belial") {
-		document.querySelector("body").style.background = `url('/media/img/spacex.gif')`	
+		document.querySelector("body").style.background = `url('/media/img/spacex.gif') fixed center`	
 	}
 	if (isSaved) {
 		localStorage.setItem("selectedTheme", theme);
