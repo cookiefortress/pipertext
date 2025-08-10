@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>pipertext</title>
+	<link rel="icon" type="image/x-icon" href="/media/img/pipe.png" />
+	<link rel="icon" type="image/png" href="/media/img/pipe.png" />
+	<link rel="stylesheet" href="/style.css" />
+	<script src="/scripts/layout.js" type="module" defer></script>
+	<script src="/scripts/themes.js" type="module" defer></script>
+	<script src="/scripts/articleScripts/recursion.js" defer></script>
+</head>
+
+<body>
+	<div class="container">
+		<header></header>
+		<nav></nav>
+		<aside></aside>
+
+		<main class="article">
+			<article>
+				<h2 class="articleHeader">Project - Recursion</h2>
+				<time>UTC 2025-08-10 - August 10th<sup>th</sup>, 2025</time>
+				<hr />
+				<p>This is a little adventure into recursion, following the <a
+						href="https://www.theodinproject.com/lessons/javascript-recursion" target="_blank"
+						rel="noopener noreferrer">The Odin Project's Recursion assignment on the subject</a>. I have
+					left some <code>console.log()</code> instructions in the code, but I've also depicted the results of
+					the algorithms below.
+				</p>
+				<h2>Fibonacci sequence</h2>
+				<p>Below is the actual code for both the non-recursive and recursive versions of the Fibonacci sequenc,
+					implented in everybody's favorite language, JavaScript.</p>
+				<code class="codeBlock">function fibs(num) {
+	const arr = [0, 1];
+	for(let i = 0; i < num-2; i++) {
+		arr.push(arr[i] + arr[i+1]);
+	}
+	return arr;
+}
+
+function fibsRec(num, arr = [0, 1]) {
+	if(num === 2) {
+		return arr;
+	}
+	if(num <= 1) {
+		return [1];
+	}
+	const arrLength = arr.length;
+	const sum = arr[arrLength - 1] + arr[arrLength - 2];
+	arr.push(sum);
+	if(num === 3) {
+		return arr;
+	}
+	else {
+		return fibsRec(num - 1, arr);
+	}
+}</code>
+				<div id="fibRes"></div>
+				<h2>Merge sort</h2>
+				<p>I didn't make a non-recursive version of the merge sort algorithm as the assignment didn't ask for one. Sorry for your loss! Mwahaha!</p>
+				<code class="codeBlock">function mergeSort(arr = [3, 2, 1, 13, 8, 5, 0, 1]) {
+	if(arr.length <= 1) {
+		return arr;
+	}
+	const halfLength = Math.ceil(arr.length / 2);
+	const arrFirstHalf = arr.slice(0, halfLength);
+	const arrSecondHalf = arr.slice(halfLength, arr.length);
+
+	const sortedFirstHalf = mergeSort(arrFirstHalf);
+	const sortedSecondHalf = mergeSort(arrSecondHalf);
+
+	const sortedArray = [];
+	let i = 0;
+	let j = 0;
+	while(i < sortedFirstHalf.length && j < sortedSecondHalf.length) {
+		if(sortedFirstHalf[i] <= sortedSecondHalf[j]) {
+			sortedArray.push(sortedFirstHalf[i]);
+			i++;
+		}
+		else {
+			sortedArray.push(sortedSecondHalf[j]);
+			j++;
+		}
+	}
+	while(i < sortedFirstHalf.length) {
+		sortedArray.push(sortedFirstHalf[i]);
+		i++;
+	}
+	while(j < sortedSecondHalf.length) {
+		sortedArray.push(sortedSecondHalf[j]);
+		j++;
+	}
+	return sortedArray;
+}</code>
+				<div id="msRes"></div>
+			</article>
+		</main>
+
+		<footer></footer>
+	</div>
+</body>
+
+</html>

@@ -495,11 +495,21 @@ main p a {
     text-decoration: none;
 }
 
-main p code {
+p code {
     text-shadow: 1px 1px 1px rgb(0, 0, 0);
     letter-spacing: 1px;
     font-size: 0.8rem;
     color: var(--code);
+}
+.codeBlock {
+    white-space: pre-wrap;
+    color: var(--code);
+    font-size: 1rem;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid var(--accentOne);
+    padding: 1rem;
+    margin-bottom: 1rem;
 }
 
 /* figure component */
