@@ -17,7 +17,68 @@ body {
     color: var(--secondary);
 }
 
+/* site-wide styles */
+p a:visited {
+    color: var(--accentOne);
+}
+
+p a:not(:visited) {
+    color: var(--accentOne);
+}
+
+a:hover {
+    color: var(--accentOne);
+    font-weight: bold;
+}
+
+p code {
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    color: var(--code);
+}
+
+:focus {
+    outline: 4px solid var(--secondary);
+}
+
 /* standards */
+.card {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    float: right;
+    margin-left: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.card:hover figcaption {
+    box-shadow: none;
+}
+
+.card img {
+    width: 13rem;
+    border: 4px outset var(--accentOne);
+    background-color: var(--primary);
+}
+
+.card figcaption {
+    width: 12rem;
+    text-align: center;
+    background-color: var(--primary);
+    color: var(--secondary);
+    padding: 0.5rem;
+    border-color: var(--accentOne);
+    border-width: 0 4px 4px 4px;
+    border-style: outset;
+    font-size: 0.8rem;
+}
+
+.card figcaption a {
+    text-decoration: none;
+    color: var(--accentOne);
+}
+
 .input {
     border-radius: 0;
     padding: .5rem;
@@ -35,6 +96,17 @@ body {
     border: 3px outset var(--accentOne);
     background-color: var(--secondary);
     color: var(--primary);
+}
+
+.codeBlock {
+    white-space: pre-wrap;
+    color: var(--code);
+    font-size: 1rem;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid var(--accentOne);
+    padding: 1rem;
+    margin-bottom: 1rem;
 }
 
 /* main container for page layout */
@@ -256,9 +328,11 @@ body {
 #layoutSidebar div h3 {
     width: 9rem;
 }
+
 .recentPosts {
-    position: relative; 
+    position: relative;
 }
+
 #layoutSidebar .recentArticle {
     font-size: 0.6rem;
     padding: 0 0 0 1rem;
@@ -361,6 +435,8 @@ body {
 .recentPostsDetail,
 .tinnoteDetail {
     cursor: help;
+    text-decoration: underline dotted;
+    padding-bottom: .3rem;
 }
 
 .recentPostsDetailText,
@@ -392,8 +468,8 @@ body {
     top: 122%;
 }
 
-.recentPostsDetail:hover + .recentPostsDetailText,
-.tinnoteDetail:hover + .tinnoteDetailText {
+.recentPostsDetail:hover+.recentPostsDetailText,
+.tinnoteDetail:hover+.tinnoteDetailText {
     visibility: visible;
     opacity: 1;
 }
@@ -495,60 +571,6 @@ main p a {
     text-decoration: none;
 }
 
-p code {
-    text-shadow: 1px 1px 1px rgb(0, 0, 0);
-    letter-spacing: 1px;
-    font-size: 0.8rem;
-    color: var(--code);
-}
-.codeBlock {
-    white-space: pre-wrap;
-    color: var(--code);
-    font-size: 1rem;
-    display: block;
-    margin: 0 auto;
-    border: 2px solid var(--accentOne);
-    padding: 1rem;
-    margin-bottom: 1rem;
-}
-
-/* figure component */
-figure {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    float: right;
-    margin-left: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-figure:hover figcaption {
-    box-shadow: none;
-}
-
-figure.card img {
-    width: 13rem;
-    border: 4px outset var(--accentOne);
-    background-color: var(--primary);
-}
-
-figure.card figcaption {
-    width: 12rem;
-    text-align: center;
-    background-color: var(--primary);
-    color: var(--secondary);
-    padding: 0.5rem;
-    border-color: var(--accentOne);
-    border-width: 0 4px 4px 4px;
-    border-style: outset;
-    font-size: 0.8rem;
-}
-
-figure.card figcaption a {
-    text-decoration: none;
-    color: var(--accentOne);
-}
-
 /* media queries */
 @media screen and (max-width: 1050px) {
     body {
@@ -562,42 +584,42 @@ figure.card figcaption a {
         margin-bottom: 1rem;
     }
 
-    header {
+    #layoutHeader {
         display: flex;
         flex-flow: row nowrap;
         margin-bottom: 1rem;
     }
 
-    header div:nth-child(2) {
+    #layoutHeader img {
         display: flex;
         flex-flow: column nowrap;
         margin-top: 2rem;
     }
 
-    header div:nth-child(2) img {
+    #layoutHeader div:nth-child(2) img {
         width: 5rem;
     }
 
-    header h1 {
+    #layoutHeader .pipertext {
         width: 100%;
     }
 
-    header .logo {
+    #layoutHeader .logo {
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
     }
 
-    header #themeButton {
+    #layoutHeader #themeButton {
         margin: 0;
     }
 
-    nav ul {
+    #layoutNav ul {
         justify-content: center;
         gap: .5rem;
     }
 
-    nav ul li {
+    #layoutNav ul li {
         min-width: 25%;
         max-width: 2rem;
     }
@@ -615,24 +637,24 @@ figure.card figcaption a {
         border-right: none;
     }
 
-    aside .recentPosts {
+    #layoutSidebar .recentPosts {
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
     }
 
-    div.marquee {
+    .marquee {
         max-width: 20%;
         min-width: 15%;
     }
 
-    div.window {
+    .window {
         top: 45%;
         left: 35%;
     }
 
-    #homeMain figure {
+    #homeMain .card {
         width: 100%;
         margin: 0 auto;
         margin-bottom: 1rem;
@@ -652,15 +674,15 @@ figure.card figcaption a {
 }
 
 @media screen and (max-width: 600px) {
-    header h1 {
+    #layoutHeader h1 {
         font-size: 2.5rem;
     }
 
-    nav ul li {
+    #layoutNav ul li {
         max-width: 8rem;
     }
 
-    nav ul li a {
+    #layoutNav ul li a {
         font-size: .7rem;
     }
 
@@ -678,29 +700,15 @@ figure.card figcaption a {
 }
 
 @media screen and (max-width: 515px) {
-    header h1 {
+    #layoutHeader h1 {
         font-size: 2rem;
     }
 }
 
 @media screen and (max-width: 380px) {
-    header h1 {
+    #layoutHeader h1 {
         font-size: 1.5rem;
     }
-}
-
-/* site-wide styles */
-p a:visited {
-    color: var(--accentOne);
-}
-
-p a:not(:visited) {
-    color: var(--accentOne);
-}
-
-a:hover {
-    color: var(--accentOne);
-    font-weight: bold;
 }
 
 /* homepage */
@@ -829,7 +837,7 @@ a:hover {
     text-decoration: none;
 }
 
-main.resourcePage h2 {
+.resourcePage h2 {
     margin-bottom: 1rem;
 }
 
