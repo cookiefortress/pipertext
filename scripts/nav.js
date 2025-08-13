@@ -10,7 +10,7 @@ const homepage = `
               logo from 2002, when it was still named <i>Pheonix</i>, and then
               later <i>Firebird</i>, before rebranding to <i>Firefox</i>
             </figcaption>
-          </figure>
+        </figure>
         <p>
           Pipertext is a love letter to the old web; when it seemed
           to be a never-ending adventure through others' little corners of the grand series of tubes you're viewing this website through. I was personally
@@ -309,11 +309,11 @@ const contact = `
 
 function renderContentFromHash() {
 
-  function changePage(page, id) {
-    main.innerHTML = page;
-    main.id = `${id}Main`
-  }
-  
+	function changePage(page, id) {
+		main.innerHTML = page;
+		main.id = `${id}Main`
+	}
+
 	switch (window.location.hash) {
 		case "#homepage":
 			changePage(homepage, 'home');
