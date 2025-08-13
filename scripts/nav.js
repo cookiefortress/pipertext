@@ -267,6 +267,12 @@ const about = `
                 @@@@@@@@@@@@@@@@@@@@@                                                             
                     @@@@@@@@@@@@                                                                  
         </pre>
+        <div id='aboutIconRow'>
+            <img src='/media/gif/thisWebsiteKillsNaziScum.png' alt='88x31 icon depicting an ex'd out Swastika reading this website kills Nazi scum'>
+            <img src='/media/img/pipertext.png' alt='Pipertext 88x31 icon'>
+            <img src='/media/gif/linux-p.gif'>
+        </div>
+
 	`
 const contact = `
           <h2>Contact</h2>

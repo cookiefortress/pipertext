@@ -1040,6 +1040,22 @@ main p a {
     width: 80%;
 }
 
+#aboutIconRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    background-color: var(--accentTwo);
+    height: 4rem;
+    border: 3px ridge var(--accentOne);
+}
+
+#aboutIconRow img {
+    width: 88px;
+    height: 31px;
+}
+
 /* contact page */
 #contactMain div {
     display: flex;
