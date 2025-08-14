@@ -9,6 +9,9 @@ function createTable() {
 
 	const headers = Array.from(document.querySelector("main").querySelectorAll("h2, h3"));
 	for(let i = 1; i < headers.length; i++) {
+		if(headers[i].textContent.includes("this article is a part of the")) {
+			continue;
+		}
 		const link = document.createElement("a");
 		link.href = `#sec${i}`;
 		link.textContent = headers[i].textContent;
