@@ -2,161 +2,166 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>pipertext</title>
-  <link rel="icon" type="image/x-icon" href="/media/img/pipe.png" />
-  <link rel="icon" type="image/png" href="/media/img/pipe.png" />
-  <link rel="stylesheet" href="/style.css" />
-  <script src="/scripts/layout.js" type="module" defer></script>
-  <script src="/scripts/themes.js" type="module" defer></script>
-  <script src="/scripts/articleScripts/tictactoeRevisited.js" defer></script>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>pipertext</title>
+	<link rel="icon" type="image/x-icon" href="/media/img/pipe.png" />
+	<link rel="icon" type="image/png" href="/media/img/pipe.png" />
+	<link rel="stylesheet" href="/style.css" />
+	<script src="/scripts/layout.js" type="module" defer></script>
+	<script src="/scripts/themes.js" type="module" defer></script>
+	<script src="/scripts/articleScripts/tictactoeRevisited.js" defer></script>
+	<script src="/scripts/tableOfContents.js" type='module' defer></script>
 </head>
 <style>
-  #players {
-    display: flex;
-    flex-flow: row nowrap;
-    gap: 3rem;
-  }
+	#players {
+		display: flex;
+		flex-flow: row nowrap;
+		gap: 3rem;
+	}
 
-  #players div {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    padding: 1rem;
-  }
+	#players div {
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+		padding: 1rem;
+	}
 
-  #players div p {
-    padding: 0.5rem 1rem;
-    margin: 0;
-    text-indent: 0;
-    border-left: none;
-    font-size: 1.3rem;
-    margin-top: 0.5rem;
-    background-color: var(--accentTwo);
-    border: 1px ridge var(--secondary);
-  }
+	#players div p {
+		padding: 0.5rem 1rem;
+		margin: 0;
+		text-indent: 0;
+		border-left: none;
+		font-size: 1.3rem;
+		margin-top: 0.5rem;
+		background-color: var(--accentTwo);
+		border: 1px ridge var(--secondary);
+	}
 
-  #announcement {
-    margin-bottom: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: var(--accentTwo);
-    border: 3px ridge var(--secondary);
-    width: 30rem;
-    text-align: center;
-  }
+	#announcement {
+		margin-bottom: 1rem;
+		padding: 0.5rem 1rem;
+		background-color: var(--accentTwo);
+		border: 3px ridge var(--secondary);
+		width: 30rem;
+		text-align: center;
+	}
 
-  #announcement h3 {
-    font-size: 2rem;
-  }
+	#announcement h3 {
+		font-size: 2rem;
+	}
 
-  #tictactoe {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-  }
+	#tictactoe {
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+	}
 
-  #board {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    width: 20rem;
-    height: 20rem;
-  }
+	#board {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr;
+		width: 20rem;
+		height: 20rem;
+	}
 
-  .square {
-    border: 2px solid var(--accentOne);
-    background-color: transparent;
-    color: var(--secondary);
-    font-size: 5rem;
-  }
+	.square {
+		border: 2px solid var(--accentOne);
+		background-color: transparent;
+		color: var(--secondary);
+		font-size: 5rem;
+	}
 
-  .square:hover {
-    background-color: var(--accentTwo);
-  }
+	.square:hover {
+		background-color: var(--accentTwo);
+	}
 
-  .square:active {
-    background-color: var(--accentOne);
-    border: 2px solid var(--primary);
-  }
+	.square:active {
+		background-color: var(--accentOne);
+		border: 2px solid var(--primary);
+	}
 
-  .square:nth-child(1),
-  .square:nth-child(2),
-  .square:nth-child(3) {
-    border-top: none;
-  }
+	.square:nth-child(1),
+	.square:nth-child(2),
+	.square:nth-child(3) {
+		border-top: none;
+	}
 
-  .square:nth-child(7),
-  .square:nth-child(8),
-  .square:nth-child(9) {
-    border-bottom: none;
-  }
+	.square:nth-child(7),
+	.square:nth-child(8),
+	.square:nth-child(9) {
+		border-bottom: none;
+	}
 
-  .square:nth-child(1),
-  .square:nth-child(4),
-  .square:nth-child(7) {
-    border-left: none;
-  }
+	.square:nth-child(1),
+	.square:nth-child(4),
+	.square:nth-child(7) {
+		border-left: none;
+	}
 
-  .square:nth-child(3),
-  .square:nth-child(6),
-  .square:nth-child(9) {
-    border-right: none;
-  }
+	.square:nth-child(3),
+	.square:nth-child(6),
+	.square:nth-child(9) {
+		border-right: none;
+	}
 </style>
 
 <body>
-  <div class="container">
-    <header></header>
-    <nav></nav>
-    <aside></aside>
+	<div class="container">
+		<header></header>
+		<nav></nav>
+		<aside></aside>
 
-    <main class="article">
-      <article>
-        <h2 class="articleHeader">Project - Tic Tac Toe Revisited</h2>
-        <time>UTC 2025-04-25 - April 25<sup>th</sup>, 2025</time>
-        <hr />
-        <p>
-          This project was initially completed as part of
-          <a href="https://www.theodinproject.com/lessons/node-path-javascript-tic-tac-toe" target="_blank"
-            rel="noopener noreferrer">The Odin Project's Tic Tac Toe project</a>, but my initial implementation had some
-          bugs... whoops! I fixed
-          them here though! Good job me!
-        </p>
+		<main class="article">
+			<article>
+				<section id="articleHead">
+				<div id="articleHeadMetadata">
+					<h2 class="articleHeader">Project - Tic Tac Toe Revisited</h2>
+					<time>UTC 2025-04-25 - April 25<sup>th</sup>, 2025</time>
+				</div>
+				</section>
+				<p>
+					This project was initially completed as part of
+					<a href="https://www.theodinproject.com/lessons/node-path-javascript-tic-tac-toe" target="_blank"
+						rel="noopener noreferrer">The Odin Project's Tic Tac Toe project</a>, but my initial
+					implementation had some
+					bugs... whoops! I fixed
+					them here though! Good job me!
+				</p>
 
-        <div id="tictactoe">
-          <div id="players">
-            <div>
-              <h3 id="p1name">player 1</h3>
-              <p id="p1score">0</p>
-            </div>
-            <div>
-              <h3 id="p2name">player 2</h3>
-              <p id="p2score">0</p>
-            </div>
-          </div>
+				<div id="tictactoe">
+					<div id="players">
+						<div>
+							<h3 id="p1name">player 1</h3>
+							<p id="p1score">0</p>
+						</div>
+						<div>
+							<h3 id="p2name">player 2</h3>
+							<p id="p2score">0</p>
+						</div>
+					</div>
 
-          <div id="announcement">
-            <h3>Start yer engines!</h3>
-          </div>
+					<div id="announcement">
+						<h3>Start yer engines!</h3>
+					</div>
 
-          <div id="board">
-            <button class="square"></button>
-            <button class="square"></button>
-            <button class="square"></button>
-            <button class="square"></button>
-            <button class="square"></button>
-            <button class="square"></button>
-            <button class="square"></button>
-            <button class="square"></button>
-            <button class="square"></button>
-          </div>
-        </div>
-      </article>
-    </main>
+					<div id="board">
+						<button class="square"></button>
+						<button class="square"></button>
+						<button class="square"></button>
+						<button class="square"></button>
+						<button class="square"></button>
+						<button class="square"></button>
+						<button class="square"></button>
+						<button class="square"></button>
+						<button class="square"></button>
+					</div>
+				</div>
+			</article>
+		</main>
 
-    <footer></footer>
-  </div>
+		<footer></footer>
+	</div>
 </body>
 
 </html>

@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="/style.css" />
   <script src="/scripts/layout.js" type="module" defer></script>
   <script src="/scripts/themes.js" type="module" defer></script>
+  <script src="/scripts/tableOfContents.js" type='module' defer></script>
   <style>
     .article span.bigText {
       font-size: 8rem;
@@ -30,9 +31,13 @@
     <main class="article">
       <span class="bigText">&lt;article&gt;</span>
       <article>
-        <h2 class="articleHeader">The beauty of semantic HTML</h2>
-        <time>UTC 2025-04-08 - April 8<sup>th</sup>, 2025</time>
-        <hr />
+        <section id="articleHead">
+          <div id="articleHeadMetadata">
+            <h2 class="articleHeader">The beauty of semantic HTML</h2>
+            <time>UTC 2025-04-08 - April 8<sup>th</sup>, 2025</time>
+          </div>
+        </section>
+
         <p>
           Yea yea, the <em>semantic web</em> is a modern idea! What's
           old-school about that?

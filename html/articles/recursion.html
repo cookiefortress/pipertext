@@ -10,7 +10,8 @@
 	<link rel="stylesheet" href="/style.css" />
 	<script src="/scripts/layout.js" type="module" defer></script>
 	<script src="/scripts/themes.js" type="module" defer></script>
-	<script src="/scripts/articleScripts/recursion.js" defer></script>
+	<script src="/scripts/articleScripts/recursion.js" type='module' defer></script>
+	<script src="/scripts/tableOfContents.js" type='module' defer></script>
 </head>
 
 <body>
@@ -21,9 +22,13 @@
 
 		<main class="article">
 			<article>
-				<h2 class="articleHeader">Project - Recursion</h2>
-				<time>UTC 2025-08-10 - August 10th<sup>th</sup>, 2025</time>
-				<hr />
+				<section id="articleHead">
+					<div id="articleHeadMetadata">
+						<h2 class="articleHeader">Project - Recursion</h2>
+						<time>UTC 2025-08-10<br>August 10th<sup>th</sup>, 2025</time>
+					</div>
+				</section>
+
 				<p>This is a little adventure into recursion, following the <a
 						href="https://www.theodinproject.com/lessons/javascript-recursion" target="_blank"
 						rel="noopener noreferrer">The Odin Project's Recursion assignment on the subject</a>. I have
@@ -60,7 +65,8 @@ function fibsRec(num, arr = [0, 1]) {
 }</code>
 				<div id="fibRes"></div>
 				<h2>Merge sort</h2>
-				<p>I didn't make a non-recursive version of the merge sort algorithm as the assignment didn't ask for one. Sorry for your loss! Mwahaha!</p>
+				<p>I didn't make a non-recursive version of the merge sort algorithm as the assignment didn't ask for
+					one. Sorry for your loss! Mwahaha!</p>
 				<code class="codeBlock">function mergeSort(arr = [3, 2, 1, 13, 8, 5, 0, 1]) {
 	if(arr.length <= 1) {
 		return arr;

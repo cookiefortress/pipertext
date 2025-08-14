@@ -10,15 +10,17 @@
   <link rel="stylesheet" href="/style.css" />
   <script src="/scripts/layout.js" type="module"></script>
   <script src="/scripts/themes.js" type="module"></script>
+  <script src="/scripts/tableOfContents.js" type='module' defer></script>
   <style>
-	ol {
-		margin: 0 auto;
-		justify-self: center;
-		width: 80%;
-	}
-	ol li {
-		margin-bottom: 1rem;
-	}
+    ol {
+      margin: 0 auto;
+      justify-self: center;
+      width: 80%;
+    }
+
+    ol li {
+      margin-bottom: 1rem;
+    }
   </style>
 </head>
 
@@ -30,23 +32,35 @@
 
     <main class="article">
       <article>
-        <h2 class="articleHeader">Running JACK on Linux</h2>
-        <time>UTC 2025-07-15<sup>th</sup>, 2025</time>
-        <hr />
+        <section id="articleHead">
+        <div id="articleHeadMetadata">
+          <h2 class="articleHeader">Running JACK on Linux</h2>
+          <time>UTC 2025-07-15<sup>th</sup>, 2025</time>
+        </div>
+        </section>
         <p>
-          So, about a month ago I spent much longer than I'd ever like to admit trying to get the Steam version of <a href="https://store.steampowered.com/app/496450/JACK/" target="_blank" rel="noopener noreferrer">JACK</a> to run on my laptop running Fedora. If you don't know, JACK is an alternative to Valve's original Hammer map editor for games running on the <a href="https://developer.valvesoftware.com/wiki/GoldSrc" target="_blank" rel="noopener noreferrer">Goldsrc</a> engine. I installed maybe a million old packages, scouring the web for some semblance of help, and I got it working, but long story short, it stopped working again.
+          So, about a month ago I spent much longer than I'd ever like to admit trying to get the Steam version of <a
+            href="https://store.steampowered.com/app/496450/JACK/" target="_blank" rel="noopener noreferrer">JACK</a> to
+          run on my laptop running Fedora. If you don't know, JACK is an alternative to Valve's original Hammer map
+          editor for games running on the <a href="https://developer.valvesoftware.com/wiki/GoldSrc" target="_blank"
+            rel="noopener noreferrer">Goldsrc</a> engine. I installed maybe a million old packages, scouring the web for
+          some semblance of help, and I got it working, but long story short, it stopped working again.
         </p>
-		<p>
-			<img src="/media/img/JACKlogo.jpg" alt="JACK (Goldsrc map editor) logo" style="float: right; width: 200px;">
-			Fast forward to now, I decided to screw with it some more, and figured out the world's easiest solution, as detailed below:
-		</p>
-		<ol>
-			<li>Boot up Steam</li>
-			<li>Right-click on JACK and select <i>Preferences</i></li>
-			<li>Go to <i>Compatability</i> and click the checkbox that says <i>Force the use of a specific Steam Play compatability tool</i></li>
-			<li>Lastly, select <i>Proton Hotfix</i> in the dropdown</li>
-		</ol>
-		<p>And JACK should boot up like nothing. I'm assuming the Linux version just isn't very well maintained, so using Proton is the way to go. If you're having issues with the free version, I'd honestly just recommend waiting for a Steam sale and picking it up for a decent price then. Happy piping!</p>
+        <p>
+          <img src="/media/img/JACKlogo.jpg" alt="JACK (Goldsrc map editor) logo" style="float: right; width: 200px;">
+          Fast forward to now, I decided to screw with it some more, and figured out the world's easiest solution, as
+          detailed below:
+        </p>
+        <ol>
+          <li>Boot up Steam</li>
+          <li>Right-click on JACK and select <i>Preferences</i></li>
+          <li>Go to <i>Compatability</i> and click the checkbox that says <i>Force the use of a specific Steam Play
+              compatability tool</i></li>
+          <li>Lastly, select <i>Proton Hotfix</i> in the dropdown</li>
+        </ol>
+        <p>And JACK should boot up like nothing. I'm assuming the Linux version just isn't very well maintained, so
+          using Proton is the way to go. If you're having issues with the free version, I'd honestly just recommend
+          waiting for a Steam sale and picking it up for a decent price then. Happy piping!</p>
       </article>
     </main>
 

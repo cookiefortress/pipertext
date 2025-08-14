@@ -11,7 +11,7 @@
   <script src="/scripts/layout.js" type="module" defer></script>
   <script src="/scripts/themes.js" type="module" defer></script>
   <script src="/scripts/articleScripts/todo.js" defer></script>
-
+  	<script src="/scripts/tableOfContents.js" type='module' defer></script>
   <style>
     #todoList {
       display: flex;
@@ -102,9 +102,13 @@
 
     <main class="article">
       <article>
-        <h2 class="articleHeader">Project - Todo List</h2>
+        <section id="articleHead">
+          <div id="articleHeadMetadata">
+                    <h2 class="articleHeader">Project - Todo List</h2>
         <time>UTC 2025-04-20 - April 20<sup>th</sup>, 2025</time>
-        <hr />
+          </div>
+        </section>
+
         <p style="text-indent: 1rem;">
           This project was completed as part of
           <a href="https://www.theodinproject.com/lessons/node-path-javascript-todo-list" target="_blank"

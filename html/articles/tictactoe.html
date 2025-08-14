@@ -11,6 +11,7 @@
   <script src="/scripts/layout.js" type="module" defer></script>
   <script src="/scripts/themes.js" type="module" defer></script>
   <script src="/scripts/articleScripts/tictactoe.js" defer></script>
+  <script src="/scripts/tableOfContents.js" type='module' defer></script>
 </head>
 
 <body>
@@ -21,9 +22,13 @@
 
     <main class="article">
       <article>
-        <h2 class="articleHeader">Project - Tic Tac Toe</h2>
-        <time>UTC 2025-04-12 - April 12<sup>th</sup>, 2025</time>
-        <hr />
+        <section id="articleHead">
+          <div id="articleHeadMetadata">
+            <h2 class="articleHeader">Project - Tic Tac Toe</h2>
+            <time>UTC 2025-04-12 - April 12<sup>th</sup>, 2025</time>
+          </div>
+        </section>
+
         <p>
           This project was completed as part of
           <a href="https://www.theodinproject.com/lessons/node-path-javascript-tic-tac-toe" target="_blank"

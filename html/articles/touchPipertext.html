@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="/style.css" />
   <script src="/scripts/layout.js" type="module"></script>
   <script src="/scripts/themes.js" type="module"></script>
+  <script src="/scripts/tableOfContents.js" type='module' defer></script>
 </head>
 
 <body>
@@ -21,9 +22,13 @@
     <main class="article">
       <img src="/media/img/touchPipertext.png" alt="The text 'touch pipertext.ptml' with a CLI aesthetic.">
       <article>
-        <h2 class="articleHeader">touch pipertext.ptml</h2>
-        <time>UTC 2025-04-06 - April 6<sup>th</sup>, 2025</time>
-        <hr />
+        <section id="articleHead">
+          <div id="articleHeadMetadata">
+            <h2 class="articleHeader">touch pipertext.ptml</h2>
+            <time>UTC 2025-04-06 - April 6<sup>th</sup>, 2025</time>
+          </div>
+        </section>
+
         <p>
           Welcome to Pipertext! If you're actually reading this within a few
           days of the site's publishing, you'll notice there's no resources

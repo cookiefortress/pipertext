@@ -38,8 +38,47 @@ p code {
     color: var(--code);
 }
 
+#articleHead {
+    display: flex;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    gap: 2rem;
+    border-bottom: 1px solid var(--secondary);
+}
+
+#articleHeadMetadata {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    flex-basis: 55%;
+    text-align: center;
+}
+
+#articleHeadMetadata h2 {
+    font-size: 1.5rem;
+}
+
+#tableOfContents {
+    flex-basis: 45%;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 1rem;
+    border: 3px ridge var(--accentTwo);
+}
+
+#tableOfContents a {
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+#TOCheader {
+    font-size: 1.2rem;
+}
+
 :focus {
-    outline: 4px solid var(--secondary);
+    outline: 2px solid var(--secondary);
 }
 
 /* standards */
@@ -671,20 +710,38 @@ main p a {
 }
 
 @media screen and (max-width: 750px) {
+    #articleHead {
+        flex-wrap: wrap;
+    }
+    #articleHead #articleHeadMetadata {
+        flex-basis: 100%;
+    }
+    #articleHead #tableOfContents {
+        flex-basis: 100%;
+    }
+
     #aboutFoot {
         flex-flow: row wrap;
     }
+
     #aboutFoot #aboutIconRow {
         display: flex;
         flex-flow: row wrap;
         width: 75%;
     }
+
     #aboutFoot #asciiPipe {
         font-size: .4rem;
     }
 }
 
 @media screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+    }
+    body {
+        padding: 0;
+    }
     #layoutHeader h1 {
         font-size: 2.5rem;
     }
@@ -704,17 +761,28 @@ main p a {
     #ricostay {
         max-width: 30rem;
     }
+
+    .codeBlock {
+        width: 80%;
+        font-size: .8rem;
+    }
 }
 
 @media screen and (max-width: 515px) {
     #layoutHeader h1 {
         font-size: 2rem;
     }
+
     #aboutFoot #aboutIconRow {
         height: 10rem;
     }
+
     #aboutFoot #asciiPipe {
         font-size: .3rem;
+    }
+
+    .codeBlock {
+        font-size: .7rem;
     }
 }
 
@@ -722,9 +790,11 @@ main p a {
     #layoutHeader h1 {
         font-size: 1.5rem;
     }
+
     #aboutFoot #asciiPipe {
         font-size: .2rem;
     }
+
 }
 
 /* homepage */

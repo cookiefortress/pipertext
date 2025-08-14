@@ -10,6 +10,8 @@
 	<link rel="stylesheet" href="/style.css">
 	<script src="/scripts/layout.js" type="module" defer></script>
 	<script src="/scripts/themes.js" type="module" defer></script>
+	<script src="/scripts/tableOfContents.js" type='module' defer></script>
+
 </head>
 <style>
 	.dropdown {
@@ -171,9 +173,12 @@
 
 		<main class="article">
 			<article>
-				<h2 class="articleHeader">Project - Dynamic UI</h2>
-				<time>UTC 2025-05-08 - May 8<sup>th</sup>, 2025</time>
-				<hr />
+				<section id="articleHead">
+					<div id="articleHeadMetadata">
+						<h2 class="articleHeader">Project - Dynamic UI</h2>
+						<time>UTC 2025-05-08 - May 8<sup>th</sup>, 2025</time>
+					</div>
+				</section>
 				<p>
 					This little project was completed as part of
 					<a href="https://www.theodinproject.com/lessons/node-path-javascript-dynamic-user-interface-interactions"

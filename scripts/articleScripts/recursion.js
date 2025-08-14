@@ -106,7 +106,7 @@ console.log(mergeSort([105, 79, 100, 110]));
 	const div = document.querySelector("#msRes");
 
 	const header = document.createElement("h3");
-	header.textContent = 'Merge sort (resursive)';
+	header.textContent = 'Merge sort (recursive)';
 
 	const paragraph = document.createElement("p");
 	paragraph.textContent = `mergeSort([3,2,1,13,8,5,0,1]): ${mergeSort([3,2,1,13,8,5,0,1])}`;
