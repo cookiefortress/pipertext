@@ -661,15 +661,26 @@ main p a {
         margin-top: 1rem;
     }
 
-    #asciiPipe {
-        font-size: .6rem;
-        margin: auto;
-        display: block;
-        text-align: center;
-    }
-
     #ricostay {
         display: none;
+    }
+
+    #aboutFoot #asciiPipe {
+        font-size: .2rem;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #aboutFoot {
+        flex-flow: row wrap;
+    }
+    #aboutFoot #aboutIconRow {
+        display: flex;
+        flex-flow: row wrap;
+        width: 75%;
+    }
+    #aboutFoot #asciiPipe {
+        font-size: .4rem;
     }
 }
 
@@ -693,21 +704,26 @@ main p a {
     #ricostay {
         max-width: 30rem;
     }
-
-    #asciiPipe {
-        font-size: .2rem;
-    }
 }
 
 @media screen and (max-width: 515px) {
     #layoutHeader h1 {
         font-size: 2rem;
     }
+    #aboutFoot #aboutIconRow {
+        height: 10rem;
+    }
+    #aboutFoot #asciiPipe {
+        font-size: .3rem;
+    }
 }
 
 @media screen and (max-width: 380px) {
     #layoutHeader h1 {
         font-size: 1.5rem;
+    }
+    #aboutFoot #asciiPipe {
+        font-size: .2rem;
     }
 }
 
@@ -1040,20 +1056,31 @@ main p a {
     width: 80%;
 }
 
+#aboutFoot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #aboutIconRow {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    margin-top: 2rem;
     background-color: var(--accentTwo);
-    height: 4rem;
+    height: 3.1rem;
     border: 3px ridge var(--accentOne);
+    width: 50%;
+    margin-top: 1rem;
 }
 
 #aboutIconRow img {
     width: 88px;
     height: 31px;
+}
+
+#asciiPipe {
+    font-size: .3rem;
 }
 
 /* contact page */
