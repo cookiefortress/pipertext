@@ -338,6 +338,10 @@ p code {
     background-color: var(--accentTwo);
 }
 
+#layoutNav ul li a:focus {
+    background-color: var(--accentOne);
+}
+
 #layoutNav ul li a:hover {
     color: var(--secondary);
     background-color: var(--accentOne);
@@ -643,23 +647,13 @@ main p a {
         width: 100%;
     }
 
-    #layoutHeader .logo {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-    }
-
-    #layoutHeader #themeButton {
-        margin: 0;
-    }
-
     #layoutNav ul {
         justify-content: center;
         gap: .5rem;
     }
 
     #layoutNav ul li {
-        min-width: 25%;
+        min-width: 45%;
         max-width: 2rem;
     }
 
@@ -710,6 +704,25 @@ main p a {
 }
 
 @media screen and (max-width: 750px) {
+    #layoutHeader {
+        flex-flow: column nowrap;
+    }
+    #layoutHeader .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column nowrap;
+        width: 80%;
+    }
+    #layoutHeader img {
+        margin: 0;
+        width: 30% !important;
+    }
+    #themeButton {
+        margin: 0;
+        order: 1;
+        align-self: center;
+    }
     #articleHead {
         flex-wrap: wrap;
     }
@@ -743,7 +756,7 @@ main p a {
         padding: 0;
     }
     #layoutHeader h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     #layoutNav ul li {
@@ -770,7 +783,7 @@ main p a {
 
 @media screen and (max-width: 515px) {
     #layoutHeader h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     #aboutFoot #aboutIconRow {
@@ -788,7 +801,7 @@ main p a {
 
 @media screen and (max-width: 380px) {
     #layoutHeader h1 {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     #aboutFoot #asciiPipe {
