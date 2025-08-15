@@ -806,9 +806,10 @@ main p a {
 .chatbox {
     background-color: var(--accentTwo);
     border: 4px ridge var(--accentOne);
-    max-width: 70%;
+    max-width: 90%;
     height: 13rem;
     flex: 1;
+    margin: 0 auto;
 }
 
 .chatbox h3 {
