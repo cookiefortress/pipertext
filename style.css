@@ -96,7 +96,7 @@ p code {
 }
 
 .card img {
-    width: 13rem;
+    max-width: 13rem;
     border: 4px outset var(--accentOne);
     background-color: var(--primary);
 }
@@ -1044,7 +1044,7 @@ main p a {
     font-size: 1rem;
 }
 
-.article img:first-of-type {
+.article .headImg {
     /* mask-image: linear-gradient(to right,
             rgba(0, 0, 0, 1) -20%,
             transparent 100%); */
