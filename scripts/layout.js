@@ -51,6 +51,11 @@ function createSidebar() {
             recentPosts.appendChild(recentPostsHeader);
             recentPosts.appendChild(recentPostsDetailText);
 
+            createRecentPost(
+                `/html/articles/goldsrcIsGold.html`,
+                `Goldsrc is gold`,
+                `2025/08/18`,
+            );
              createRecentPost(
                 `/html/articles/recursion.html`,
                 `Project - Recursion`,
@@ -60,11 +65,6 @@ function createSidebar() {
                 `/html/articles/weatherApp.html`,
                 `Project - Weather App`,
                 `2025/07/28`,
-            );
-            createRecentPost(
-                `/html/articles/JACKlinuxFix.html`,
-                `Running JACK on Linux`,
-                `2025/07/15`,
             );
         }
         const recentPosts = document.createElement(`div`);

@@ -53,5 +53,10 @@
     "name": "Project - Recursion",
     "publish_date": "2025/08/10",
     "html_file": "/html/articles/recursion.html"
+  },
+  {
+    "name": "Goldsrc is gold",
+    "publish_date": "2025/08/18",
+    "html_file": "/html/articles/goldsrcIsGold.html"
   }
 ]
