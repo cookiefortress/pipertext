@@ -1125,12 +1125,14 @@ main p a {
 }
 
 #ricostayImg {
-    width: 20rem;
+    max-width: 20rem;
 }
 
 #ricostayCard {
-    width: 80%;
+    max-width: 16rem;
+    width: 16rem;
 }
+
 
 #runningMan {
     width: 130px;
