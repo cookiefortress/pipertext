@@ -38,6 +38,14 @@ p code {
     color: var(--code);
 }
 
+.htmlArticle ul {
+    padding: 0 2rem 1rem 2rem;
+    font-size: .85rem;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: .5rem;
+}
+
 #articleHead {
     display: flex;
     margin-top: .5rem;
@@ -118,6 +126,28 @@ p code {
     color: var(--accentOne);
 }
 
+.bigFigure figcaption {
+    max-width: 80%;
+    text-align: center;
+    margin: 0 auto 1rem auto;
+    background-color: transparent;
+    padding: 1rem;
+    border: 4px outset var(--accentOne);
+    border-top: none;
+}
+
+.bigFigure figcaption a {
+    color: var(--accentOne);
+    text-decoration: none;
+}
+
+.bigFigureImg {
+    max-width: 95%;
+    margin: 0 auto;
+    display: block;
+    border: 4px outset var(--accentOne);
+}
+
 .input {
     border-radius: 0;
     padding: .5rem;
@@ -146,6 +176,7 @@ p code {
     border: 2px solid var(--accentOne);
     padding: 1rem;
     margin-bottom: 1rem;
+
 }
 
 /* main container for page layout */
@@ -955,12 +986,19 @@ main p a {
 .resGrid div p {
     margin-right: 2rem;
     margin-left: .5rem;
+    margin-bottom: 1rem;
 }
 
 .resGrid div p img {
     float: right;
     padding: .2rem;
     margin-left: 1rem;
+}
+
+.resGrid div a {
+    color: var(--accentOne);
+    text-decoration: none;
+    padding: .5rem 0 0 .5rem;
 }
 
 /* articles page */
@@ -1039,7 +1077,7 @@ main p a {
     font-size: 1rem;
 }
 
-.article .headImg {
+.headImg {
     /* mask-image: linear-gradient(to right,
             rgba(0, 0, 0, 1) -20%,
             transparent 100%); */
@@ -1066,7 +1104,7 @@ main p a {
     padding: 1rem;
 }
 
-.article h3 {
+.htmlArticle h3 {
     text-align: center;
 }
 

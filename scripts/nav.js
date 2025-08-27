@@ -52,7 +52,7 @@ const resource = `
         <h2>Guides</h2>
         <p>I am continuously adding new guides in the form of articles here. This serves not only as good practice for myself, but hopefully a decent resource for beginners to learn more about the tools of the trade in layman's terms!</p>
         <div class="resourceGuides">
-          <a href=''>
+          <a href='/html/resource/articlesHTML.html'>
             <div>
               <h2>HTML</h2>
             </div>
