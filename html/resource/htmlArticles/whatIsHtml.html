@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>pipertext</title>
+	<link rel="icon" type="image/x-icon" href="/media/img/pipe.png" />
+	<link rel="icon" type="image/png" href="/media/img/pipe.png" />
+	<link rel="stylesheet" href="/style.css" />
+	<script src="/scripts/layout.js" type="module" defer></script>
+	<script src="/scripts/themes.js" type="module" defer></script>
+	<script src="/scripts/tableOfContents.js" type='module' defer></script>
+</head>
+
+<body>
+	<div class="container">
+		<header></header>
+		<nav></nav>
+		<aside></aside>
+
+		<main class="htmlArticle">
+			<section id="articleHead">
+				<div id="articleHeadMetadata">
+					<h2>What is HTML?</h2>
+				</div>
+			</section>
+
+			<p>The dawn of the web was defined by raw HTML. No fancy colors, no animations, no React + Express SPAs with
+				externally hosted databases... just pure, unadulterated text, some
+				text bigger than other text, which often linked to other text. Everything was text. Need an
+					example?
+				</p>
+				<figure class="bigFigure">
+					<img src="/media/img/infoCernCh.png" alt="A screencap of info.cern.ch" class="bigFigureImg">
+					<figcaption>An image of <a href="https://info.cern.ch/hypertext/WWW/TheProject.html" target="_blank" rel="noopener noreferrer">info.cern.ch</a>, the first website</figcaption>
+				</figure>
+
+			<p>
+				And that's all that it is. Any page rendered with exclusively HTML will look just like that. Below
+				this paragraph is what this page looks like with no CSS. Keep in mind
+				that HTML was birthed in a time where the web was expected to be used mostly by scientists &
+				researchers; <a href="https://en.wikipedia.org/wiki/Tim_Berners-Lee" target="_blank" rel="noopener noreferrer">TimBL</a> (the creator of HTML and the World Wide Web) certainly didn't
+				expect that HTML would be the foundation powering giant websites like Amazon in the future.
+			</p>
+
+							<figure class="bigFigure">
+					<img src="/media/img/pipertextPureHTML.png" alt="A screencap of info.cern.ch" class="bigFigureImg">
+					<figcaption>A screencap of this page with no CSS applied (only default browser styles)</figcaption>
+				</figure>
+
+			<p>If you're reading this article, that's might all be stuff you don't really care about anyways. My point
+				is that HTML is deceptively simple. It wasn't designed to be anything
+				fancy, and it certainly isn't. I would say you can get completely comfortable with HTML in a day.
+				Mastering it may take, like, a couple days, man.</p>
+
+			<h2>The basics</h2>
+
+			<p>HTML at a high-level is just a bunch of tags that describe the content they contain. Some have content in within two tags, others don't. Here's an example of the former:</p>
+
+			<code class="codeBlock">&lt;p&gt;Pipertext fuckin' rules!&lt;/p&gt;</code>
+
+			<p>Take note of the tags before and after the text, and also know that <code>&lt;p&gt;</code> stands for
+				"paragraph". The first tag is the opening tag. It lets the browser know, "hey,
+				a paragraph starts here." The second tag (and final tag for this particular paragraph element) tells the
+				browser that the paragraph is now complete. Everything in-between
+				these tags is the text that makes up the paragraph.</p>
+
+			<p>The second kind of tag is called a "void tag" to differentiate it from standard, non-void tags. A void
+				tag only has one tag, the opening tag, and does not need to be closed.
+				A fine example is the <code>&lt;img&gt;</code> tag:</p>
+
+			<code class="codeBlock"> &lt;img src='/images/pipertextLogo.png' alt='The Pipertext logo'&gt; </code>
+
+			<p>An image doesn't need a closing tag, because the image itself is referenced as an attribute within the
+				<code>&lt;img&gt;</code> tag. But what is an attribute?
+			</p>
+
+			<h3>Attributes</h3>
+
+			<p>You'll notice I actually have two attributes in the above <code> &lt;img&gt; </code> tag. One is
+				<code>src</code>, which tells the browser where to find the desired image;
+				obviously, "src" stands for "source". If I changed this attribute's value to something like
+				"epicCookie.png" and there was a picture of an epic cookie at the file path
+				specified, then it would show that instead.
+			</p>
+
+			<p>The second attribute is <code>alt</code> which is short for "alternate text". Alternate text is used in
+				two cases: when the image is unable to be retrieved from the server,
+				and when someone is using a tool which reads it off to them automatically (which may be you..!). This is
+				usually in the case of visually impaired individuals who may have
+				a hard time seeing an image normally, so they depend on the alternate text being read out to them.</p>
+
+			<p>These two attributes demonstrate the use of attributes as a whole. They provide additional information
+				regarding the element they are found in. Do note that, in the case
+				of non-void tags, attributes are <em>always</em> found within the opening tag. Closing tags are always
+				just that, closing tags.</p>
+
+			<h2>Types of elements</h2>
+
+			<p>There exists somewhere in the ballpark of 110 HTML elements overall. The reason there isn't a concrete
+				number is that browsers choose to implement very new or very niche
+				elements on their own accord, and many old, sometimes browser-specific elements such as
+				<code>&lt;marquee&gt;</code> are still around despite being considered "deprecated" by
+				all major browsers. The primary tags that you'll make us of frequently in your webpage-crafting career
+				are universally supported.
+			</p>
+
+			<p>I like to group HTML tags like the following:</p>
+
+			<ul>
+				<li>Text-level elements, like for headings and paragraphs</li>
+				<li>Graphic elements, stuff like images and horizontal rules</li>
+				<li>Semantic elements, tags which define things like "this is the main section"</li>
+				<li>Metadata elements, which relay information related to the page, like associated files or keywords
+				</li>
+				<li>Obsolete elements, sometimes fun to use but generally obscure/not practical</li>
+			</ul>
+
+			<p>I feel that these categories mostly sum up what you have to work with. Text-level elements are like
+				<code>&lt;p&gt;</code>, which defines a simple paragraph. Headings are
+				like <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, and so forth. One of my
+				favorites (which you may notice I am using liberally on this page)
+				is <code>&lt;code&gt;</code>, which designates the contained text as being a code segment of some kind.
+				Most browsers will apply a monospace font to text found within a
+				<code>&lt;code&gt;</code> element.
+			</p>
+
+			<p>Graphic elements are like the aforementioned <code>&lt;img&gt;</code> tag, or stuff like
+				<code>&lt;hr&gt;</code> which simply defines a horizontal line. Semantic
+				elements include not only stuff like <code>&lt;main&gt;</code> (used to indicate the main content of a
+				page) and
+				<code>&lt;time&gt;</code> (used to indicate that the
+				contained text is depicting time), but also stuff like <code>&lt;button&gt;</code> which offer
+				functionality as well as indicating what the element actually is. Metadata
+				elements, which I have yet to discuss, are stuff like <code>&lt;link&gt;</code>. Here's an example of
+				one of those for clarity:
+			</p>
+
+			<code class="codeBlock">&lt;link href='/style.css' rel='stylesheet'&gt;</code>
+
+			<p>This line of code tells the browser that there is a CSS stylesheet (which will add formatting, colors,
+				layout changes, et cetera) related to this page, hence the
+				<code>rel</code> attribute (short for "relation"), and where to find this stylesheet, hence the
+				<code>href</code> attribute. Think of these as data
+				<em>about</em> the webpage, rather than data <em>for</em> the webpage to use and display directly. I
+				won't get into obsolete elements too much, but it's stuff like the
+				aforementioned <code>&lt;marquee&gt;</code> tag, which is <em>not</em> an HTML standard and will work
+				differently and sporadically across different browsers. Websites
+				like Pipertext are commonly quite fond of these, as they do represent the fun, Wild West vibe of the
+				oldweb, distinct from today's strict standards and lack of fun stuff
+				like <code>&lt;marquee&gt;</code> and <code>&lt;blink&gt;</code>.
+			</p>
+
+			<p><a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements' target='_blank'
+					rel=noopener noreferrer'>MDN</a> and
+				<a href='https://www.w3schools.com/tags/default.asp' target='_blank'
+					rel='noopener noreferrer'>W3Schools</a> both have extensive lists of the most commonly used HTML
+				elements. I'd say give them a scroll and see what's out there!
+			</p>
+
+			<h2>What do I do with this wisdom?</h2>
+
+			<p>Below is an example of some HTML in action. Study it deeply, young one...</p>
+
+			<code class="codeBlock">
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset="UTF-8"&gt;
+		&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+		&lt;title&gt;pipertext&lt;/title&gt;
+		&lt;link rel="icon" type="image/x-icon" href="/media/img/pipe.png"&gt;
+		&lt;link rel="stylesheet" href="/style.css"&gt;
+		&lt;script src="/scripts/typewriter.js" type="module" defer=""&gt;&lt;/script&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;header&gt;
+			&lt;h1&gt;pipertext&lt;h2&gt;
+			&lt;h2&gt;welcome to the embernet&lt;/h2&gt;
+		&lt;/header&gt;
+		&lt;main&gt;
+			&lt;p&gt;Welcome to the first day of the rest of your life. Pipertext kicks your ass so hard the boot comes out the other end, flies to your mom's house, and gets dinner.&lt;/p&gt;
+			&lt;h3&gt;upcoming events&lt;/h3&gt;
+			&lt;p&gt;At &lt;time datetime="2025-08-26T11:00:00-05:00"&gt;11:00 a.m. EST&lt;/time&gt; tomorrow, something is gonna happen. I don't know. I can't come up with an example. Just imagine we're all going to take a siesta or something.&lt;/p&gt;
+		&lt;/main&gt;
+		&lt;footer&gt;
+			&lt;p&gt;copyright pipertext 2025&lt;/p&gt;
+		&lt;/footer&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+			</code>
+
+			<p>Now, you're probably saying, "holy shit dear webmaster, what is all of this magic and sorcery I have yet
+				to be endowed with?" Do not fear, for at a second glance, it's
+				all really quite self-explanatory.</p>
+
+			<p>Let's first take a look at the <code>&lt;head&gt;</code> tag. The head tag contains metadata about the
+				page. Like I mentioned earlier, the webpage doesn't really display
+				this data to the user (generally), but uses it to define what the webpage is or what resources it
+				requires. In particular, take a look at the last two elements found within
+				the <code>&lt;head&gt;</code> tag. One references the stylesheet, and the other references a JavaScript
+				file. The user will never see this information unless they
+				fat-finger <code>Ctrl+Shift+I</code> or something, but they <em>will</em> certainly notice if the
+				stylesheet didn't load.</p>
+
+			<p>Now, to be fair, if you've looked at the middle two elements, the <code>&lt;title&gt;</code> element and
+				first </code>&lt;link&gt;</code> element, you may have caught me
+				in a lie... these two directly define data to be shown to the user. The difference is in the delivery
+				method: let's take the <code>&lt;title&gt;</code> element for example;
+				this information is not found <em>on</em> the webpage, opposed to to how something like
+				<code>&lt;h1&gt;Put that in your pipe and smoke it!&lt;/h1&gt;</code> would. Instead,
+				it is always displayed in a way the browser dictates, almost always as text on the tab representing the
+				page.
+			</p>
+
+			<p>The top two <code>&lt;meta&gt;</code> tags are just that: metadata. Really, if I had to guess, at least
+				half of web developers would be unable to tell you what these
+				lines truly mean. Code editors like Visual Studio Code will generally add them in for you when
+				generating boilerplate code. UTF-8 is basically just a character set, so
+				that tag is telling the browser to use it. The second <code>&lt;meta&gt;</code> tag is honestly
+				difficult to explain. Here's
+				<a href='https://www.reddit.com/r/web_design/comments/9y88xl/what_does_the_meta_nameviewport/'
+					target='_blank' rel='noopener noreferrer'>a Reddit thread</a>
+				where the purpose of the line was put into question. See, even I am part of that half! The smartest guy
+				you know just showed you a shortcoming of his... just wow...
+			</p>
+
+			<h2>What practical purpose does this tool serve?</h2>
+
+			<p>As I mentioned earlier, HTML wasn't intended to be such a widespread, necessary tool as it is today. But
+				here we are, so learn to love it!</p>
+
+			<p>HTML acts as the foundation of any website. Without HTML, there is no webpage. The same can't be said for
+				CSS or JavaScript, the other two pillars of the web.
+				HTML doesn't really define layout, that's the job of CSS, but it does define structure. For example,
+				this heading belongs in this header, or this footer. Maybe
+				this paragraph belongs in the <code>&lt;main&gt;</code> tag, and that other one belongs in the
+				<code>&lt;aside&gt;</code> tag. Good HTML practices basically allow
+				your website to be read as though it's a newspaper when, for whatever bizarre reason, you don't have any
+				CSS to help make it look pretty.
+			</p>
+
+			<h2>The essence of HTML</h2>
+
+			<p>Getting familiar with HTML really will not take you long. Just reading this article probably is enough to
+				get the gist; now when I tell you about the
+				<code>&lt;content&gt;</code> element, you can probably have a vague idea of its function in your head.
+			</p>
+		</main>
+
+		<footer></footer>
+	</div>
+</body>
+
+</html>
