@@ -26,6 +26,10 @@ p a:not(:visited) {
     color: var(--accentOne);
 }
 
+* a {
+    text-decoration: none;
+}
+
 a:hover {
     color: var(--accentOne);
     font-weight: bold;
@@ -956,10 +960,10 @@ main p a {
     margin-left: 1rem;
 }
 
-.resGrid div a {
+.resGrid a:has(h3) {
     color: var(--accentOne);
-    text-decoration: none;
-    padding: .5rem 0 0 .5rem;
+    margin: .5rem 0 0 .5rem;
+    max-width: fit-content;
 }
 
 /* articles page */
