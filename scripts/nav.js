@@ -50,7 +50,7 @@ const resource = `
         </p>
         <hr>
         <h2>Guides</h2>
-        <p>I am continuously adding new guides in the form of articles here. This serves not only as good practice for myself, but hopefully a decent resource for beginners to learn more about the tools of the trade in layman's terms!</p>
+        <p>I am continuously adding new guides in the form of articles here. This serves not only as means to hone my knowledge and writing skills, but also hopefully a decent resource to learn more about the tools of the trade!</p>
         <div class="resourceGuides">
           <a href='/html/resource/articlesHTML.html'>
             <div>
@@ -319,115 +319,115 @@ const contact = `
 
 function renderContentFromHash() {
 
-	function changePage(page, id) {
-		main.innerHTML = page;
-		main.id = `${id}Main`
-	}
+  function changePage(page, id) {
+    main.innerHTML = page;
+    main.id = `${id}Main`
+  }
 
-	switch (window.location.hash) {
-		case "#homepage":
-			changePage(homepage, 'home');
-			break;
-		case "#resource":
-			changePage(resource, 'resource');
-			break;
-		case "#articles":
-			changePage(articles, 'articles');
-			listArticles();
-			document.querySelector("#articleSearch").addEventListener("input", () => {
-				searchArticles();
-			})
-			break;
-		case "#quotes":
-			changePage(quotes, 'quotes');
-			break;
-		case "#about":
-			changePage(about, 'about');
-			waterfall("#aboutIconRow", "img");
-			break;
-		case "#contact":
-			changePage(contact, 'contact');
-			break;
-		default:
-			window.location.hash = "#homepage";
-	}
+  switch (window.location.hash) {
+    case "#homepage":
+      changePage(homepage, 'home');
+      break;
+    case "#resource":
+      changePage(resource, 'resource');
+      break;
+    case "#articles":
+      changePage(articles, 'articles');
+      listArticles();
+      document.querySelector("#articleSearch").addEventListener("input", () => {
+        searchArticles();
+      })
+      break;
+    case "#quotes":
+      changePage(quotes, 'quotes');
+      break;
+    case "#about":
+      changePage(about, 'about');
+      waterfall("#aboutIconRow", "img");
+      break;
+    case "#contact":
+      changePage(contact, 'contact');
+      break;
+    default:
+      window.location.hash = "#homepage";
+  }
 }
 
 // articles page, list articles
 function listArticles(searchValue) {
-	const articleList = document.querySelector("#articleList");
-	articleList.innerHTML = '';
+  const articleList = document.querySelector("#articleList");
+  articleList.innerHTML = '';
 
-	fetch('/html/articles/_articleList.json')
-		.then(response => response.json())
-		.then(articles => {
-			articles.slice().reverse().forEach(article => {
-				const [titleText, dateText, link] = Object.values(article);
+  fetch('/html/articles/_articleList.json')
+    .then(response => response.json())
+    .then(articles => {
+      articles.slice().reverse().forEach(article => {
+        const [titleText, dateText, link] = Object.values(article);
 
-				if (searchValue && !titleText.toLowerCase().includes(searchValue.toLowerCase())) {
-					return;
-				}
+        if (searchValue && !titleText.toLowerCase().includes(searchValue.toLowerCase())) {
+          return;
+        }
 
-				const anchor = document.createElement("a");
-				anchor.href = link;
+        const anchor = document.createElement("a");
+        anchor.href = link;
 
-				const title = document.createElement("span");
-				title.classList.add("articleName");
-				title.textContent = titleText;
+        const title = document.createElement("span");
+        title.classList.add("articleName");
+        title.textContent = titleText;
 
-				const date = document.createElement("time");
-				date.classList.add("articleDate");
-				date.textContent = dateText;
+        const date = document.createElement("time");
+        date.classList.add("articleDate");
+        date.textContent = dateText;
 
-				const listItem = document.createElement("li");
-				listItem.appendChild(title);
-				listItem.appendChild(date);
+        const listItem = document.createElement("li");
+        listItem.appendChild(title);
+        listItem.appendChild(date);
 
-				anchor.appendChild(listItem);
-				articleList.appendChild(anchor);
-			});
-		})
-		.catch(error => console.error('error loading JSON file!!! - ', error));
+        anchor.appendChild(listItem);
+        articleList.appendChild(anchor);
+      });
+    })
+    .catch(error => console.error('error loading JSON file!!! - ', error));
 }
 
 function searchArticles() {
-	const searchValue = document.querySelector('input#articleSearch').value;
-	console.log(searchValue)
-	listArticles(searchValue);
+  const searchValue = document.querySelector('input#articleSearch').value;
+  console.log(searchValue)
+  listArticles(searchValue);
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-	if (!window.location.hash) {
-		window.location.hash = "#homepage";
-	} else {
-		renderContentFromHash();
-	}
+  if (!window.location.hash) {
+    window.location.hash = "#homepage";
+  } else {
+    renderContentFromHash();
+  }
 });
 
 window.addEventListener("hashchange", renderContentFromHash);
 
 document.querySelector("#navHome").addEventListener("click", (e) => {
-	e.preventDefault();
-	window.location.hash = "homepage";
+  e.preventDefault();
+  window.location.hash = "homepage";
 });
 document.querySelector("#navResource").addEventListener("click", (e) => {
-	e.preventDefault();
-	window.location.hash = "resource";
+  e.preventDefault();
+  window.location.hash = "resource";
 });
 document.querySelector("#navArticles").addEventListener("click", (e) => {
-	e.preventDefault();
-	window.location.hash = "articles";
+  e.preventDefault();
+  window.location.hash = "articles";
 });
 document.querySelector("#navQuotes").addEventListener("click", (e) => {
-	e.preventDefault();
-	window.location.hash = "quotes";
+  e.preventDefault();
+  window.location.hash = "quotes";
 });
 document.querySelector("#navAbout").addEventListener("click", (e) => {
-	e.preventDefault();
-	window.location.hash = "about";
+  e.preventDefault();
+  window.location.hash = "about";
 });
 document.querySelector("#navContact").addEventListener("click", (e) => {
-	e.preventDefault();
-	window.location.hash = "contact";
-	''
+  e.preventDefault();
+  window.location.hash = "contact";
+  ''
 });

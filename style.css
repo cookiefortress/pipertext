@@ -38,53 +38,6 @@ p code {
     color: var(--code);
 }
 
-.htmlArticle ul {
-    padding: 0 2rem 1rem 2rem;
-    font-size: .85rem;
-    display: flex;
-    flex-flow: column nowrap;
-    gap: .5rem;
-}
-
-#articleHead {
-    display: flex;
-    margin-top: .5rem;
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-    gap: 2rem;
-    border-bottom: 1px solid var(--secondary);
-}
-
-#articleHeadMetadata {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column nowrap;
-    flex-basis: 55%;
-    text-align: center;
-}
-
-#articleHeadMetadata h2 {
-    font-size: 1.5rem;
-}
-
-#tableOfContents {
-    flex-basis: 45%;
-    display: flex;
-    flex-flow: column nowrap;
-    padding: 1rem;
-    border: 3px ridge var(--accentTwo);
-}
-
-#tableOfContents a {
-    color: var(--secondary);
-    text-decoration: none;
-}
-
-#TOCheader {
-    font-size: 1.2rem;
-}
-
 :focus {
     outline: 2px solid var(--secondary);
 }
@@ -733,6 +686,7 @@ main p a {
     #layoutHeader {
         flex-flow: column nowrap;
     }
+
     #layoutHeader .logo {
         display: flex;
         justify-content: center;
@@ -740,21 +694,26 @@ main p a {
         flex-flow: column nowrap;
         width: 80%;
     }
+
     #layoutHeader img {
         margin: 0;
         width: 30% !important;
     }
+
     #themeButton {
         margin: 0;
         order: 1;
         align-self: center;
     }
+
     #articleHead {
         flex-wrap: wrap;
     }
+
     #articleHead #articleHeadMetadata {
         flex-basis: 100%;
     }
+
     #articleHead #tableOfContents {
         flex-basis: 100%;
     }
@@ -778,9 +737,11 @@ main p a {
     .container {
         width: 100%;
     }
+
     body {
         padding: 0;
     }
+
     #layoutHeader h1 {
         font-size: 3rem;
     }
@@ -1108,6 +1069,90 @@ main p a {
     text-align: center;
 }
 
+.seriesHeaderSubtext {
+    text-align: center;
+    font-size: .8rem;
+    font-style: italic;
+    border: 2px solid var(--accentTwo);
+    max-width: 65%;
+    margin: 0 auto;
+    margin-bottom: .9rem;
+    padding: .3rem .1rem;
+}
+
+.seriesHeaderSubtext a {
+    text-decoration: none;
+    color: var(--accentOne);
+}
+
+#seriesFirstPara {
+    margin-top: 1rem;
+}
+
+#seriesArticle p {
+    font-size: 1rem;
+}
+
+#seriesArticle img {
+    border: 4px ridge var(--accentTwo);
+}
+
+#seriesArticle ul {
+    margin: 0 auto;
+    max-width: 80%;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.htmlArticle ul {
+    padding: 0 2rem 1rem 2rem;
+    font-size: .85rem;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: .5rem;
+}
+
+#articleHead {
+    display: flex;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    gap: 2rem;
+    border-bottom: 1px solid var(--secondary);
+}
+
+#articleHeadMetadata {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    flex-basis: 55%;
+    text-align: center;
+}
+
+#articleHeadMetadata h2 {
+    font-size: 1.5rem;
+}
+
+#tableOfContents {
+    flex-basis: 45%;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 1rem;
+    border: 3px ridge var(--accentTwo);
+}
+
+#tableOfContents a {
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+#TOCheader {
+    font-size: 1.2rem;
+}
+
 /* quotes page */
 #quotesMain h2 {
     margin-bottom: 1rem;
@@ -1319,44 +1364,6 @@ main p a {
 .windowTitle div:nth-child(2) button:hover {
     border: 2px groove var(--accentTwo);
     cursor: pointer;
-}
-
-/* series */
-.seriesHeaderSubtext {
-    text-align: center;
-    font-size: .8rem;
-    font-style: italic;
-    border: 2px solid var(--accentTwo);
-    max-width: 65%;
-    margin: 0 auto;
-    margin-bottom: .9rem;
-    padding: .3rem .1rem;
-}
-
-.seriesHeaderSubtext a {
-    text-decoration: none;
-    color: var(--accentOne);
-}
-
-#seriesFirstPara {
-    margin-top: 1rem;
-}
-
-#seriesArticle p {
-    font-size: 1rem;
-}
-
-#seriesArticle img {
-    border: 4px ridge var(--accentTwo);
-}
-
-#seriesArticle ul {
-    margin: 0 auto;
-    max-width: 80%;
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
 }
 
 /* weather app */
