@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>pipertext</title>
+	<link rel="icon" type="image/x-icon" href="/media/img/pipe.png" />
+	<link rel="icon" type="image/png" href="/media/img/pipe.png" />
+	<link rel="stylesheet" href="/style.css" />
+	<script src="/scripts/layout.js" type="module" defer></script>
+	<script src="/scripts/themes.js" type="module" defer></script>
+	<script src="/scripts/tableOfContents.js" type='module' defer></script>
+</head>
+
+<body>
+	<div class="container">
+		<header></header>
+		<nav></nav>
+		<aside></aside>
+
+		<main class="htmlArticle">
+			<section id="articleHead">
+				<div id="articleHeadMetadata">
+					<h2>Semantic HTML</h2>
+				</div>
+			</section>
+
+			<p>The use of <a href='https://en.wikipedia.org/wiki/Semantic_HTML' target='_blank'
+					rel='noopener noreferrer'>semantic HTML</a> is a relatively new concept. Semantic HTML is basically
+				just HTML elements that are self-describing; a fine example is <code>&lt;main&gt;</code>, which
+				indicates that the content within is the primary content of the page. One of my personal favorites is
+				the semi-elusive <code>&lt;time&gt;</code>, which indicates that the contained content is denoting a
+				time of some sort, whether that be an exact date or just a certain time of the day.</p>
+
+			<p>I belive it's important to get used to using semantic HTML early on. It'll become second nature before
+				you know it, and there's no disadvantages to it. First, I'll go over what <em>non</em>-semantic HTML is.
+			</p>
+
+			<h2>Non-semantic HTML</h2>
+
+			<p>Typically, websites don't use semantics. This is for a bunch of sorta crappy reasons outside the scope of
+				this article, but there's two primary sticking points. The first one is that semantic HTML is relatively
+				open-ended, as in, what content goes inside the <code>&lt;aside&gt;</code> element? Well, it could be a
+				<a href='https://en.wikipedia.org/wiki/Sidebar_(computing)' target='_blank'
+					rel='noopener noreferrer'>sidebar</a>, but it could also be used in the English sense where one
+				might say something like 'as an aside'. The second reason, of which the merits are debatable, is that
+				semantic HTML wasn't necessarily designed for all websites. Sure, it may work perfectly in an
+				environment like Pipertext, but using those same elements on websites like Netflix may be more
+				difficult. I look at this as a bit of an excuse, because even poorly designated semantic tags are better
+				than a bunch on nondescript generic tags.</p>
+
+			<p>When talking about elements that are not semantic, there's surprisingly only two of them. You're probably
+				all like "holy shit, dearest webmaster! How can someone avoid using semantics in the first place, then?"
+				Well, unfortunately, those two elements are the <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code>
+				elements, which act as completely generic boxes to place content in. <code>&lt;div&gt;</code> tags are
+				used for blocks of content, such as a grid of images or a header/footer, while <code>&lt;span&gt;</code>
+				tags are for selecting certain pieces of text to give special stylings to. You can think of it like
+				<code>&lt;strong&gt;</code> tags; you can use the tags anywhere in a paragraph, or a header, or
+				whatever, and any content inside will become <strong>bold</strong>.</p>
+
+			<p>The problem is that, <code>&lt;div&gt;</code> especially, is used en masse. Most web developers will
+				think, "hey, I need a header," and then summon up a <code>&lt;div&gt;</code> despite the perfectly
+				useful and frankly gorgeous <code>&lt;header&gt;</code> tag sitting <em>right there</em>. In terms of
+				the layout of your website, these two have no inherent difference. Browsers all treat these two the
+				exact same way; in theory, you could use <code>&lt;header&gt;</code> tags for <em>everything</em> you
+				typically use <code>&lt;div&gt;</code> tags for. You may now be wondering what difference it makes, in
+				that case.</p>
+
+			<h2>Screen readers</h2>
+
+			<p>Visually impaired individuals on the web don't have it easy as it is. Here's <a
+					href='https://www.youtube.com/watch?v=q_ATY9gimOM' target='_blank' rel='noopener noreferrer'>a
+					decent example</a> of what using a screen reader is like. In essence, if you're unable to visually
+				view a screen effectively, you'd use one of these; it reads off all activity for you. When you type a
+				letter, it repeats it to you so you can be sure you typed the correct thing. When you tab over to an
+				image, it reads the alternate text so you can get an idea of what it's depicting.</p>
+
+			<p>Let's say you're using a screen reader, and you visit Pipertext. Your screenreader will say something
+				like:</p>
+
+			<blockquote class='codeBlock'>www.pipertext.net, five headings, thirteen links, and a header, nav, aside,
+				main, and footer in that order. Pipertext.
+			</blockquote>
+
+			<p>That's pretty descriptive, and also very helpful. The user now knows of, and can navigate between, the
+				header, and the footer, and the main content, and so forth with ease. What would it look like without
+				semantics? Well:</p>
+
+			<blockquote class='codeBlock'>www.pipertext.net, five headings, thirteen links. Pipertext.
+			</blockquote>
+
+			<p>It's the exact same thing, minus describing the semantics I would have been using in the first example.
+				Now it feels like the user may be more lost; they only really have headings to make use of to navigate
+				in an organized fashion, and even that is imperfect; web developers, myself included, are often unaware
+				of the best practices for ordering various heading tags. Over the course of one's life, assuming they
+				always need to make use of a screen reader, the addition of semantic elements will make their life on
+				the web much easier, much more convenient, and probably also make them pretty happy knowing that the
+				kind webmaster(s) decided to make use of elements which are there specifically to help them out.</p>
+
+			<p><a href='https://developer.mozilla.org/en-US/docs/Glossary/Inline-level_content' target='_blank'
+					rel='noopener noreferrer'>Inline-level content</a> also benefits from semantic HTML, perhaps even
+				more so. Say the user is reading about an upcoming event next week. A time and date is given. Sure, the
+				screen reader can read off "this event is on oh-eight-slash-two-six-slash-two-zero-two-five, starting at
+				oh-seven-three-zero AM", but using a <code>&lt;time&gt;</code> element would tell the screen reader
+				that, hey, this is a <em>time</em>, so pronounce it as such. Presumably, it would then read off "this
+				event is on August twenty-sixth, starting at seven-thirty AM". Much easier to mentally parse.</p>
+
+			<p>A short list of the most common semantic elements can be found at <a
+					href='https://developer.mozilla.org/en-US/docs/Glossary/Semantics#semantic_elements' target='_blank'
+					rel='noopener noreferrer'>MDN</a>, as well as listed below.</p>
+
+			<ul>
+				<li><code>&lt;article&gt;</code></li>
+				<li><code>&lt;aside&gt;</code></li>
+				<li><code>&lt;details&gt;</code></li>
+				<li><code>&lt;figcaption&gt;</code></li>
+				<li><code>&lt;figure&gt;</code></li>
+				<li><code>&lt;footer&gt;</code></li>
+				<li><code>&lt;form&gt;</code></li>
+				<li><code>&lt;header&gt;</code></li>
+				<li><code>&lt;main&gt;</code></li>
+				<li><code>&lt;mark&gt;</code></li>
+				<li><code>&lt;nav&gt;</code></li>
+				<li><code>&lt;section&gt;</code></li>
+				<li><code>&lt;summary&gt;</code></li>
+				<li><code>&lt;time&gt;</code></li>
+			</ul>
+
+			<h2>How does the browser view semantics?</h2>
+
+			<p>As I mentioned earlier, the browser is completely impartial to your tags, for the most part. Basically,
+				everything the browser does in terms of styling prior to you adding in CSS is opinionated; as in, Chrome
+				is going to be a bit different than Firefox. For most things, they'll probably be identical, like
+				<code>&lt;strong&gt;</code> tags will universally make text a certain amount bolder across all browsers.
+				You'll see some differences in font styling and other default stuff, though. Hell, just checkout out
+				this website of Firefox and then on Chrome or Edge. Browsers behave slightly differently, but I can
+				assure you that, other than getting used to styling a bunch of <code>&lt;div&gt;</code>s, there is no
+				difference to your workflow when encapsulating content in more descriptive and meaningful tags.</p>
+
+			<h2>Conclusion</h2>
+
+			<p>The usefulness of semantic HTML should not be understated. If you're a straight beginner, then starting
+				off with semantics will build good habits right off the bat. If you're already well experienced, then I
+				don't think it would take much effort to shoehorn semantics into your workflow. The value it provides to
+				those with screenreaders is immense, and on top of that, your HTML looks so much prettier when it's a
+				nice, even stack of elements which are self-descriptive rather than doing things like
+				<code>class='header'</code>.</p>
+		</main>
+
+		<footer></footer>
+	</div>
+</body>
+
+</html>

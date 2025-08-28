@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>pipertext</title>
+	<link rel="icon" type="image/x-icon" href="/media/img/pipe.png" />
+	<link rel="icon" type="image/png" href="/media/img/pipe.png" />
+	<link rel="stylesheet" href="/style.css" />
+	<script src="/scripts/layout.js" type="module" defer></script>
+	<script src="/scripts/themes.js" type="module" defer></script>
+	<script src="/scripts/tableOfContents.js" type='module' defer></script>
+</head>
+
+<body>
+	<div class="container">
+		<header></header>
+		<nav></nav>
+		<aside></aside>
+
+		<main class="htmlArticle">
+			<section id="articleHead">
+				<div id="articleHeadMetadata">
+					<h2>Inline-elements list</h2>
+				</div>
+			</section>
+			<p>This list is intended to be an exhaustive list of all current inline elements that are not deprecated as
+				of this page's last update. Do keep in mind that "inline elements" is somewhat arbitrary, as any element
+				can be set to <code>display: inline;</code>, but this list assumes an inline element to be any element
+				that is generally set to <code>display: inline;</code> by default by most major browsers, including
+				Firefox, Chrome, Safari, and more.</p>
+
+			<p>Practically speaking, an inline element is anything that is expected to be used in within blocks of text
+				(with exceptions like <code>&lt;img&gt;</code>, which are inline despite not usually being found in the
+				middle of blocks of text). For example, <code>&lt;span&gt;</code> is inline as the intended purpose of
+				it is for demarcating certain sections of text. <code>&lt;div&gt;</code> is <em>not</em> inline, not
+				only for reasons listed above, but also because it would be impractical and counterintuitive to do so.
+			</p>
+
+			<ul>
+				<li>
+					<details>
+						<summary><code>&lt;a&gt;</code></summary>
+						<p>The <code>&lt;a&gt;</code> element is referred to as an "anchor" or as "anchor tags". It
+							serves the function of demarcating text to be a <a
+								href='https://en.wikipedia.org/wiki/Hyperlink' target='_blank'
+								rel='noopener noreferrer'>hyperlink</a>, either leading to another page on its own
+							website or externally to another website.</p>
+						<p class='htmlExample'><a href='www.pipertext.net' target='_blank'
+								rel='noopener noreferrer'>Pipertext</a> rules!</p>
+					</details>
+				</li>
+				<li>
+					<details>
+						<summary><code>&lt;abbr&gt;</code></summary>
+						<p>The <code>&lt;abbr&gt;</code> element denotes an abbreviation. Making use of the
+							<code>title</code> attribute allows for the containing text to offer a tooltip when hovered
+							over.
+						</p>
+						<p class='htmlExample'>My favorite video game is <abbr title='Team Fortress 2'>TF2</abbr>!</p>
+					</details>
+				</li>
+				<li>
+					<details>
+						<summary><code>&lt;address&gt;</code></summary>
+						<p>The <code>&lt;address&gt;</code> element denotes an address. The kind of address can vary,
+							anything from physical addresses to phone numbers and emails. Think of it more as a pointer
+							to somebody, somewhere, or something. When denoting something like an email, this element
+							will usually contain an <code>&lt;a&gt;</code> element with an attribute of
+							<code>href='mailto:contact@pipertext.net'</code>.
+						</p>
+						<p class='htmlExample'>You can always contact me at
+						<address><a href='mailto:contact@pipertext.net'>contact@pipertext.net</a></address>!</p>
+					</details>
+				</li>
+				<li>
+					<details>
+						<summary><code>&lt;audio&gt;</code></summary>
+						<p>The <code>&lt;audio&gt;</code> element inserts an audio interface, usually for pausing,
+							changing the volume, and skipping around an audio clip with the use of the
+							<code>controls</code> attribute.
+						</p>
+						<p class=' htmlExample'><audio controls src="/shared-assets/audio/t-rex-roar.mp3"></audio></p>
+					</details>
+				</li>
+				<li>
+					<details>
+						<summary><code>&lt;b&gt;</code></summary>
+						<p><code>&lt;b&gt;</code> is the <b>boldface</b> element. Nowadays, it's often called the "Bring
+							Attention To" element in order to distinguish it from <code>&lt;strong&gt;</code> tags.
+							While both generally have the same visual effect, <code>&lt;b&gt;</code> should only be used
+							to bring the reader's eyes/attention to certain word(s), not for granting importance to
+							words.</p>
+						<p class='htmlExample'>I love writing <b>HTML</b>!</p>
+					</details>
+				</li>
+				<li>
+					<details>
+						<summary><code>&lt;bdi&gt;</code></summary>
+						<p>The <code>&lt;bdi&gt;</code> element stands for "bidirectional isolate". It's used as a means
+							to tell the browser to treat the contained text as separate from the surrounding text with
+							regards to the direction in which the text flows. That sounds confusing, but I assure you it
+							isn't; for example, <a href='https://en.wikipedia.org/wiki/Arabic' target='_blank'
+								rel='noopener noreferrer'>Arabic</a> is written right-to-left. If you had some Arabic in
+							the middle of an English paragraph, you can wrap that Arabic in the <code>&lt;bdi&gt;</code>
+							element to ensure it is written in the right-to-left format.</p>
+						<p class='htmlExample'>Howdy there <bdi>كليتوس</bdi>!</p>
+					</details>
+				</li>
+				<li>
+					<details>
+						<summary><code>&lt;bdo&gt;</code></summary>
+						<p>The <code>&lt;bdo&gt;</code> element can be used to force text into either right-to-left
+							(<code>dir='rtl'</code>) or left-to-right (<code>dir='ltr'</code>) directionalities.</p>
+						<p class='htmlExample'><bdo dir='rtl'>I'm kind of hard to read.</bdo></p>
+					</details>
+				</li>
+				<li>
+					<details>
+						<summary><code>&lt;br&gt;</code></summary>
+						<p>Perhaps the most interesting case of inline element, <code>&lt;br&gt;</code> produces a line
+							break. Despite the fact that it basically coerces text into a one-time block-level
+							structure, it is an inline element and can only be made use of as such.
+							<code>&lt;br&gt;</code> is a void element.
+						</p>
+						<p class='htmlExample'>This is the first line of text.<br>And this is the second line of text,
+							directly following <code>&lt;br&gt;</code>.</p>
+					</details>
+				</li>
+
+				<li>
+					<details>
+						<summary><code>&lt;&gt;</code></summary>
+						<p></p>
+						<p class='htmlExample'></p>
+					</details>
+				</li>
+				</li>
+			</ul>
+		</main>
+
+		<footer></footer>
+	</div>
+</body>
+
+</html>
