@@ -22,7 +22,7 @@
 		<main class="htmlArticle">
 			<section id="articleHead">
 				<div id="articleHeadMetadata">
-					<h2>Inline-elements list</h2>
+					<h2>Inline element list</h2>
 				</div>
 			</section>
 			<p>This list is intended to be an exhaustive list of all current inline elements that are not deprecated as
@@ -38,7 +38,7 @@
 				only for reasons listed above, but also because it would be impractical and counterintuitive to do so.
 			</p>
 
-			<ul>
+			<ul class="elementList">
 				<li>
 					<details>
 						<summary><code>&lt;a&gt;</code></summary>
@@ -128,6 +128,47 @@
 							directly following <code>&lt;br&gt;</code>.</p>
 					</details>
 				</li>
+				<li>
+					<details>
+						<summary><code>&lt;cite&gt;</code></summary>
+						<p>The <code>&lt;cite&gt;</code> element is used to cite specific works that reinforce the topic at hand.
+						</p>
+						<p class='htmlExample'>According to <cite>Pipertext</cite>, the world will be taken over by pipe-smoking gremlins by 2050.</p>
+					</details>
+				</li>
+				<li>
+					<details>
+						<summary><code>&lt;code&gt;</code></summary>
+						<p>The <code>&lt;code&gt;</code> element (which I just used to denote the tag) indicates that the contained text is a line or block of code. It's also common to use for things like keyboard shortcuts.</p>
+						<p class='htmlExample'><code>.pipertext { awesomeness: 200%; }</code></p>
+					</details>
+				</li>
+				<li>
+					<details>
+						<summary><code>&lt;data&gt;</code></summary>
+						<p>The <code>&lt;data&gt;</code> element allows for adding machine-readable data/information to a piece of text for data processors. A fairly uncommon tag, yet quite useful.</p>
+						<p class='htmlExample'><code><data value="theoretical physicist">Gordon Freeman, theoretical physicist</data></code></p>
+					</details>
+				</li>
+				<li>
+					<details>
+						<summary><code>&lt;dd&gt;</code></summary>
+						<p>Standing for "description details", it elaborates on the on the proceeding <code>&lt;dt&gt;</code> (description title) element, both of which are found within a <code>&lt;dl&gt;</code> (description list) element.</p>
+						<p class='htmlExample'>
+							<dl>
+								<dt>Burley tobacco</dt>
+								<dd>Low in sugar yet strong in flavor, burley is an air-cured tobacco that blends well with other varietals.</dd>
+							</dl>
+						</p>
+					</details>
+				</li>
+				<li>
+					<details>
+						<summary><code>&lt;del&gt;</code></summary>
+						<p><code>&lt;del&gt;</code> stands for "deleted", and indicates outdated, incorrect, or otherwise previously incorrect information that should now be disregarded by the reader.</p>
+						<p class='htmlExample'>Pipe smoke smells <del>like cigarettes</del> <ins>wonderful</ins>!</p>
+					</details>
+				</li>
 
 				<li>
 					<details>
@@ -135,7 +176,6 @@
 						<p></p>
 						<p class='htmlExample'></p>
 					</details>
-				</li>
 				</li>
 			</ul>
 		</main>

@@ -966,6 +966,19 @@ main p a {
     max-width: fit-content;
 }
 
+.elementList {
+    list-style-type: none;
+}
+.elementList li {
+    border: 2px ridge var(--accentOne);
+    padding: .5rem;
+}
+.elementList li details summary {
+    font-size: 1rem;
+    cursor: pointer;
+    padding: .5rem;
+}
+
 /* articles page */
 #articlesMain ul {
     list-style-type: none;
