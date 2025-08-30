@@ -52,10 +52,18 @@ function changeTheme(theme, isSaved = true) {
 			break;
 		case "belial":
 			writeStyles("#000000", "#89000bff", "#5a0101ff", "#491414ff", "#000000", "0 10px 16px 1px #89000bff,0 6px 20px 1px #89000bff", "rgba(255, 68, 0, 1)");
-			document.querySelector("body").style.background = `url('/media/img/hell.png') repeat fixed center`
+			document.querySelector("body").style.background = `url('/media/img/hell.png') repeat fixed center`;
 			break;
 		case "freedom":
 			writeStyles("#ffffff", "#003693ff", "#be0b31", "#cd012dff", "#ffffff", "0 10px 16px 1px #89000bff,0 6px 20px 1px #89000bff", "rgb(0, 218, 0)");
+			break;
+		case "frutiger":
+			writeStyles("#0055ffff", "#f5f5f5", "#96d419ff", "#6b8f25", "#0078c8", "0 10px 16px 1px #00fbffff,0 6px 20px 1px #00fbffff", "rgb(0, 218, 0)");
+			document.querySelector("body").style.background = `url('/media/img/frutigerAero.jpg') repeat fixed center`;
+			break;
+		case "trans":
+			writeStyles("#ffffff", "#15bdffff", "#e194a3ff", "#F7A8B8", "#ffffff", "0 10px 16px 1px #F7A8B8,0 6px 20px 1px #F7A8B8", "rgb(0, 218, 0)");
+			document.querySelector("body").style.background = `url('/media/img/frutigerAero.jpg') repeat fixed center`;
 			break;
 
 		// -- holidays --
@@ -65,8 +73,10 @@ function changeTheme(theme, isSaved = true) {
 		case "halloween":
 			writeStyles("rgb(190, 89, 0)", "rgb(226, 223, 208)", "rgb(50, 1, 47)", "rgb(82, 76, 66)", "rgb(190, 89, 0)", "0 10px 16px 	rgba(149, 23, 177, 0.93),0 6px 20px rgb(50, 1, 47)", "rgb(0, 218, 0)");
 			break;
+		default:
+			changeTheme("cherry");
 	}
-	if(theme !== "belial") {
+	if(theme !== "belial" && theme !== "frutiger") {
 		document.querySelector("body").style.background = `url('/media/img/spacex.gif') fixed center`	
 	}
 	if (isSaved) {
@@ -92,7 +102,9 @@ themeWindow(`themes`,
 			<button onclick="changeTheme('2600')">2600</button>
 			<button onclick="changeTheme('monster')">monster</button>
 			<button onclick="changeTheme('belial')">belial</button>
-			<button onclick="changeTheme('freedom')">freedom</button>		
+			<button onclick="changeTheme('freedom')">freedom</button>
+			<button onclick="changeTheme('frutiger')">frutiger</button>
+			<button onclick="changeTheme('trans')">trans</button>	
 		</div>
 	`,
 	'#themeButton');
