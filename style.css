@@ -1,0 +1,31 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#pageContainer {
+	max-width: 1024px;
+	margin: 0 auto;
+	font-family: 'Consolas', monospace;
+	border: 1px solid red;
+	border-bottom: none;
+}
+
+#pageHeader {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 1rem;
+}
+
+#pageHeaderName {
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 2.5rem;
+}
+
+#pageHeaderLogo {
+	max-width: 6rem;
+}
