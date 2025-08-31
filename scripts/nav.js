@@ -1,8 +1,9 @@
 import { waterfall } from '/scripts/waterfall.js';
 
-const main = document.querySelector("#pageMain");
+export function nav() {
+	const main = document.querySelector("#pageMain");
 
-const homepage = `
+	const homepage = `
 	<h1>homepage</h1>
 
 	<figure class="standardCard">
@@ -46,8 +47,8 @@ const homepage = `
 		</div>
 	</div>
 `
-const resource = `
-	<h1>Resource</h1>
+	const resource = `
+	<h1>resource</h1>
 	<p>
 		Welcome to the resource page! Here, I am continuously adding new
 		materials for your use in web 1.0-esque designs, general web development stuff, and archives of other random stuff I like. If you
@@ -63,56 +64,35 @@ const resource = `
 			<h2>HTML</h2>
 		</div>
 		</a>
-		<a href=''>
-		<div>
-			<h2>CSS</h2>
-		</div>
-		</a>
-		<a href=''>
-		<div>
-			<h2>JavaScript</h2>
-		</div>
-		</a>
 	</div>
 	<hr>
 	<h2>Links</h2>
 	<p>Below are links to pages, in which I have compiled external links to various websites which I think would be useful to an adventurous web developer. For example, going to the <a href='/resource/icons.html'>Icons</a> page links to a bunch of webpages that have compiled small images for use in your own sites.</p>
 	<p>If any of the links are broken or don't seem to match up with what my description of them detailed, please head to <a href='/index.html#contact'>the contact page</a> and let me know!</p>
-	<div class="resourceContainer">
+	<div id="resourceContainer">
 		<a href="/html/resource/communities.html">
-		<div>
 			<h2>Communities</h2>
 			<p>
-			There's a lot of communities out there dedicated to the web 1.0
-			design niche. Take a look at some and join 'em!
+			There's a lot of communities out there dedicated to recapturing the oldweb. Take a look at some and join 'em!
 			</p>
-		</div>
 		</a>
 		<a href="/html/resource/icons.html">
-		<div>
 			<h2>Icons</h2>
 			<p>
-			Icons are like the heartbeat of the old web! Luckily,
-			there is a metric shit ton out there!
+			Icons are like the heartbeat of the old web!
 			</p>
-		</div>
 		</a>
 		<a href="/html/resource/websites.html">
-		<div>
 			<h2>Websites</h2>
 			<p>
-			While there's a lot more websites going for the web 1.0
-			aesthetic then most might imagine, following this link will
-			mostly give you websites similar to Pipertext; ones that are
-			aimed at helping you get resources!
+			There's many websites dedicated to handing out cool resources, making guides/tutorials, and helping you grow as a developer. In this subsection, I've linked to lots of neat stuff!
 			</p>
-		</div>
 		</a>
 	</div>
 `
 
-const articles = `
-	<h1>Articles</h1>
+	const articles = `
+	<h1>articles</h1>
 	<p>
 		The following list sorts all articles from newest to oldest. Article
 		topics are broad, and some contain cute little programs!
@@ -123,8 +103,8 @@ const articles = `
 	
 	</ul>
 `
-const quotes = `
-	<h1>Quotes</h1>
+	const quotes = `
+	<h1>quotes</h1>
 	<p>
 		This page is simply a collection of quotes which I really like. Enjoy!
 	</p>
@@ -153,8 +133,8 @@ const quotes = `
 		</blockquote>
 	</div>
 `
-const about = `
-	<h1>About</h1>
+	const about = `
+	<h1>about</h1>
 	<p>
 		Once I got out of high school and started up college, I always
 		imagined having a website chock-full of old-school web goodies, not
@@ -163,7 +143,7 @@ const about = `
 		until I can create it efficiently," but what's the fun in that,
 		anyways? It's supposed to be a little unoptimized, right?
 	</p>
-	<figure class='card' id='ricostay'>
+	<figure class='standardCard'>
 		<img
 		src='/media/img/ricostay.png'
 		alt='A screencap of one of my first Web 1.0-themed website designs, Ricostay'
@@ -194,7 +174,7 @@ const about = `
 		Nonetheless, I was an Annoying Orange kid. I grew up knowing the web
 		in a way similar to what it is today: commercialized. Bland is a word that can honestly describe most sites today. I hate to be negative like that, but it's true! How often do you stumble across websites that make you go "cool", just through their design or content, without specifically scouting it out via a site like Neocities? This is known as <a href="https://lawsofux.com/jakobs-law/" target="_blank" rel="noopener noreferrer">Jakob's Law</a>, and it's an unfortunate consequence of a consumer-driven web, as opposed to a human-driven web, if that makes sense. That's not to say there is no place for familiarity in UI design, but to say that it has stripped most of the web of its charm is an understatement.
 	</p>
-	<figure class="card">
+	<figure class="standardCard">
 		<img
 		src="/media/img/runningMan.png"
 		id="runningMan"
@@ -252,41 +232,44 @@ const about = `
 	</p>
 	<div id='aboutFoot'>
 		<pre id='asciiPipe'>
-																			@@@@@@@@@@@@@@@     
-																	@@@@@@@@@@@@@@@@@@@@@@@    
-																@@@@@@@@@@@@@@@@@@@@@@@@@@     
-																@@@@@@@@@@@@@@@                   
-			@@@@@@@@@@@@@@                                  @@@@@@@@@@@@@                        
-		@@@@              @@@@                            @@@@@@@@@@@@@                          
-		@@@                  @@@                        @@@@@@@@@@@@@                             
-		@@@@@@@@@@@@@@@@@@@@@@@@                      @@@@@@@@@@@@@@                              
-	@@@@@@@@@@@@@@@@@@@@@@@@@                    @@@@@@@@@@@@@@                                
-	@@@@@@@@@@@@@@@@@@@@@@@@@@                @@@@@@@@@@@@@@@                                  
-	@@@@@@@@@@@@@@@@@@@@@@@@@@@              @@@@@@@@@@@@@@@                                    
-	@@@@@@@@@@@@@@@@@@@@@@@@@@@           @@@@@@@@@@@@@@@@@                                     
-	@@@@@@@@@@@@@@@@@@@@@@@@@@@@        @@@@@@@@@@@@@@@@@                                       
-	@@@@@@@@@@@@@@@@@@@@@@@@@@@@     @@@@@@@@@@@@@@@@@@                                         
-	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                           
-	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                            
-	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                              
-		@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                                
-		@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                                  
-		@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                                    
-		@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                                       
-			@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                                         
-				@@@@@@@@@@@@@@@@@@@@@                                                             
-					@@@@@@@@@@@@                                                                  
+
+
+                                                                                @@@@@@@@@@@@@@@     
+                                                                        @@@@@@@@@@@@@@@@@@@@@@@    
+                                                                    @@@@@@@@@@@@@@@@@@@@@@@@@@     
+                                                                  @@@@@@@@@@@@@@@                   
+              @@@@@@@@@@@@@@                                  @@@@@@@@@@@@@                        
+          @@@@              @@@@                            @@@@@@@@@@@@@                          
+          @@@                  @@@                        @@@@@@@@@@@@@                             
+          @@@@@@@@@@@@@@@@@@@@@@@@                      @@@@@@@@@@@@@@                              
+        @@@@@@@@@@@@@@@@@@@@@@@@@                    @@@@@@@@@@@@@@                                
+        @@@@@@@@@@@@@@@@@@@@@@@@@@                @@@@@@@@@@@@@@@                                  
+        @@@@@@@@@@@@@@@@@@@@@@@@@@@              @@@@@@@@@@@@@@@                                    
+        @@@@@@@@@@@@@@@@@@@@@@@@@@@           @@@@@@@@@@@@@@@@@                                     
+        @@@@@@@@@@@@@@@@@@@@@@@@@@@@        @@@@@@@@@@@@@@@@@                                       
+        @@@@@@@@@@@@@@@@@@@@@@@@@@@@     @@@@@@@@@@@@@@@@@@                                         
+        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                           
+        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                            
+        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                              
+          @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                                
+          @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                                  
+          @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                                    
+            @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                                       
+              @@@@@@@@@@@@@@@@@@@@@@@@@@@@                                                         
+                  @@@@@@@@@@@@@@@@@@@@@                                                             
+                      @@@@@@@@@@@@                                                                  
+                                                                      
 		</pre>
 		<div id='aboutIconRow'>
-			<img src='/media/gif/thisWebsiteKillsNaziScum.png' alt='88x31 icon depicting an ex'd out Swastika reading this website kills Nazi scum'>
-			<img src='/media/img/pipertext.png' alt='Pipertext 88x31 icon'>
-			<img src='/media/gif/linux-p.gif'>
+			<img src='/media/buttons/thisWebsiteKillsNaziScum.png' alt='88x31 icon depicting an ex'd out Swastika reading "this website kills Nazi scum"'>
+			<img src='/media/pipertextResources/88x31pipertext.png' alt='Pipertext 88x31 icon'>
+			<img src='/media/buttons/linux-p.gif'>
 		</div>
 	</div>
 
 `
-const contact = `
-	<h1>Contact</h1>
+	const contact = `
+	<h1>contact</h1>
 	<p>
 	Below are a couple of ways to get in contact with me, if you ever need to
 	(for whatever reason that may be... I know my devilish looks can be
@@ -295,14 +278,12 @@ const contact = `
 	<p>
 	The contact form below is probably the preferred method. You can alternatively directly contact me at either of the email addresses listed below.
 	</p>
-	<div>
-	<address>
+	<address id='contactEmails'>
 		<a href="mailto:contact@pipertext.net">contact@pipertext.net</a>
 		<a href="mailto:cookiefortress@hotmail.com"
 		>cookiefortress@hotmail.com</a
 		>
 	</address>
-	</div>
 	<p style="margin-top: 1rem">
 	Yes, it's a Hotmail email address. No, I did not make it two decades
 	ago when I was a fetus. I made it in 2025. I am tryharding the
@@ -324,117 +305,118 @@ const contact = `
 	</form>
 `
 
-window.addEventListener("hashchange", renderContentFromHash);
+	window.addEventListener("hashchange", renderContentFromHash);
 
-document.querySelector("#navHome").addEventListener("click", (e) => {
-	e.preventDefault();
-	window.location.hash = "homepage";
-});
-document.querySelector("#navArticles").addEventListener("click", (e) => {
-	e.preventDefault();
-	window.location.hash = "articles";
-});
-document.querySelector("#navResource").addEventListener("click", (e) => {
-	e.preventDefault();
-	window.location.hash = "resource";
-});
-document.querySelector("#navQuotes").addEventListener("click", (e) => {
-	e.preventDefault();
-	window.location.hash = "quotes";
-});
-document.querySelector("#navAbout").addEventListener("click", (e) => {
-	e.preventDefault();
-	window.location.hash = "about";
-});
-document.querySelector("#navContact").addEventListener("click", (e) => {
-	e.preventDefault();
-	window.location.hash = "contact";
-	''
-});
+	document.querySelector("#navHome").addEventListener("click", (e) => {
+		e.preventDefault();
+		window.location.hash = "homepage";
+	});
+	document.querySelector("#navArticles").addEventListener("click", (e) => {
+		e.preventDefault();
+		window.location.hash = "articles";
+	});
+	document.querySelector("#navResource").addEventListener("click", (e) => {
+		e.preventDefault();
+		window.location.hash = "resource";
+	});
+	document.querySelector("#navQuotes").addEventListener("click", (e) => {
+		e.preventDefault();
+		window.location.hash = "quotes";
+	});
+	document.querySelector("#navAbout").addEventListener("click", (e) => {
+		e.preventDefault();
+		window.location.hash = "about";
+	});
+	document.querySelector("#navContact").addEventListener("click", (e) => {
+		e.preventDefault();
+		window.location.hash = "contact";
+		''
+	});
 
-function renderContentFromHash() {
-	function changePage(page) {
-		main.innerHTML = page;
+	function renderContentFromHash() {
+		function changePage(page) {
+			main.innerHTML = page;
+		}
+
+		switch (window.location.hash) {
+			case "#homepage":
+				changePage(homepage);
+				break;
+			case "#resource":
+				changePage(resource);
+				break;
+			case "#articles":
+				changePage(articles);
+				listArticles();
+				document.querySelector("#articleSearch").addEventListener("input", () => {
+					searchArticles();
+				})
+				break;
+			case "#quotes":
+				changePage(quotes);
+				break;
+			case "#about":
+				changePage(about);
+				waterfall("#aboutIconRow", "img");
+				break;
+			case "#contact":
+				changePage(contact);
+				break;
+			default:
+				window.location.hash = "#homepage";
+				changePage(homepage);
+
+		}
 	}
 
-	switch (window.location.hash) {
-		case "#homepage":
-			changePage(homepage);
-			break;
-		case "#resource":
-			changePage(resource);
-			break;
-		case "#articles":
-			changePage(articles);
-			listArticles();
-			document.querySelector("#articleSearch").addEventListener("input", () => {
-				searchArticles();
+	// articles page, list articles
+	function listArticles(searchValue) {
+		const articleList = document.querySelector("#articleList");
+		articleList.innerHTML = '';
+
+		fetch('/html/articles/_articleList.json')
+			.then(response => response.json())
+			.then(articles => {
+				articles.slice().reverse().forEach(article => {
+					const [titleText, dateText, link] = Object.values(article);
+
+					if (searchValue && !titleText.toLowerCase().includes(searchValue.toLowerCase())) {
+						return;
+					}
+
+					const anchor = document.createElement("a");
+					anchor.href = link;
+
+					const title = document.createElement("span");
+					title.classList.add("articleName");
+					title.textContent = titleText;
+
+					const date = document.createElement("time");
+					date.classList.add("articleDate");
+					date.textContent = dateText;
+
+					const listItem = document.createElement("li");
+					listItem.appendChild(title);
+					listItem.appendChild(date);
+
+					anchor.appendChild(listItem);
+					articleList.appendChild(anchor);
+				});
 			})
-			break;
-		case "#quotes":
-			changePage(quotes);
-			break;
-		case "#about":
-			changePage(about);
-			waterfall("#aboutIconRow", "img");
-			break;
-		case "#contact":
-			changePage(contact);
-			break;
-		default:
+			.catch(error => console.error('error loading JSON file!!! - ', error));
+	}
+
+	function searchArticles() {
+		const searchValue = document.querySelector('input#articleSearch').value;
+		console.log(searchValue)
+		listArticles(searchValue);
+	}
+
+	window.addEventListener("DOMContentLoaded", () => {
+		if (!window.location.hash) {
 			window.location.hash = "#homepage";
-			changePage(homepage);
-
-	}
+		} else {
+			renderContentFromHash();
+		}
+	});
 }
-
-// articles page, list articles
-function listArticles(searchValue) {
-	const articleList = document.querySelector("#articleList");
-	articleList.innerHTML = '';
-
-	fetch('/html/articles/_articleList.json')
-		.then(response => response.json())
-		.then(articles => {
-			articles.slice().reverse().forEach(article => {
-				const [titleText, dateText, link] = Object.values(article);
-
-				if (searchValue && !titleText.toLowerCase().includes(searchValue.toLowerCase())) {
-					return;
-				}
-
-				const anchor = document.createElement("a");
-				anchor.href = link;
-
-				const title = document.createElement("span");
-				title.classList.add("articleName");
-				title.textContent = titleText;
-
-				const date = document.createElement("time");
-				date.classList.add("articleDate");
-				date.textContent = dateText;
-
-				const listItem = document.createElement("li");
-				listItem.appendChild(title);
-				listItem.appendChild(date);
-
-				anchor.appendChild(listItem);
-				articleList.appendChild(anchor);
-			});
-		})
-		.catch(error => console.error('error loading JSON file!!! - ', error));
-}
-
-function searchArticles() {
-	const searchValue = document.querySelector('input#articleSearch').value;
-	console.log(searchValue)
-	listArticles(searchValue);
-}
-
-window.addEventListener("DOMContentLoaded", () => {
-	if (!window.location.hash) {
-		window.location.hash = "#homepage";
-	} else {
-		renderContentFromHash();
-	}
-});

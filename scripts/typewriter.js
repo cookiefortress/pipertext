@@ -32,17 +32,15 @@ function typewriter(target, string = document.querySelector(target).textContent,
 		}, 500);
 	}
 
-	if(isTypewriter) {
+	if (isTypewriter) {
 		typeString();
 	}
-	if(isBlink) {
+	if (isBlink) {
 		setTimeout(blink, 2300);
 	}
-	if(isCursor) {
+	if (isCursor) {
 		setTimeout(cursor, 3600);
 	}
 }
-
-typewriter(".pipertext", "> pipertext", 200, true, true)
 
 export { typewriter };

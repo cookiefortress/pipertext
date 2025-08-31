@@ -32,14 +32,14 @@ body {
 	max-width: 1024px;
 	margin: 0 auto;
 	margin-bottom: 2rem;
-	font-family: 'Consolas', monospace;
+	font-family: 'Consolas', 'Liberation Mono', monospace;
 	background-image: linear-gradient(to bottom right, var(--gradientTopLeft), var(--primaryBG));
 	box-shadow: rgba(255, 255, 255, 0.2) 0px 10px 16px 2px, rgba(255, 255, 255, 0.2) 0px 6px 20px 2px;
 }
 
 #pageContainer * {
 	color: var(--text);
-	font-family: 'Consolas', monospace;
+	font-family: 'Consolas', 'Liberation Mono', monospace;
 }
 
 /* main ! */
@@ -54,6 +54,10 @@ body {
 #pageMain h3 {
 	text-align: center;
 	margin-bottom: .5rem;
+	margin-top: .5rem;
+}
+#pageMain h1:nth-child(1) {
+	margin-top: 0;
 }
 
 #pageMain h1 {
@@ -288,7 +292,7 @@ body {
 #articleSearch {
 	display: block;
 	margin: 0 auto;
-	width: 25%;
+	width: 15rem;
 	border: 3px groove var(--accent);
 	background-color: transparent;
 	padding: .3rem;
@@ -340,6 +344,167 @@ body {
 	align-items: center;
 	font-size: 1.2rem;
 	text-shadow: 2px 2px var(--accent);
+}
+
+#resourceContainer {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+	grid-auto-rows: max-content;
+	gap: 1.2rem;
+	margin-top: 1rem;
+	text-decoration: none;
+}
+
+#resourceContainer a {
+	text-decoration: none;
+	color: var(--accent);
+	background: linear-gradient(to bottom right, var(--accentBG), var(--primaryBG));
+	border: 3px ridge var(--accentBGalt);
+	height: 100%;
+	padding: .4rem;
+}
+
+#resourceContainer a p {
+	border: none;
+	padding: 0;
+	margin: 0;
+	text-indent: 0;
+	text-align: center;
+	margin-bottom: 0.5rem;
+	text-decoration: none;
+}
+
+/* quotes hash */
+#quotes {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+	grid-auto-rows: max-content;
+	gap: 1.2rem;
+	margin-top: 1rem;
+}
+#quotes blockquote {
+	background-color: var(--accentBGalt);
+	padding: 1rem;
+	border: 2px groove var(--accent);
+	display: flex;
+	gap: .5rem;
+	flex-direction: column;
+	height: min-content;
+}
+#quotes blockquote div {
+	padding: 0.5rem;
+	border: 2px groove var(--accent);
+	text-indent: 1rem;
+	line-height: 1.3rem;
+}
+#quotes blockquote p {
+	text-align: center;
+	border-left: none;
+	text-indent: 0;
+	margin-bottom: 0;
+	background-color: var(--primaryBG);
+	padding: 0.6rem;
+	border: 3px ridge rgb(2, 2, 2);
+	font-size: 1rem;
+}
+
+/* about hash */
+#aboutFoot {
+	display: flex;
+	flex-flow: row wrap;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+#aboutFoot #asciiPipe {
+	font-size: .3rem;
+}
+#aboutFoot #aboutIconRow {
+	padding: .5rem;
+	background-color: var(--accentBG);
+	border: 2px ridge var(--accent);
+}
+
+/* contact hash */
+#contactEmails {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+}
+#contactEmails a {
+	margin: auto;
+	text-decoration: none;
+	color: var(--secondary);
+	padding: 0.3rem;
+	background-color: var(--accentBGalt);
+	border: 4px outset var(--text);
+}
+#contactForm {
+	display: flex;
+	flex-flow: column nowrap;
+	max-width: 24rem;
+	margin: 0 auto;
+	font-size: 1.2rem;
+	text-align: center;
+}
+#contactForm label {
+	margin-top: .5rem;
+	margin-bottom: .2rem;
+}
+#contactForm input, #contactForm textarea {
+	border: 2px ridge var(--accent);
+	padding: .2rem;
+	background-color: transparent;
+	font-size: .85rem;
+	font-family: Consolas, 'Liberation Mono', 'Adwaita Mono', monospace;
+}
+#contactForm button {
+	width: 5rem;
+	padding: .2rem .5rem;
+	border-radius: 0;
+	color: var(--secondary);
+	border-color: var(--text);
+	background-color: var(--accentBG);
+	margin: 0 auto;
+	margin-top: 1rem;
+	cursor: pointer;
+}
+
+/* index media query */
+@media screen and (max-width: 1050px) {
+	#pageContainer {
+		grid-template-areas:
+		"header  header"
+		"navbar  navbar"
+		"main main"
+		"sidebar sidebar"
+		"footer  footer";
+	}
+	#smokeLounge {
+		display: none; /* perhaps change later? */
+	}
+	#pageHeader {
+		flex-flow: column nowrap;
+	}
+	#pageNavbar ul {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		gap: 1rem;
+	}
+	#pageNavbar ul li {
+		min-width: 45%;
+	}
+	#pageSidebar {
+		border-right: none;
+	}
+	#pageSidebar #pageButtonMarquee {
+		display: none;
+	}
 }
 
 /* marquee animation */
