@@ -1,144 +1,93 @@
 import { writeUTC } from '/scripts/UTC.js';
 
+const headerHTML = `
+    <a href="https://www.pipertext.net" id="pageHeaderName">&gt; pipertext</a>
+    <div id='pageHeaderButtons'>
+        <button id='pageThemeButton'>themes</button>
+    </div>
+    <img src="/media/pipertextResources/pipertextPipe.png" alt="Pipertext tobacco pipe logo"
+        id="pageHeaderLogo">
+`;
+
+const navbarHTML = `
+    <ul>
+        <li><a href="/index.html#homepage" id='navHome'>home</a></li>
+        <li><a href="/index.html#articles" id='navArticles'>articles</a></li>
+        <li><a href="/index.html#resource" id='navResource'>resource</a></li>
+        <li><a href="/index.html#quotes" id='navQuotes'>quotes</a></li>
+        <li><a href="/index.html#about" id='navAbout'>about</a></li>
+        <li><a href="/index.html#contact" id='navContact'>contact</a></li>
+    </ul>
+`
+
+const sidebarHTML = `
+    <div id="pageButtonMarquee" class="marquee">
+        <img src="/media/buttons/bestvw.gif" alt="Best viewed with a computer and a monitor!">
+        <img src="/media/buttons/css2.gif" alt="Made with CSS!">
+        <img src="/media/buttons/gothtml.gif" alt="Got HTML?">
+    </div>
+    <div id="pageDashboard">
+        <time datetime="">xxx</time>
+        <img src="/media/pipertextResources/88x31pipertext.png" alt="Pipertext 88x31 icon">
+    </div>
+    <dl id="pageRecentPosts">
+        <h3>recent posts</h3>
+        <dt><a>Recent Article 1</a></dt>
+        <dd><time datetime="">2025/08/09</time></dd>
+        <dt><a>Recent Article 2</a></dt>
+        <dd><time datetime="">2025/08/09</time></dd>
+        <dt><a>Recent Article 3</a></dt>
+        <dd><time datetime="">2025/08/09</time></dd>
+    </dl>
+    <dl id="pageTinNotes">
+        <h3>tin notes</h3>
+        <ul>
+            <li><a href="">tobacconist</a></li>
+        </ul>
+    </dl>
+`;
+
+const footerHTML = `
+    <small><a href="https://www.pipertext.net">pipertext.net</a></small>
+    <img src="/media/pipertextResources/pipertextPipe.png" alt="Pipertext tobacco pipe logo">
+    <small id="pageFooterWithLove">lovingly handmade with HTML, CSS, & JS</small>
+`
+
 function createSidebar() {
-    function marquee() {
-        const marquee = document.createElement(`div`);
-        marquee.classList.add(`marquee`);
-        marquee.innerHTML = `
-	<img src="/media/gif/bestvw.gif" alt="Best viewed with a computer and a monitor!">
-    <img src="/media/gif/css2.gif" alt="Made with CSS!">
-    <img src="/media/gif/gothtml.gif" alt="Got HTML?">`;
-        return marquee;
-    }
+    document.querySelector("#pageSidebar").innerHTML = sidebarHTML;
 
-    function dashboard() {
-        const dashboard = document.createElement(`div`);
-        dashboard.classList.add(`dashboard`);
-        const UTCtext = document.createElement(`time`);
-        dashboard.appendChild(UTCtext);
-        const pipertextIcon = document.createElement(`div`);
-        pipertextIcon.innerHTML =
-            `<img src='/media/img/pipertext.png' alt='Pipertext 88x31 icon' width='88px'>`;
-        dashboard.appendChild(pipertextIcon);
-        writeUTC(UTCtext);
-        return dashboard;
-    }
+    const dashboardTime = document.querySelector("#pageDashboard time")
+    writeUTC(dashboardTime);
 
-    function recentPosts() {
-        function createRecentPost(href, title, date) {
-            const recentPost = document.createElement(`div`);
-            recentPost.classList.add(`recentArticle`);
-
-            const postLink = document.createElement(`a`);
-            postLink.href = href;
-            postLink.textContent = title;
-            const postDate = document.createElement(`p`);
-            postDate.textContent = date;
-
-            recentPost.appendChild(postLink);
-            recentPost.appendChild(postDate);
-            recentPosts.appendChild(recentPost);
-        }
-
-        function createRecentPosts() {
-            const recentPostsHeader = document.createElement(`h3`);
-            recentPostsHeader.textContent = `Recent posts`;
-            recentPostsHeader.classList.add("recentPostsDetail");
-            const recentPostsDetailText = document.createElement("div");
-            recentPostsDetailText.classList.add("recentPostsDetailText");
-            recentPostsDetailText.textContent = `I'm always posting new articles! The latest three show up here.`;
-
-            recentPosts.appendChild(recentPostsHeader);
-            recentPosts.appendChild(recentPostsDetailText);
-
-            createRecentPost(
-                `/html/articles/goldsrcIsGold.html`,
-                `Goldsrc is gold`,
-                `2025/08/18`,
-            );
-             createRecentPost(
-                `/html/articles/recursion.html`,
-                `Project - Recursion`,
-                `2025/08/10`,
-            );
-            createRecentPost(
-                `/html/articles/weatherApp.html`,
-                `Project - Weather App`,
-                `2025/07/28`,
-            );
-        }
-        const recentPosts = document.createElement(`div`);
-        recentPosts.classList.add(`recentPosts`);
-        createRecentPosts();
-        return recentPosts;
-    }
-
-    function createSeries() {
-        const header = document.createElement(`h3`);
-        header.classList.add("tinnoteDetail");
-        header.textContent = `Tin notes`;
-        const headerDetail = document.createElement("div");
-        headerDetail.classList.add("tinnoteDetailText");
-        headerDetail.innerHTML = `Tin notes are directories containing pages which are all focused on discussing a specific topic.`
-
-        const tobacconist = document.createElement(`a`);
-        tobacconist.textContent = `tobacconist`;
-        tobacconist.href = `/html/tobacconist/tobacconist.html`;
-
-        const series = document.createElement(`div`);
-        series.id = `seriesList`;
-        series.appendChild(header);
-        series.appendChild(headerDetail);
-        series.appendChild(tobacconist);
-
-        return series;
-    }
-
-    sidebar.appendChild(marquee());
-    sidebar.appendChild(dashboard());
-    sidebar.appendChild(recentPosts());
-    sidebar.appendChild(createSeries());
-    sidebar.id = `layoutSidebar`;
-}
-
-function createFooter() {
-    const footer = document.querySelector(`footer`);
-    footer.id = `layoutFooter`;
-    footer.innerHTML = `
-		<a href="https://www.pipertext.net" style="text-decoration: none;"><small class="flame-text">pipertext.net</small></a>
-    <img src='/media/img/pipe.png' style='width: 2rem; filter: invert() drop-shadow(2px 2px 1px #100000);'>
-    <small class="withlove"><em>lovingly handmade with HTML, CSS, and JavaScript</em></small>
-    <p></p>`;
+    const aElements = document.querySelectorAll("#pageRecentPosts a");
+    const timeElements = document.querySelectorAll("#pageRecentPosts dd time");
+    let counter = 0;
+    fetch('/html/articles/_articleList.json')
+		.then(response => response.json())
+		.then(articles => {
+			articles.slice(-3).reverse().forEach(article => {
+                aElements[counter].textContent = article.name;
+                aElements[counter].href = article.html_file;
+                timeElements[counter].textContent = article.publish_date;
+                timeElements[counter].setAttribute('datetime', `${article.publish_date}`)
+				counter++;
+			});
+		})
+		.catch(error => console.error('error loading JSON file!!! - ', error));
 }
 
 function createHeader() {
-    const header = document.querySelector(`header`);
-    header.id = `layoutHeader`;
-    header.innerHTML = `
-		    <div>
-            <h1 class="pipertext">&gt; pipertext</h1>
-        </div>
-        <div class="logo">
-            <button id="themeButton">themes</button>
-            <img src="/media/img/pipe.png" alt="Pipertext logo">
-        </div>`;
+    document.querySelector("#pageHeader").innerHTML = headerHTML;
 }
 
 function createNav() {
-    const nav = document.querySelector(`nav`);
-    nav.id = `layoutNav`;
-    nav.innerHTML = `
-	<ul>
-        <li><a href="/index.html#homepage" id="navHome">home</a></li>
-        <li><a href="/index.html#resource" id="navResource">resource</a></li>
-        <li><a href="/index.html#articles" id="navArticles">articles</a></li>
-        <li><a href="/index.html#quotes" id="navQuotes">quotes</a></li>
-        <li><a href="/index.html#about" id="navAbout">about</a></li>
-        <li><a href="/index.html#contact" id="navContact">contact</a></li>
-    </ul>`;
+    document.querySelector("#pageNavbar").innerHTML = navbarHTML;
 }
 
-const sidebar = document.querySelector(`aside`);
+function createFooter() {
+    document.querySelector("#pageFooter").innerHTML = footerHTML;
+}
+
 createHeader();
 createSidebar();
 createNav();

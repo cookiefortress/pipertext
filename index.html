@@ -12,57 +12,22 @@
 	<link rel="icon" type="image/x-icon" href="/media/img/pipe.png">
 	<link rel="icon" type="image/png" href="/media/img/pipe.png">
 	<link rel="stylesheet" href="/style.css">
-
+	<script type="module" src="/scripts/layout.js" defer></script>
+	<script type="module" src="/scripts/nav.js" defer></script>
+	<script type="module" src="/scripts/themes.js" defer></script>
 </head>
 
 <body>
 	<div id="pageContainer">
-		<header id="pageHeader">
-			<a href="https://www.pipertext.net" id="pageHeaderName">&gt; pipertext</a>
-			<img src="/media/pipertextResources/pipertextPipe.png" alt="Pipertext tobacco pipe logo"
-				id="pageHeaderLogo">
-		</header>
+		<header id="pageHeader"></header>
 
-		<nav id="pageNavbar">
-			<ul>
-				<li><a href="/index.html#homepage">home</a></li>
-				<li><a href="/index.html#articles">articles</a></li>
-				<li><a href="/index.html#resource">resource</a></li>
-				<li><a href="/index.html#quotes">quotes</a></li>
-				<li><a href="/index.html#about">about</a></li>
-				<li><a href="/index.html#contact">contact</a></li>
-			</ul>
-		</nav>
+		<nav id="pageNavbar"></nav>
 
-		<aside id="pageSidebar">
-			<div id="pageButtonMarquee" class="marquee">
-				<img src="/media/buttons/bestvw.gif" alt="Best viewed with a computer and a monitor!">
-				<img src="/media/buttons/css2.gif" alt="Made with CSS!">
-				<img src="/media/buttons/gothtml.gif" alt="Got HTML?">
-			</div>
-			<div id="pageDashboard">
-				<time datetime="">xxx</time>
-				<img src="/media/pipertextResources/88x31pipertext.png" alt="Pipertext 88x31 icon">
-			</div>
-			<dl id="pageRecentPosts">
-				<h3>recent posts</h3>
-				<dt>Recent Article 1</dt>
-				<dd><time datetime="">2025/08/09</time></dd>
-				<dt>Recent Article 2</dt>
-				<dd><time datetime="">2025/08/09</time></dd>
-				<dt>Recent Article 3</dt>
-				<dd><time datetime="">2025/08/09</time></dd>
-			</dl>
-			<dl id="pageTinNotes">
-				<h3>tin notes</h3>
-				<ul>
-					<li><a href="">tobacconist</a></li>
-				</ul>
-			</dl>
-		</aside>
+		<aside id="pageSidebar"></aside>
 
 		<main id="pageMain">
 			<h1>homepage</h1>
+
 			<figure class="standardCard">
 				<img src="/media/img/pheonix.png"
 					alt="The original Mozilla Phoenix logo before eventually being rebranded into a fox">
@@ -104,11 +69,8 @@
 				</div>
 			</div>
 		</main>
-		<footer id="pageFooter">
-			<small><a href="https://www.pipertext.net">pipertext.net</a></small>
-			<img src="/media/pipertextResources/pipertextPipe.png" alt="Pipertext tobacco pipe logo">
-			<small id="pageFooterWithLove">lovingly handmade with HTML, CSS, & JS</small>
-		</footer>
+
+		<footer id="pageFooter"></footer>
 	</div>
 </body>
 

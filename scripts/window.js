@@ -6,7 +6,7 @@ function window(name, html, buttonID) {
 	windowTitle.classList.add(`windowTitle`);
 	windowTitle.innerHTML = `
 		<div>
-			<img src="/media/img/pipe.png" style="width: 2rem;">
+			<img src="/media/pipertextResources/pipertextPipe.png" style="width: 2rem;">
 			<h4>${name}</h4>
 		</div>
 		<div>
@@ -43,7 +43,7 @@ function window(name, html, buttonID) {
 	window.appendChild(windowTitle);
 	window.appendChild(windowContent);
 
-	document.querySelector(".container").appendChild(window);
+	document.querySelector("#pageContainer").appendChild(window);
 
 	document.querySelector(`${buttonID}`).addEventListener("click", () => {
 		if (window.style.visibility === "visible") {
