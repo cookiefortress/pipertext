@@ -2,61 +2,61 @@
   {
     "name": "touch pipertext.ptml",
     "publish_date": "2025/04/06",
-    "html_file": "/html/articles/touchPipertext.html"
+    "html_file": "/html/articles/0001touchPipertext/touchPipertext.html"
   },
   {
     "name": "50 years of Microsoft",
     "publish_date": "2025/04/06",
-    "html_file": "/html/articles/microsoft50.html"
+    "html_file": "/html/articles/0002microsoft50/microsoft50.html"
   },
   {
     "name": "The beauty of semantic HTML",
     "publish_date": "2025/04/08",
-    "html_file": "/html/articles/semanticHTML.html"
+    "html_file": "/html/articles/0003semanticHTML/semanticHTML.html"
   },
   {
     "name": "Project - Library",
     "publish_date": "2025/04/10",
-    "html_file": "/html/articles/library.html"
+    "html_file": "/html/articles/0004library/library.html"
   },
   {
     "name": "Project - Tic Tac Toe",
     "publish_date": "2025/04/12",
-    "html_file": "/html/articles/tictactoe.html"
+    "html_file": "/html/articles/0005tictactoe/tictactoe.html"
   },
   {
     "name": "Project - Todo List",
     "publish_date": "2025/04/20",
-    "html_file": "/html/articles/todo.html"
+    "html_file": "/html/articles/0006todo/todo.html"
   },
   {
     "name": "Project - Tic Tac Toe Revisited",
     "publish_date": "2025/04/25",
-    "html_file": "/html/articles/tictactoeRevisited.html"
+    "html_file": "/html/articles/0007tictactoeRevisited/tictactoeRevisited.html"
   },
   {
     "name": "Project - Dynamic UI",
     "publish_date": "2025/05/08",
-    "html_file": "/html/articles/dynamicUI.html"
+    "html_file": "/html/articles/0008dynamicUI/dynamicUI.html"
   },
   {
     "name": "Running JACK on Linux",
     "publish_date": "2025/07/15",
-    "html_file": "/html/articles/JACKlinuxFix.html"
+    "html_file": "/html/articles/0009JACKlinuxFix/JACKlinuxFix.html"
   },
   {
     "name": "Project - Weather App",
     "publish_date": "2025/07/28",
-    "html_file": "/html/articles/weatherApp.html"
+    "html_file": "/html/articles/0010weatherApp/weatherApp.html"
   },
   {
     "name": "Project - Recursion",
     "publish_date": "2025/08/10",
-    "html_file": "/html/articles/recursion.html"
+    "html_file": "/html/articles/0011recursion/recursion.html"
   },
   {
     "name": "Goldsrc is gold",
     "publish_date": "2025/08/18",
-    "html_file": "/html/articles/goldsrcIsGold.html"
+    "html_file": "/html/articles/0012goldsrcIsGold/goldsrcIsGold.html"
   }
 ]
