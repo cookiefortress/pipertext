@@ -10,6 +10,28 @@ body {
 	overflow-x: hidden;
 }
 
+/* site-wide main content rules */
+#pageMain ul {
+	margin: 0 auto;
+	max-width: 80%;
+	display: flex;
+	flex-flow: column nowrap;
+	gap: 1rem;
+	margin-bottom: 1.5rem;
+	font-size: .9rem;
+}
+
+#pageMain .seriesHeaderSubtext {
+	text-align: center;
+	font-size: .8rem;
+	font-style: italic;
+	border: 2px solid var(--accentBGalt);
+	max-width: 65%;
+	margin: 0 auto;
+	margin-bottom: .9rem;
+	padding: .3rem .1rem;
+}
+
 :root {
 	--primaryBG: #1b1717;
 	--accentBG: #810000;
@@ -56,6 +78,7 @@ body {
 	margin-bottom: .5rem;
 	margin-top: .5rem;
 }
+
 #pageMain h1:nth-child(1) {
 	margin-top: 0;
 }
@@ -97,6 +120,11 @@ body {
 
 #pageHeaderButtons {
 	align-self: flex-start;
+}
+
+#pageHeaderButtonsAndLogo {
+	display: flex;
+	gap: 2rem;
 }
 
 #pageThemeButton {
@@ -305,6 +333,7 @@ body {
 	flex-flow: column nowrap;
 	list-style-type: none;
 }
+
 #articleList a {
 	margin: 0 auto;
 	width: 90%;
@@ -312,6 +341,7 @@ body {
 	padding: .5rem;
 	border: 3px groove var(--accent);
 }
+
 #articleList a li {
 	display: flex;
 	justify-content: space-between;
@@ -326,6 +356,7 @@ body {
 	gap: .5rem;
 	margin-bottom: 1rem;
 }
+
 #resourceGuides a {
 	flex: 1;
 	height: 14rem;
@@ -335,6 +366,7 @@ body {
 	text-decoration: none;
 	border: 3px ridge var(--accent);
 }
+
 #resourceHTML {
 	background-image: linear-gradient(to right bottom, rgb(0 0 0 / .8), var(--primaryBG)), url('/media/img/resourceHTML.png');
 	width: 100%;
@@ -382,6 +414,7 @@ body {
 	gap: 1.2rem;
 	margin-top: 1rem;
 }
+
 #quotes blockquote {
 	background-color: var(--accentBGalt);
 	padding: 1rem;
@@ -391,12 +424,14 @@ body {
 	flex-direction: column;
 	height: min-content;
 }
+
 #quotes blockquote div {
 	padding: 0.5rem;
 	border: 2px groove var(--accent);
 	text-indent: 1rem;
 	line-height: 1.3rem;
 }
+
 #quotes blockquote p {
 	text-align: center;
 	border-left: none;
@@ -416,9 +451,11 @@ body {
 	justify-content: center;
 	align-items: center;
 }
+
 #aboutFoot #asciiPipe {
 	font-size: .3rem;
 }
+
 #aboutFoot #aboutIconRow {
 	padding: .5rem;
 	background-color: var(--accentBG);
@@ -433,6 +470,7 @@ body {
 	justify-content: center;
 	gap: 2rem;
 }
+
 #contactEmails a {
 	margin: auto;
 	text-decoration: none;
@@ -441,6 +479,7 @@ body {
 	background-color: var(--accentBGalt);
 	border: 4px outset var(--text);
 }
+
 #contactForm {
 	display: flex;
 	flex-flow: column nowrap;
@@ -449,17 +488,21 @@ body {
 	font-size: 1.2rem;
 	text-align: center;
 }
+
 #contactForm label {
 	margin-top: .5rem;
 	margin-bottom: .2rem;
 }
-#contactForm input, #contactForm textarea {
+
+#contactForm input,
+#contactForm textarea {
 	border: 2px ridge var(--accent);
 	padding: .2rem;
 	background-color: transparent;
 	font-size: .85rem;
 	font-family: Consolas, 'Liberation Mono', 'Adwaita Mono', monospace;
 }
+
 #contactForm button {
 	width: 5rem;
 	padding: .2rem .5rem;
@@ -476,18 +519,22 @@ body {
 @media screen and (max-width: 1050px) {
 	#pageContainer {
 		grid-template-areas:
-		"header  header"
-		"navbar  navbar"
-		"main main"
-		"sidebar sidebar"
-		"footer  footer";
+			"header  header"
+			"navbar  navbar"
+			"main main"
+			"sidebar sidebar"
+			"footer  footer";
 	}
+
 	#smokeLounge {
-		display: none; /* perhaps change later? */
+		display: none;
+		/* perhaps change later? */
 	}
+
 	#pageHeader {
 		flex-flow: column nowrap;
 	}
+
 	#pageNavbar ul {
 		display: flex;
 		flex-flow: row wrap;
@@ -496,12 +543,15 @@ body {
 		height: 100%;
 		gap: 1rem;
 	}
+
 	#pageNavbar ul li {
 		min-width: 45%;
 	}
+
 	#pageSidebar {
 		border-right: none;
 	}
+
 	#pageSidebar #pageButtonMarquee {
 		display: none;
 	}
@@ -588,180 +638,238 @@ body {
 
 /* window component */
 .window {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center;
-    width: auto;
-    height: auto;
-    background-color: var(--primaryBG);
-    border: 1px ridge var(--accent);
-    position: absolute;
-    top: 8rem;
-    left: 80%;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+	width: auto;
+	height: auto;
+	background-color: var(--primaryBG);
+	border: 1px ridge var(--accent);
+	position: absolute;
+	top: 8rem;
+	left: 8rem;
 }
 
 .windowTitle {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 2rem;
-    gap: .52rem;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 2rem;
+	gap: .52rem;
 }
 
 .windowTitle h4 {
-    user-select: none;
+	user-select: none;
 }
 
 .windowTitle div {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    gap: .4rem;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	gap: .4rem;
 }
 
 .windowTitle div:nth-child(2) {
-    margin-right: .3rem;
+	margin-right: .3rem;
 }
 
 .windowTitle div:nth-child(2) button {
-    border: 2px ridge var(--accent);
-    padding: .1rem .3rem;
-    background-color: var(--accent);
-    color: var(--primaryBG);
+	border: 2px ridge var(--accent);
+	padding: .1rem .3rem;
+	background-color: var(--accent);
+	color: var(--primaryBG);
 }
 
 .windowTitle div:nth-child(2) button:hover {
-    border: 2px groove var(--accentTwo);
-    cursor: pointer;
+	border: 2px groove var(--accentTwo);
+	cursor: pointer;
 }
 
 /* themes window component */
 #themeButton {
-    border: 2px solid var(--accentOne);
-    font-size: 1rem;
-    font-family: Consolas, 'Liberation Mono', 'Adwaita Mono', monospace;
-    width: 5rem;
-    color: var(--secondary);
-    background-color: var(--primary);
-    cursor: pointer;
-    padding: .2rem;
-    align-self: flex-start;
-    margin-right: 2rem;
+	border: 2px solid var(--accentOne);
+	font-size: 1rem;
+	font-family: Consolas, 'Liberation Mono', 'Adwaita Mono', monospace;
+	width: 5rem;
+	color: var(--secondary);
+	background-color: var(--primary);
+	cursor: pointer;
+	padding: .2rem;
+	align-self: flex-start;
+	margin-right: 2rem;
 }
 
 #themeList {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    border: 2px groove var(--accentTwo);
-    background-color: var(--accentTwo);
-    padding: .3rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	border: 2px groove var(--accentTwo);
+	background-color: var(--accentTwo);
+	padding: .3rem;
 }
 
 #themeList button {
-    font-size: .8rem;
-    font-family: Consolas, 'Liberation Mono', 'Adwaita Mono', monospace;
-    width: 6.5rem;
-    cursor: pointer;
-    padding: .2rem;
-    margin: .1rem;
+	font-size: .8rem;
+	font-family: Consolas, 'Liberation Mono', 'Adwaita Mono', monospace;
+	width: 6.5rem;
+	cursor: pointer;
+	padding: .2rem;
+	margin: .1rem;
 }
 
 #themeList button:nth-child(1) {
-    /* accentOne secondary primary */
-    border: 2px solid #810000;
-    color: #eeebdd;
-    background-color: #1b1717;
+	/* accentOne secondary primary */
+	border: 2px solid #810000;
+	color: #eeebdd;
+	background-color: #1b1717;
 }
 
 #themeList button:nth-child(2) {
-    border: 2px solid rgb(54, 36, 24);
-    color: #FED8B1;
-    background-color: rgb(134, 90, 69);
+	border: 2px solid rgb(54, 36, 24);
+	color: #FED8B1;
+	background-color: rgb(134, 90, 69);
 }
 
 #themeList button:nth-child(3) {
-    border: 2px solid rgb(17, 97, 17);
-    color: #1b1717;
-    background-color: #33FF33;
+	border: 2px solid rgb(17, 97, 17);
+	color: #1b1717;
+	background-color: #33FF33;
 }
 
 #themeList button:nth-child(4) {
-    border: 2px solid #732906;
-    color: #9d8457;
-    background-color: #2f2617;
+	border: 2px solid #732906;
+	color: #9d8457;
+	background-color: #2f2617;
 }
 
 #themeList button:nth-child(5) {
-    border: 2px solid rgb(103, 117, 94);
-    color: #968732;
-    background-color: #4c5844;
+	border: 2px solid rgb(103, 117, 94);
+	color: #968732;
+	background-color: #4c5844;
 }
 
 #themeList button:nth-child(6) {
-    border: 2px solid #bac715;
-    color: #d4d8de;
-    background-color: #012456;
+	border: 2px solid #bac715;
+	color: #d4d8de;
+	background-color: #012456;
 }
 
 #themeList button:nth-child(7) {
-    border: 2px solid grey;
-    color: black;
-    background-color: white;
+	border: 2px solid grey;
+	color: black;
+	background-color: white;
 }
 
 #themeList button:nth-child(8) {
-    border: 2px solid grey;
-    color: white;
-    background-color: black;
+	border: 2px solid grey;
+	color: white;
+	background-color: black;
 }
 
 #themeList button:nth-child(9) {
-    border: 2px solid #99BC85;
-    color: #443627;
-    background-color: #FFF5E4;
+	border: 2px solid #99BC85;
+	color: #443627;
+	background-color: #FFF5E4;
 }
 
 #themeList button:nth-child(10) {
-    border: 2px solid #0000ac;
-    color: #000000;
-    background-color: #acaaac;
+	border: 2px solid #0000ac;
+	color: #000000;
+	background-color: #acaaac;
 }
 
 #themeList button:nth-child(11) {
-    border: 2px solid #272728;
-    color: #dcdcdc;
-    background-color: #6a4832;
+	border: 2px solid #272728;
+	color: #dcdcdc;
+	background-color: #6a4832;
 }
 
 #themeList button:nth-child(12) {
-    border: 2px solid rgb(144, 177, 0);
-    color: #ffffff;
-    background-color: #161616;
+	border: 2px solid rgb(144, 177, 0);
+	color: #ffffff;
+	background-color: #161616;
 }
 
 #themeList button:nth-child(13) {
-    border: 2px solid #260000ff;
-    color: #89000bff;
-    background-color: #000000;
+	border: 2px solid #260000ff;
+	color: #89000bff;
+	background-color: #000000;
 }
 
 #themeList button:nth-child(14) {
-    border: 2px solid #be0b31;
-    color: #003693ff;
-    background-color: #ffffff;
+	border: 2px solid #be0b31;
+	color: #003693ff;
+	background-color: #ffffff;
 }
 
 #themeList button:nth-child(15) {
-    border: 2px solid #96d419;
-    color: #f5f5f5;
-    background-color: #0055ff;
+	border: 2px solid #96d419;
+	color: #f5f5f5;
+	background-color: #0055ff;
 }
 
 #themeList button:nth-child(16) {
-    border: 2px solid #e194a3ff;
-    color: #15bdffff;
-    background-color: #ffffff;
+	border: 2px solid #e194a3ff;
+	color: #15bdffff;
+	background-color: #ffffff;
+}
+
+/* tobacconist */
+#tobacconistNav {
+	display: flex;
+	flex-flow: row wrap;
+	gap: 3rem;
+}
+
+.tobacconistCard {
+	width: 40%;
+	min-height: 9rem;
+	min-width: 13rem;
+	padding: .5rem;
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-shadow: 2px 2px var(--accent);
+	background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), var(--accent)), url('/media/pipertextResources/pipertextPipe.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-blend-mode: multiply;
+	border: 3px ridge var(--accent);
+	flex: 1;
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	word-wrap: break-word;
+}
+
+/* article heads */
+#articleHead {
+	display: flex;
+	margin-top: .5rem;
+	margin-bottom: 1rem;
+	padding-bottom: 1rem;
+	gap: 2rem;
+	border-bottom: 1px solid var(--text);
+}
+#articleHeadMetadata {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column nowrap;
+	flex-basis: 55%;
+	text-align: center;
+}
+#tableOfContents {
+	flex-basis: 45%;
+	display: flex;
+	flex-flow: column nowrap;
+	padding: 1rem;
+	border: 3px ridge var(--accentBGalt);
+}
+#tableOfContents a {
+	text-decoration: none;
 }

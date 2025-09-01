@@ -3,11 +3,13 @@ import { writeUTC } from '/scripts/UTC.js';
 export function layout() {
     const headerHTML = `
     <a href="https://www.pipertext.net" id="pageHeaderName">&gt; pipertext</a>
-    <div id='pageHeaderButtons'>
-        <button id='pageThemeButton'>themes</button>
+    <div id='pageHeaderButtonsAndLogo'>
+        <div id='pageHeaderButtons'>
+            <button id='pageThemeButton'>themes</button>
+        </div>
+        <img src="/media/pipertextResources/pipertextPipe.png" alt="Pipertext tobacco pipe logo"
+            id="pageHeaderLogo">
     </div>
-    <img src="/media/pipertextResources/pipertextPipe.png" alt="Pipertext tobacco pipe logo"
-        id="pageHeaderLogo">
 `
 
     const navbarHTML = `
@@ -43,7 +45,7 @@ export function layout() {
     <dl id="pageTinNotes">
         <h3>tin notes</h3>
         <ul>
-            <li><a href="">tobacconist</a></li>
+            <li><a href="/html/tobacconist/tobacconist.html">tobacconist</a></li>
         </ul>
     </dl>
 `;

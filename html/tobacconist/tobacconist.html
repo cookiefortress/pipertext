@@ -6,10 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>pipertext</title>
 	<link rel="icon" type="image/x-icon" href="/media/img/pipe.png" />
-	<link rel="icon" type="image/png" href="/media/img/pipe.png" />
 	<link rel="stylesheet" href="/style.css">
-	<script src="/scripts/layout.js" type="module" defer></script>
-	<script src="/scripts/themes.js" type="module" defer></script>
+	<script src="/scripts/index.js" type="module" defer></script>
 	<style>
 		#tobacconistNav {
 			display: flex;
@@ -50,19 +48,20 @@
 </head>
 
 <body>
-	<div class="container">
-		<header></header>
-		<nav aria-label="primary"></nav>
-		<aside></aside>
+	<div id="pageContainer">
+		<header id="pageHeader"></header>
+		<nav id="pageNavbar"></nav>
+		<aside id="pageSidebar"></aside>
 
-		<main>
+		<main id="pageMain">
 			<h2>Tobacconist</h2>
 			<p>Welcome to the Tobacconist page! What kind of website would this be without a
 				section dedicated to the beautiful art of pipe smoking? Here I will discuss everything from pipe shapes
 				to softy bits!
 			</p>
 			<p>Just to be clear: Pipertext is <em>not</em> solely about pipe smoking and tobacco; I update this website
-				with no true "goal" in mind! However, given the beautiful, absolute creative masterpiece of a name, how could I not have a section such as this? Now, put that in your pipe and smoke it!</p>
+				with no true "goal" in mind! However, given the beautiful, absolute creative masterpiece of a name, how
+				could I not have a section such as this? Now, put that in your pipe and smoke it!</p>
 
 			<nav aria-label="secondary" id="tobacconistNav">
 				<a href="/html/tobacconist/introduction.html" class="tobacconistCard">Introduction to pipe
@@ -71,8 +70,9 @@
 			</nav>
 		</main>
 
-		<footer></footer>
+		<footer id="pageFooter"></footer>
 	</div>
+
 </body>
 
 </html>
