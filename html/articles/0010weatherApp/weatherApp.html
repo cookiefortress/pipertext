@@ -11,6 +11,34 @@
 	<script src="/scripts/index.js" type="module" defer></script>
 	<script src="/scripts/articles/0010weatherApp/weatherApp.js" defer></script>
 	<script src="/scripts/tableOfContents.js" type='module' defer></script>
+	<style>
+		#weatherAppForm {
+			display: flex;
+			justify-content: center;
+			gap: 1rem;
+			flex-flow: row wrap;
+			align-items: center;
+		}
+
+		.input {
+			border-radius: 0;
+			padding: .5rem;
+			font-size: 1rem;
+			font-family: Consolas, 'Liberation Mono', 'Adwaita Mono', monospace;
+			border: 3px ridge var(--accent);
+			background-color: var(--text);
+			color: var(--primaryBG) !important;
+		}
+
+		.button {
+			font-family: Consolas, 'Liberation Mono', 'Adwaita Mono', monospace;
+			padding: .5rem 1rem;
+			border-radius: 0;
+			border: 3px outset var(--accent);
+			background-color: var(--text);
+			color: var(--primaryBG) !important;
+		}
+	</style>
 </head>
 
 <body>
@@ -22,10 +50,10 @@
 		<main class="article">
 			<article>
 				<section id="articleHead">
-				<div id="articleHeadMetadata">
-					<h2 class="articleHeader">Project - Weather App</h2>
-					<time>UTC 2025-07-28 - July 28<sup>th</sup>, 2025</time>
-				</div>
+					<div id="articleHeadMetadata">
+						<h2 class="articleHeader">Project - Weather App</h2>
+						<time>UTC 2025-07-28 - July 28<sup>th</sup>, 2025</time>
+					</div>
 				</section>
 				<p>I made this small weather program as part of <a
 						href="https://www.theodinproject.com/lessons/node-path-javascript-weather-app" target="_blank"
@@ -53,5 +81,4 @@
 		<footer></footer>
 	</div>
 </body>
-
 </html>

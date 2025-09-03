@@ -41,6 +41,10 @@ body {
 	border: 4px inset var(--accent);
 }
 
+.noBorder {
+	border: none !important;
+}
+
 .imgRow {
 	display: flex;
 	flex-flow: row wrap;
@@ -756,7 +760,6 @@ body {
 
 /* themes window component */
 #themeButton {
-	border: 2px solid var(--accentOne);
 	font-size: 1rem;
 	font-family: Consolas, 'Liberation Mono', 'Adwaita Mono', monospace;
 	width: 5rem;
@@ -928,6 +931,7 @@ body {
 	flex-flow: column nowrap;
 	flex-basis: 55%;
 	text-align: center;
+	margin: 0 auto;
 }
 #tableOfContents {
 	flex-basis: 45%;
