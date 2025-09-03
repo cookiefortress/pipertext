@@ -11,7 +11,7 @@ body {
 }
 
 /* site-wide main content rules */
-#pageMain p + ul {
+#pageMain p + ul:not(.elementList) {
 	margin: 0 auto;
 	max-width: 80%;
 	display: flex;
@@ -39,6 +39,19 @@ body {
 #pageMain p > img,
 #pageMain p a > img {
 	border: 4px inset var(--accent);
+}
+
+.imgRow {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+}
+.imgRow img {
+	padding: 1rem;
+}
+#pageContainer code {
+	color: var(--code);
 }
 
 /*
@@ -438,6 +451,11 @@ body {
 	margin-left: .5rem;
 	margin-bottom: 1rem;
 }
+.resGrid div p img {
+	float: right;
+	margin-left: 1rem;
+	margin-bottom: 1rem;
+}
 
 /* quotes hash */
 #quotes {
@@ -634,6 +652,21 @@ body {
 	font-size: .8rem;
 	padding: .5rem;
 	text-align: center;
+}
+.bigFigureImg {
+	max-width: 95%;
+	margin: 0 auto;
+	display: block;
+	border: 4px outset var(--accent);
+}
+.bigFigure figcaption {
+	max-width: 80%;
+	text-align: center;
+	margin: 0 auto 1rem auto;
+	background-color: transparent;
+	padding: 1rem;
+	border: 4px outset var(--accent);
+	border-top: none;
 }
 
 /* the smoke lounge */
@@ -905,4 +938,43 @@ body {
 }
 #tableOfContents a {
 	text-decoration: none;
+}
+.headImg {
+	/* mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) -20%, transparent 100%); */
+	width: 95%;
+	margin: 0 auto;
+	justify-self: center;
+	margin-top: 1.5rem;
+	border: 2px solid var(--text);
+	display: block;
+}
+
+/* HTML articles */
+.elementList {
+	padding: 0 2rem 1rem 2rem;
+	font-size: .85rem;
+	display: flex;
+	flex-flow: column nowrap;
+	gap: .5rem;
+	list-style-type: none;	
+}
+.elementList li {
+	border: 2px ridge var(--accent);
+	padding: .5rem;
+}
+.elementList li details summary {
+	font-size: 1rem;
+	cursor: pointer;
+	padding: .5rem;
+}
+.codeBlock {
+	white-space: pre-wrap;
+	color: var(--code) !important;
+	font-size: 1rem;
+	display: block;
+	margin: 0 auto;
+	border: 2px solid var(--accent);
+	padding: 1rem;
+	margin-bottom: 1rem;
+	height: fit-content;
 }

@@ -8,13 +8,12 @@
 	<link rel="icon" type="image/x-icon" href="/media/img/pipe.png" />
 	<link rel="icon" type="image/png" href="/media/img/pipe.png" />
 	<link rel="stylesheet" href="/style.css" />
-	<script src="/scripts/layout.js" type="module" defer></script>
-	<script src="/scripts/themes.js" type="module" defer></script>
-	<script src="/scripts/tableOfContents.js" type='module' defer></script>
+	<script src="/scripts/index.js" type="module" defer></script>
+	<script src="/scripts/tableOfContents.js" type="module" defer></script>
 </head>
 
 <body>
-	<div class="container">
+	<div id="pageContainer">
 		<header></header>
 		<nav></nav>
 		<aside></aside>
@@ -79,8 +78,7 @@
 			<p>Let's say you're using a screen reader, and you visit Pipertext. Your screenreader will say something
 				like:</p>
 
-			<blockquote class='codeBlock'>www.pipertext.net, five headings, thirteen links, and a header, nav, aside,
-				main, and footer in that order. Pipertext.
+			<blockquote class='codeBlock'>www.pipertext.net, five headings, thirteen links, and a header, nav, aside, main, and footer in that order. Pipertext.
 			</blockquote>
 
 			<p>That's pretty descriptive, and also very helpful. The user now knows of, and can navigate between, the

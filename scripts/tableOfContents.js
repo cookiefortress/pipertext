@@ -26,7 +26,6 @@ function createTable() {
 		return;
 	}
 	document.querySelector("#articleHead").appendChild(table);
-	console.log(table)
 }
 
 (function tableOfContents() {
@@ -39,6 +38,5 @@ function createTable() {
 		counter++;
 	}
 
-	console.log(headers);
 	createTable();
 })();
