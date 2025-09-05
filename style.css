@@ -141,7 +141,7 @@ body {
 	text-decoration: none;
 	font-weight: 700;
 	font-size: 44.8px;
-	text-shadow: 2px 2px 0px var(--accentBGalt);
+	text-shadow: 2px 2px 0px var(--accent);
 }
 
 #pageHeaderLogo {
@@ -192,8 +192,8 @@ body {
 	padding: .75rem 0;
 	text-decoration: none;
 
-	background-color: var(--accentBGalt);
-	border: 3px outset var(--accentBG);
+	background-color: var(--accentBG);
+	border: 3px outset var(--accentBGalt);
 }
 
 /* sidebar */
@@ -210,7 +210,7 @@ body {
 
 #pageButtonMarquee {
 	background-color: var(--accentBG);
-	border: 2px ridge var(--accentBGalt);
+	border: 2px ridge var(--accent);
 	height: auto;
 	width: 90%;
 	padding: .5rem 0 .45rem 0;
@@ -231,7 +231,7 @@ body {
 	gap: .5rem;
 	padding: 3rem 0;
 	width: 90%;
-	border: 2px ridge var(--accentBGalt);
+	border: 2px ridge var(--accent);
 }
 
 #pageDashboard time {
@@ -257,7 +257,7 @@ body {
 	text-align: center;
 	width: 100%;
 	padding-bottom: .3rem;
-	border-bottom: 2px solid var(--accentBGalt);
+	border-bottom: 2px solid var(--accent);
 }
 
 #pageRecentPosts h3 {
