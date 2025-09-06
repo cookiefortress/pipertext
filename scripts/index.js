@@ -22,7 +22,7 @@ if(window.location.hash === '#homepage'
 	nav();
 }
 
-if(window.location.hash === '') {
+if(window.location === 'https://www.pipertext.net/index.html' && window.location.hash === '') {
 	window.location.hash = '#homepage';
 	nav();
 }
