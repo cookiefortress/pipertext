@@ -12,6 +12,10 @@ document.querySelector("footer").id = 'pageFooter';
 layout();
 themes();
 
+if(!window.location.hash) {
+	window.location.hash = '#homepage';
+}
+
 if(window.location.hash === '#homepage'
 	|| window.location.hash === '#articles'
 	|| window.location.hash === '#resource'
@@ -22,10 +26,6 @@ if(window.location.hash === '#homepage'
 	nav();
 }
 
-if(window.location === 'https://www.pipertext.net/index.html' && window.location.hash === '') {
-	window.location.hash = '#homepage';
-	nav();
-}
 if(window.location.hash === '#homepage') {
 	typewriter("#pageHeaderName", "> pipertext", 200, true, true)
 }

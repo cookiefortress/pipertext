@@ -11,7 +11,7 @@ body {
 }
 
 /* site-wide main content rules */
-#pageMain p + ul:not(.elementList) {
+#pageMain p+ul:not(.elementList) {
 	margin: 0 auto;
 	max-width: 80%;
 	display: flex;
@@ -36,8 +36,8 @@ body {
 	color: var(--accent);
 }
 
-#pageMain p > img,
-#pageMain p a > img {
+#pageMain p>img,
+#pageMain p a>img {
 	border: 4px inset var(--accent);
 }
 
@@ -51,9 +51,11 @@ body {
 	justify-content: center;
 	align-items: center;
 }
+
 .imgRow img {
 	padding: 1rem;
 }
+
 #pageContainer code {
 	color: var(--code);
 }
@@ -436,11 +438,13 @@ body {
 	margin-bottom: 0.5rem;
 	text-decoration: none;
 }
+
 .resGrid {
 	display: flex;
 	flex-flow: column nowrap;
 	gap: 1rem;
 }
+
 .resGrid div {
 	background-color: var(--primaryBG);
 	color: var(--text);
@@ -450,11 +454,13 @@ body {
 	justify-content: space-between;
 	width: 100%;
 }
+
 .resGrid div p {
 	margin-right: 2rem;
 	margin-left: .5rem;
 	margin-bottom: 1rem;
 }
+
 .resGrid div p img {
 	float: right;
 	margin-left: 1rem;
@@ -657,12 +663,14 @@ body {
 	padding: .5rem;
 	text-align: center;
 }
+
 .bigFigureImg {
 	max-width: 95%;
 	margin: 0 auto;
 	display: block;
 	border: 4px outset var(--accent);
 }
+
 .bigFigure figcaption {
 	max-width: 80%;
 	text-align: center;
@@ -924,6 +932,7 @@ body {
 	gap: 2rem;
 	border-bottom: 1px solid var(--text);
 }
+
 #articleHeadMetadata {
 	display: flex;
 	justify-content: center;
@@ -933,6 +942,7 @@ body {
 	text-align: center;
 	margin: 0 auto;
 }
+
 #tableOfContents {
 	flex-basis: 45%;
 	display: flex;
@@ -940,9 +950,11 @@ body {
 	padding: 1rem;
 	border: 3px ridge var(--accentBGalt);
 }
+
 #tableOfContents a {
 	text-decoration: none;
 }
+
 .headImg {
 	/* mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) -20%, transparent 100%); */
 	width: 95%;
@@ -960,17 +972,20 @@ body {
 	display: flex;
 	flex-flow: column nowrap;
 	gap: .5rem;
-	list-style-type: none;	
+	list-style-type: none;
 }
+
 .elementList li {
 	border: 2px ridge var(--accent);
 	padding: .5rem;
 }
+
 .elementList li details summary {
 	font-size: 1rem;
 	cursor: pointer;
 	padding: .5rem;
 }
+
 .codeBlock {
 	white-space: pre-wrap;
 	color: var(--code) !important;
