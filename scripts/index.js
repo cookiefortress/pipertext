@@ -22,6 +22,10 @@ if(window.location.hash === '#homepage'
 	nav();
 }
 
+if(window.location.hash === '') {
+	window.location.hash = '#homepage';
+	nav();
+}
 if(window.location.hash === '#homepage') {
 	typewriter("#pageHeaderName", "> pipertext", 200, true, true)
 }
