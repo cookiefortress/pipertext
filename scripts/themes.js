@@ -129,36 +129,40 @@ export function themes() {
 				break;
 			case "monster":
 				writeStyles("#161616",
-					"#ffffff",
 					"rgb(144, 177, 0)",
 					"#0b9936",
+					"#0b9936",
+					"#ffffff",
 					"#161616",
 					"0 10px 16px 1px rgba(0, 90, 0, 0.5),0 6px 20px 1px rgba(51, 255, 51, 0.5)",
 					"rgb(0, 218, 0)");
 				break;
 			case "belial":
 				writeStyles("#000000",
-					"#89000bff",
 					"#5a0101ff",
 					"#491414ff",
+					"#491414ff",
+					"#89000bff",
 					"#000000", "0 10px 16px 1px #89000bff,0 6px 20px 1px #89000bff",
 					"rgba(255, 68, 0, 1)");
 				document.querySelector("body").style.background = `url('/media/pipertextResources/bgHell.png') repeat fixed center`;
 				break;
 			case "freedom":
-				writeStyles("#ffffff",
+				writeStyles("#003693ff",
+					"#e00007ff",
 					"#003693ff",
-					"#be0b31",
-					"#cd012dff",
+					"#990323ff",
 					"#ffffff",
+					"#0040afff",
 					"0 10px 16px 1px #89000bff,0 6px 20px 1px #89000bff",
 					"rgb(0, 218, 0)");
 				break;
 			case "frutiger":
 				writeStyles("#0055ffff",
-					"#f5f5f5",
+					"#699d01ff",
 					"#96d419ff",
-					"#6b8f25",
+					"#0078c8",
+					"#f5f5f5",
 					"#0078c8",
 					"0 10px 16px 1px #00fbffff,0 6px 20px 1px #00fbffff",
 					"rgb(0, 218, 0)");
@@ -168,7 +172,8 @@ export function themes() {
 				writeStyles("#ffffff",
 					"#15bdffff",
 					"#e194a3ff",
-					"#F7A8B8",
+					"#0693caff",
+					"#cb3bafff",
 					"#ffffff",
 					"0 10px 16px 1px #F7A8B8,0 6px 20px 1px #F7A8B8",
 					"rgb(0, 218, 0)");
