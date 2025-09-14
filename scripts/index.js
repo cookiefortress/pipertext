@@ -12,7 +12,7 @@ document.querySelector("footer").id = 'pageFooter';
 layout();
 themes();
 
-if(!window.location.hash) {
+if(!window.location.hash && window.location.pathname.endsWith('/')) {
 	window.location.hash = '#homepage';
 }
 

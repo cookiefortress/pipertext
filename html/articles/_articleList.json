@@ -58,5 +58,10 @@
     "name": "Goldsrc is gold",
     "publish_date": "2025/08/18",
     "html_file": "/html/articles/0012goldsrcIsGold/goldsrcIsGold.html"
+  },
+  {
+    "name": "Project - Linked List",
+    "publish_date": "2025/09/14",
+    "html_file": "/html/articles/0013linkedList/linkedList.html"
   }
 ]
