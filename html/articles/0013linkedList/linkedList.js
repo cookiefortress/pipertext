@@ -4,18 +4,18 @@ class LinkedList {
         this.size = 0;
     }
 
-    // Add a node to the end of the list
+    // add a node to the end of the list
     append(value) {
         const newNode = {
             value: value,
             next: null
         };
 
-        // If list is empty, make new node the head
+        // if list is empty, make new node the head
         if (!this.head) {
             this.head = newNode;
         } else {
-            // Find the last node and link it to the new node
+            // find the last node and link it to the new node
             let current = this.head;
             while (current.next) {
                 current = current.next;
@@ -27,7 +27,7 @@ class LinkedList {
         return this;
     }
 
-    // Add a node to the beginning of the list
+    // add a node to the beginning of the list
     prepend(value) {
         const newNode = {
             value: value,
@@ -38,7 +38,7 @@ class LinkedList {
         return this;
     }
 
-    // Insert at specific index
+    // insert at specific index
     insert(index, value) {
         if (index < 0 || index > this.size) {
             throw new Error('Index out of bounds');
@@ -64,7 +64,7 @@ class LinkedList {
         return this;
     }
 
-    // Remove by index
+    // remove by index
     removeAt(index) {
         if (index < 0 || index >= this.size) {
             throw new Error('Index out of bounds');
@@ -88,7 +88,7 @@ class LinkedList {
         return removedValue;
     }
 
-    // Remove by value (first occurrence)
+    // remove by value (first occurrence)
     remove(value) {
         if (!this.head) return false;
 
@@ -112,7 +112,7 @@ class LinkedList {
         return false;
     }
 
-    // Find a value and return its index
+    // find a value and return its index
     indexOf(value) {
         let current = this.head;
         let index = 0;
@@ -128,7 +128,7 @@ class LinkedList {
         return -1;
     }
 
-    // Get value at specific index
+    // get value at specific index
     get(index) {
         if (index < 0 || index >= this.size) {
             throw new Error('Index out of bounds');
@@ -142,22 +142,22 @@ class LinkedList {
         return current.value;
     }
 
-    // Check if list contains a value
+    // check if list contains a value
     contains(value) {
         return this.indexOf(value) !== -1;
     }
 
-    // Get the size of the list
+    // get the size of the list
     getSize() {
         return this.size;
     }
 
-    // Check if list is empty
+    // check if list is empty
     isEmpty() {
         return this.size === 0;
     }
 
-    // Convert list to array for easy viewing
+    // convert list to array for easy viewing
     toArray() {
         const result = [];
         let current = this.head;
@@ -170,13 +170,13 @@ class LinkedList {
         return result;
     }
 
-    // Clear the entire list
+    // clear the entire list
     clear() {
         this.head = null;
         this.size = 0;
     }
 
-    // Display the list
+    // display the list
     display() {
         if (!this.head) {
             console.log('List is empty');
@@ -188,10 +188,10 @@ class LinkedList {
     }
 }
 
-// Example usage:
+// example usage:
 const list = new LinkedList();
 
-// Add some values
+// add some values
 list.append(1);
 list.append(2);
 list.append(3);
@@ -199,19 +199,19 @@ list.prepend(0);
 
 console.log('List:', list.toArray()); // [0, 1, 2, 3]
 
-// Insert at specific position
+// insert at specific position
 list.insert(2, 1.5);
 console.log('After insert:', list.toArray()); // [0, 1, 1.5, 2, 3]
 
-// Remove elements
+// remove elements
 list.remove(1.5);
 console.log('After remove:', list.toArray()); // [0, 1, 2, 3]
 
-// Get specific elements
+// get specific elements
 console.log('Element at index 2:', list.get(2)); // 2
 console.log('Index of value 3:', list.indexOf(3)); // 3
 
-// Check properties
+// check properties
 console.log('Size:', list.getSize()); // 4
 console.log('Contains 2:', list.contains(2)); // true
 console.log('Is empty:', list.isEmpty()); // false
