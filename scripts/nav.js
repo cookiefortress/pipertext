@@ -414,7 +414,7 @@ export function nav() {
 
 	window.addEventListener("DOMContentLoaded", () => {
 		if (!window.location.hash) {
-			window.location.hash = "#homepage";
+			window.location.hash = "homepage";
 		} else {
 			renderContentFromHash();
 		}

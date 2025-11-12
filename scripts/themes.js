@@ -4,7 +4,7 @@ export function themes() {
 	// function for changing the color scheme
 	// text must be accessible when laid over the first three arguments
 	function changeTheme(theme, isSaved = true) {
-		function writeStyles(primaryBG, accentBG, accentBGalt, accent, text, gradientTopLeft, bShadow, code) {
+		function writeStyles(primaryBG, accentBG, accentBGalt, accent, text, gradientTopLeft, bShadow, code, anchorColor) {
 			document.documentElement.style.cssText = `
 			--primaryBG: ${primaryBG};
 			--accentBG: ${accentBG};
@@ -12,7 +12,8 @@ export function themes() {
 			--accent: ${accent};
 			--text: ${text};
 			--gradientTopLeft: ${gradientTopLeft};
-			--code: ${code}`;
+			--code: ${code};
+			--anchorColor: ${anchorColor}`;
 			document.querySelector("#pageContainer").style.boxShadow = `${bShadow}`;
 		}
 
@@ -25,7 +26,8 @@ export function themes() {
 					"#eeebdd",
 					"black",
 					"0 10px 16px 2px rgba(255, 255, 255, 0.2),0 6px 20px 2px rgba(255, 255, 255, 0.2)",
-					"rgb(0, 218, 0)");
+					"rgb(0, 218, 0)",
+					"#f91111ff");
 				break;
 			case "tobacco":
 				writeStyles("rgb(54, 36, 24)",
@@ -35,7 +37,8 @@ export function themes() {
 					"#FED8B1",
 					"#1b1717",
 						"0 10px 16px 2px rgba(134, 90, 69, 0.5),0 6px 20px 2px rgba(134, 90, 69, 0.5)",
-					"rgb(0, 218, 0)");
+					"rgb(0, 218, 0)",
+					"#d16f0dff");
 				break;
 			case "haxor":
 				writeStyles("black",
@@ -45,7 +48,8 @@ export function themes() {
 					"#33FF33",
 					"rgb(0, 50, 4)",
 					"0 10px 16px 2px rgba(0, 90, 0, 0.4),0 6px 20px 2px rgba(51, 255, 51, 0.4)",
-					"rgb(218, 0, 0)");
+					"rgb(218, 0, 0)",
+					"#018201ff",);
 				break;
 			case "cypher":
 				writeStyles("#2f2617",
@@ -55,7 +59,8 @@ export function themes() {
 					"#9d8457",
 					"#1b1717",
 					"0 10px 16px 1px rgba(115, 41, 6, 0.6),0 6px 20px 1px rgba(115, 41, 6, 0.6)",
-					"rgb(0, 180, 0)");
+					"rgb(0, 180, 0)",
+					"#d04707ff");
 				break;
 			case "steam":
 				writeStyles("#4c5844",
@@ -65,7 +70,8 @@ export function themes() {
 					"white",
 					"#4c5844",
 					"0 10px 16px 2px rgba(76, 88, 68, 0.8),0 6px 20px 2px rgba(76, 88, 68, 0.8)",
-					"rgb(194, 193, 131)");
+					"rgb(194, 193, 131)",
+					"#968732");
 				break;
 			case "powershell":
 				writeStyles("#012456",
@@ -75,7 +81,8 @@ export function themes() {
 					"#d4d8de",
 					"#012456",
 					"0 10px 16px rgba(212, 216, 222, 0.4),0 6px 20px rgba(212, 216, 222, 0.4)",
-					"rgb(0, 218, 0)");
+					"rgb(0, 218, 0)",
+					"#94a6efff");
 				break;
 			case "paper":
 				writeStyles("white",
@@ -85,7 +92,8 @@ export function themes() {
 					"black",
 					"whitesmoke",
 					"0 10px 16px 4px rgba(112, 113, 116, 0.9),0 6px 20px 4px rgba(112, 113, 116, 0.9)",
-					"rgb(25, 0, 255)");
+					"rgb(25, 0, 255)",
+					"#636363ff");
 				break;
 			case "cmd":
 				writeStyles("black",
@@ -94,8 +102,9 @@ export function themes() {
 					"grey",
 					"whitesmoke",
 					"black",
-					"#1b1717", "0 10px 16px 1px rgba(112, 113, 116, 0.7),0 6px 20px 1px rgba(112, 113, 116, 0.7)", 
-					"rgb(0, 218, 0)");
+					"0 10px 16px 1px rgba(112, 113, 116, 0.7),0 6px 20px 1px rgba(112, 113, 116, 0.7)", 
+					"rgb(0, 218, 0)",
+					"#b1b1b1ff");
 				break;
 			case "marnie":
 				writeStyles("#FFF5E4",

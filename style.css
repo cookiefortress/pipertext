@@ -33,7 +33,13 @@ body {
 }
 
 #pageMain a {
-	color: var(--accent);
+	color: var(--anchorColor);
+	text-decoration: none;
+    text-shadow: 1px 1px rgba(128, 128, 128, 0.347);
+}
+
+#pageMain a:hover {
+	font-weight: bold;
 }
 
 #pageMain p>img,
