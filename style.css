@@ -167,7 +167,7 @@ body {
 }
 
 #pageThemeButton {
-	border: 2px solid var(--accentBG);
+	border: 2px solid var(--text);
 	background-color: var(--accentBGalt);
 	padding: .3rem;
 	cursor: pointer;
@@ -894,9 +894,9 @@ body {
 }
 
 #themeList button:nth-child(16) {
-	border: 2px solid #e194a3ff;
-	color: #15bdffff;
-	background-color: #ffffff;
+	border: 2px solid #E25E3E;
+	color: #FFBB5C;
+	background-color: #C63D2F;
 }
 
 /* tobacconist */

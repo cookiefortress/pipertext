@@ -114,17 +114,19 @@ export function themes() {
 					"#443627",
 					"#FFF5E4",	
 					"0 10px 16px 2px rgba(255, 167, 37, 0.6),0 6px 20px 2px rgba(255, 167, 37, 0.6)",
-					"rgb(0, 218, 0)");
+					"rgb(0, 218, 0)",
+					"#ee6e06ff");
 				break;
 			case "freeDOS":
 				writeStyles("#acaaac",
 					"#1515ffff",
 					"#0000FF",
 					"#00aaac",
-					"black",
+					"#000000ff",
 					"#acaaac",
 					"0 10px 16px 3px rgba(0, 170, 172, 0.5),0 6px 20px 3px rgba(0, 170, 172, 0.5)",
-					"rgb(0, 218, 0)");
+					"rgb(0, 218, 0)",
+					"#0000ff");
 				break;
 			case "2600":
 				writeStyles("#272728",
@@ -134,7 +136,8 @@ export function themes() {
 					"white",
 					"#272728",
 					"0 10px 16px 2px rgba(106, 72, 50, 0.5),0 6px 20px 2px rgba(106, 72, 50, 0.5)",
-					"rgb(0, 218, 0)");
+					"rgb(0, 218, 0)",
+					"#c24850ff");
 				break;
 			case "monster":
 				writeStyles("#161616",
@@ -144,7 +147,8 @@ export function themes() {
 					"#ffffff",
 					"#161616",
 					"0 10px 16px 1px rgba(0, 90, 0, 0.5),0 6px 20px 1px rgba(51, 255, 51, 0.5)",
-					"rgb(0, 218, 0)");
+					"rgb(0, 218, 0)",
+					"#daf016ff");
 				break;
 			case "belial":
 				writeStyles("#000000",
@@ -153,7 +157,8 @@ export function themes() {
 					"#491414ff",
 					"#89000bff",
 					"#000000", "0 10px 16px 1px #89000bff,0 6px 20px 1px #89000bff",
-					"rgba(255, 68, 0, 1)");
+					"rgba(255, 68, 0, 1)",	
+					"#c90b1bff");
 				document.querySelector("body").style.background = `url('/media/pipertextResources/bgHell.png') repeat fixed center`;
 				break;
 			case "freedom":
@@ -164,7 +169,8 @@ export function themes() {
 					"#ffffff",
 					"#0040afff",
 					"0 10px 16px 1px #89000bff,0 6px 20px 1px #89000bff",
-					"rgb(0, 218, 0)");
+					"rgb(0, 218, 0)",
+					"#ff0000ff");
 				break;
 			case "frutiger":
 				writeStyles("#0055ffff",
@@ -174,26 +180,27 @@ export function themes() {
 					"#f5f5f5",
 					"#0078c8",
 					"0 10px 16px 1px #00fbffff,0 6px 20px 1px #00fbffff",
-					"rgb(0, 218, 0)");
+					"rgb(0, 218, 0)",
+					"#16f4edff");
 				document.querySelector("body").style.background = `url('/media/pipertextResources/bgFrutigerAero.jpg') repeat fixed center`;
 				break;
-			case "trans":
-				writeStyles("#ffffff",
-					"#15bdffff",
-					"#e194a3ff",
-					"#0693caff",
-					"#cb3bafff",
-					"#ffffff",
-					"0 10px 16px 1px #F7A8B8,0 6px 20px 1px #F7A8B8",
+			case "autumn":
+				writeStyles("#C63D2F",
+					"#C63D2F",
+					"#E25E3E",
+					"#E25E3E",
+					"#FFBB5C",
+					"#C63D2F",
+					"0 10px 16px 1px #fc1e06ff,0 6px 20px 1px #fc1e06ff",
 					"rgb(0, 218, 0)");
 				break;
 
 			// -- holidays --
 			case "christmas":
-				writeStyles("rgb(14, 78, 14)", "white", "rgb(110, 0, 0)", "rgb(120, 0, 0)", "rgb(14, 78, 14)", "0 10px 16px 2px rgba(0, 90, 0, 0.5),0 6px 20px 2px rgba(255, 255, 255, 0.79)", "gold");
+				writeStyles("rgb(14, 78, 14)", "rgba(4, 65, 4, 1)", "#ff0000", "#ff0000", "#ecffeb", "rgb(14, 78, 14)", "0 10px 16px 2px rgba(0, 90, 0, 0.5),0 6px 20px 2px rgba(255, 255, 255, 0.79)", "gold", "white");
 				break;
 			case "halloween":
-				writeStyles("rgb(190, 89, 0)", "rgb(226, 223, 208)", "rgb(50, 1, 47)", "rgb(82, 76, 66)", "rgb(190, 89, 0)", "0 10px 16px 	rgba(149, 23, 177, 0.93),0 6px 20px rgb(50, 1, 47)", "rgb(0, 218, 0)");
+				writeStyles("rgb(190, 89, 0)", "rgba(100, 50, 6, 1)", "rgb(50, 1, 47)", "rgb(50, 1, 47)", "rgba(232, 158, 93, 1)", "rgb(190, 89, 0)", "0 10px 16px 	rgba(149, 23, 177, 0.93),0 6px 20px rgb(50, 1, 47)", "rgb(0, 218, 0)", "orange");
 				break;
 			default:
 				changeTheme("cherry");
@@ -223,7 +230,7 @@ export function themes() {
 		<button onclick="changeTheme('belial')">belial</button>
 		<button onclick="changeTheme('freedom')">freedom</button>
 		<button onclick="changeTheme('frutiger')">frutiger</button>
-		<button onclick="changeTheme('trans')">trans</button>	
+		<button onclick="changeTheme('autumn')">autumn</button>	
 	</div>
 `, '#pageThemeButton');
 
