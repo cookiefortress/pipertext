@@ -622,6 +622,20 @@ body {
 	#pageSidebar #pageButtonMarquee {
 		display: none;
 	}
+	#pageHeaderName {
+		width: 22rem;
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		margin-top: 1rem;
+	}
+	#pageHeaderButtonsAndLogo {
+		justify-content: center;
+		align-items: center;
+	}
+	#pageHeaderButtons {
+		height: 100%;
+		margin-top: 15%;
+	}
 }
 
 /* marquee animation */
