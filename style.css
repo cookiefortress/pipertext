@@ -637,6 +637,12 @@ body {
 		margin-top: 15%;
 	}
 }
+@media screen and (max-width: 360px) {
+	#pageHeaderName {
+		width: 15rem;
+		font-size: 2rem;
+	}
+}
 
 /* marquee animation */
 .marquee img {
