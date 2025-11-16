@@ -1,5 +1,3 @@
-import { waterfall } from '/scripts/waterfall.js';
-
 export function nav() {
 	const main = document.querySelector("#pageMain");
 
@@ -356,8 +354,7 @@ export function nav() {
 				changePage(quotes);
 				break;
 			case "#about":
-				changePage(about);
-				waterfall("#aboutIconRow", "img");
+				changePage(about);	
 				break;
 			case "#contact":
 				changePage(contact);
