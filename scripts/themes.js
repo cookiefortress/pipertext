@@ -184,7 +184,7 @@ export function themes() {
 					"#16f4edff");
 				document.querySelector("body").style.background = `url('/media/pipertextResources/bgFrutigerAero.jpg') repeat fixed center`;
 				break;
-			case "autumn":
+			case "lambda":
 				writeStyles("#C63D2F",
 					"#C63D2F",
 					"#E25E3E",
@@ -192,7 +192,8 @@ export function themes() {
 					"#FFBB5C",
 					"#C63D2F",
 					"0 10px 16px 1px #fc1e06ff,0 6px 20px 1px #fc1e06ff",
-					"rgb(0, 218, 0)");
+					"rgb(0, 218, 0)",
+					"#ff6f00ff");
 				break;
 
 			// -- holidays --
@@ -230,7 +231,7 @@ export function themes() {
 		<button onclick="changeTheme('belial')">belial</button>
 		<button onclick="changeTheme('freedom')">freedom</button>
 		<button onclick="changeTheme('frutiger')">frutiger</button>
-		<button onclick="changeTheme('autumn')">autumn</button>	
+		<button onclick="changeTheme('lambda')">lambda</button>	
 	</div>
 `, '#pageThemeButton');
 

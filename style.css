@@ -167,7 +167,7 @@ body {
 }
 
 #pageThemeButton {
-	border: 2px solid var(--text);
+	border: 2px solid var(--anchorColor);
 	background-color: var(--accentBGalt);
 	padding: .3rem;
 	cursor: pointer;
