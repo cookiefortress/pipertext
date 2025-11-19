@@ -66,10 +66,21 @@ body {
 	color: var(--code);
 }
 
-/*
-!-- text must be visible when laid on top of all other variables
-!-- accentBGalt can be used for a background as well as borders
-*/
+.tooltip {
+	position: absolute;
+	background: var(--accentBG);
+	color: var(--text);
+	border: 2px solid var(--accent);
+	padding: 5px 10px;
+	font-size: 14px;
+	max-width: 15rem;
+	pointer-events: none;
+	display: none;
+	z-index: 1000;
+	font-family: 'Consolas', 'Liberation Mono', monospace;
+}
+
+/* --- */
 
 :root {
 	--primaryBG: #1b1717;
@@ -267,6 +278,11 @@ body {
 	padding-bottom: .3rem;
 	border-bottom: 2px solid var(--accent);
 	cursor:context-menu;
+}
+
+#pageRecentPosts h3:hover,
+#pageTinNotes h3:hover {
+	text-decoration: underline blink;
 }
 
 #pageRecentPosts h3 {

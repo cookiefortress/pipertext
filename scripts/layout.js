@@ -1,4 +1,5 @@
 import { writeUTC } from '/scripts/UTC.js';
+import { tooltip } from '/scripts/tooltip.js';
 
 export function layout() {
     const headerHTML = `
@@ -47,8 +48,7 @@ export function layout() {
         <ul>
             <li><a href="/html/tobacconist/tobacconist.html">tobacconist</a></li>
         </ul>
-    </dl>
-`;
+    </dl>`;
 
     const footerHTML = `
     <small><a href="https://www.pipertext.net">pipertext.net</a></small>
@@ -61,6 +61,9 @@ export function layout() {
 
         const dashboardTime = document.querySelector("#pageDashboard time")
         writeUTC(dashboardTime);
+
+        tooltip("#pageRecentPosts h3", "The three most recent articles posted are shown below.");
+        tooltip("#pageTinNotes h3", "'Tin notes' are little directories containing various articles and resources dedicated to certain topics that I find interesting.");
 
         const aElements = document.querySelectorAll("#pageRecentPosts a");
         const timeElements = document.querySelectorAll("#pageRecentPosts dd time");
