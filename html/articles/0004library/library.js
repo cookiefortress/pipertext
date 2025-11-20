@@ -50,7 +50,7 @@ function createTable(arr) {
 			else {
 				tableData.textContent = book[prop];
 			}
-			tableData.style.border = "2px ridge var(--accentOne)";
+			tableData.style.border = "2px ridge var(--accent)";
 			tableData.style.padding = ".5rem 1rem";
 			tableData.style.width = "25%";
 			tableRow.appendChild(tableData);
@@ -134,6 +134,8 @@ function createForm() {
 	submitButton.style.borderRadius = "0";
 	submitButton.style.display = "block";
 	submitButton.style.margin = "0 auto";
+	submitButton.style.backgroundColor = 'var(--backgroundAlt)';
+	submitButton.style.color = 'var(--text)';
 	submitButton.addEventListener("click", (event) => {
 		event.preventDefault();
 		let title = form.title.value;
@@ -156,6 +158,8 @@ addBook("The Hobbit", "J.R.R. Tolkien", 300, true);
 createTable(libraryArr);
 
 let newBookButton = document.querySelector("#newBookButton");
+newBookButton.style.color = 'var(--text)';
+newBookButton.style.backgroundColor = 'var(--backgroundAlt)';
 newBookButton.addEventListener("click", () => {
 	createForm();
 });

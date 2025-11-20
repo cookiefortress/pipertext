@@ -228,7 +228,7 @@ const Game = (function () {
   scoreboard.style.width = "50%";
   scoreboard.style.margin = "0 auto";
   scoreboard.style.marginBottom = "1rem";
-  scoreboard.style.border = "3px ridge var(--accentOne)";
+  scoreboard.style.border = "3px ridge var(--accent)";
   scoreboard.style.display = "flex";
   scoreboard.style.justifyContent = "space-around";
   scoreboard.style.alignItems = "center";
@@ -236,7 +236,7 @@ const Game = (function () {
   let scoreOne = document.createElement("div");
   scoreOne.style.width = "20%";
   scoreOne.style.height = "80%";
-  scoreOne.style.border = "3px solid var(--accentTwo)";
+  scoreOne.style.border = "3px solid var(--accentAlt)";
   scoreOne.style.display = "flex";
   scoreOne.style.justifyContent = "center";
   scoreOne.style.alignItems = "center";
@@ -245,7 +245,7 @@ const Game = (function () {
   let scoreTwo = document.createElement("div");
   scoreTwo.style.width = "20%";
   scoreTwo.style.height = "80%";
-  scoreTwo.style.border = "3px solid var(--accentTwo)";
+  scoreTwo.style.border = "3px solid var(--accentAlt)";
   scoreTwo.style.display = "flex";
   scoreTwo.style.justifyContent = "center";
   scoreTwo.style.alignItems = "center";
@@ -269,18 +269,18 @@ const Game = (function () {
     let button = document.createElement("button");
     container.appendChild(button);
     button.style.border = "none";
-    button.style.borderBottom = "4px solid var(--accentOne)";
+    button.style.borderBottom = "4px solid var(--accent)";
     if (i === 0 || i === 1) {
-      button.style.borderRight = "4px solid var(--accentOne)";
+      button.style.borderRight = "4px solid var(--accent)";
     }
   }
   for (let i = 0; i < 3; i++) {
     let button = document.createElement("button");
     container.appendChild(button);
     button.style.border = "none";
-    button.style.borderBottom = "4px solid var(--accentOne)";
+    button.style.borderBottom = "4px solid var(--accent)";
     if (i === 0 || i === 1) {
-      button.style.borderRight = "4px solid var(--accentOne)";
+      button.style.borderRight = "4px solid var(--accent)";
     }
   }
   for (let i = 0; i < 3; i++) {
@@ -288,7 +288,7 @@ const Game = (function () {
     container.appendChild(button);
     button.style.border = "none";
     if (i === 0 || i === 1) {
-      button.style.borderRight = "4px solid var(--accentOne)";
+      button.style.borderRight = "4px solid var(--accent)";
     }
   }
   const tictactoe = document.querySelector("#tictactoe");

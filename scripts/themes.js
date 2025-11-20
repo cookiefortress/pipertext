@@ -4,11 +4,11 @@ export function themes() {
 	// function for changing the color scheme
 	// text must be accessible when laid over the first three arguments
 	function changeTheme(theme, isSaved = true) {
-		function writeStyles(primaryBG, accentBG, accentBGalt, accent, text, gradientTopLeft, bShadow, code, anchorColor) {
+		function writeStyles(background, backgroundAlt, accentAlt, accent, text, gradientTopLeft, bShadow, code, anchorColor) {
 			document.documentElement.style.cssText = `
-			--primaryBG: ${primaryBG};
-			--accentBG: ${accentBG};
-			--accentBGalt: ${accentBGalt};
+			--background: ${background};
+			--backgroundAlt: ${backgroundAlt};
+			--accentAlt: ${accentAlt};
 			--accent: ${accent};
 			--text: ${text};
 			--gradientTopLeft: ${gradientTopLeft};

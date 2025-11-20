@@ -25,7 +25,7 @@ body {
 	text-align: center;
 	font-size: .8rem;
 	font-style: italic;
-	border: 2px solid var(--accentBGalt);
+	border: 2px solid var(--accentAlt);
 	max-width: 65%;
 	margin: 0 auto;
 	margin-bottom: .9rem;
@@ -68,7 +68,7 @@ body {
 
 .tooltip {
 	position: absolute;
-	background: var(--accentBG);
+	background: var(--backgroundAlt);
 	color: var(--text);
 	border: 2px solid var(--accent);
 	padding: 5px 10px;
@@ -83,11 +83,11 @@ body {
 /* --- */
 
 :root {
-	--primaryBG: #1b1717;
-	--accentBG: #810000;
-	--accentBGalt: #630000;
-	--accent: #a70f0f;
-	--text: #eeebdd;
+	--background: #1b1717; /* primaryBG */
+	--backgroundAlt: #810000; /* accentBG */
+	--accent: #a70f0f; /* accent */
+	--accentAlt: #630000; /* accentBGalt */
+	--text: #eeebdd; /* text */
 	--gradientTopLeft: black;
 	--code: rgb(0, 218, 0);
 }
@@ -105,7 +105,7 @@ body {
 	margin: 0 auto;
 	margin-bottom: 2rem;
 	font-family: 'Consolas', 'Liberation Mono', monospace;
-	background-image: linear-gradient(to bottom right, var(--gradientTopLeft), var(--primaryBG));
+	background-image: linear-gradient(to bottom right, var(--gradientTopLeft), var(--background));
 	box-shadow: rgba(255, 255, 255, 0.2) 0px 10px 16px 2px, rgba(255, 255, 255, 0.2) 0px 6px 20px 2px;
 }
 
@@ -139,7 +139,7 @@ body {
 
 #pageMain p {
 	text-indent: 1rem;
-	border-left: 2px solid var(--accentBGalt);
+	border-left: 2px solid var(--accentAlt);
 	padding-left: 1rem;
 	margin-bottom: 1rem;
 	line-height: 1.1;
@@ -178,8 +178,8 @@ body {
 }
 
 #pageThemeButton {
-	border: 2px solid var(--anchorColor);
-	background-color: var(--accentBGalt);
+	border: 2px solid var(--accent);
+	background-color: var(--backgroundAlt);
 	padding: .3rem;
 	cursor: pointer;
 }
@@ -211,8 +211,8 @@ body {
 	padding: .75rem 0;
 	text-decoration: none;
 
-	background-color: var(--accentBG);
-	border: 3px outset var(--accentBGalt);
+	background-color: var(--backgroundAlt);
+	border: 3px outset var(--accentAlt);
 }
 
 /* sidebar */
@@ -228,7 +228,7 @@ body {
 }
 
 #pageButtonMarquee {
-	background-color: var(--accentBG);
+	background-color: var(--backgroundAlt);
 	border: 2px ridge var(--accent);
 	height: auto;
 	width: 90%;
@@ -317,8 +317,8 @@ body {
 
 #pageTinNotes ul li a {
 	padding: .5rem;
-	background-color: var(--accentBG);
-	border: 3px ridge var(--accentBGalt);
+	background-color: var(--backgroundAlt);
+	border: 3px ridge var(--accentAlt);
 	width: 90%;
 }
 
@@ -366,10 +366,10 @@ body {
 }
 
 #pageFooterWithLove {
-	background-color: var(--accentBG);
+	background-color: var(--backgroundAlt);
 	padding: .5rem;
 	font-style: italic;
-	border: 2px ridge var(--accentBGalt);
+	border: 2px ridge var(--accentAlt);
 }
 
 /* articles hash */
@@ -393,7 +393,7 @@ body {
 #articleList a {
 	margin: 0 auto;
 	width: 90%;
-	background-color: var(--accentBG);
+	background-color: var(--backgroundAlt);
 	padding: .5rem;
 	border: 3px groove var(--accent);
 }
@@ -424,7 +424,7 @@ body {
 }
 
 #resourceHTML {
-	background-image: linear-gradient(to right bottom, rgb(0 0 0 / .8), var(--primaryBG)), url('/media/img/resourceHTML.png');
+	background-image: linear-gradient(to right bottom, rgb(0 0 0 / .8), var(--background)), url('/media/img/resourceHTML.png');
 	width: 100%;
 	height: 100%;
 	display: flex;
@@ -446,8 +446,8 @@ body {
 #resourceContainer a {
 	text-decoration: none;
 	color: var(--accent);
-	background: linear-gradient(to bottom right, var(--accentBG), var(--primaryBG));
-	border: 3px ridge var(--accentBGalt);
+	background: linear-gradient(to bottom right, var(--backgroundAlt), var(--background));
+	border: 3px ridge var(--accentAlt);
 	height: 100%;
 	padding: .4rem;
 }
@@ -469,7 +469,7 @@ body {
 }
 
 .resGrid div {
-	background-color: var(--primaryBG);
+	background-color: var(--background);
 	color: var(--text);
 	padding: 0.4rem;
 	display: flex;
@@ -500,7 +500,7 @@ body {
 }
 
 #quotes blockquote {
-	background-color: var(--accentBGalt);
+	background-color: var(--backgroundAlt);
 	padding: 1rem;
 	border: 2px groove var(--accent);
 	display: flex;
@@ -521,7 +521,7 @@ body {
 	border-left: none;
 	text-indent: 0;
 	margin-bottom: 0;
-	background-color: var(--primaryBG);
+	background-color: var(--background);
 	padding: 0.6rem;
 	border: 3px ridge rgb(2, 2, 2);
 	font-size: 1rem;
@@ -542,7 +542,7 @@ body {
 
 #aboutFoot #aboutIconRow {
 	padding: .5rem;
-	background-color: var(--accentBG);
+	background-color: var(--backgroundAlt);
 	border: 2px ridge var(--accent);
 }
 
@@ -560,7 +560,7 @@ body {
 	text-decoration: none;
 	color: var(--secondary);
 	padding: 0.3rem;
-	background-color: var(--accentBGalt);
+	background-color: var(--backgroundAlt);
 	border: 4px outset var(--text);
 }
 
@@ -593,7 +593,7 @@ body {
 	border-radius: 0;
 	color: var(--secondary);
 	border-color: var(--text);
-	background-color: var(--accentBG);
+	background-color: var(--backgroundAlt);
 	margin: 0 auto;
 	margin-top: 1rem;
 	cursor: pointer;
@@ -728,14 +728,14 @@ body {
 #smokeLounge {
 	width: 80%;
 	margin: 0 auto;
-	background-color: var(--accentBGalt);
-	border: 3px ridge var(--accentBGalt);
+	background-color: var(--backgroundAlt);
+	border: 3px ridge var(--accentAlt);
 }
 
 #smokeLounge h3 {
 	text-align: start;
 	margin-bottom: 0;
-	border-bottom: 2px groove var(--accentBG);
+	border-bottom: 2px groove var(--backgroundAlt);
 	padding: .3rem;
 }
 
@@ -752,7 +752,7 @@ body {
 
 #smokeLounge #smokeLoungePoll {
 	width: 25%;
-	border-left: 2px groove var(--accentBG);
+	border-left: 2px groove var(--backgroundAlt);
 	height: 10rem;
 	padding: .3rem;
 }
@@ -765,8 +765,8 @@ body {
 	justify-content: center;
 	width: auto;
 	height: auto;
-	background-color: var(--primaryBG);
-	border: 1px ridge var(--accent);
+	border: 3px ridge var(--accentAlt);
+	background-color: var(--accent);
 	position: absolute;
 	top: 8rem;
 	left: 8rem;
@@ -800,8 +800,8 @@ body {
 .windowTitle div:nth-child(2) button {
 	border: 2px ridge var(--accent);
 	padding: .1rem .3rem;
-	background-color: var(--accent);
-	color: var(--primaryBG);
+	background-color: var(--backgroundAlt);
+	color: var(--background);
 }
 
 .windowTitle div:nth-child(2) button:hover {
@@ -809,24 +809,15 @@ body {
 	cursor: pointer;
 }
 
-/* themes window component */
-#themeButton {
-	font-size: 1rem;
-	font-family: Consolas, 'Liberation Mono', 'Adwaita Mono', monospace;
-	width: 5rem;
-	color: var(--secondary);
-	background-color: var(--primary);
-	cursor: pointer;
-	padding: .2rem;
-	align-self: flex-start;
-	margin-right: 2rem;
+.windowTitle div img {
+	margin-left: 4px;
 }
 
+/* themes window component */
 #themeList {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	border: 2px groove var(--accentTwo);
-	background-color: var(--accentTwo);
 	padding: .3rem;
 }
 
@@ -991,7 +982,7 @@ body {
 	display: flex;
 	flex-flow: column nowrap;
 	padding: 1rem;
-	border: 3px ridge var(--accentBGalt);
+	border: 3px ridge var(--accentAlt);
 }
 
 #tableOfContents a {

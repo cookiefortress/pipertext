@@ -25,7 +25,7 @@
 		width: 6rem;
 		text-align: center;
 		border-radius: 0;
-		font-family: consolas;
+		font-family: Consolas, monospace;
 	}
 
 	.dropdown ul {
@@ -37,19 +37,24 @@
 	.dropdown ul a {
 		text-decoration: none;
 		text-align: center;
-		color: var(--secondary);
+		color: var(--accent);
 	}
 
 	.dropdown ul a li {
-		border: 1px solid var(--secondary);
-		background-color: var(--primary);
+		border: 1px solid var(--accent);
+		background-color: var(--background);
 		font-size: .8rem;
 		text-align: start;
 		padding: .2rem;
 	}
 
 	.dropdown ul a li.odd {
-		background-color: var(--accentOne);
+		background-color: var(--accent);
+	}
+
+	.dropdownButton {
+		color: var(--text);
+		background-color: var(--accentAlt);
 	}
 
 	.frame {
@@ -59,7 +64,7 @@
 		height: 15rem;
 		width: 30rem;
 		background-color: transparent;
-		border: 2px ridge var(--accentOne);
+		border: 2px ridge var(--accent);
 		position: relative;
 		overflow: hidden;
 	}
@@ -144,12 +149,12 @@
 	}
 
 	.frame button.picLeft:hover {
-		background-color: var(--accentOne);
+		background-color: var(--accent);
 		transition: all .3s ease;
 	}
 
 	.frame button.picRight:hover {
-		background-color: var(--accentOne);
+		background-color: var(--accent);
 		transition: all .3s ease;
 	}
 

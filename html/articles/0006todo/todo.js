@@ -199,3 +199,11 @@ function saveLists() {
 	localStorage.setItem("lists", jsonLists);
 	localStorage.setItem("currentListIndex", currentList); // Save index too
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+	document.querySelectorAll("button").forEach((b) => {
+		b.style.backgroundColor = 'var(--background)';
+		b.style.border = '2px solid var(--accentAlt)';
+		b.style.color = 'var(--text)';
+	})
+})
