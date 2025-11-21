@@ -51,6 +51,14 @@ body {
 	border: none !important;
 }
 
+/* ::selection changes the color of highlighting text, :focus changes the default focus color */
+::selection {
+  background: var(--accent)
+}
+:focus {
+	outline: 2px solid var(--text);
+}
+
 .imgRow {
 	display: flex;
 	flex-flow: row wrap;
@@ -383,6 +391,8 @@ body {
 }
 #articleSearchHeader {
 	text-decoration: underline dotted;
+	margin: 0 auto;
+	width: 17rem;
 }
 
 #articleList {
