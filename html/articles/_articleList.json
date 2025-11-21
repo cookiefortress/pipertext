@@ -2,71 +2,85 @@
   {
     "name": "touch pipertext.ptml",
     "publish_date": "2025/04/06",
-    "html_file": "/html/articles/0001touchPipertext/touchPipertext.html"
+    "html_file": "/html/articles/0001touchPipertext/touchPipertext.html",
+    "tags": "pilot"
   },
   {
     "name": "50 years of Microsoft",
     "publish_date": "2025/04/06",
-    "html_file": "/html/articles/0002microsoft50/microsoft50.html"
+    "html_file": "/html/articles/0002microsoft50/microsoft50.html",
+    "tags": "microsoft"
   },
   {
     "name": "The beauty of semantic HTML",
     "publish_date": "2025/04/08",
-    "html_file": "/html/articles/0003semanticHTML/semanticHTML.html"
+    "html_file": "/html/articles/0003semanticHTML/semanticHTML.html",
+    "tags": "html markup semantics tags webdev web development"
   },
   {
     "name": "Project - Library",
     "publish_date": "2025/04/10",
-    "html_file": "/html/articles/0004library/library.html"
+    "html_file": "/html/articles/0004library/library.html",
+    "tags": "top odin library"
   },
   {
     "name": "Project - Tic Tac Toe",
     "publish_date": "2025/04/12",
-    "html_file": "/html/articles/0005tictactoe/tictactoe.html"
+    "html_file": "/html/articles/0005tictactoe/tictactoe.html",
+    "tags": "top odin"
   },
   {
     "name": "Project - Todo List",
     "publish_date": "2025/04/20",
-    "html_file": "/html/articles/0006todo/todo.html"
+    "html_file": "/html/articles/0006todo/todo.html",
+    "tags": "to-do todo top odin"
   },
   {
     "name": "Project - Tic Tac Toe Revisited",
     "publish_date": "2025/04/25",
-    "html_file": "/html/articles/0007tictactoeRevisited/tictactoeRevisited.html"
+    "html_file": "/html/articles/0007tictactoeRevisited/tictactoeRevisited.html",
+    "tags": "project tictactoe tic-tac-toe top odin"
   },
   {
     "name": "Project - Dynamic UI",
     "publish_date": "2025/05/08",
-    "html_file": "/html/articles/0008dynamicUI/dynamicUI.html"
+    "html_file": "/html/articles/0008dynamicUI/dynamicUI.html",
+    "tags": "project interface ui top odin"
   },
   {
     "name": "Running JACK on Linux",
     "publish_date": "2025/07/15",
-    "html_file": "/html/articles/0009JACKlinuxFix/JACKlinuxFix.html"
+    "html_file": "/html/articles/0009JACKlinuxFix/JACKlinuxFix.html",
+    "tags": "jack hammer valve map editor mapping"
   },
   {
     "name": "Project - Weather App",
     "publish_date": "2025/07/28",
-    "html_file": "/html/articles/0010weatherApp/weatherApp.html"
+    "html_file": "/html/articles/0010weatherApp/weatherApp.html",
+    "tags": "project weather top odin"
   },
   {
     "name": "Project - Recursion",
     "publish_date": "2025/08/10",
-    "html_file": "/html/articles/0011recursion/recursion.html"
+    "html_file": "/html/articles/0011recursion/recursion.html",
+    "tags": "project recursion top odin"
   },
   {
     "name": "Goldsrc is gold",
     "publish_date": "2025/08/18",
-    "html_file": "/html/articles/0012goldsrcIsGold/goldsrcIsGold.html"
+    "html_file": "/html/articles/0012goldsrcIsGold/goldsrcIsGold.html",
+    "tags": "goldsrc valve hl half-life half life counter-strike 90s 3d"
   },
   {
     "name": "Project - Linked List",
     "publish_date": "2025/09/14",
-    "html_file": "/html/articles/0013linkedList/linkedList.html"
+    "html_file": "/html/articles/0013linkedList/linkedList.html",
+    "tags": "project linkedlist coding programming top odin"
   },
   {
     "name": "Packing lips of coffee",
     "publish_date": "2025/11/20",
-    "html_file": "/html/articles/0014packingLipsOfCoffee/packingLipsOfCoffee.html"
+    "html_file": "/html/articles/0014packingLipsOfCoffee/packingLipsOfCoffee.html",
+    "tags": "grinds coffee pouches portions dip chew"
   }
 ]

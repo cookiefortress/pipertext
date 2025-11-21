@@ -1,3 +1,5 @@
+import { tooltip } from '/scripts/tooltip.js';
+
 export function nav() {
 	const main = document.querySelector("#pageMain");
 
@@ -328,7 +330,6 @@ export function nav() {
 	document.querySelector("#navContact").addEventListener("click", (e) => {
 		e.preventDefault();
 		window.location.hash = "contact";
-		''
 	});
 
 	function renderContentFromHash() {
@@ -345,6 +346,7 @@ export function nav() {
 				break;
 			case "#articles":
 				changePage(articles);
+				tooltip("#articleSearchHeader", "Search queries filter by looking for the words entered in either the title or by keywords (i.e., an article about programming will have keywords like 'coding'")
 				listArticles();
 				document.querySelector("#articleSearch").addEventListener("input", () => {
 					searchArticles();
@@ -375,9 +377,11 @@ export function nav() {
 			.then(response => response.json())
 			.then(articles => {
 				articles.slice().reverse().forEach(article => {
-					const [titleText, dateText, link] = Object.values(article);
+					const [titleText, dateText, link, keywordList] = Object.values(article);
+					const keywords = keywordList.split(" ");
 
-					if (searchValue && !titleText.toLowerCase().includes(searchValue.toLowerCase())) {
+					if (searchValue && !titleText.toLowerCase().includes(searchValue.toLowerCase())
+						&& !keywords.some(v => searchValue.includes(v))) {
 						return;
 					}
 
@@ -405,7 +409,6 @@ export function nav() {
 
 	function searchArticles() {
 		const searchValue = document.querySelector('input#articleSearch').value;
-		console.log(searchValue)
 		listArticles(searchValue);
 	}
 
