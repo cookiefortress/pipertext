@@ -381,6 +381,9 @@ body {
 	background-color: transparent;
 	padding: .3rem;
 }
+#articleSearchHeader {
+	text-decoration: underline dotted;
+}
 
 #articleList {
 	display: flex;
@@ -396,6 +399,14 @@ body {
 	background-color: var(--backgroundAlt);
 	padding: .5rem;
 	border: 3px groove var(--accent);
+}
+
+#articleList a:nth-child(even) {
+	background-color: var(--background);
+}
+
+#articleList a:hover {
+	border-color: var(--text);
 }
 
 #articleList a li {
