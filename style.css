@@ -393,6 +393,7 @@ body {
 	text-decoration: underline dotted;
 	margin: 0 auto;
 	width: 17rem;
+	cursor:context-menu;
 }
 
 #articleList {

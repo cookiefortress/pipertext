@@ -54,7 +54,7 @@ export function themes() {
 			case "cypher":
 				writeStyles("#2f2617",
 					"#732906",
-					"#201810",
+					"#69441fff",
 					"#1b1717",
 					"#9d8457",
 					"#1b1717",
@@ -87,7 +87,7 @@ export function themes() {
 			case "paper":
 				writeStyles("white",
 					"whitesmoke",
-					"whitesmoke",
+					"#898989ff",
 					"grey",
 					"black",
 					"whitesmoke",
@@ -164,7 +164,7 @@ export function themes() {
 			case "freedom":
 				writeStyles("#003693ff",
 					"#e00007ff",
-					"#003693ff",
+					"#005effff",
 					"#990323ff",
 					"#ffffff",
 					"#0040afff",
