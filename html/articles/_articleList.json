@@ -82,5 +82,11 @@
     "publish_date": "2025/11/20",
     "html_file": "/html/articles/0014packingLipsOfCoffee/packingLipsOfCoffee.html",
     "tags": "grinds coffee pouches portions dip chew"
+  },
+  {
+    "name": "The Vive 100% energy drink",
+    "publish_date": "2025/12/20",
+    "html_file": "/html/articles/0015vive100/vive100.html",
+    "tags": "energy drink caffeine monster redbull"
   }
 ]
