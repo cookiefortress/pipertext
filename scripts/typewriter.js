@@ -2,6 +2,9 @@ function typewriter(target, string = document.querySelector(target).textContent,
 	const targetElement = document.querySelector(target);
 
 	function typeString() {
+		if(speed <= 5) {
+			return;
+		}
 		targetElement.textContent = "";
 		for (let i = 0; i < string.length; i++) {
 			setTimeout(() => {
@@ -36,10 +39,15 @@ function typewriter(target, string = document.querySelector(target).textContent,
 		typeString();
 	}
 	if (isBlink) {
-		setTimeout(blink, 2300);
+		setTimeout(blink, (speed * string.length));
 	}
 	if (isCursor) {
-		setTimeout(cursor, 3600);
+		if(isBlink) {
+			setTimeout(cursor, (speed * string.length + 1000));
+		}
+		else {
+			cursor();
+		}
 	}
 }
 

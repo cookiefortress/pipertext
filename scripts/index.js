@@ -27,5 +27,8 @@ if(window.location.hash === '#homepage'
 }
 
 if(window.location.hash === '#homepage') {
-	typewriter("#pageHeaderName", "> pipertext", 200, true, true)
+	typewriter("#pageHeaderName", "> pipertext", 200, true, true, true);
+}
+else {
+	typewriter("#pageHeaderName", "> pipertext", 5, false, true);
 }
