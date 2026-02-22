@@ -1,5 +1,6 @@
 function tooltip(selector, tooltipText) {
 	const element = document.querySelector(`${selector}`);
+	element.style.cursor = 'help';
 	
 	// create tooltip element
 	const tooltipEl = document.createElement('div');

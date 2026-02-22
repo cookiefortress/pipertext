@@ -395,6 +395,9 @@ body {
 	width: 17rem;
 	cursor:context-menu;
 }
+#articleSearchHeader:hover {
+	text-decoration: underline solid;
+}
 
 #articleList {
 	display: flex;
