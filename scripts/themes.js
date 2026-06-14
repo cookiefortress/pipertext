@@ -31,12 +31,12 @@ export function themes() {
 				break;
 			case "tobacco":
 				writeStyles("rgb(54, 36, 24)",
-					"rgba(134, 90, 69, 0.5)",
+					"rgba(134, 90, 69)",
 					"rgba(129, 67, 39, 1)",
 					"#1b1717",
 					"#FED8B1",
 					"#1b1717",
-						"0 10px 16px 2px rgba(134, 90, 69, 0.5),0 6px 20px 2px rgba(134, 90, 69, 0.5)",
+					"0 10px 16px 2px rgba(134, 90, 69, 0.5),0 6px 20px 2px rgba(134, 90, 69, 0.5)",
 					"rgb(0, 218, 0)",
 					"#d16f0dff");
 				break;

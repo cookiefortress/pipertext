@@ -1050,6 +1050,27 @@ body {
 	padding: .5rem;
 }
 
+.charactersQuote {
+	font-size: .9rem;
+	margin: 0 auto;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	max-width: fit-content;
+}
+
+.charactersQuote q {
+	quotes: none;
+	display: block;
+	margin-bottom: .5rem;
+	font-weight: bold;
+}
+
+/* #pageContainer precedes the .charactersWords class here because apparently I don't understand specificity */
+#pageContainer .charactersQuote q .charactersWords {
+	font-style: italic;
+	font-weight: normal;
+}
+
 .codeBlock {
 	white-space: pre-wrap;
 	color: var(--code) !important;
