@@ -910,48 +910,60 @@ body {
 }
 
 #themeList button:nth-child(9) {
+	border: 2px solid #483e34;
+	color: #d2cfbc;
+	background-color: #2c2928;
+}
+
+#themeList button:nth-child(10) {
+	border: 2px solid #483e34;
+	color: #c4be9d;
+	background-color: #2c2928;
+}
+
+#themeList button:nth-child(11) {
 	border: 2px solid #99BC85;
 	color: #443627;
 	background-color: #FFF5E4;
 }
 
-#themeList button:nth-child(10) {
+#themeList button:nth-child(12) {
 	border: 2px solid #0000ac;
 	color: #000000;
 	background-color: #acaaac;
 }
 
-#themeList button:nth-child(11) {
+#themeList button:nth-child(13) {
 	border: 2px solid #272728;
 	color: #dcdcdc;
 	background-color: #6a4832;
 }
 
-#themeList button:nth-child(12) {
+#themeList button:nth-child(14) {
 	border: 2px solid rgb(144, 177, 0);
 	color: #ffffff;
 	background-color: #161616;
 }
 
-#themeList button:nth-child(13) {
+#themeList button:nth-child(15) {
 	border: 2px solid #260000ff;
 	color: #89000bff;
 	background-color: #000000;
 }
 
-#themeList button:nth-child(14) {
+#themeList button:nth-child(16) {
 	border: 2px solid #be0b31;
 	color: #003693ff;
 	background-color: #ffffff;
 }
 
-#themeList button:nth-child(15) {
+#themeList button:nth-child(17) {
 	border: 2px solid #96d419;
 	color: #f5f5f5;
 	background-color: #0055ff;
 }
 
-#themeList button:nth-child(16) {
+#themeList button:nth-child(18) {
 	border: 2px solid #E25E3E;
 	color: #FFBB5C;
 	background-color: #C63D2F;

@@ -106,6 +106,28 @@ export function themes() {
 					"rgb(0, 218, 0)",
 					"#b1b1b1ff");
 				break;
+			case "mac":
+				writeStyles("#2c2928",
+					"#7a7a6e",
+					"#483e34",
+					"#151517",
+					"#d2cfbc",
+					"#292929",
+					"0 10px 16px 1px #2a2929,0 6px 20px 1px #69222b", 
+					"#bfa385",
+					"#f8b491");
+				break;
+			case "mona":
+				writeStyles("#0b0a08",
+					"#12110d",
+					"#686d3c",
+					"#b7966f",
+					"#c4be9d",
+					"#1b1711",
+					"0 10px 16px 1px #2a2929,0 6px 20px 1px #69222b", 
+					"#bfa385",
+					"#f8b491");
+				break;
 			case "marnie":
 				writeStyles("#FFF5E4",
 					"#d7750eff",
@@ -224,6 +246,8 @@ export function themes() {
 		<button onclick="changeTheme('powershell')">powershell</button>
 		<button onclick="changeTheme('paper')">paper</button>
 		<button onclick="changeTheme('cmd')">cmd</button>
+		<button onclick="changeTheme('mac')">mac</button>
+		<button onclick="changeTheme('mona')">mona</button>
 		<button onclick="changeTheme('marnie')">marnie</button>
 		<button onclick="changeTheme('freeDOS')">freeDOS</button>
 		<button onclick="changeTheme('2600')">2600</button>
